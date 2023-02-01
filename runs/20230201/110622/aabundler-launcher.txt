@@ -1,0 +1,43 @@
+Running launcher ../launchers/aabundler-launcher.sh, name=AA Reference Bundler/0.4.0
+latest: Pulling from accountabstraction/bundler
+Digest: sha256:3654920c5c988eddd6af6d68dc8523fef7cf5c42867009edffb40e5845552b3f
+Status: Downloaded newer image for accountabstraction/bundler:latest
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ethereum/client-go:release-1.10
+release-1.10: Pulling from ethereum/client-go
+213ec9aee27d: Pulling fs layer
+4a36b71a98b2: Pulling fs layer
+ee12b8715f0d: Pulling fs layer
+4a36b71a98b2: Download complete
+213ec9aee27d: Verifying Checksum
+213ec9aee27d: Download complete
+ee12b8715f0d: Verifying Checksum
+ee12b8715f0d: Download complete
+213ec9aee27d: Pull complete
+4a36b71a98b2: Pull complete
+ee12b8715f0d: Pull complete
+Digest: sha256:03604c12f6123fda67f534c9a68a73dbabd35d5c0a13f0c6cfcf735cfd8760c8
+Status: Downloaded newer image for ethereum/client-go:release-1.10
+ ---> c16c2e0da325
+Step 2/2 : ENTRYPOINT geth       --verbosity 1       --http.vhosts '*,localhost,host.docker.internal'       --http       --http.api personal,eth,net,web3,debug       --http.corsdomain '*'       --http.addr "0.0.0.0"       --nodiscover --maxpeers 0 --mine       --networkid 1337       --dev       --allow-insecure-unlock       --rpc.allow-unprotected-txs       --dev.gaslimit 20000000
+ ---> Running in 9c11576853ba
+Removing intermediate container 9c11576853ba
+ ---> 26e880069bfd
+Successfully built 26e880069bfd
+Successfully tagged aabundler_geth-dev:latest
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 106 items / 103 deselected / 1 skipped / 3 selected
+
+tests/opbanning/test_op_banning.py ...                                   [100%]
+
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/aabundler-launcher.xml -
+=========================== short test summary info ============================
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+SKIPPED [1] tests/bundle/test_stake_rules.py:12: Skipped
+================= 3 passed, 1 skipped, 103 deselected in 1.88s =================
