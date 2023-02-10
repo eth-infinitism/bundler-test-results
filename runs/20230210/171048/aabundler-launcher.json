@@ -1,0 +1,559 @@
+{
+  "testsuites": {
+    "testsuite": {
+      "@name": "AA Reference Bundler/0.4.0",
+      "@errors": "0",
+      "@failures": "1",
+      "@skipped": "1",
+      "@tests": "107",
+      "@time": "43.382",
+      "@timestamp": "2023-02-10T17:10:02.984081",
+      "@hostname": "fv-az268-512",
+      "testcase": [
+        {
+          "@classname": "",
+          "@name": "tests.bundle.test_stake_rules",
+          "@time": "0.000",
+          "skipped": {
+            "@message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_bundle",
+          "@name": "test_bundle_replace_by_fee[]",
+          "@time": "0.249"
+        },
+        {
+          "@classname": "tests.bundle.test_bundle",
+          "@name": "test_max_allowed_ops_unstaked_sender[]",
+          "@time": "0.528"
+        },
+        {
+          "@classname": "tests.bundle.test_bundle",
+          "@name": "test_max_allowed_ops_staked_sender[]",
+          "@time": "0.567"
+        },
+        {
+          "@classname": "tests.bundle.test_codehash",
+          "@name": "test_codehash_changed[]",
+          "@time": "0.318",
+          "failure": {
+            "@message": "assert 1 == 0\n +  where 1 = len((AttributeDict({'args': AttributeDict({'userOpHash': b\"7)\\x9e\\x17P%\\x9e\\xff\\xa3\\xd5'\\xa0^\\x89\\xec\\xe1\\xcd\\xa8N\\x04:)f\\...53', 'blockHash': HexBytes('0xc97d41bd08b6d0908ca74a79133ffb08313d224ef16ef437664b151cbaca5eac'), 'blockNumber': 17}),))",
+            "#text": "tests/bundle/test_codehash.py:60: in test_codehash_changed\n    assert_no_useroperation_event(entrypoint_contract, from_block=block_number)\ntests/bundle/test_codehash.py:18: in assert_no_useroperation_event\n    assert len(logs) == 0\nE   assert 1 == 0\nE    +  where 1 = len((AttributeDict({'args': AttributeDict({'userOpHash': b\"7)\\x9e\\x17P%\\x9e\\xff\\xa3\\xd5'\\xa0^\\x89\\xec\\xe1\\xcd\\xa8N\\x04:)f\\...53', 'blockHash': HexBytes('0xc97d41bd08b6d0908ca74a79133ffb08313d224ef16ef437664b151cbaca5eac'), 'blockNumber': 17}),))"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "@time": "0.256"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][storage][drop]",
+          "@time": "0.246"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "@time": "0.252"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "@time": "0.265"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "@time": "0.263"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "@time": "0.259"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "@time": "0.274"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "@time": "0.515"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][context][drop]",
+          "@time": "0.246"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "@time": "0.251"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][no_storage][ok]",
+          "@time": "0.284"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][storage][ok]",
+          "@time": "0.300"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "@time": "0.306"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "@time": "0.304"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_storage][ok]",
+          "@time": "0.306"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "@time": "0.311"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "@time": "0.308"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "@time": "0.565"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][context][ok]",
+          "@time": "0.301"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][external_storage][drop]",
+          "@time": "0.296"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][no_storage][ok]",
+          "@time": "0.329"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][storage][drop]",
+          "@time": "0.337"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "@time": "0.345"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "@time": "0.363"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][account_storage][ok]",
+          "@time": "0.349"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "@time": "0.340"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "@time": "0.360"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][external_storage][drop]",
+          "@time": "0.343"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][no_storage][ok]",
+          "@time": "0.475"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][storage][ok]",
+          "@time": "0.395"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][reference_storage][ok]",
+          "@time": "0.393"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "@time": "0.406"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][account_storage][ok]",
+          "@time": "0.385"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "@time": "0.406"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "@time": "0.421"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][external_storage][drop]",
+          "@time": "0.389"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][no_storage][ok]",
+          "@time": "0.162"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][account_storage][ok]",
+          "@time": "0.163"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "@time": "0.177"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "@time": "0.181"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][external_storage][drop]",
+          "@time": "0.171"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][no_storage][ok]",
+          "@time": "0.208"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][account_storage][ok]",
+          "@time": "0.215"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][account_reference_storage][ok]",
+          "@time": "0.217"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "@time": "0.264"
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][external_storage][drop]",
+          "@time": "0.212"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GAS]",
+          "@time": "0.146"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[NUMBER]",
+          "@time": "0.144"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[TIMESTAMP]",
+          "@time": "0.146"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[COINBASE]",
+          "@time": "0.164"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[DIFFICULTY]",
+          "@time": "0.148"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BASEFEE]",
+          "@time": "0.148"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GASLIMIT]",
+          "@time": "0.151"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GASPRICE]",
+          "@time": "0.146"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[SELFBALANCE]",
+          "@time": "0.146"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BALANCE]",
+          "@time": "0.151"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[ORIGIN]",
+          "@time": "0.159"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BLOCKHASH]",
+          "@time": "0.150"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[CREATE]",
+          "@time": "0.161"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[CREATE2]",
+          "@time": "0.166"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.162"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GAS]",
+          "@time": "0.245"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[NUMBER]",
+          "@time": "0.247"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "@time": "0.249"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[COINBASE]",
+          "@time": "0.251"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "@time": "0.254"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BASEFEE]",
+          "@time": "0.248"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "@time": "0.253"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GASPRICE]",
+          "@time": "0.252"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "@time": "0.252"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BALANCE]",
+          "@time": "0.256"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[ORIGIN]",
+          "@time": "0.252"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "@time": "0.256"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[CREATE]",
+          "@time": "0.258"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[CREATE2]",
+          "@time": "0.252"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.253"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GAS]",
+          "@time": "0.330"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[NUMBER]",
+          "@time": "0.333"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[TIMESTAMP]",
+          "@time": "0.330"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[COINBASE]",
+          "@time": "0.336"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[DIFFICULTY]",
+          "@time": "0.332"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BASEFEE]",
+          "@time": "0.339"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GASLIMIT]",
+          "@time": "0.349"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GASPRICE]",
+          "@time": "0.337"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[SELFBALANCE]",
+          "@time": "0.338"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BALANCE]",
+          "@time": "0.335"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[ORIGIN]",
+          "@time": "0.345"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BLOCKHASH]",
+          "@time": "0.342"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[CREATE]",
+          "@time": "0.350"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[CREATE2]",
+          "@time": "0.354"
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.349"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_chainId",
+          "@name": "test_eth_chainId[]",
+          "@time": "0.017"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas[]",
+          "@time": "0.080"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas_execution_revert",
+          "@time": "0.075"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "@time": "0.071"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "@name": "test_eth_getUserOperationByHash[]",
+          "@time": "0.250"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "@name": "test_eth_getUserOperationByHash_error",
+          "@time": "0.005"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "@name": "test_eth_getUserOperationReceipt[]",
+          "@time": "0.258"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "@name": "test_eth_getUserOperationReceipt_error",
+          "@time": "0.005"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_sendUserOperation",
+          "@name": "test_eth_sendUserOperation[]",
+          "@time": "0.224"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_sendUserOperation",
+          "@name": "test_eth_sendUserOperation_revert",
+          "@time": "0.104"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "@name": "test_eth_supportedEntryPoints[]",
+          "@time": "0.015"
+        }
+      ]
+    }
+  }
+}
