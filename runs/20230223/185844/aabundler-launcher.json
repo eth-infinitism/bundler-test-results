@@ -1,0 +1,967 @@
+{
+  "testsuites": {
+    "testsuite": {
+      "@name": "AA Reference Bundler/0.4.0",
+      "@errors": "2",
+      "@failures": "101",
+      "@skipped": "1",
+      "@tests": "107",
+      "@time": "26.997",
+      "@timestamp": "2023-02-23T18:58:16.104358",
+      "@hostname": "fv-az851-500",
+      "testcase": [
+        {
+          "@classname": "",
+          "@name": "tests.bundle.test_stake_rules",
+          "@time": "0.000",
+          "skipped": {
+            "@message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_bundle",
+          "@name": "test_bundle_replace_by_fee[]",
+          "@time": "0.068",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_bundle.py:40: in test_bundle_replace_by_fee\n    assert lower_fee_op.send().result\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_bundle",
+          "@name": "test_max_allowed_ops_unstaked_sender[]",
+          "@time": "0.099",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_bundle.py:58: in test_max_allowed_ops_unstaked_sender\n    userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_bundle",
+          "@name": "test_max_allowed_ops_staked_sender[]",
+          "@time": "0.098",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_bundle.py:78: in test_max_allowed_ops_staked_sender\n    wallet = deploy_and_deposit(w3, entrypoint_contract, \"SimpleWallet\", True)\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_codehash",
+          "@name": "test_codehash_changed[]",
+          "@time": "0.085",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_codehash.py:43: in test_codehash_changed\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "@time": "0.156",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][storage][drop]",
+          "@time": "0.155",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "@time": "0.155",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "@time": "0.155",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "@time": "0.157",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "@time": "0.154",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "@time": "0.153",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "@time": "0.295",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:41: in _with_initcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][context][drop]",
+          "@time": "0.158",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "@time": "0.155",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][no_storage][ok]",
+          "@time": "0.124",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][storage][ok]",
+          "@time": "0.124",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "@time": "0.127",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "@time": "0.124",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_storage][ok]",
+          "@time": "0.125",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "@time": "0.129",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "@time": "0.124",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "@time": "0.124",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][context][ok]",
+          "@time": "0.125",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][paymaster][external_storage][drop]",
+          "@time": "0.127",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][no_storage][ok]",
+          "@time": "0.174",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][storage][drop]",
+          "@time": "0.181",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "@time": "0.174",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "@time": "0.176",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][account_storage][ok]",
+          "@time": "0.173",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "@time": "0.175",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "@time": "0.173",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][factory][external_storage][drop]",
+          "@time": "0.177",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:309: in test_rule\n    userop = case.userop_build_func(w3, entrypoint_contract, entity_contract, case.rule)\ntests/bundle/test_storage_rules.py:67: in build_userop_for_factory\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][no_storage][ok]",
+          "@time": "0.123",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][storage][ok]",
+          "@time": "0.123",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][reference_storage][ok]",
+          "@time": "0.124",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "@time": "0.124",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][account_storage][ok]",
+          "@time": "0.134",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "@time": "0.122",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "@time": "0.125",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][factory][external_storage][drop]",
+          "@time": "0.127",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][no_storage][ok]",
+          "@time": "0.089",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][account_storage][ok]",
+          "@time": "0.089",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "@time": "0.090",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "@time": "0.090",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[unstaked][account][external_storage][drop]",
+          "@time": "0.091",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][no_storage][ok]",
+          "@time": "0.102",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][account_storage][ok]",
+          "@time": "0.101",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][account_reference_storage][ok]",
+          "@time": "0.100",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "@time": "0.101",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.bundle.test_storage_rules",
+          "@name": "test_rule[staked][account][external_storage][drop]",
+          "@time": "0.101",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/bundle/test_storage_rules.py:306: in test_rule\n    entity_contract = deploy_and_deposit(\ntests/utils.py:55: in deploy_and_deposit\n    return staked_contract(w3, entrypoint_contract, contract)\ntests/utils.py:60: in staked_contract\n    tx_hash = contract.functions.addStake(entrypoint_contract.address, 2).transact(\n.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact\n    return transact_with_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function\n    txn_hash = web3.eth.send_transaction(transact_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction\n    return self._send_transaction(transaction)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking\n    response = self._make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request\n    return request_func(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware\n    return make_request(method, (transaction,))\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware\n    response = make_request(method, params)\n.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware\n    hex(get_buffered_gas_estimate(web3, transaction)),\n.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate\n    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)\n.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas\n    return self._estimate_gas(transaction, block_identifier)\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GAS]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[NUMBER]",
+          "@time": "0.092",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[TIMESTAMP]",
+          "@time": "0.089",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[COINBASE]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[DIFFICULTY]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BASEFEE]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GASLIMIT]",
+          "@time": "0.091",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GASPRICE]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[SELFBALANCE]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BALANCE]",
+          "@time": "0.089",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[ORIGIN]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BLOCKHASH]",
+          "@time": "0.086",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[CREATE]",
+          "@time": "0.087",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[CREATE2]",
+          "@time": "0.087",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.085",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GAS]",
+          "@time": "0.151",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[NUMBER]",
+          "@time": "0.154",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "@time": "0.153",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[COINBASE]",
+          "@time": "0.152",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "@time": "0.157",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BASEFEE]",
+          "@time": "0.152",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "@time": "0.152",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GASPRICE]",
+          "@time": "0.152",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "@time": "0.155",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BALANCE]",
+          "@time": "0.151",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[ORIGIN]",
+          "@time": "0.153",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "@time": "0.151",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[CREATE]",
+          "@time": "0.152",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[CREATE2]",
+          "@time": "0.152",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.153",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GAS]",
+          "@time": "0.171",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[NUMBER]",
+          "@time": "0.172",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[TIMESTAMP]",
+          "@time": "0.170",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[COINBASE]",
+          "@time": "0.171",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[DIFFICULTY]",
+          "@time": "0.175",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BASEFEE]",
+          "@time": "0.175",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GASLIMIT]",
+          "@time": "0.175",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GASPRICE]",
+          "@time": "0.175",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[SELFBALANCE]",
+          "@time": "0.172",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BALANCE]",
+          "@time": "0.171",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[ORIGIN]",
+          "@time": "0.175",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BLOCKHASH]",
+          "@time": "0.173",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[CREATE]",
+          "@time": "0.179",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[CREATE2]",
+          "@time": "0.173",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.174",
+          "failure": {
+            "@message": "web3.exceptions.ContractLogicError: execution reverted",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_factory_banned_opcode\n    sender = deposit_to_undeployed_sender(w3, entrypoint_contract, initcode)\ntests/utils.py:114: in deposit_to_undeployed_sender\n    sender = get_sender_address(w3, initcode)\ntests/utils.py:108: in get_sender_address\n    return helper.functions.getSenderAddress(CommandLineArgs.entrypoint, initcode).call(\n.venv/lib/python3.10/site-packages/web3/contract.py:970: in call\n    return call_contract_function(\n.venv/lib/python3.10/site-packages/web3/contract.py:1525: in call_contract_function\n    return_data = web3.eth.call(\n.venv/lib/python3.10/site-packages/web3/module.py:57: in caller\n    result = w3.manager.request_blocking(method_str,\n.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking\n    return self.formatted_response(response,\n.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response\n    apply_error_formatters(error_formatters, response)\n.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters\n    formatted_resp = pipe(response, error_formatters)\ncytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe\n    ???\ncytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe\n    ???\n.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert\n    raise ContractLogicError('execution reverted')\nE   web3.exceptions.ContractLogicError: execution reverted"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_chainId",
+          "@name": "test_eth_chainId[]",
+          "@time": "0.013"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas[]",
+          "@time": "0.048",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:18: in test_eth_estimateUserOperationGas\n    ).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas_execution_revert",
+          "@time": "0.048",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:28: in test_eth_estimateUserOperationGas_execution_revert\n    ).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "@time": "0.047",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:36: in test_eth_estimateUserOperationGas_simulation_revert\n    ).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "@name": "test_eth_getUserOperationByHash[]",
+          "@time": "0.047",
+          "error": {
+            "@message": "failed on setup with \"KeyError: 'code'\"",
+            "#text": "tests/conftest.py:104: in execute_user_operation\n    userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "@name": "test_eth_getUserOperationByHash_error",
+          "@time": "0.004"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "@name": "test_eth_getUserOperationReceipt[]",
+          "@time": "0.048",
+          "error": {
+            "@message": "failed on setup with \"KeyError: 'code'\"",
+            "#text": "tests/conftest.py:104: in execute_user_operation\n    userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "@name": "test_eth_getUserOperationReceipt_error",
+          "@time": "0.004"
+        },
+        {
+          "@classname": "tests.rpc.test_eth_sendUserOperation",
+          "@name": "test_eth_sendUserOperation[]",
+          "@time": "0.053",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:16: in test_eth_sendUserOperation\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_sendUserOperation",
+          "@name": "test_eth_sendUserOperation_revert",
+          "@time": "0.056",
+          "failure": {
+            "@message": "KeyError: 'code'",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:28: in test_eth_sendUserOperation_revert\n    response = bad_sig_userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   KeyError: 'code'"
+          }
+        },
+        {
+          "@classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "@name": "test_eth_supportedEntryPoints[]",
+          "@time": "0.011",
+          "failure": {
+            "@message": "AssertionError: assert '0x1306b01bC3...7e94737673F53' == '0x0576a174D2...45A78A0C91B57'\n  - 0x0576a174D229E3cFA37253523E645A78A0C91B57\n  + 0x1306b01bC3e4AD202612D3843387e94737673F53",
+            "#text": "tests/rpc/test_eth_supportedEntryPoints.py:11: in test_eth_supportedEntryPoints\n    assert supported_entrypoints[0] == CommandLineArgs.entrypoint\nE   AssertionError: assert '0x1306b01bC3...7e94737673F53' == '0x0576a174D2...45A78A0C91B57'\nE     - 0x0576a174D229E3cFA37253523E645A78A0C91B57\nE     + 0x1306b01bC3e4AD202612D3843387e94737673F53"
+          }
+        }
+      ]
+    }
+  }
+}
