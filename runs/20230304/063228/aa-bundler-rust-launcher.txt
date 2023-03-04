@@ -1,0 +1,1160 @@
+Running launcher ../launchers/aa-bundler-rust-launcher.sh, name=aa-bundler in Rust
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ethereum/client-go:release-1.10
+release-1.10: Pulling from ethereum/client-go
+213ec9aee27d: Pulling fs layer
+4a36b71a98b2: Pulling fs layer
+ee12b8715f0d: Pulling fs layer
+4a36b71a98b2: Verifying Checksum
+4a36b71a98b2: Download complete
+213ec9aee27d: Verifying Checksum
+213ec9aee27d: Download complete
+ee12b8715f0d: Verifying Checksum
+ee12b8715f0d: Download complete
+213ec9aee27d: Pull complete
+4a36b71a98b2: Pull complete
+ee12b8715f0d: Pull complete
+Digest: sha256:03604c12f6123fda67f534c9a68a73dbabd35d5c0a13f0c6cfcf735cfd8760c8
+Status: Downloaded newer image for ethereum/client-go:release-1.10
+ ---> c16c2e0da325
+Step 2/2 : ENTRYPOINT geth       --verbosity 1       --http.vhosts '*,localhost,host.docker.internal'       --http       --http.api personal,eth,net,web3,debug       --http.corsdomain '*'       --http.addr "0.0.0.0"       --nodiscover --maxpeers 0 --mine       --networkid 1337       --dev       --allow-insecure-unlock       --rpc.allow-unprotected-txs       --dev.gaslimit 20000000
+ ---> Running in c99ab5c76864
+Removing intermediate container c99ab5c76864
+ ---> 77e93d532aaf
+Successfully built 77e93d532aaf
+Successfully tagged aa-bundler-rust_geth-dev:latest
+latest: Pulling from vid201/aa-bundler
+Digest: sha256:bbf430399765221d08c3f67e98e99797d4107615664e307c692e215284ea219f
+Status: Downloaded newer image for ghcr.io/vid201/aa-bundler:latest
+yarn run v1.22.19
+$ ./scripts/hh-wrapper deploy --network localhost
+Nothing to compile
+No need to generate any newer typings.
+==entrypoint addr= 0x0576a174D229E3cFA37253523E645A78A0C91B57
+==SimpleAccountFactory addr= 0x09c58cf6be8E25560d479bd52B4417d15bCA2845
+Done in 2.13s.
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 106 items / 1 skipped
+
+tests/bundle/test_bundle.py FFF                                          [  2%]
+tests/bundle/test_codehash.py F                                          [  3%]
+tests/bundle/test_storage_rules.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 38%]
+FFFFFFFFF                                                                [ 47%]
+tests/opbanning/test_op_banning.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.F..... [ 82%]
+..F...F.                                                                 [ 89%]
+tests/rpc/test_eth_chainId.py .                                          [ 90%]
+tests/rpc/test_eth_estimateUserOperationGas.py FFF                       [ 93%]
+tests/rpc/test_eth_getUserOperationByHash.py FF                          [ 95%]
+tests/rpc/test_eth_getUserOperationReceipt.py FF                         [ 97%]
+tests/rpc/test_eth_sendUserOperation.py F.                               [ 99%]
+tests/rpc/test_eth_supportedEntryPoints.py .                             [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_bundle_replace_by_fee[] _________________________
+tests/bundle/test_bundle.py:40: in test_bundle_replace_by_fee
+    assert lower_fee_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_max_allowed_ops_unstaked_sender[] ____________________
+tests/bundle/test_bundle.py:60: in test_max_allowed_ops_unstaked_sender
+    assert dump_mempool() == wallet_ops[: i + 1]
+E   AssertionError: assert [] == [UserOperatio...gnature='0x')]
+E     Right contains one more item: UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     +  ,
+E     -  UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8',
+E     -                nonce='0x0',
+E     -                initCode='0x',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0x77359400',
+E     -                maxPriorityFeePerGas='0x3b9aca00',
+E     -                paymasterAndData='0x',
+E     -                signature='0x'),
+E       ]
+_____________________ test_max_allowed_ops_staked_sender[] _____________________
+tests/bundle/test_bundle.py:86: in test_max_allowed_ops_staked_sender
+    assert dump_mempool() == wallet_ops[: i + 1]
+E   AssertionError: assert [] == [UserOperatio...gnature='0x')]
+E     Right contains one more item: UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     +  ,
+E     -  UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32',
+E     -                nonce='0x0',
+E     -                initCode='0x',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0x77359400',
+E     -                maxPriorityFeePerGas='0x3b9aca00',
+E     -                paymasterAndData='0x',
+E     -                signature='0x'),
+E       ]
+___________________________ test_codehash_changed[] ____________________________
+tests/bundle/test_codehash.py:44: in test_codehash_changed
+    assert response.result, "userop dropped by bundler"
+E   AttributeError: 'Error' object has no attribute 'result'
+________________ test_rule[unstaked][paymaster][no_storage][ok] ________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=15)
+________________ test_rule[unstaked][paymaster][storage][drop] _________________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=17).code
+___________ test_rule[unstaked][paymaster][reference_storage][drop] ____________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=19).code
+________ test_rule[unstaked][paymaster][reference_storage_struct][drop] ________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=21).code
+_____________ test_rule[unstaked][paymaster][account_storage][ok] ______________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=23)
+________ test_rule[unstaked][paymaster][account_reference_storage][ok] _________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=25)
+_____ test_rule[unstaked][paymaster][account_reference_storage_struct][ok] _____
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=27)
+__ test_rule[unstaked][paymaster][account_reference_storage_init_code][drop] ___
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=29).code
+________________ test_rule[unstaked][paymaster][context][drop] _________________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=31).code
+____________ test_rule[unstaked][paymaster][external_storage][drop] ____________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=33).code
+_________________ test_rule[staked][paymaster][no_storage][ok] _________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=35)
+__________________ test_rule[staked][paymaster][storage][ok] ___________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=37)
+_____________ test_rule[staked][paymaster][reference_storage][ok] ______________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=39)
+__________ test_rule[staked][paymaster][reference_storage_struct][ok] __________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=41)
+______________ test_rule[staked][paymaster][account_storage][ok] _______________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=43)
+_________ test_rule[staked][paymaster][account_reference_storage][ok] __________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=45)
+______ test_rule[staked][paymaster][account_reference_storage_struct][ok] ______
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=47)
+____ test_rule[staked][paymaster][account_reference_storage_init_code][ok] _____
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=49)
+__________________ test_rule[staked][paymaster][context][ok] ___________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=51)
+_____________ test_rule[staked][paymaster][external_storage][drop] _____________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=53).code
+_________________ test_rule[unstaked][factory][no_storage][ok] _________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=55)
+_________________ test_rule[unstaked][factory][storage][drop] __________________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=57).code
+____________ test_rule[unstaked][factory][reference_storage][drop] _____________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=59).code
+_________ test_rule[unstaked][factory][reference_storage_struct][drop] _________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=61).code
+______________ test_rule[unstaked][factory][account_storage][ok] _______________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=63)
+________ test_rule[unstaked][factory][account_reference_storage][drop] _________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=65).code
+_____ test_rule[unstaked][factory][account_reference_storage_struct][drop] _____
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=67).code
+_____________ test_rule[unstaked][factory][external_storage][drop] _____________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=69).code
+__________________ test_rule[staked][factory][no_storage][ok] __________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=71)
+___________________ test_rule[staked][factory][storage][ok] ____________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=73)
+______________ test_rule[staked][factory][reference_storage][ok] _______________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=75)
+___________ test_rule[staked][factory][reference_storage_struct][ok] ___________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=77)
+_______________ test_rule[staked][factory][account_storage][ok] ________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=79)
+__________ test_rule[staked][factory][account_reference_storage][ok] ___________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=81)
+_______ test_rule[staked][factory][account_reference_storage_struct][ok] _______
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=83)
+______________ test_rule[staked][factory][external_storage][drop] ______________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=85).code
+_________________ test_rule[unstaked][account][no_storage][ok] _________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=87)
+______________ test_rule[unstaked][account][account_storage][ok] _______________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=89)
+_________ test_rule[unstaked][account][account_reference_storage][ok] __________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=91)
+______ test_rule[unstaked][account][account_reference_storage_struct][ok] ______
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=93)
+_____________ test_rule[unstaked][account][external_storage][drop] _____________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=95).code
+__________________ test_rule[staked][account][no_storage][ok] __________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=97)
+_______________ test_rule[staked][account][account_storage][ok] ________________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=99)
+__________ test_rule[staked][account][account_reference_storage][ok] ___________
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=101)
+_______ test_rule[staked][account][account_reference_storage_struct][ok] _______
+tests/bundle/test_storage_rules.py:18: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:20: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='Internal error', data=None, id=103)
+______________ test_rule[staked][account][external_storage][drop] ______________
+tests/bundle/test_storage_rules.py:311: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:24: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=105).code
+_______________________ test_account_banned_opcode[GAS] ________________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=106).code
+______________________ test_account_banned_opcode[NUMBER] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=107).code
+____________________ test_account_banned_opcode[TIMESTAMP] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=108).code
+_____________________ test_account_banned_opcode[COINBASE] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=109).code
+____________________ test_account_banned_opcode[DIFFICULTY] ____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=110).code
+_____________________ test_account_banned_opcode[BASEFEE] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=111).code
+_____________________ test_account_banned_opcode[GASLIMIT] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=112).code
+_____________________ test_account_banned_opcode[GASPRICE] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=113).code
+___________________ test_account_banned_opcode[SELFBALANCE] ____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=114).code
+_____________________ test_account_banned_opcode[BALANCE] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=115).code
+______________________ test_account_banned_opcode[ORIGIN] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=116).code
+____________________ test_account_banned_opcode[BLOCKHASH] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=117).code
+______________________ test_account_banned_opcode[CREATE] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=118).code
+_____________________ test_account_banned_opcode[CREATE2] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=119).code
+___________________ test_account_banned_opcode[SELFDESTRUCT] ___________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=120).code
+______________________ test_paymaster_banned_opcode[GAS] _______________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=121).code
+_____________________ test_paymaster_banned_opcode[NUMBER] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=122).code
+___________________ test_paymaster_banned_opcode[TIMESTAMP] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=123).code
+____________________ test_paymaster_banned_opcode[COINBASE] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=124).code
+___________________ test_paymaster_banned_opcode[DIFFICULTY] ___________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=125).code
+____________________ test_paymaster_banned_opcode[BASEFEE] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=126).code
+____________________ test_paymaster_banned_opcode[GASLIMIT] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=127).code
+____________________ test_paymaster_banned_opcode[GASPRICE] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=128).code
+__________________ test_paymaster_banned_opcode[SELFBALANCE] ___________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=129).code
+____________________ test_paymaster_banned_opcode[BALANCE] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=130).code
+_____________________ test_paymaster_banned_opcode[ORIGIN] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=131).code
+___________________ test_paymaster_banned_opcode[BLOCKHASH] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=132).code
+_____________________ test_paymaster_banned_opcode[CREATE] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=133).code
+____________________ test_paymaster_banned_opcode[CREATE2] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=134).code
+__________________ test_paymaster_banned_opcode[SELFDESTRUCT] __________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=135).code
+______________________ test_factory_banned_opcode[NUMBER] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=137).code
+_____________________ test_factory_banned_opcode[BALANCE] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=145).code
+_____________________ test_factory_banned_opcode[CREATE2] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=149).code
+_____________________ test_eth_estimateUserOperationGas[] ______________________
+tests/rpc/test_eth_estimateUserOperationGas.py:20: in test_eth_estimateUserOperationGas
+    validate(instance=response.result, schema=schema)
+.venv/lib/python3.10/site-packages/jsonschema/validators.py:1121: in validate
+    raise error
+E   jsonschema.exceptions.ValidationError: 'verificationGas' is a required property
+E   
+E   Failed validating 'required' in schema:
+E       {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+E                                                   'type': 'string'},
+E                                                  {'type': 'number'}],
+E                                        'title': 'callGasLimit'},
+E                       'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+E                                                         'type': 'string'},
+E                                                        {'type': 'number'}],
+E                                              'title': 'preVerificationGas'},
+E                       'verificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+E                                                      'type': 'string'},
+E                                                     {'type': 'number'}],
+E                                           'title': 'verificationGas'}},
+E        'required': ['callGasLimit', 'preVerificationGas', 'verificationGas'],
+E        'title': 'UserOperation Gas parameters',
+E        'type': 'object'}
+E   
+E   On instance:
+E       {'callGasLimit': '0xab10',
+E        'preVerificationGas': '0xae00',
+E        'verificationGasLimit': '0x4c8a1'}
+______________ test_eth_estimateUserOperationGas_execution_revert ______________
+tests/rpc/test_eth_estimateUserOperationGas.py:29: in test_eth_estimateUserOperationGas_execution_revert
+    assert_rpc_error(response, "test fail", RPCErrorCode.EXECUTION_REVERTED)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32000 == <RPCErrorCode.EXECUTION_REVERTED: -32521>
+E    +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=153).code
+_____________ test_eth_estimateUserOperationGas_simulation_revert ______________
+tests/rpc/test_eth_estimateUserOperationGas.py:37: in test_eth_estimateUserOperationGas_simulation_revert
+    assert_rpc_error(response, "dead signature", RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32000 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+E    +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=154).code
+______________________ test_eth_getUserOperationByHash[] _______________________
+tests/rpc/test_eth_getUserOperationByHash.py:16: in test_eth_getUserOperationByHash
+    ) == userop_hash(helper_contract, userop), "user operation mismatch"
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_eth_getUserOperationByHash_error _____________________
+tests/rpc/test_eth_getUserOperationByHash.py:28: in test_eth_getUserOperationByHash_error
+    assert_rpc_error(response, "Missing/invalid userOpHash", -32601)
+tests/utils.py:101: in assert_rpc_error
+    assert message in response.message
+E   AssertionError: assert 'Missing/invalid userOpHash' in 'Method not found'
+E    +  where 'Method not found' = Error(code=-32601, message='Method not found', data=None, id=158).message
+______________________ test_eth_getUserOperationReceipt[] ______________________
+tests/rpc/test_eth_getUserOperationReceipt.py:15: in test_eth_getUserOperationReceipt
+    assert response.result["userOpHash"] == userop_hash(helper_contract, userop)
+E   TypeError: 'NoneType' object is not subscriptable
+____________________ test_eth_getUserOperationReceipt_error ____________________
+tests/rpc/test_eth_getUserOperationReceipt.py:26: in test_eth_getUserOperationReceipt_error
+    assert_rpc_error(response, "Missing/invalid userOpHash", -32601)
+tests/utils.py:100: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32602 == -32601
+E    +  where -32602 = Error(code=-32602, message='invalid length 0, expected a (both 0x-prefixed or not) hex string or byte array containing 32 bytes at line 1 column 2', data=None, id=162).code
+_________________________ test_eth_sendUserOperation[] _________________________
+tests/rpc/test_eth_sendUserOperation.py:19: in test_eth_sendUserOperation
+    assert response.result == userop_hash(helper_contract, userop)
+E   AttributeError: 'Error' object has no attribute 'result'
+=============================== warnings summary ===============================
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xdbe736005c82025db0d3977e268d2b7dc7e504b495f12b08f2992636084ab728') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/aa-bundler-rust-launcher.xml -
+=========================== short test summary info ============================
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT]
+PASSED tests/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert
+PASSED tests/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+SKIPPED [1] tests/bundle/test_stake_rules.py:12: Skipped
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_by_fee[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender[] - AssertionError: assert [] == [UserOperatio...gnature='0x')]
+  Right contains one more item: UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+  Full diff:
+    [
+  +  ,
+  -  UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8',
+  -                nonce='0x0',
+  -                initCode='0x',
+  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  -                callGasLimit='0x493e0',
+  -                verificationGasLimit='0xf4240',
+  -                preVerificationGas='0x493e0',
+  -                maxFeePerGas='0x77359400',
+  -                maxPriorityFeePerGas='0x3b9aca00',
+  -                paymasterAndData='0x',
+  -                signature='0x'),
+    ]
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_staked_sender[] - AssertionError: assert [] == [UserOperatio...gnature='0x')]
+  Right contains one more item: UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+  Full diff:
+    [
+  +  ,
+  -  UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32',
+  -                nonce='0x0',
+  -                initCode='0x',
+  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  -                callGasLimit='0x493e0',
+  -                verificationGasLimit='0xf4240',
+  -                preVerificationGas='0x493e0',
+  -                maxFeePerGas='0x77359400',
+  -                maxPriorityFeePerGas='0x3b9aca00',
+  -                paymasterAndData='0x',
+  -                signature='0x'),
+    ]
+FAILED tests/bundle/test_codehash.py::test_codehash_changed[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=15)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=17).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=19).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage_struct][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=21).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=23)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=25)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=27)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_init_code][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=29).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][context][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=31).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=33).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=35)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=37)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=39)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=41)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=43)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=45)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=47)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_init_code][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=49)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][context][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=51)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=53).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=55)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][storage][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=57).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=59).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage_struct][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=61).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=63)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=65).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage_struct][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=67).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][external_storage][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=69).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=71)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][storage][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=73)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=75)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=77)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=79)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=81)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=83)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][external_storage][drop] - assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \'"\' at position 0', data=None, id=85).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=87)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=89)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=91)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=93)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=95).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=97)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=99)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=101)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='Internal error', data=None, id=103)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=105).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GAS] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=106).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=107).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=108).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=109).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=110).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=111).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=112).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=113).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=114).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=115).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=116).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=117).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=118).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=119).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=120).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=121).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=122).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=123).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=124).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=125).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=126).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=127).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=128).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=129).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=130).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=131).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=132).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=133).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=134).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=135).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=137).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=145).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=149).code
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[] - jsonschema.exceptions.ValidationError: 'verificationGas' is a required property
+
+Failed validating 'required' in schema:
+    {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+                                                'type': 'string'},
+                                               {'type': 'number'}],
+                                     'title': 'callGasLimit'},
+                    'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+                                                      'type': 'string'},
+                                                     {'type': 'number'}],
+                                           'title': 'preVerificationGas'},
+                    'verificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+                                                   'type': 'string'},
+                                                  {'type': 'number'}],
+                                        'title': 'verificationGas'}},
+     'required': ['callGasLimit', 'preVerificationGas', 'verificationGas'],
+     'title': 'UserOperation Gas parameters',
+     'type': 'object'}
+
+On instance:
+    {'callGasLimit': '0xab10',
+     'preVerificationGas': '0xae00',
+     'verificationGasLimit': '0x4c8a1'}
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert - AssertionError: assert -32000 == <RPCErrorCode.EXECUTION_REVERTED: -32521>
+ +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=153).code
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert - AssertionError: assert -32000 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+ +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=154).code
+FAILED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error - AssertionError: assert 'Missing/invalid userOpHash' in 'Method not found'
+ +  where 'Method not found' = Error(code=-32601, message='Method not found', data=None, id=158).message
+FAILED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[] - TypeError: 'NoneType' object is not subscriptable
+FAILED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error - AssertionError: assert -32602 == -32601
+ +  where -32602 = Error(code=-32602, message='invalid length 0, expected a (both 0x-prefixed or not) hex string or byte array containing 32 bytes at line 1 column 2', data=None, id=162).code
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[] - AttributeError: 'Error' object has no attribute 'result'
+============= 91 failed, 15 passed, 1 skipped, 1 warning in 31.22s =============

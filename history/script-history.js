@@ -1,4 +1,2027 @@
 testHistory={
+  "20230304/063228": {
+    "stackup-bundler-launcher": {
+      "name": "Stackup Bundler",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "1",
+      "tests": "107",
+      "time": "30.328",
+      "timestamp": "2023-03-04T06:31:56.053635",
+      "hostname": "fv-az487-601",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_by_fee[]",
+          "time": "0.115",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:42: in test_bundle_replace_by_fee\n    assert higher_fee_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          }
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.340"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.420"
+        },
+        "4": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.495"
+        },
+        "5": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.222"
+        },
+        "6": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.217"
+        },
+        "7": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.223"
+        },
+        "8": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.236"
+        },
+        "9": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.229"
+        },
+        "10": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.231"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.238"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.418"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.220"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.231"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.251"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.257"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.258"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.262"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.259"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.263"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.270"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.459"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.259"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.255"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.278"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.278"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.285"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.298"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.286"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.287"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.297"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.391"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.316"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.317"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.325"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.334"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.319"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.319"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.330"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.320"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.153"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.146"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.161"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.165"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.180"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.182"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.179"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.192"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.192"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.186"
+        },
+        "51": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.123"
+        },
+        "52": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.124"
+        },
+        "53": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.128"
+        },
+        "54": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.125"
+        },
+        "55": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.127"
+        },
+        "56": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.131"
+        },
+        "57": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.127"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.128"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.128"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.129"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.133"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.129"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.136"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.136"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.136"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.208"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.213"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.211"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.213"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.210"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.216"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.211"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.216"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.214"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.215"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.215"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.218"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.215"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.220"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.213"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.274"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.271"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.275"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.274"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.270"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.274"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.274"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.283"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.276"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.277"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.285"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.284"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.283"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.281"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.278"
+        },
+        "96": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.009"
+        },
+        "97": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.055"
+        },
+        "98": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.050"
+        },
+        "99": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.048"
+        },
+        "100": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.148"
+        },
+        "101": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.006"
+        },
+        "102": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.162"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.006"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.133"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.093"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.011"
+        }
+      }
+    },
+    "aabundler-launcher": {
+      "name": "AA-Reference-Bundler/0.5.0",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "1",
+      "tests": "107",
+      "time": "33.802",
+      "timestamp": "2023-03-04T06:31:10.045350",
+      "hostname": "fv-az487-601",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_by_fee[]",
+          "time": "0.286"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.556"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.545"
+        },
+        "4": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.642"
+        },
+        "5": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.221"
+        },
+        "6": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.210"
+        },
+        "7": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.214"
+        },
+        "8": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.227"
+        },
+        "9": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.235"
+        },
+        "10": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.233"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.241"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.420"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.212"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.218"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.257"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.254"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.262"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.268"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.264"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.263"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.281"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.473"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.255"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.257"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.289"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.276"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.287"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.295"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.297"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.281"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.295"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.291"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.321"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.323"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.325"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.346"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.326"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.345"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.348"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.317"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.166"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.150"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.159"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.165"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.175"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.182"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.184"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.196"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.203"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.175"
+        },
+        "51": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.128"
+        },
+        "52": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.129"
+        },
+        "53": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.125"
+        },
+        "54": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.129"
+        },
+        "55": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.125"
+        },
+        "56": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.130"
+        },
+        "57": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.134"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.131"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.128"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.132"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.132"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.131"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.139"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.138"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.135"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.212"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.211"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.210"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.214"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.210"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.213"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.212"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.216"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.213"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.218"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.216"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.215"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.221"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.220"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.213"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.278"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.278"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.271"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.277"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.276"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.283"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.275"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.283"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.281"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.280"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.284"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.277"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.289"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.283"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.280"
+        },
+        "96": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.013"
+        },
+        "97": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.066"
+        },
+        "98": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.067"
+        },
+        "99": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.050"
+        },
+        "100": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.299"
+        },
+        "101": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.005"
+        },
+        "102": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.250"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.003"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.213"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.096"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.011"
+        }
+      }
+    },
+    "aa-bundler-rust-launcher": {
+      "name": "aa-bundler in Rust",
+      "errors": "0",
+      "failures": "91",
+      "skipped": "1",
+      "tests": "107",
+      "time": "34.554",
+      "timestamp": "2023-03-04T06:30:22.992571",
+      "hostname": "fv-az487-601",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_by_fee[]",
+          "time": "0.095",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:40: in test_bundle_replace_by_fee\n    assert lower_fee_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          }
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.139",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:60: in test_max_allowed_ops_unstaked_sender\n    assert dump_mempool() == wallet_ops[: i + 1]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0xFe6FAF22E750d3916A7ca0f5C450158701C572d8',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          }
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.262",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:86: in test_max_allowed_ops_staked_sender\n    assert dump_mempool() == wallet_ops[: i + 1]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0x94960dbba0013AC4c50ADca3eAD4868Bf01dfA32',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          }
+        },
+        "4": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.092",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_codehash.py:44: in test_codehash_changed\n    assert response.result, \"userop dropped by bundler\"\nE   AttributeError: 'Error' object has no attribute 'result'"
+          }
+        },
+        "5": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.165",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=15)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=15)"
+          }
+        },
+        "6": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.166",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=17).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=17).code"
+          }
+        },
+        "7": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.166",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=19).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=19).code"
+          }
+        },
+        "8": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.165",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=21).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=21).code"
+          }
+        },
+        "9": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.166",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=23)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=23)"
+          }
+        },
+        "10": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.164",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=25)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=25)"
+          }
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.164",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=27)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=27)"
+          }
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.415",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=29).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=29).code"
+          }
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.170",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=31).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=31).code"
+          }
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.165",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=33).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=33).code"
+          }
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.197",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=35)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=35)"
+          }
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.198",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=37)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=37)"
+          }
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.196",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=39)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=39)"
+          }
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.200",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=41)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=41)"
+          }
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.199",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=43)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=43)"
+          }
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.197",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=45)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=45)"
+          }
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.199",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=47)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=47)"
+          }
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.444",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=49)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=49)"
+          }
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.199",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=51)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=51)"
+          }
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.199",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=53).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=53).code"
+          }
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.257",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=55)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=55)"
+          }
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.293",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=57).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=57).code"
+          }
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.272",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=59).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=59).code"
+          }
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.284",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=61).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=61).code"
+          }
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.271",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=63)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=63)"
+          }
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.275",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=65).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=65).code"
+          }
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.279",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=67).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=67).code"
+          }
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.275",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=69).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=69).code"
+          }
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.293",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=71)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=71)"
+          }
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.400",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=73)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=73)"
+          }
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.302",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=75)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=75)"
+          }
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.311",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=77)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=77)"
+          }
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.299",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=79)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=79)"
+          }
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.308",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=81)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=81)"
+          }
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.311",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=83)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=83)"
+          }
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.303",
+          "failure": {
+            "message": "assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=85).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   assert -32000 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32000 = Error(code=-32000, message='error parsing user operation hash: Invalid character \\'\"\\' at position 0', data=None, id=85).code"
+          }
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.098",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=87)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=87)"
+          }
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.098",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=89)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=89)"
+          }
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.100",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=91)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=91)"
+          }
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.097",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=93)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=93)"
+          }
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.098",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=95).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=95).code"
+          }
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.135",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=97)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=97)"
+          }
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.129",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=99)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=99)"
+          }
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.129",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=101)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=101)"
+          }
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.130",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32603, message='Internal error', data=None, id=103)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32603, message='Internal error', data=None, id=103)"
+          }
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.130",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=105).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=105).code"
+          }
+        },
+        "51": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.094",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=106).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=106).code"
+          }
+        },
+        "52": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.097",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=107).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=107).code"
+          }
+        },
+        "53": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=108).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=108).code"
+          }
+        },
+        "54": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=109).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=109).code"
+          }
+        },
+        "55": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=110).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=110).code"
+          }
+        },
+        "56": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=111).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=111).code"
+          }
+        },
+        "57": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.120",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=112).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=112).code"
+          }
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=113).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=113).code"
+          }
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=114).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=114).code"
+          }
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=115).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=115).code"
+          }
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.096",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=116).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=116).code"
+          }
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.091",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=117).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=117).code"
+          }
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.095",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=118).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=118).code"
+          }
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.093",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=119).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=119).code"
+          }
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.092",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=120).code",
+            "#text": "tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=120).code"
+          }
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.160",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=121).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=121).code"
+          }
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.161",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=122).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=122).code"
+          }
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.161",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=123).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=123).code"
+          }
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.167",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=124).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=124).code"
+          }
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.166",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=125).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=125).code"
+          }
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.161",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=126).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=126).code"
+          }
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.161",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=127).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=127).code"
+          }
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.161",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=128).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=128).code"
+          }
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.165",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=129).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=129).code"
+          }
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.163",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=130).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=130).code"
+          }
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.162",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=131).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=131).code"
+          }
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.264",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=132).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=132).code"
+          }
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.161",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=133).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=133).code"
+          }
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.160",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=134).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=134).code"
+          }
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.162",
+          "failure": {
+            "message": "AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=135).code",
+            "#text": "tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32603 = Error(code=-32603, message='Internal error', data=None, id=135).code"
+          }
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.265"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.262",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=137).code",
+            "#text": "tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=137).code"
+          }
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.266"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.263"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.268"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.269"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.293"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.272"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.267"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.270",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=145).code",
+            "#text": "tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=145).code"
+          }
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.269"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.266"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.272"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.273",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=149).code",
+            "#text": "tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=149).code"
+          }
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.262"
+        },
+        "96": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.011"
+        },
+        "97": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.058",
+          "failure": {
+            "message": "jsonschema.exceptions.ValidationError: 'verificationGas' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                'type': 'string'},\n                                               {'type': 'number'}],\n                                     'title': 'callGasLimit'},\n                    'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                      'type': 'string'},\n                                                     {'type': 'number'}],\n                                           'title': 'preVerificationGas'},\n                    'verificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                   'type': 'string'},\n                                                  {'type': 'number'}],\n                                        'title': 'verificationGas'}},\n     'required': ['callGasLimit', 'preVerificationGas', 'verificationGas'],\n     'title': 'UserOperation Gas parameters',\n     'type': 'object'}\n\nOn instance:\n    {'callGasLimit': '0xab10',\n     'preVerificationGas': '0xae00',\n     'verificationGasLimit': '0x4c8a1'}",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:20: in test_eth_estimateUserOperationGas\n    validate(instance=response.result, schema=schema)\n.venv/lib/python3.10/site-packages/jsonschema/validators.py:1121: in validate\n    raise error\nE   jsonschema.exceptions.ValidationError: 'verificationGas' is a required property\nE   \nE   Failed validating 'required' in schema:\nE       {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                   'type': 'string'},\nE                                                  {'type': 'number'}],\nE                                        'title': 'callGasLimit'},\nE                       'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                         'type': 'string'},\nE                                                        {'type': 'number'}],\nE                                              'title': 'preVerificationGas'},\nE                       'verificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                      'type': 'string'},\nE                                                     {'type': 'number'}],\nE                                           'title': 'verificationGas'}},\nE        'required': ['callGasLimit', 'preVerificationGas', 'verificationGas'],\nE        'title': 'UserOperation Gas parameters',\nE        'type': 'object'}\nE   \nE   On instance:\nE       {'callGasLimit': '0xab10',\nE        'preVerificationGas': '0xae00',\nE        'verificationGasLimit': '0x4c8a1'}"
+          }
+        },
+        "98": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.054",
+          "failure": {
+            "message": "AssertionError: assert -32000 == <RPCErrorCode.EXECUTION_REVERTED: -32521>\n +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=153).code",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:29: in test_eth_estimateUserOperationGas_execution_revert\n    assert_rpc_error(response, \"test fail\", RPCErrorCode.EXECUTION_REVERTED)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32000 == <RPCErrorCode.EXECUTION_REVERTED: -32521>\nE    +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=153).code"
+          }
+        },
+        "99": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.051",
+          "failure": {
+            "message": "AssertionError: assert -32000 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>\n +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=154).code",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:37: in test_eth_estimateUserOperationGas_simulation_revert\n    assert_rpc_error(response, \"dead signature\", RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32000 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>\nE    +  where -32000 = Error(code=-32000, message='GRPC error (uopool): error estimating user operation gas', data=None, id=154).code"
+          }
+        },
+        "100": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.098",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/rpc/test_eth_getUserOperationByHash.py:16: in test_eth_getUserOperationByHash\n    ) == userop_hash(helper_contract, userop), \"user operation mismatch\"\nE   AttributeError: 'Error' object has no attribute 'result'"
+          }
+        },
+        "101": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.003",
+          "failure": {
+            "message": "AssertionError: assert 'Missing/invalid userOpHash' in 'Method not found'\n +  where 'Method not found' = Error(code=-32601, message='Method not found', data=None, id=158).message",
+            "#text": "tests/rpc/test_eth_getUserOperationByHash.py:28: in test_eth_getUserOperationByHash_error\n    assert_rpc_error(response, \"Missing/invalid userOpHash\", -32601)\ntests/utils.py:101: in assert_rpc_error\n    assert message in response.message\nE   AssertionError: assert 'Missing/invalid userOpHash' in 'Method not found'\nE    +  where 'Method not found' = Error(code=-32601, message='Method not found', data=None, id=158).message"
+          }
+        },
+        "102": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.092",
+          "failure": {
+            "message": "TypeError: 'NoneType' object is not subscriptable",
+            "#text": "tests/rpc/test_eth_getUserOperationReceipt.py:15: in test_eth_getUserOperationReceipt\n    assert response.result[\"userOpHash\"] == userop_hash(helper_contract, userop)\nE   TypeError: 'NoneType' object is not subscriptable"
+          }
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.003",
+          "failure": {
+            "message": "AssertionError: assert -32602 == -32601\n +  where -32602 = Error(code=-32602, message='invalid length 0, expected a (both 0x-prefixed or not) hex string or byte array containing 32 bytes at line 1 column 2', data=None, id=162).code",
+            "#text": "tests/rpc/test_eth_getUserOperationReceipt.py:26: in test_eth_getUserOperationReceipt_error\n    assert_rpc_error(response, \"Missing/invalid userOpHash\", -32601)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32602 == -32601\nE    +  where -32602 = Error(code=-32602, message='invalid length 0, expected a (both 0x-prefixed or not) hex string or byte array containing 32 bytes at line 1 column 2', data=None, id=162).code"
+          }
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.093",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:19: in test_eth_sendUserOperation\n    assert response.result == userop_hash(helper_contract, userop)\nE   AttributeError: 'Error' object has no attribute 'result'"
+          }
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.069"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.013"
+        }
+      }
+    }
+  },
   "20230226/122355": {
     "stackup-bundler-launcher": {
       "name": "Stackup Bundler",
