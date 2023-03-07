@@ -1,0 +1,239 @@
+Running launcher ../launchers/skandha-launcher.sh, name=Skandha Bundler
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ethereum/client-go:release-1.10
+ ---> c16c2e0da325
+Step 2/2 : ENTRYPOINT geth       --verbosity 1       --http.vhosts '*,localhost,host.docker.internal'       --http       --http.api personal,eth,net,web3,debug       --http.corsdomain '*'       --http.addr "0.0.0.0"       --nodiscover --maxpeers 0       --networkid 1337       --dev       --allow-insecure-unlock       --rpc.allow-unprotected-txs       --dev.gaslimit 20000000       --ignore-legacy-receipts
+ ---> Running in 466e8b56d65b
+Removing intermediate container 466e8b56d65b
+ ---> 4ce33bb92a76
+Successfully built 4ce33bb92a76
+Successfully tagged skandha_geth-dev:latest
+latest: Pulling from etherspot/skandha
+Digest: sha256:18bb9955f2c14575d3bb46556fc0fe2a93e69e27b5459b6af76554b49bc0989d
+Status: Downloaded newer image for etherspot/skandha:latest
+deploying EntryPoint...
+yarn run v1.22.19
+$ ./scripts/hh-wrapper deploy --network localhost
+Nothing to compile
+No need to generate any newer typings.
+==entrypoint addr= 0x0576a174D229E3cFA37253523E645A78A0C91B57
+==SimpleAccountFactory addr= 0x09c58cf6be8E25560d479bd52B4417d15bCA2845
+Done in 2.63s.
+waiting for bundler to start
+waiting for bundler
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 106 items / 1 skipped
+
+tests/bundle/test_bundle.py .FF                                          [  2%]
+tests/bundle/test_codehash.py F                                          [  3%]
+tests/bundle/test_storage_rules.py ..................................... [ 38%]
+.........                                                                [ 47%]
+tests/opbanning/test_op_banning.py ..................................... [ 82%]
+........                                                                 [ 89%]
+tests/rpc/test_eth_chainId.py .                                          [ 90%]
+tests/rpc/test_eth_estimateUserOperationGas.py ...                       [ 93%]
+tests/rpc/test_eth_getUserOperationByHash.py E.                          [ 95%]
+tests/rpc/test_eth_getUserOperationReceipt.py E.                         [ 97%]
+tests/rpc/test_eth_sendUserOperation.py FF                               [ 99%]
+tests/rpc/test_eth_supportedEntryPoints.py .                             [100%]
+
+==================================== ERRORS ====================================
+_____________ ERROR at setup of test_eth_getUserOperationByHash[] ______________
+tests/conftest.py:105: in execute_user_operation
+    send_bundle_now()
+tests/utils.py:124: in send_bundle_now
+    RPCRequest(method="debug_bundler_sendBundleNow").send()
+tests/types.py:62: in send
+    return jsonrpcclient.responses.to_result(
+.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result
+    response["error"]["code"],
+E   TypeError: string indices must be integers
+_____________ ERROR at setup of test_eth_getUserOperationReceipt[] _____________
+tests/conftest.py:105: in execute_user_operation
+    send_bundle_now()
+tests/utils.py:124: in send_bundle_now
+    RPCRequest(method="debug_bundler_sendBundleNow").send()
+tests/types.py:62: in send
+    return jsonrpcclient.responses.to_result(
+.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result
+    response["error"]["code"],
+E   TypeError: string indices must be integers
+=================================== FAILURES ===================================
+____________________ test_max_allowed_ops_unstaked_sender[] ____________________
+tests/bundle/test_bundle.py:64: in test_max_allowed_ops_unstaked_sender
+    send_bundle_now()
+tests/utils.py:124: in send_bundle_now
+    RPCRequest(method="debug_bundler_sendBundleNow").send()
+tests/types.py:62: in send
+    return jsonrpcclient.responses.to_result(
+.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result
+    response["error"]["code"],
+E   TypeError: string indices must be integers
+_____________________ test_max_allowed_ops_staked_sender[] _____________________
+tests/bundle/test_bundle.py:88: in test_max_allowed_ops_staked_sender
+    send_bundle_now()
+tests/utils.py:124: in send_bundle_now
+    RPCRequest(method="debug_bundler_sendBundleNow").send()
+tests/types.py:62: in send
+    return jsonrpcclient.responses.to_result(
+.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result
+    response["error"]["code"],
+E   TypeError: string indices must be integers
+___________________________ test_codehash_changed[] ____________________________
+tests/bundle/test_codehash.py:73: in test_codehash_changed
+    send_bundle_now()
+tests/utils.py:124: in send_bundle_now
+    RPCRequest(method="debug_bundler_sendBundleNow").send()
+tests/types.py:62: in send
+    return jsonrpcclient.responses.to_result(
+.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result
+    response["error"]["code"],
+E   TypeError: string indices must be integers
+_________________________ test_eth_sendUserOperation[] _________________________
+tests/rpc/test_eth_sendUserOperation.py:17: in test_eth_sendUserOperation
+    send_bundle_now()
+tests/utils.py:124: in send_bundle_now
+    RPCRequest(method="debug_bundler_sendBundleNow").send()
+tests/types.py:62: in send
+    return jsonrpcclient.responses.to_result(
+.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result
+    response["error"]["code"],
+E   TypeError: string indices must be integers
+______________________ test_eth_sendUserOperation_revert _______________________
+tests/rpc/test_eth_sendUserOperation.py:29: in test_eth_sendUserOperation_revert
+    send_bundle_now()
+tests/utils.py:124: in send_bundle_now
+    RPCRequest(method="debug_bundler_sendBundleNow").send()
+tests/types.py:62: in send
+    return jsonrpcclient.responses.to_result(
+.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result
+    response["error"]["code"],
+E   TypeError: string indices must be integers
+=============================== warnings summary ===============================
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x9f2b459a61c34be0ba7af1e3f3e74cb85932bb8b7c6bc67af5cad3f8054ecc9b') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xf9639efae56fef491811946f79d733271dbf5e2c187a969303ae32af58a43dab') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x942b49d0923a38d9e563c85e1f5c7bfb5d35e0402c01beac1d6e1c60ee9c04db') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/skandha-launcher.xml -
+=========================== short test summary info ============================
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_by_fee[]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][context][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_init_code][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][context][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][external_storage][drop]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT]
+PASSED tests/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[]
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert
+PASSED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+PASSED tests/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+SKIPPED [1] tests/bundle/test_stake_rules.py:12: Skipped
+ERROR tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[] - TypeError: string indices must be integers
+ERROR tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[] - TypeError: string indices must be integers
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender[] - TypeError: string indices must be integers
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_staked_sender[] - TypeError: string indices must be integers
+FAILED tests/bundle/test_codehash.py::test_codehash_changed[] - TypeError: string indices must be integers
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[] - TypeError: string indices must be integers
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert - TypeError: string indices must be integers
+======== 5 failed, 99 passed, 1 skipped, 3 warnings, 2 errors in 48.47s ========
