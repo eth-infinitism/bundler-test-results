@@ -1,4 +1,2690 @@
 testHistory={
+  "20230313/183254": {
+    "stackup-bundler-launcher": {
+      "name": "Stackup Bundler",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "1",
+      "tests": "107",
+      "time": "30.967",
+      "timestamp": "2023-03-13T18:32:21.317130",
+      "hostname": "fv-az401-180",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_by_fee[]",
+          "time": "0.124",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:42: in test_bundle_replace_by_fee\n    assert higher_fee_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          }
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.355"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.437"
+        },
+        "4": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.508"
+        },
+        "5": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.341"
+        },
+        "6": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.234"
+        },
+        "7": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.240"
+        },
+        "8": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.242"
+        },
+        "9": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.237"
+        },
+        "10": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.243"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.247"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.444"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.237"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.242"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.266"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.264"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.273"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.280"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.277"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.282"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.282"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.486"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.271"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.274"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.296"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.294"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.302"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.308"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.303"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.301"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.316"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.307"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.335"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.342"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.348"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.348"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.331"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.342"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.353"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.335"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.159"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.156"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.170"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.169"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.200"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.188"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.192"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.199"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.208"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.194"
+        },
+        "51": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.129"
+        },
+        "52": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.128"
+        },
+        "53": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.129"
+        },
+        "54": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.133"
+        },
+        "55": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.130"
+        },
+        "56": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.132"
+        },
+        "57": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.133"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.131"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.135"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.133"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.134"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.143"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.137"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.141"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.137"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.224"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.220"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.225"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.218"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.222"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.214"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.220"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.216"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.222"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.216"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.220"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.222"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.219"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.224"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.218"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.283"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.284"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.281"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.289"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.285"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.284"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.284"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.284"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.282"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.286"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.283"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.285"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.289"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.285"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.279"
+        },
+        "96": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.010"
+        },
+        "97": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.057"
+        },
+        "98": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.054"
+        },
+        "99": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.050"
+        },
+        "100": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.158"
+        },
+        "101": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.006"
+        },
+        "102": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.163"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.007"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.136"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.102"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.011"
+        }
+      }
+    },
+    "skandha-launcher": {
+      "name": "Skandha Bundler",
+      "errors": "2",
+      "failures": "103",
+      "skipped": "1",
+      "tests": "107",
+      "time": "51.379",
+      "timestamp": "2023-03-13T18:31:27.377717",
+      "hostname": "fv-az401-180",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_by_fee[]",
+          "time": "0.083",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_bundle.py:40: in test_bundle_replace_by_fee\n    assert lower_fee_op.send().result\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.108",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_bundle.py:58: in test_max_allowed_ops_unstaked_sender\n    userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.132",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_bundle.py:85: in test_max_allowed_ops_staked_sender\n    userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "4": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.107",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_codehash.py:43: in test_codehash_changed\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "5": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.171",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "6": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.168",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "7": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.167",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "8": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.166",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "9": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.177",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "10": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.165",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.170",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.355",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.163",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.163",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.199",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.201",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.197",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.198",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.206",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.197",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.198",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.382",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.201",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.196",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.254",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.217",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.221",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.224",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.218",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.249",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.220",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.225",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.252",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.363",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.251",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.252",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.245",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.255",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.258",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.256",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.095",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.097",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.096",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.096",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.095",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.130",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.241",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.131",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.131",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.130",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/bundle/test_storage_rules.py:310: in test_rule\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "51": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.092",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "52": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.093",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "53": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.095",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "54": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.091",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "55": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.098",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "56": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.092",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "57": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.093",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.093",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.093",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.095",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.095",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.094",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.094",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.092",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.096",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:40: in test_account_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.171",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.160",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.162",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.162",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.164",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.162",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.159",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.161",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.159",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.214",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.160",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.161",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.169",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.165",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.162",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:51: in test_paymaster_banned_opcode\n    ).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.215",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.241",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.214",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.212",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.210",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.218",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.211",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.235",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.211",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.220",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.212",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.218",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.214",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.216",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.221",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/opbanning/test_op_banning.py:68: in test_factory_banned_opcode\n    response = UserOperation(sender=sender, initCode=initcode).send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "96": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.017"
+        },
+        "97": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.051",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:18: in test_eth_estimateUserOperationGas\n    ).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "98": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.050",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:28: in test_eth_estimateUserOperationGas_execution_revert\n    ).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "99": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.049",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:36: in test_eth_estimateUserOperationGas_simulation_revert\n    ).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "100": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.051",
+          "error": {
+            "message": "failed on setup with \"TypeError: string indices must be integers\"",
+            "#text": "tests/conftest.py:104: in execute_user_operation\n    userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "101": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.005",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/rpc/test_eth_getUserOperationByHash.py:27: in test_eth_getUserOperationByHash_error\n    response = RPCRequest(method=\"eth_getUserOperationByHash\", params=[\"\"]).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "102": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.050",
+          "error": {
+            "message": "failed on setup with \"TypeError: string indices must be integers\"",
+            "#text": "tests/conftest.py:104: in execute_user_operation\n    userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.004",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/rpc/test_eth_getUserOperationReceipt.py:25: in test_eth_getUserOperationReceipt_error\n    response = RPCRequest(method=\"eth_getUserOperationReceipt\", params=[\"\"]).send()\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.055",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:16: in test_eth_sendUserOperation\n    response = userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.056",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:28: in test_eth_sendUserOperation_revert\n    response = bad_sig_userop.send()\ntests/types.py:48: in send\n    ).send(url)\ntests/types.py:62: in send\n    return jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          }
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.010",
+          "failure": {
+            "message": "KeyError: 0",
+            "#text": "tests/rpc/test_eth_supportedEntryPoints.py:11: in test_eth_supportedEntryPoints\n    assert supported_entrypoints[0] == CommandLineArgs.entrypoint\nE   KeyError: 0"
+          }
+        }
+      }
+    },
+    "aabundler-launcher": {
+      "name": "AA-Reference-Bundler/0.5.0",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "1",
+      "tests": "107",
+      "time": "34.316",
+      "timestamp": "2023-03-13T18:30:50.582323",
+      "hostname": "fv-az401-180",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_by_fee[]",
+          "time": "0.292"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.574"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.561"
+        },
+        "4": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.664"
+        },
+        "5": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.232"
+        },
+        "6": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.216"
+        },
+        "7": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.221"
+        },
+        "8": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.235"
+        },
+        "9": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.236"
+        },
+        "10": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.241"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.247"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.435"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.221"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.227"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.266"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.265"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.274"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.289"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.270"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.278"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.292"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.491"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.274"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.260"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.299"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.284"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.297"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.308"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.308"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.295"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.307"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.298"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.336"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.340"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.341"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.355"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.348"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.365"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.364"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.345"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.172"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.154"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.167"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.171"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.195"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.188"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.194"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.199"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.319"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.183"
+        },
+        "51": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.131"
+        },
+        "52": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.133"
+        },
+        "53": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.136"
+        },
+        "54": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.131"
+        },
+        "55": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.134"
+        },
+        "56": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.135"
+        },
+        "57": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.135"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.132"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.133"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.140"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.135"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.144"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.141"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.148"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.146"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.214"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.219"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.217"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.217"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.223"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.217"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.227"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.219"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.223"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.218"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.223"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.222"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.228"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.229"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.216"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.292"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.283"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.296"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.289"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.287"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.294"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.290"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.291"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.295"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.295"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.294"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.291"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.293"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.296"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.292"
+        },
+        "96": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.014"
+        },
+        "97": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.068"
+        },
+        "98": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.070"
+        },
+        "99": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.057"
+        },
+        "100": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.306"
+        },
+        "101": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.006"
+        },
+        "102": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.261"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.004"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.207"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.109"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.012"
+        }
+      }
+    },
+    "aa-bundler-rust-launcher": {
+      "name": "aa-bundler in Rust",
+      "errors": "0",
+      "failures": "14",
+      "skipped": "1",
+      "tests": "107",
+      "time": "30.920",
+      "timestamp": "2023-03-13T18:30:17.037824",
+      "hostname": "fv-az401-180",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_by_fee[]",
+          "time": "0.094",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0xE03B0619d3bC7A2741408933F2EB1b3Bddf5A089', nonce='0x1', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0xE03B0619d3bC7A2741408933F2EB1b3Bddf5A089',\n  -                nonce='0x1',\n  -                initCode='0x',\n  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:41: in test_bundle_replace_by_fee\n    assert dump_mempool() == [lower_fee_op]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0xE03B0619d3bC7A2741408933F2EB1b3Bddf5A089', nonce='0x1', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0xE03B0619d3bC7A2741408933F2EB1b3Bddf5A089',\nE     -                nonce='0x1',\nE     -                initCode='0x',\nE     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          }
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.135",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0x378119Cbd3f021f7bFaaA68DA98F961235BC98B0', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0x378119Cbd3f021f7bFaaA68DA98F961235BC98B0',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:60: in test_max_allowed_ops_unstaked_sender\n    assert dump_mempool() == wallet_ops[: i + 1]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0x378119Cbd3f021f7bFaaA68DA98F961235BC98B0', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0x378119Cbd3f021f7bFaaA68DA98F961235BC98B0',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          }
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.162",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0x257030E8e7206DadD522C9DA418C4f782f47032F', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0x257030E8e7206DadD522C9DA418C4f782f47032F',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:86: in test_max_allowed_ops_staked_sender\n    assert dump_mempool() == wallet_ops[: i + 1]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0x257030E8e7206DadD522C9DA418C4f782f47032F', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0x257030E8e7206DadD522C9DA418C4f782f47032F',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          }
+        },
+        "4": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.119",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0x7E1Ce5e6C438fDB50F96f93856453044752d20C5', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0x7E1Ce5e6C438fDB50F96f93856453044752d20C5',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0x',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_codehash.py:45: in test_codehash_changed\n    assert dump_mempool() == [userop]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0x7E1Ce5e6C438fDB50F96f93856453044752d20C5', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0x7E1Ce5e6C438fDB50F96f93856453044752d20C5',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0x',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          }
+        },
+        "5": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.199"
+        },
+        "6": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.201"
+        },
+        "7": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.206"
+        },
+        "8": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.215"
+        },
+        "9": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.207"
+        },
+        "10": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.209"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.213"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.411"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.205",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          }
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.209"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.227"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.233"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.242"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.250"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.236"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.248"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.248"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.441"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.231"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.244"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.259"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.257"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.270",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=61).code",
+            "#text": "tests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:24: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=61).code"
+          }
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.275"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.271"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.275"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.274"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.269"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.292"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.301"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.305"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.305"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.306"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.305",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=83)",
+            "#text": "tests/bundle/test_storage_rules.py:18: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:311: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:20: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=83)"
+          }
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.345"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.304"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.126"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.127"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.133"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.136"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.138"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.157"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.156"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.169"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.175"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.168"
+        },
+        "51": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.118"
+        },
+        "52": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.116"
+        },
+        "53": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.122"
+        },
+        "54": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.119"
+        },
+        "55": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.119"
+        },
+        "56": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.124"
+        },
+        "57": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.121"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.119"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.120"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.227"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.121"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.120"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.128"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.125"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.128"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.206"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.201"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.202"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.208"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.203"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.206"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.201"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.209"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.204"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.206"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.208"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.204"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.210"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.205"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.198"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.269",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=138).code",
+            "#text": "tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=138).code"
+          }
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.260"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.271"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.268"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.261",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=142).code",
+            "#text": "tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='failed to parse geth trace: Odd number of digits', data=None, id=142).code"
+          }
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.262"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.263"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.268"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.271"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.273"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.264"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.272"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.270"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.272"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.267"
+        },
+        "96": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.011"
+        },
+        "97": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.078"
+        },
+        "98": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.079"
+        },
+        "99": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.051"
+        },
+        "100": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.090",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/rpc/test_eth_getUserOperationByHash.py:16: in test_eth_getUserOperationByHash\n    ) == userop_hash(helper_contract, userop), \"user operation mismatch\"\nE   AttributeError: 'Error' object has no attribute 'result'"
+          }
+        },
+        "101": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.003",
+          "failure": {
+            "message": "AssertionError: assert 'Missing/invalid userOpHash' in 'Method not found'\n +  where 'Method not found' = Error(code=-32601, message='Method not found', data=None, id=160).message",
+            "#text": "tests/rpc/test_eth_getUserOperationByHash.py:28: in test_eth_getUserOperationByHash_error\n    assert_rpc_error(response, \"Missing/invalid userOpHash\", -32601)\ntests/utils.py:101: in assert_rpc_error\n    assert message in response.message\nE   AssertionError: assert 'Missing/invalid userOpHash' in 'Method not found'\nE    +  where 'Method not found' = Error(code=-32601, message='Method not found', data=None, id=160).message"
+          }
+        },
+        "102": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.088",
+          "failure": {
+            "message": "TypeError: 'NoneType' object is not subscriptable",
+            "#text": "tests/rpc/test_eth_getUserOperationReceipt.py:15: in test_eth_getUserOperationReceipt\n    assert response.result[\"userOpHash\"] == userop_hash(helper_contract, userop)\nE   TypeError: 'NoneType' object is not subscriptable"
+          }
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.003",
+          "failure": {
+            "message": "AssertionError: assert -32602 == -32601\n +  where -32602 = Error(code=-32602, message='invalid length 0, expected a (both 0x-prefixed or not) hex string or byte array containing 32 bytes at line 1 column 2', data=None, id=164).code",
+            "#text": "tests/rpc/test_eth_getUserOperationReceipt.py:26: in test_eth_getUserOperationReceipt_error\n    assert_rpc_error(response, \"Missing/invalid userOpHash\", -32601)\ntests/utils.py:100: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32602 == -32601\nE    +  where -32602 = Error(code=-32602, message='invalid length 0, expected a (both 0x-prefixed or not) hex string or byte array containing 32 bytes at line 1 column 2', data=None, id=164).code"
+          }
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.147",
+          "failure": {
+            "message": "assert 0 == 1111111",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:20: in test_eth_sendUserOperation\n    assert state_after == 1111111\nE   assert 0 == 1111111"
+          }
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.067"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.011"
+        }
+      }
+    }
+  },
   "20230307/173401": {
     "stackup-bundler-launcher": {
       "name": "Stackup Bundler",
