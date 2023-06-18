@@ -1,4 +1,3027 @@
 testHistory={
+  "20230618/113102": {
+    "voltaire-bundler-launcher": {
+      "name": "Voltaire-Bundler",
+      "errors": "0",
+      "failures": "10",
+      "skipped": "1",
+      "tests": "115",
+      "time": "50.920",
+      "timestamp": "2023-06-18T11:30:08.997064",
+      "hostname": "fv-az280-52",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.226"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.200"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.203"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.200"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.201"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.214"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.209"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.570"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.626"
+        },
+        "10": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.738"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.281"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.282"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.274"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.286"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.283"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.282"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.294"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.524"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.273"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.282"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.316"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.318"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.320"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.333"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.326"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.324"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.331"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.565"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.316"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.320"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.342"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.346"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.346"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.371"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.347"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.348"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.353"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.346"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.391"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.398"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.393"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.397"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.387"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.396"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.394"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.407"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.197",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=153)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=153)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.165",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=155)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=155)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.157",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=157)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=157)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.448"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.159",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=161)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=161)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.154",
+          "failure": {
+            "message": "AssertionError: assert -32521 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32521 = Error(code=-32521, message='execution reverted', data=None, id=163).code",
+            "#text": "tests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:25: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:103: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32521 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32521 = Error(code=-32521, message='execution reverted', data=None, id=163).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.197",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=165)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=165)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.195",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=167)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=167)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.204",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=169)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=169)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.196",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32521, message='execution reverted', data=None, id=171)",
+            "#text": "tests/bundle/test_storage_rules.py:19: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:21: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32521, message='execution reverted', data=None, id=171)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.198",
+          "failure": {
+            "message": "AssertionError: assert -32521 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32521 = Error(code=-32521, message='execution reverted', data=None, id=173).code",
+            "#text": "tests/bundle/test_storage_rules.py:320: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:25: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:103: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32521 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32521 = Error(code=-32521, message='execution reverted', data=None, id=173).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.158"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.165"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.164"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.170"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.153"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.158"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.171"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.165"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.167"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.165"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.167"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.173"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.169"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.173"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.173"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.280"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.267"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.279"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.267"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.263"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.269"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.275"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.273"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.278"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.272"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.276"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.281"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.276"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.277"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.266"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.337"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.341"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.343"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.337"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.339"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.347"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.384"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.346"
+        },
+        "96": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.345"
+        },
+        "97": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.349"
+        },
+        "98": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.345"
+        },
+        "99": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.347"
+        },
+        "100": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.353"
+        },
+        "101": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.350"
+        },
+        "102": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.340"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.013"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.077"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.075"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.068"
+        },
+        "107": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.248"
+        },
+        "108": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.004"
+        },
+        "109": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.258"
+        },
+        "110": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.005"
+        },
+        "111": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.216"
+        },
+        "112": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.086"
+        },
+        "113": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.074"
+        },
+        "114": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.014"
+        }
+      }
+    },
+    "stackup-bundler-launcher": {
+      "name": "Stackup Bundler",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "1",
+      "tests": "115",
+      "time": "40.463",
+      "timestamp": "2023-06-18T11:29:25.676683",
+      "hostname": "fv-az280-52",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.157"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.150"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.172"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.184"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.169"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.219"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.220"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.455"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.517"
+        },
+        "10": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.624",
+          "failure": {
+            "message": "assert 0 == 1\n +  where 0 = len(())",
+            "#text": "tests/bundle/test_codehash.py:77: in test_codehash_changed\n    assert_useroperation_event(entrypoint_contract, userop, from_block=block_number)\ntests/bundle/test_codehash.py:12: in assert_useroperation_event\n    assert len(logs) == 1\nE   assert 0 == 1\nE    +  where 0 = len(())"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.281"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.281"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.290"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.296"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.316"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.309"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.301"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.542"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.288"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.285"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.323"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.324"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.337"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.343"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.328"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.326"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.342"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.577"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.337"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.338"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.353"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.356"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.359"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.374"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.467"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.363"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.374"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.368"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.399"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.402"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.405"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.420"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.407"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.411"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.416"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.441"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.213"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.217"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.232"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.458"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.237"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.225"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.254"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.263"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.271"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.266"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.264"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.157"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.161"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.158"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.154"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.160"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.156"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.155"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.156"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.159"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.160"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.159"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.160"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.166"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.158"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.168"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.260"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.272"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.276"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.267"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.270"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.259"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.266"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.267"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.278"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.274"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.262"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.266"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.269"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.275"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.268"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.347"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.331"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.333"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.329"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.335"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.337"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.339"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.335"
+        },
+        "96": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.337"
+        },
+        "97": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.338"
+        },
+        "98": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.339"
+        },
+        "99": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.335"
+        },
+        "100": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.338"
+        },
+        "101": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.348"
+        },
+        "102": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.375"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.011"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.139"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.130"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.086"
+        },
+        "107": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.194"
+        },
+        "108": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.009"
+        },
+        "109": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.199"
+        },
+        "110": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.008"
+        },
+        "111": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.175"
+        },
+        "112": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.121"
+        },
+        "113": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.114"
+        },
+        "114": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.013"
+        }
+      }
+    },
+    "skandha-launcher": {
+      "name": "Skandha Bundler",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "1",
+      "tests": "115",
+      "time": "53.537",
+      "timestamp": "2023-06-18T11:28:26.489706",
+      "hostname": "fv-az280-52",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.489"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.343"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.334"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.319"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.312"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.326"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.319"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.957"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "1.043"
+        },
+        "10": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "1.125"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.343"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.304"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.318"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.333"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.361"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.380"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.372"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.584"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.332"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.342"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.371"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.377"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.394"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.408"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.400"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.401"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.409"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.667"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.411"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.380"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.430"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.382"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.392"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.411"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.450"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.389"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.516"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.392"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.463"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.458"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.483"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.513"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.485"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.491"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.502"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.441"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.362"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.331"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.362"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.497"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.349"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.306"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.365"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.364"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.388"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.414"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.368"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.200"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.209"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.212"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.209"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.210"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.217"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.216"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.226"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.230"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.245"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.238"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.241"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.247"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.265"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.245"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.337"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.332"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.340"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.352"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.350"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.355"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.368"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.367"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.364"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.366"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.379"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.372"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.373"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.396"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.341"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.403"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.414"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.419"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.425"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.424"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.439"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.434"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.430"
+        },
+        "96": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.429"
+        },
+        "97": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.439"
+        },
+        "98": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.438"
+        },
+        "99": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.445"
+        },
+        "100": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.443"
+        },
+        "101": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.453"
+        },
+        "102": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.436"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.014"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.080"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.098"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.076"
+        },
+        "107": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.387"
+        },
+        "108": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.005"
+        },
+        "109": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.414"
+        },
+        "110": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.006"
+        },
+        "111": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.352"
+        },
+        "112": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.131"
+        },
+        "113": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.161"
+        },
+        "114": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.014"
+        }
+      }
+    },
+    "aabundler-launcher": {
+      "name": "AA-Reference-Bundler/0.6.0",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "1",
+      "tests": "115",
+      "time": "41.831",
+      "timestamp": "2023-06-18T11:27:40.392219",
+      "hostname": "fv-az280-52",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.254"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.222"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.214"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.225"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.214"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.216"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.204"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.661"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.656"
+        },
+        "10": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.773"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.287"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.366"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.268"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.278"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.285"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.308"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.299"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.521"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.267"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.268"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.324"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.315"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.342"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.342"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.345"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.324"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.349"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.584"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.329"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.311"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.374"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.345"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.351"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.368"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.369"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.351"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.373"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.354"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.411"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.393"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.409"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.419"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.413"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.420"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.423"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.391"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.257"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.219"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.224"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.443"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.243"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.208"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.258"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.264"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.275"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.265"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.249"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.159"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.159"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.160"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.155"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.150"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.160"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.154"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.158"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.164"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.153"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.160"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.162"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.166"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.176"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.170"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.268"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.263"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.260"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.267"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.259"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.273"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.265"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.270"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.272"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.276"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.269"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.273"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.273"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.277"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.276"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.340"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.341"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.335"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.345"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.355"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.335"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.342"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.344"
+        },
+        "96": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.343"
+        },
+        "97": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.337"
+        },
+        "98": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.349"
+        },
+        "99": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.348"
+        },
+        "100": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.348"
+        },
+        "101": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.364"
+        },
+        "102": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.380"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.014"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.075"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.077"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.068"
+        },
+        "107": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.478"
+        },
+        "108": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.004"
+        },
+        "109": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.276"
+        },
+        "110": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.004"
+        },
+        "111": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.252"
+        },
+        "112": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.135"
+        },
+        "113": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.114"
+        },
+        "114": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.013"
+        }
+      }
+    },
+    "aa-bundler-rust-launcher": {
+      "name": "aa-bundler in Rust",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "1",
+      "tests": "115",
+      "time": "39.782",
+      "timestamp": "2023-06-18T11:26:57.595926",
+      "hostname": "fv-az280-52",
+      "testcase": {
+        "0": {
+          "classname": "",
+          "name": "tests.bundle.test_stake_rules",
+          "time": "0.000",
+          "skipped": {
+            "message": "collection skipped",
+            "#text": "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')"
+          }
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.116"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.116"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.113"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.116"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.116"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.140"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.139"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender[]",
+          "time": "0.424"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender[]",
+          "time": "0.487"
+        },
+        "10": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed[]",
+          "time": "0.737"
+        },
+        "11": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][no_storage][ok]",
+          "time": "0.249"
+        },
+        "12": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][storage][drop]",
+          "time": "0.241"
+        },
+        "13": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage][drop]",
+          "time": "0.260"
+        },
+        "14": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.259"
+        },
+        "15": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_storage][ok]",
+          "time": "0.254"
+        },
+        "16": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.256"
+        },
+        "17": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.271"
+        },
+        "18": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]",
+          "time": "0.514"
+        },
+        "19": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][context][drop]",
+          "time": "0.243"
+        },
+        "20": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][paymaster][external_storage][drop]",
+          "time": "0.253"
+        },
+        "21": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][no_storage][ok]",
+          "time": "0.272"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][storage][ok]",
+          "time": "0.279"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage][ok]",
+          "time": "0.298"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.293"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_storage][ok]",
+          "time": "0.286"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage][ok]",
+          "time": "0.291"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.299"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.526"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][context][ok]",
+          "time": "0.288"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][paymaster][external_storage][drop]",
+          "time": "0.297"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][no_storage][ok]",
+          "time": "0.314"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][storage][drop]",
+          "time": "0.311"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage][drop]",
+          "time": "0.330"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.328"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_storage][ok]",
+          "time": "0.315"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage][drop]",
+          "time": "0.336"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.331"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][factory][external_storage][drop]",
+          "time": "0.316"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][no_storage][ok]",
+          "time": "0.353"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][storage][ok]",
+          "time": "0.359"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage][ok]",
+          "time": "0.363"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][reference_storage_struct][ok]",
+          "time": "0.377"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_storage][ok]",
+          "time": "0.354"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage][ok]",
+          "time": "0.358"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.372"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][factory][external_storage][drop]",
+          "time": "0.353"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][no_storage][ok]",
+          "time": "0.219"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_storage][ok]",
+          "time": "0.180"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage][ok]",
+          "time": "0.191"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.415"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.204"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[unstaked][account][external_storage][drop]",
+          "time": "0.194"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][no_storage][ok]",
+          "time": "0.228"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_storage][ok]",
+          "time": "0.232"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage][ok]",
+          "time": "0.224"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][account_reference_storage_struct][ok]",
+          "time": "0.243"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[staked][account][external_storage][drop]",
+          "time": "0.229"
+        },
+        "58": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.136"
+        },
+        "59": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.142"
+        },
+        "60": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.136"
+        },
+        "61": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.137"
+        },
+        "62": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.144"
+        },
+        "63": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.141"
+        },
+        "64": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.140"
+        },
+        "65": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.152"
+        },
+        "66": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.142"
+        },
+        "67": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.140"
+        },
+        "68": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.144"
+        },
+        "69": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.147"
+        },
+        "70": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.146"
+        },
+        "71": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.154"
+        },
+        "72": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.147"
+        },
+        "73": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.244"
+        },
+        "74": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.241"
+        },
+        "75": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.242"
+        },
+        "76": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.247"
+        },
+        "77": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.247"
+        },
+        "78": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.247"
+        },
+        "79": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.241"
+        },
+        "80": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.248"
+        },
+        "81": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.250"
+        },
+        "82": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.255"
+        },
+        "83": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.261"
+        },
+        "84": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.249"
+        },
+        "85": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.255"
+        },
+        "86": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.248"
+        },
+        "87": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.256"
+        },
+        "88": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.311"
+        },
+        "89": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.308"
+        },
+        "90": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.317"
+        },
+        "91": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.318"
+        },
+        "92": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.324"
+        },
+        "93": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.327"
+        },
+        "94": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.339"
+        },
+        "95": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.304"
+        },
+        "96": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.311"
+        },
+        "97": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.366"
+        },
+        "98": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.318"
+        },
+        "99": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.337"
+        },
+        "100": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.329"
+        },
+        "101": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.311"
+        },
+        "102": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.318"
+        },
+        "103": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.012"
+        },
+        "104": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.101"
+        },
+        "105": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.091"
+        },
+        "106": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.060"
+        },
+        "107": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.270"
+        },
+        "108": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.003"
+        },
+        "109": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.272"
+        },
+        "110": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.003"
+        },
+        "111": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.256"
+        },
+        "112": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.093"
+        },
+        "113": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.068"
+        },
+        "114": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.013"
+        }
+      }
+    }
+  },
   "20230618/112143": {
     "voltaire-bundler-launcher": {
       "name": "Voltaire-Bundler",

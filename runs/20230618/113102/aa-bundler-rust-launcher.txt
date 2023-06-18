@@ -1,0 +1,192 @@
+Running launcher /home/runner/work/bundler-test-executor/bundler-test-executor/launchers/aa-bundler-rust-launcher.sh, name=aa-bundler in Rust
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ethereum/client-go:release-1.10
+release-1.10: Pulling from ethereum/client-go
+213ec9aee27d: Pulling fs layer
+4a36b71a98b2: Pulling fs layer
+ee12b8715f0d: Pulling fs layer
+4a36b71a98b2: Verifying Checksum
+4a36b71a98b2: Download complete
+213ec9aee27d: Verifying Checksum
+213ec9aee27d: Download complete
+ee12b8715f0d: Verifying Checksum
+ee12b8715f0d: Download complete
+213ec9aee27d: Pull complete
+4a36b71a98b2: Pull complete
+ee12b8715f0d: Pull complete
+Digest: sha256:03604c12f6123fda67f534c9a68a73dbabd35d5c0a13f0c6cfcf735cfd8760c8
+Status: Downloaded newer image for ethereum/client-go:release-1.10
+ ---> c16c2e0da325
+Step 2/2 : ENTRYPOINT geth       --verbosity 1       --http.vhosts '*,localhost,host.docker.internal'       --http       --http.api personal,eth,net,web3,debug       --http.corsdomain '*'       --http.addr "0.0.0.0"       --nodiscover --maxpeers 0 --mine       --networkid 1337       --dev       --allow-insecure-unlock       --rpc.allow-unprotected-txs       --dev.gaslimit 20000000
+ ---> Running in cc29db72a6da
+Removing intermediate container cc29db72a6da
+ ---> e740ef558c4b
+Successfully built e740ef558c4b
+Successfully tagged aa-bundler-rust_geth-dev:latest
+latest: Pulling from vid201/aa-bundler
+Digest: sha256:318d4b5f27eff55098f07e7c9617b9f30acb45a931cdb29879f6141294aca133
+Status: Downloaded newer image for ghcr.io/vid201/aa-bundler:latest
+yarn run v1.22.19
+$ ./scripts/hh-wrapper deploy --network localhost
+Nothing to compile
+No need to generate any newer typings.
+==entrypoint addr= 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789
+deploying "SimpleAccountFactory" (tx: 0x66ed1465035c16dba4dec43d864d0964a357d7d52630241080d77db8d4d86aa6)...: deployed at 0x9406Cc6185a346906296840746125a0E44976454 with 2799271 gas
+==SimpleAccountFactory addr= 0x9406Cc6185a346906296840746125a0E44976454
+Done in 2.59s.
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 114 items / 1 skipped
+
+tests/bundle/test_bundle.py .........                                    [  7%]
+tests/bundle/test_codehash.py .                                          [  8%]
+tests/bundle/test_storage_rules.py ..................................... [ 41%]
+..........                                                               [ 50%]
+tests/opbanning/test_op_banning.py ..................................... [ 82%]
+........                                                                 [ 89%]
+tests/rpc/test_eth_chainId.py .                                          [ 90%]
+tests/rpc/test_eth_estimateUserOperationGas.py ...                       [ 92%]
+tests/rpc/test_eth_getUserOperationByHash.py ..                          [ 94%]
+tests/rpc/test_eth_getUserOperationReceipt.py ..                         [ 96%]
+tests/rpc/test_eth_sendUserOperation.py ...                              [ 99%]
+tests/rpc/test_eth_supportedEntryPoints.py .                             [100%]
+
+=============================== warnings summary ===============================
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xaf1ce10291908afad803c0892da6d3b4fc1879cc39d345909a8bb0671d8de8ee') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xbc185a5d4fa7fe2a857256eeb10d1bedf710bae7661aefc7a68ea5e9c71fabdf') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x68dd35ba410c1427609d5144915bc64c0cc6c8a41f46181bec937ede47304687') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x57034a6221eb0840a8a2d2afda6c4d03ddabf21ac0a6ab253d589b106783d74a') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/aa-bundler-rust-launcher.xml -
+=========================== short test summary info ============================
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold]
+PASSED tests/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender[]
+PASSED tests/bundle/test_bundle.py::test_max_allowed_ops_staked_sender[]
+PASSED tests/bundle/test_codehash.py::test_codehash_changed[]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_init_code][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][context][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_init_code][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][context][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][factory][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_init_code][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[staked][account][external_storage][drop]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT]
+PASSED tests/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[]
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert
+PASSED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[]
+PASSED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[]
+PASSED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+PASSED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[]
+PASSED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert
+PASSED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature
+PASSED tests/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+SKIPPED [1] tests/bundle/test_stake_rules.py:12: Skipped
+================= 114 passed, 1 skipped, 4 warnings in 30.24s ==================
