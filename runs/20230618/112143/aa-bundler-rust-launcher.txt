@@ -1,0 +1,1200 @@
+Running launcher /home/runner/work/bundler-test-executor/bundler-test-executor/launchers/aa-bundler-rust-launcher.sh, name=aa-bundler in Rust
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ethereum/client-go:release-1.10
+release-1.10: Pulling from ethereum/client-go
+213ec9aee27d: Pulling fs layer
+4a36b71a98b2: Pulling fs layer
+ee12b8715f0d: Pulling fs layer
+213ec9aee27d: Verifying Checksum
+213ec9aee27d: Download complete
+ee12b8715f0d: Verifying Checksum
+ee12b8715f0d: Download complete
+213ec9aee27d: Pull complete
+4a36b71a98b2: Download complete
+4a36b71a98b2: Pull complete
+ee12b8715f0d: Pull complete
+Digest: sha256:03604c12f6123fda67f534c9a68a73dbabd35d5c0a13f0c6cfcf735cfd8760c8
+Status: Downloaded newer image for ethereum/client-go:release-1.10
+ ---> c16c2e0da325
+Step 2/2 : ENTRYPOINT geth       --verbosity 1       --http.vhosts '*,localhost,host.docker.internal'       --http       --http.api personal,eth,net,web3,debug       --http.corsdomain '*'       --http.addr "0.0.0.0"       --nodiscover --maxpeers 0 --mine       --networkid 1337       --dev       --allow-insecure-unlock       --rpc.allow-unprotected-txs       --dev.gaslimit 20000000
+ ---> Running in fe3a1ece4fcf
+Removing intermediate container fe3a1ece4fcf
+ ---> e8f7becad0fb
+Successfully built e8f7becad0fb
+Successfully tagged aa-bundler-rust_geth-dev:latest
+latest: Pulling from vid201/aa-bundler
+Digest: sha256:318d4b5f27eff55098f07e7c9617b9f30acb45a931cdb29879f6141294aca133
+Status: Downloaded newer image for ghcr.io/vid201/aa-bundler:latest
+yarn run v1.22.19
+$ ./scripts/hh-wrapper deploy --network localhost
+Nothing to compile
+No need to generate any newer typings.
+==entrypoint addr= 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789
+deploying "SimpleAccountFactory" (tx: 0x20d6bc5989c3c5377ff95efbb1a96bead4babdc81140a95174cf346065bfafed)...: deployed at 0x9406Cc6185a346906296840746125a0E44976454 with 2799271 gas
+==SimpleAccountFactory addr= 0x9406Cc6185a346906296840746125a0E44976454
+Done in 2.26s.
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 114 items / 1 skipped
+
+tests/bundle/test_bundle.py FFFFFFFFF                                    [  7%]
+tests/bundle/test_codehash.py F                                          [  8%]
+tests/bundle/test_storage_rules.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 41%]
+FFFFFFFFFF                                                               [ 50%]
+tests/opbanning/test_op_banning.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 82%]
+FFFFFFFF                                                                 [ 89%]
+tests/rpc/test_eth_chainId.py .                                          [ 90%]
+tests/rpc/test_eth_estimateUserOperationGas.py FFF                       [ 92%]
+tests/rpc/test_eth_getUserOperationByHash.py F.                          [ 94%]
+tests/rpc/test_eth_getUserOperationReceipt.py F.                         [ 96%]
+tests/rpc/test_eth_sendUserOperation.py FFF                              [ 99%]
+tests/rpc/test_eth_supportedEntryPoints.py F                             [100%]
+
+=================================== FAILURES ===================================
+________________ test_bundle_replace_op[only_priority_fee_bump] ________________
+tests/bundle/test_bundle.py:79: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+__________________ test_bundle_replace_op[only_max_fee_bump] ___________________
+tests/bundle/test_bundle.py:79: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_bundle_replace_op[with_same_fee] _____________________
+tests/bundle/test_bundle.py:79: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_bundle_replace_op[with_less_fee] _____________________
+tests/bundle/test_bundle.py:79: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+_______________ test_bundle_replace_op[fee_bump_below_threshold] _______________
+tests/bundle/test_bundle.py:79: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+________________ test_bundle_replace_op[fee_bump_at_threshold] _________________
+tests/bundle/test_bundle.py:79: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+_______________ test_bundle_replace_op[fee_bump_above_threshold] _______________
+tests/bundle/test_bundle.py:79: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_max_allowed_ops_unstaked_sender[] ____________________
+tests/bundle/test_bundle.py:97: in test_max_allowed_ops_unstaked_sender
+    assert dump_mempool() == wallet_ops[: i + 1]
+tests/utils.py:138: in dump_mempool
+    .result
+E   AttributeError: 'Error' object has no attribute 'result'
+_____________________ test_max_allowed_ops_staked_sender[] _____________________
+tests/bundle/test_bundle.py:123: in test_max_allowed_ops_staked_sender
+    assert dump_mempool() == wallet_ops[: i + 1]
+tests/utils.py:138: in dump_mempool
+    .result
+E   AttributeError: 'Error' object has no attribute 'result'
+___________________________ test_codehash_changed[] ____________________________
+tests/bundle/test_codehash.py:45: in test_codehash_changed
+    assert response.result, "userop dropped by bundler"
+E   AttributeError: 'Error' object has no attribute 'result'
+________________ test_rule[unstaked][paymaster][no_storage][ok] ________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=26)
+________________ test_rule[unstaked][paymaster][storage][drop] _________________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=28).code
+___________ test_rule[unstaked][paymaster][reference_storage][drop] ____________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=30).code
+________ test_rule[unstaked][paymaster][reference_storage_struct][drop] ________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=32).code
+_____________ test_rule[unstaked][paymaster][account_storage][ok] ______________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=34)
+________ test_rule[unstaked][paymaster][account_reference_storage][ok] _________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=36)
+_____ test_rule[unstaked][paymaster][account_reference_storage_struct][ok] _____
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=38)
+__ test_rule[unstaked][paymaster][account_reference_storage_init_code][drop] ___
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=40).code
+________________ test_rule[unstaked][paymaster][context][drop] _________________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=42).code
+____________ test_rule[unstaked][paymaster][external_storage][drop] ____________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=44).code
+_________________ test_rule[staked][paymaster][no_storage][ok] _________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=46)
+__________________ test_rule[staked][paymaster][storage][ok] ___________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=48)
+_____________ test_rule[staked][paymaster][reference_storage][ok] ______________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=50)
+__________ test_rule[staked][paymaster][reference_storage_struct][ok] __________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=52)
+______________ test_rule[staked][paymaster][account_storage][ok] _______________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=54)
+_________ test_rule[staked][paymaster][account_reference_storage][ok] __________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=56)
+______ test_rule[staked][paymaster][account_reference_storage_struct][ok] ______
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=58)
+____ test_rule[staked][paymaster][account_reference_storage_init_code][ok] _____
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=60)
+__________________ test_rule[staked][paymaster][context][ok] ___________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=62)
+_____________ test_rule[staked][paymaster][external_storage][drop] _____________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=64).code
+_________________ test_rule[unstaked][factory][no_storage][ok] _________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=66)
+_________________ test_rule[unstaked][factory][storage][drop] __________________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=68).code
+____________ test_rule[unstaked][factory][reference_storage][drop] _____________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=70).code
+_________ test_rule[unstaked][factory][reference_storage_struct][drop] _________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=72).code
+______________ test_rule[unstaked][factory][account_storage][ok] _______________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=74)
+________ test_rule[unstaked][factory][account_reference_storage][drop] _________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=76).code
+_____ test_rule[unstaked][factory][account_reference_storage_struct][drop] _____
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=78).code
+_____________ test_rule[unstaked][factory][external_storage][drop] _____________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=80).code
+__________________ test_rule[staked][factory][no_storage][ok] __________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=82)
+___________________ test_rule[staked][factory][storage][ok] ____________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=84)
+______________ test_rule[staked][factory][reference_storage][ok] _______________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=86)
+___________ test_rule[staked][factory][reference_storage_struct][ok] ___________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=88)
+_______________ test_rule[staked][factory][account_storage][ok] ________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=90)
+__________ test_rule[staked][factory][account_reference_storage][ok] ___________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=92)
+_______ test_rule[staked][factory][account_reference_storage_struct][ok] _______
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=94)
+______________ test_rule[staked][factory][external_storage][drop] ______________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=96).code
+_________________ test_rule[unstaked][account][no_storage][ok] _________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=98)
+______________ test_rule[unstaked][account][account_storage][ok] _______________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=100)
+_________ test_rule[unstaked][account][account_reference_storage][ok] __________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=102)
+___ test_rule[unstaked][account][account_reference_storage_init_code][drop] ____
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=104).code
+______ test_rule[unstaked][account][account_reference_storage_struct][ok] ______
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=106)
+_____________ test_rule[unstaked][account][external_storage][drop] _____________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=108).code
+__________________ test_rule[staked][account][no_storage][ok] __________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=110)
+_______________ test_rule[staked][account][account_storage][ok] ________________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=112)
+__________ test_rule[staked][account][account_reference_storage][ok] ___________
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=114)
+_______ test_rule[staked][account][account_reference_storage_struct][ok] _______
+tests/bundle/test_storage_rules.py:19: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:21: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=116)
+______________ test_rule[staked][account][external_storage][drop] ______________
+tests/bundle/test_storage_rules.py:320: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:25: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=118).code
+_______________________ test_account_banned_opcode[GAS] ________________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=119).code
+______________________ test_account_banned_opcode[NUMBER] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=120).code
+____________________ test_account_banned_opcode[TIMESTAMP] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=121).code
+_____________________ test_account_banned_opcode[COINBASE] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=122).code
+____________________ test_account_banned_opcode[DIFFICULTY] ____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=123).code
+_____________________ test_account_banned_opcode[BASEFEE] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=124).code
+_____________________ test_account_banned_opcode[GASLIMIT] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=125).code
+_____________________ test_account_banned_opcode[GASPRICE] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=126).code
+___________________ test_account_banned_opcode[SELFBALANCE] ____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=127).code
+_____________________ test_account_banned_opcode[BALANCE] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=128).code
+______________________ test_account_banned_opcode[ORIGIN] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=129).code
+____________________ test_account_banned_opcode[BLOCKHASH] _____________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=130).code
+______________________ test_account_banned_opcode[CREATE] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=131).code
+_____________________ test_account_banned_opcode[CREATE2] ______________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=132).code
+___________________ test_account_banned_opcode[SELFDESTRUCT] ___________________
+tests/opbanning/test_op_banning.py:41: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=133).code
+______________________ test_paymaster_banned_opcode[GAS] _______________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=134).code
+_____________________ test_paymaster_banned_opcode[NUMBER] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=135).code
+___________________ test_paymaster_banned_opcode[TIMESTAMP] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=136).code
+____________________ test_paymaster_banned_opcode[COINBASE] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=137).code
+___________________ test_paymaster_banned_opcode[DIFFICULTY] ___________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=138).code
+____________________ test_paymaster_banned_opcode[BASEFEE] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=139).code
+____________________ test_paymaster_banned_opcode[GASLIMIT] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=140).code
+____________________ test_paymaster_banned_opcode[GASPRICE] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=141).code
+__________________ test_paymaster_banned_opcode[SELFBALANCE] ___________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=142).code
+____________________ test_paymaster_banned_opcode[BALANCE] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=143).code
+_____________________ test_paymaster_banned_opcode[ORIGIN] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=144).code
+___________________ test_paymaster_banned_opcode[BLOCKHASH] ____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=145).code
+_____________________ test_paymaster_banned_opcode[CREATE] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=146).code
+____________________ test_paymaster_banned_opcode[CREATE2] _____________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=147).code
+__________________ test_paymaster_banned_opcode[SELFDESTRUCT] __________________
+tests/opbanning/test_op_banning.py:52: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=148).code
+_______________________ test_factory_banned_opcode[GAS] ________________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=149).code
+______________________ test_factory_banned_opcode[NUMBER] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=150).code
+____________________ test_factory_banned_opcode[TIMESTAMP] _____________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=151).code
+_____________________ test_factory_banned_opcode[COINBASE] _____________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=152).code
+____________________ test_factory_banned_opcode[DIFFICULTY] ____________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=153).code
+_____________________ test_factory_banned_opcode[BASEFEE] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=154).code
+_____________________ test_factory_banned_opcode[GASLIMIT] _____________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=155).code
+_____________________ test_factory_banned_opcode[GASPRICE] _____________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=156).code
+___________________ test_factory_banned_opcode[SELFBALANCE] ____________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=157).code
+_____________________ test_factory_banned_opcode[BALANCE] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=158).code
+______________________ test_factory_banned_opcode[ORIGIN] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=159).code
+____________________ test_factory_banned_opcode[BLOCKHASH] _____________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=160).code
+______________________ test_factory_banned_opcode[CREATE] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=161).code
+_____________________ test_factory_banned_opcode[CREATE2] ______________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=162).code
+___________________ test_factory_banned_opcode[SELFDESTRUCT] ___________________
+tests/opbanning/test_op_banning.py:69: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=163).code
+_____________________ test_eth_estimateUserOperationGas[] ______________________
+tests/rpc/test_eth_estimateUserOperationGas.py:20: in test_eth_estimateUserOperationGas
+    validate(instance=response.result, schema=schema)
+E   AttributeError: 'Error' object has no attribute 'result'
+______________ test_eth_estimateUserOperationGas_execution_revert ______________
+tests/rpc/test_eth_estimateUserOperationGas.py:29: in test_eth_estimateUserOperationGas_execution_revert
+    assert_rpc_error(response, "test fail", RPCErrorCode.EXECUTION_REVERTED)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.EXECUTION_REVERTED: -32521>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=166).code
+_____________ test_eth_estimateUserOperationGas_simulation_revert ______________
+tests/rpc/test_eth_estimateUserOperationGas.py:37: in test_eth_estimateUserOperationGas_simulation_revert
+    assert_rpc_error(response, "dead signature", RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT)
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=167).code
+______________________ test_eth_getUserOperationByHash[] _______________________
+tests/rpc/test_eth_getUserOperationByHash.py:14: in test_eth_getUserOperationByHash
+    assert userop_hash(
+E   TypeError: 'NoneType' object is not subscriptable
+______________________ test_eth_getUserOperationReceipt[] ______________________
+tests/rpc/test_eth_getUserOperationReceipt.py:15: in test_eth_getUserOperationReceipt
+    assert response.result["userOpHash"] == userop_hash(helper_contract, userop)
+E   TypeError: 'NoneType' object is not subscriptable
+_________________________ test_eth_sendUserOperation[] _________________________
+tests/rpc/test_eth_sendUserOperation.py:19: in test_eth_sendUserOperation
+    assert response.result == userop_hash(helper_contract, userop)
+E   AttributeError: 'Error' object has no attribute 'result'
+______________________ test_eth_sendUserOperation_revert _______________________
+tests/rpc/test_eth_sendUserOperation.py:32: in test_eth_sendUserOperation_revert
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=178).code
+_________________ test_eth_sendUserOperation_invalid_signature _________________
+tests/rpc/test_eth_sendUserOperation.py:37: in test_eth_sendUserOperation_invalid_signature
+    assert_rpc_error(
+tests/utils.py:103: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.INVALID_SIGNATURE: -32507>
+E    +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=180).code
+_______________________ test_eth_supportedEntryPoints[] ________________________
+tests/rpc/test_eth_supportedEntryPoints.py:11: in test_eth_supportedEntryPoints
+    assert supported_entrypoints[0] == CommandLineArgs.entrypoint
+E   AssertionError: assert '0x0576a174D2...45A78A0C91B57' == '0x5FF137D4b0...E578a026d2789'
+E     - 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789
+E     + 0x0576a174D229E3cFA37253523E645A78A0C91B57
+=============================== warnings summary ===============================
+tests/bundle/test_codehash.py::test_codehash_changed[]
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x8639da1bff6107e7df6e4007e11d29d3fb2fd7c5c7f75eaa4edb8126be36d114') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/aa-bundler-rust-launcher.xml -
+=========================== short test summary info ============================
+PASSED tests/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+SKIPPED [1] tests/bundle/test_stake_rules.py:12: Skipped
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_staked_sender[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_codehash.py::test_codehash_changed[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=26)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=28).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=30).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage_struct][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=32).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=34)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=36)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=38)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_init_code][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=40).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][context][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=42).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=44).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=46)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=48)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=50)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=52)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=54)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=56)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=58)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_init_code][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=60)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][context][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=62)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=64).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=66)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=68).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=70).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage_struct][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=72).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=74)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=76).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage_struct][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=78).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=80).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=82)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=84)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=86)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=88)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=90)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=92)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=94)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][factory][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=96).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=98)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=100)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=102)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_init_code][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=104).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=106)
+FAILED tests/bundle/test_storage_rules.py::test_rule[unstaked][account][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=108).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=110)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=112)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=114)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=116)
+FAILED tests/bundle/test_storage_rules.py::test_rule[staked][account][external_storage][drop] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=118).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GAS] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=119).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=120).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=121).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=122).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=123).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=124).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=125).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=126).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=127).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=128).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=129).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=130).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=131).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=132).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=133).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=134).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=135).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=136).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=137).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=138).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=139).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=140).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=141).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=142).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=143).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=144).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=145).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=146).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=147).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=148).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=149).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=150).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=151).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=152).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=153).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=154).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=155).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=156).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=157).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=158).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=159).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=160).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=161).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=162).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32603 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=163).code
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert - AssertionError: assert -32603 == <RPCErrorCode.EXECUTION_REVERTED: -32521>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=166).code
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert - AssertionError: assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=167).code
+FAILED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[] - TypeError: 'NoneType' object is not subscriptable
+FAILED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[] - TypeError: 'NoneType' object is not subscriptable
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert - AssertionError: assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=178).code
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature - AssertionError: assert -32603 == <RPCErrorCode.INVALID_SIGNATURE: -32507>
+ +  where -32603 = Error(code=-32603, message='gRPC error: User operation pool is not available', data=None, id=180).code
+FAILED tests/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[] - AssertionError: assert '0x0576a174D2...45A78A0C91B57' == '0x5FF137D4b0...E578a026d2789'
+  - 0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789
+  + 0x0576a174D229E3cFA37253523E645A78A0C91B57
+============= 111 failed, 3 passed, 1 skipped, 1 warning in 20.28s =============
