@@ -1,0 +1,529 @@
+Running launcher /home/runner/work/bundler-test-executor/bundler-test-executor/launchers/aabundler-launcher.sh, name=AA-Reference-Bundler/0.6.0
+0.6.0: Pulling from accountabstraction/bundler
+Digest: sha256:dbc076d474c959bf1bb695b929364dd93ded5de77ed1d1953051f41bba674f75
+Status: Downloaded newer image for accountabstraction/bundler:0.6.0
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ethereum/client-go:release-1.10
+ ---> c16c2e0da325
+Step 2/2 : ENTRYPOINT geth       --verbosity 1       --http.vhosts '*,localhost,host.docker.internal'       --http       --http.api personal,eth,net,web3,debug       --http.corsdomain '*'       --http.addr "0.0.0.0"       --nodiscover --maxpeers 0 --mine       --networkid 1337       --dev       --allow-insecure-unlock       --rpc.allow-unprotected-txs       --dev.gaslimit 20000000
+ ---> Using cache
+ ---> 0db279fc9141
+Successfully built 0db279fc9141
+Successfully tagged aabundler_geth-dev:latest
+waiting for bundler to start
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 114 items / 1 skipped
+
+tests/bundle/test_bundle.py ........E                                    [  7%]
+tests/bundle/test_codehash.py E                                          [  8%]
+tests/bundle/test_storage_rules.py EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 41%]
+EEEEEEEEEE                                                               [ 50%]
+tests/opbanning/test_op_banning.py EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 82%]
+EEEEEEEE                                                                 [ 89%]
+tests/rpc/test_eth_chainId.py .                                          [ 90%]
+tests/rpc/test_eth_estimateUserOperationGas.py ...                       [ 92%]
+tests/rpc/test_eth_getUserOperationByHash.py ..                          [ 94%]
+tests/rpc/test_eth_getUserOperationReceipt.py ..                         [ 96%]
+tests/rpc/test_eth_sendUserOperation.py ...                              [ 99%]
+tests/rpc/test_eth_supportedEntryPoints.py .                             [100%]dumped bundler log to /tmp/bundler.log
+
+
+==================================== ERRORS ====================================
+____________ ERROR at setup of test_max_allowed_ops_staked_sender[] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________________ ERROR at setup of test_codehash_changed[] ___________________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_______ ERROR at setup of test_rule[unstaked][paymaster][no_storage][ok] _______
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_______ ERROR at setup of test_rule[unstaked][paymaster][storage][drop] ________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__ ERROR at setup of test_rule[unstaked][paymaster][reference_storage][drop] ___
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][paymaster][reference_storage_struct][drop] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____ ERROR at setup of test_rule[unstaked][paymaster][account_storage][ok] _____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][paymaster][account_reference_storage][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][paymaster][account_reference_storage_struct][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][paymaster][account_reference_storage_init_code][drop] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_______ ERROR at setup of test_rule[unstaked][paymaster][context][drop] ________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___ ERROR at setup of test_rule[unstaked][paymaster][external_storage][drop] ___
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+________ ERROR at setup of test_rule[staked][paymaster][no_storage][ok] ________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_________ ERROR at setup of test_rule[staked][paymaster][storage][ok] __________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____ ERROR at setup of test_rule[staked][paymaster][reference_storage][ok] _____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][paymaster][reference_storage_struct][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____ ERROR at setup of test_rule[staked][paymaster][account_storage][ok] ______
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][paymaster][account_reference_storage][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][paymaster][account_reference_storage_struct][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][paymaster][account_reference_storage_init_code][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_________ ERROR at setup of test_rule[staked][paymaster][context][ok] __________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____ ERROR at setup of test_rule[staked][paymaster][external_storage][drop] ____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+________ ERROR at setup of test_rule[unstaked][factory][no_storage][ok] ________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+________ ERROR at setup of test_rule[unstaked][factory][storage][drop] _________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___ ERROR at setup of test_rule[unstaked][factory][reference_storage][drop] ____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][factory][reference_storage_struct][drop] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____ ERROR at setup of test_rule[unstaked][factory][account_storage][ok] ______
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][factory][account_reference_storage][drop] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][factory][account_reference_storage_struct][drop] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____ ERROR at setup of test_rule[unstaked][factory][external_storage][drop] ____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_________ ERROR at setup of test_rule[staked][factory][no_storage][ok] _________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_rule[staked][factory][storage][ok] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____ ERROR at setup of test_rule[staked][factory][reference_storage][ok] ______
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__ ERROR at setup of test_rule[staked][factory][reference_storage_struct][ok] __
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+______ ERROR at setup of test_rule[staked][factory][account_storage][ok] _______
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][factory][account_reference_storage][ok] __
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][factory][account_reference_storage_struct][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____ ERROR at setup of test_rule[staked][factory][external_storage][drop] _____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+________ ERROR at setup of test_rule[unstaked][account][no_storage][ok] ________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____ ERROR at setup of test_rule[unstaked][account][account_storage][ok] ______
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][account][account_reference_storage][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][account][account_reference_storage_init_code][drop] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[unstaked][account][account_reference_storage_struct][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____ ERROR at setup of test_rule[unstaked][account][external_storage][drop] ____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_________ ERROR at setup of test_rule[staked][account][no_storage][ok] _________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+______ ERROR at setup of test_rule[staked][account][account_storage][ok] _______
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][account][account_reference_storage][ok] __
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_ ERROR at setup of test_rule[staked][account][account_reference_storage_struct][ok] _
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____ ERROR at setup of test_rule[staked][account][external_storage][drop] _____
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+______________ ERROR at setup of test_account_banned_opcode[GAS] _______________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____________ ERROR at setup of test_account_banned_opcode[NUMBER] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_account_banned_opcode[TIMESTAMP] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_account_banned_opcode[COINBASE] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_account_banned_opcode[DIFFICULTY] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_account_banned_opcode[BASEFEE] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_account_banned_opcode[GASLIMIT] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_account_banned_opcode[GASPRICE] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_account_banned_opcode[SELFBALANCE] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_account_banned_opcode[BALANCE] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____________ ERROR at setup of test_account_banned_opcode[ORIGIN] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_account_banned_opcode[BLOCKHASH] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____________ ERROR at setup of test_account_banned_opcode[CREATE] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_account_banned_opcode[CREATE2] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_account_banned_opcode[SELFDESTRUCT] __________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____________ ERROR at setup of test_paymaster_banned_opcode[GAS] ______________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_paymaster_banned_opcode[NUMBER] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_paymaster_banned_opcode[TIMESTAMP] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_paymaster_banned_opcode[COINBASE] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_paymaster_banned_opcode[DIFFICULTY] __________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_paymaster_banned_opcode[BASEFEE] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_paymaster_banned_opcode[GASLIMIT] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_paymaster_banned_opcode[GASPRICE] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_________ ERROR at setup of test_paymaster_banned_opcode[SELFBALANCE] __________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_paymaster_banned_opcode[BALANCE] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_paymaster_banned_opcode[ORIGIN] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_paymaster_banned_opcode[BLOCKHASH] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_paymaster_banned_opcode[CREATE] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_paymaster_banned_opcode[CREATE2] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_________ ERROR at setup of test_paymaster_banned_opcode[SELFDESTRUCT] _________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+______________ ERROR at setup of test_factory_banned_opcode[GAS] _______________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____________ ERROR at setup of test_factory_banned_opcode[NUMBER] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_factory_banned_opcode[TIMESTAMP] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_factory_banned_opcode[COINBASE] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_factory_banned_opcode[DIFFICULTY] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_factory_banned_opcode[BASEFEE] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_factory_banned_opcode[GASLIMIT] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_factory_banned_opcode[GASPRICE] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_factory_banned_opcode[SELFBALANCE] ___________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_factory_banned_opcode[BALANCE] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____________ ERROR at setup of test_factory_banned_opcode[ORIGIN] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+___________ ERROR at setup of test_factory_banned_opcode[BLOCKHASH] ____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+_____________ ERROR at setup of test_factory_banned_opcode[CREATE] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+____________ ERROR at setup of test_factory_banned_opcode[CREATE2] _____________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+__________ ERROR at setup of test_factory_banned_opcode[SELFDESTRUCT] __________
+tests/conftest.py:66: in entrypoint_contract
+    with open(entrypoint_path, encoding="utf-8") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/aabundler-launcher.xml -
+=========================== short test summary info ============================
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold]
+PASSED tests/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender[]
+PASSED tests/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[]
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert
+PASSED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[]
+PASSED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[]
+PASSED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+PASSED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[]
+PASSED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert
+PASSED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature
+PASSED tests/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+SKIPPED [1] tests/bundle/test_stake_rules.py:12: Skipped
+ERROR tests/bundle/test_bundle.py::test_max_allowed_ops_staked_sender[] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_codehash.py::test_codehash_changed[] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][no_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][reference_storage_struct][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_struct][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][account_reference_storage_init_code][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][context][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][paymaster][external_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][no_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][reference_storage_struct][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_struct][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][account_reference_storage_init_code][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][context][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][paymaster][external_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][no_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][reference_storage_struct][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][account_reference_storage_struct][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][factory][external_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][no_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][reference_storage_struct][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][account_reference_storage_struct][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][factory][external_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][account][no_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_init_code][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][account][account_reference_storage_struct][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[unstaked][account][external_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][account][no_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][account][account_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][account][account_reference_storage_struct][ok] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/bundle/test_storage_rules.py::test_rule[staked][account][external_storage][drop] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[GAS] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+ERROR tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT] - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/@account-abstraction/artifacts/contracts/core/EntryPoint.sol/EntryPoint.json'
+=================== 20 passed, 1 skipped, 94 errors in 6.42s ===================
