@@ -1,4 +1,5691 @@
 testHistory={
+  "20231008/162437": {
+    "voltaire": {
+      "name": "voltaire",
+      "errors": "0",
+      "failures": "161",
+      "skipped": "0",
+      "tests": "167",
+      "time": "50.350",
+      "timestamp": "2023-10-08T16:23:44.757592",
+      "hostname": "fv-az306-7",
+      "testcase": {
+        "0": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.066",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:81: in test_bundle_replace_op\n    assert new_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.032",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:81: in test_bundle_replace_op\n    assert new_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.030",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:81: in test_bundle_replace_op\n    assert new_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.032",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:81: in test_bundle_replace_op\n    assert new_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.031",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:81: in test_bundle_replace_op\n    assert new_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.030",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:81: in test_bundle_replace_op\n    assert new_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.030",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:81: in test_bundle_replace_op\n    assert new_op.send().result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]",
+          "time": "0.330",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]",
+          "time": "0.188",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]",
+          "time": "0.193",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "10": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]",
+          "time": "0.186",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "11": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]",
+          "time": "0.209",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "12": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]",
+          "time": "0.184",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "13": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]",
+          "time": "0.204",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "14": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]",
+          "time": "0.190",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "15": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]",
+          "time": "0.192",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "16": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender",
+          "time": "0.054",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0xd097fBa8A94124cFB9DD585c928704E6B18B9Af9', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0xd097fBa8A94124cFB9DD585c928704E6B18B9Af9',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:248: in test_max_allowed_ops_unstaked_sender\n    assert dump_mempool() == wallet_ops[: i + 1]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0xd097fBa8A94124cFB9DD585c928704E6B18B9Af9', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0xd097fBa8A94124cFB9DD585c928704E6B18B9Af9',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "17": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender",
+          "time": "0.083",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0x516c531d46A9084CE749b0731D02e6aaa5C421C3', nonce='0x10000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0x516c531d46A9084CE749b0731D02e6aaa5C421C3',\n  -                nonce='0x10000000000000000',\n  -                initCode='0x',\n  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:275: in test_max_allowed_ops_staked_sender\n    assert dump_mempool() == wallet_ops[: i + 1]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0x516c531d46A9084CE749b0731D02e6aaa5C421C3', nonce='0x10000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0x516c531d46A9084CE749b0731D02e6aaa5C421C3',\nE     -                nonce='0x10000000000000000',\nE     -                initCode='0x',\nE     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "18": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_op_access_other_ops_sender_in_bundle",
+          "time": "0.195",
+          "failure": {
+            "message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0xc664195478CAbD43407e932c5083B90f0ed28030', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0xc664195478CAbD43407e932c5083B90f0ed28030',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0x',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0x77359400',\n  -                maxPriorityFeePerGas='0x3b9aca00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:319: in test_ban_user_op_access_other_ops_sender_in_bundle\n    assert dump_mempool() == [user_op2]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0xc664195478CAbD43407e932c5083B90f0ed28030', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0x77359400', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0xc664195478CAbD43407e932c5083B90f0ed28030',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0x',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0x77359400',\nE     -                maxPriorityFeePerGas='0x3b9aca00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "19": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_sender_double_role_in_bundle",
+          "time": "0.147",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000010849', data=None, id=66)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_bundle.py:358: in test_ban_user_sender_double_role_in_bundle\n    assert_ok(response1)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000010849', data=None, id=66)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "20": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_stake_check_in_bundler",
+          "time": "0.052",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:382: in test_stake_check_in_bundler\n    response = get_stake_status(paymaster_contract.address, entrypoint_contract.address)\ntests/utils.py:165: in get_stake_status\n    .result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "21": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed",
+          "time": "0.083",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_codehash.py:44: in test_codehash_changed\n    assert response.result, \"userop dropped by bundler\"\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][paymaster][no_storage][ok]",
+          "time": "0.075",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000004685', data=None, id=75)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000004685', data=None, id=75)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]unstaked][paymaster][storage][drop]",
+          "time": "0.077",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000003296', data=None, id=77).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000003296', data=None, id=77).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]",
+          "time": "0.075",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000002319', data=None, id=79).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000002319', data=None, id=79).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.076",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000001632', data=None, id=81).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000001632', data=None, id=81).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][paymaster][account_storage][ok]",
+          "time": "0.090",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000001148', data=None, id=83)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000001148', data=None, id=83)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.075",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000808', data=None, id=85)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000808', data=None, id=85)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.078",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000569', data=None, id=87)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000569', data=None, id=87)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]",
+          "time": "0.161",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000289', data=None, id=89).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000289', data=None, id=89).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]unstaked][paymaster][context][drop]",
+          "time": "0.177",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000204', data=None, id=91).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000204', data=None, id=91).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][external_storage][drop]",
+          "time": "0.073",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000144', data=None, id=93).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000144', data=None, id=93).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]",
+          "time": "0.073",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000103', data=None, id=95).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000103', data=None, id=95).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.075",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000073', data=None, id=97).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000073', data=None, id=97).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][paymaster][no_storage][ok]",
+          "time": "0.101",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000047', data=None, id=99)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000047', data=None, id=99)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][storage][ok]",
+          "time": "0.103",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000031', data=None, id=101)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000031', data=None, id=101)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage][ok]",
+          "time": "0.105",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000021', data=None, id=103)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000021', data=None, id=103)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.102",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000015', data=None, id=105)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000015', data=None, id=105)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][paymaster][account_storage][ok]",
+          "time": "0.101",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000011', data=None, id=107)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000011', data=None, id=107)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]",
+          "time": "0.102",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=109)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=109)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.102",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=111)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=111)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.189",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=113)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=113)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]staked][paymaster][context][ok]",
+          "time": "0.099",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=115)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=115)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][external_storage][drop]",
+          "time": "0.101",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=117).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=117).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][out_of_gas][drop]",
+          "time": "0.105",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=119).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=119).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.101",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=121).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=121).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][no_storage][ok]",
+          "time": "0.116",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=123)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=123)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][storage][drop]",
+          "time": "0.117",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=125).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=125).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][reference_storage][drop]",
+          "time": "0.120",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=127).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=127).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.118",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=129).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=129).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][factory][account_storage][ok]",
+          "time": "0.116",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=131)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=131)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]",
+          "time": "0.118",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=133).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=133).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.122",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=135).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=135).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][external_storage][drop]",
+          "time": "0.118",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=137).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=137).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]",
+          "time": "0.114",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=139)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=139)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.115",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=141).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=141).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.120",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=143).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=143).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.117",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=145).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=145).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "58": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]",
+          "time": "0.133",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=147).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=147).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "59": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]",
+          "time": "0.132",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=149).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=149).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "60": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.131",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=151).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=151).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "61": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]",
+          "time": "0.116",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=153).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=153).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "62": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][out_of_gas][drop]",
+          "time": "0.118",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=155).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=155).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "63": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]",
+          "time": "0.117",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=157).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=157).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "64": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][no_storage][ok]",
+          "time": "0.150",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=159)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=159)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "65": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][factory][storage][ok]",
+          "time": "0.161",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=161)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=161)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "66": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage][ok]",
+          "time": "0.146",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=163)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=163)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "67": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage_struct][ok]",
+          "time": "0.151",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=165)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=165)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "68": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][factory][account_storage][ok]",
+          "time": "0.145",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=167)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=167)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "69": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage][ok]",
+          "time": "0.144",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=169)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=169)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "70": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.147",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=171)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=171)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "71": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][external_storage][drop]",
+          "time": "0.148",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=173).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=173).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "72": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][out_of_gas][drop]",
+          "time": "0.150",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=175).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=175).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "73": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]",
+          "time": "0.149",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=177).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=177).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "74": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][no_storage][ok]",
+          "time": "0.124",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=179)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=179)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "75": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][account][account_storage][ok]",
+          "time": "0.070",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=181)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=181)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "76": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage][ok]",
+          "time": "0.068",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=183)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=183)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "77": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.152",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=185).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=185).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "78": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]",
+          "time": "0.239",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=187)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=187)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "79": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]",
+          "time": "0.186",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=189).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=189).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "80": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.069",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=191)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=191)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "81": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][external_storage][drop]",
+          "time": "0.070",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=193).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=193).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "82": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][out_of_gas][drop]",
+          "time": "0.070",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=195).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=195).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "83": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]",
+          "time": "0.067",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=197).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=197).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "84": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][no_storage][ok]",
+          "time": "0.095",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=199)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=199)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "85": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][account][account_storage][ok]",
+          "time": "0.100",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=201)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=201)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "86": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage][ok]",
+          "time": "0.096",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=203)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=203)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "87": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]",
+          "time": "0.097",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=205)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=205)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "88": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][out_of_gas][drop]",
+          "time": "0.097",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=207).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=207).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "89": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]",
+          "time": "0.098",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=209).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=209).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "90": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][external_storage][drop]",
+          "time": "0.098",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=211).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=211).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "91": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]",
+          "time": "0.070",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=213).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=213).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "92": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]",
+          "time": "0.098",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=215).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=215).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "93": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]",
+          "time": "0.073",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=217)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=217)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "94": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]",
+          "time": "0.069",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=219)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=219)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "95": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.068",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=221).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=221).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "96": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.069",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=223).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=223).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "97": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.069",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=225).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=225).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "98": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]",
+          "time": "0.069",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=227).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=227).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "99": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]",
+          "time": "0.069",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=229).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=229).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "100": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]",
+          "time": "0.069",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=231).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=231).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "101": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]",
+          "time": "0.068",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=233).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=233).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "102": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]",
+          "time": "0.068",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=235).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=235).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "103": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.071",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=237).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=237).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "104": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]",
+          "time": "0.069",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=239).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=239).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "105": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]",
+          "time": "0.069",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=241)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=241)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "106": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.051",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=242).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=242).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "107": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.048",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=243).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=243).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "108": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.048",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=244).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=244).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "109": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.076",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=245).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=245).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "110": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.048",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=246).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=246).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "111": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.049",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=247).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=247).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "112": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.048",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=248).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=248).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "113": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.049",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=249).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=249).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "114": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.048",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=250).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=250).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "115": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.051",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=251).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=251).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "116": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.049",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=252).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=252).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "117": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.048",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=253).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=253).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "118": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.048",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=254).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=254).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "119": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.049",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=255).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=255).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "120": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.049",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=256).code",
+            "#text": "tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=256).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "121": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS CALL]",
+          "time": "0.054",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=257)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/opbanning/test_op_banning.py:58: in test_account_allowed_opcode_sequence\n    assert_ok(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=257)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "122": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS DELEGATECALL]",
+          "time": "0.050",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=258)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/opbanning/test_op_banning.py:58: in test_account_allowed_opcode_sequence\n    assert_ok(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=258)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "123": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.072",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=259).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=259).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "124": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.072",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=260).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=260).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "125": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.070",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=261).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=261).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "126": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.071",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=262).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=262).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "127": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.071",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=263).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=263).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "128": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.070",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=264).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=264).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "129": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.070",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=265).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=265).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "130": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.086",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=266).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=266).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "131": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.078",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=267).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=267).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "132": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.072",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=268).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=268).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "133": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.071",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=269).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=269).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "134": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.072",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=270).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=270).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "135": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.071",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=271).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=271).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "136": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.071",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=272).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=272).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "137": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.071",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=273).code",
+            "#text": "tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=273).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "138": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.126",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=274).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=274).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "139": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.118",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=275).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=275).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "140": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.113",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=276).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=276).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "141": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.114",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=277).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=277).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "142": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.112",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=278).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=278).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "143": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.118",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=279).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=279).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "144": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.114",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=280).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=280).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "145": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.115",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=281).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=281).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "146": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.118",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=282).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=282).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "147": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.115",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=283).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=283).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "148": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.120",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=284).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=284).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "149": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.115",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=285).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=285).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "150": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.116",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=286).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=286).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "151": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.114",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=287).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=287).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "152": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.119",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=288).code",
+            "#text": "tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=288).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "153": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[with_factory]",
+          "time": "32.664",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=293)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/reputation/test_reputation.py:124: in test_staked_entity_reputation_threshold\n    assert_ok(userop.send())\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=293)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "154": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[without_factory]",
+          "time": "0.178",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=298)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/reputation/test_reputation.py:124: in test_staked_entity_reputation_threshold\n    assert_ok(userop.send())\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=298)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "155": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.009"
+        },
+        "156": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.036",
+          "failure": {
+            "message": "jsonschema.exceptions.ValidationError: 'verificationGasLimit' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                'type': 'string'},\n                                               {'type': 'number'}],\n                                     'title': 'callGasLimit'},\n                    'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                      'type': 'string'},\n                                                     {'type': 'number'}],\n                                           'title': 'preVerificationGas'},\n                    'verificationGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                        'type': 'string'},\n                                                       {'type': 'number'}],\n                                             'title': 'verificationGasLimit'}},\n     'required': ['callGasLimit',\n                  'preVerificationGas',\n                  'verificationGasLimit'],\n     'title': 'UserOperation Gas parameters',\n     'type': 'object'}\n\nOn instance:\n    {'callGasLimit': '0xab10',\n     'deadline': 281474976710655,\n     'preVerificationGas': 48220,\n     'verificationGas': 334329}",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:20: in test_eth_estimateUserOperationGas\n    validate(instance=response.result, schema=schema)\n.venv/lib/python3.10/site-packages/jsonschema/validators.py:1121: in validate\n    raise error\nE   jsonschema.exceptions.ValidationError: 'verificationGasLimit' is a required property\nE   \nE   Failed validating 'required' in schema:\nE       {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                   'type': 'string'},\nE                                                  {'type': 'number'}],\nE                                        'title': 'callGasLimit'},\nE                       'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                         'type': 'string'},\nE                                                        {'type': 'number'}],\nE                                              'title': 'preVerificationGas'},\nE                       'verificationGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                           'type': 'string'},\nE                                                          {'type': 'number'}],\nE                                                'title': 'verificationGasLimit'}},\nE        'required': ['callGasLimit',\nE                     'preVerificationGas',\nE                     'verificationGasLimit'],\nE        'title': 'UserOperation Gas parameters',\nE        'type': 'object'}\nE   \nE   On instance:\nE       {'callGasLimit': '0xab10',\nE        'deadline': 281474976710655,\nE        'preVerificationGas': 48220,\nE        'verificationGas': 334329}"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "157": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.029"
+        },
+        "158": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.026"
+        },
+        "159": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.051",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/rpc/test_eth_getUserOperationByHash.py:16: in test_eth_getUserOperationByHash\n    ) == userop_hash(helper_contract, userop), \"user operation mismatch\"\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "160": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.003"
+        },
+        "161": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.055",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/rpc/test_eth_getUserOperationReceipt.py:15: in test_eth_getUserOperationReceipt\n    assert response.result[\"userOpHash\"] == userop_hash(helper_contract, userop)\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "162": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.003"
+        },
+        "163": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.038",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:19: in test_eth_sendUserOperation\n    assert response.result == userop_hash(helper_contract, userop)\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "164": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.038",
+          "failure": {
+            "message": "AssertionError: assert 'testwallet: dead signature' in 'max fee per gas is too low. it should be minimum : 3000000008'\n +  where 'testwallet: dead signature' = <built-in method lower of str object at 0x7fdf19320f80>()\n +    where <built-in method lower of str object at 0x7fdf19320f80> = 'testWallet: dead signature'.lower\n +  and   'max fee per gas is too low. it should be minimum : 3000000008' = <built-in method lower of str object at 0x7fdf18bcc880>()\n +    where <built-in method lower of str object at 0x7fdf18bcc880> = 'Max fee per gas is too low. it should be minimum : 3000000008'.lower\n +      where 'Max fee per gas is too low. it should be minimum : 3000000008' = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=313).message",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:32: in test_eth_sendUserOperation_revert\n    assert_rpc_error(\ntests/utils.py:116: in assert_rpc_error\n    assert message.lower() in response.message.lower()\nE   AssertionError: assert 'testwallet: dead signature' in 'max fee per gas is too low. it should be minimum : 3000000008'\nE    +  where 'testwallet: dead signature' = <built-in method lower of str object at 0x7fdf19320f80>()\nE    +    where <built-in method lower of str object at 0x7fdf19320f80> = 'testWallet: dead signature'.lower\nE    +  and   'max fee per gas is too low. it should be minimum : 3000000008' = <built-in method lower of str object at 0x7fdf18bcc880>()\nE    +    where <built-in method lower of str object at 0x7fdf18bcc880> = 'Max fee per gas is too low. it should be minimum : 3000000008'.lower\nE    +      where 'Max fee per gas is too low. it should be minimum : 3000000008' = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=313).message"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "165": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.027",
+          "failure": {
+            "message": "AssertionError: assert -32500 == <RPCErrorCode.INVALID_SIGNATURE: -32507>\n +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=315).code",
+            "#text": "tests/rpc/test_eth_sendUserOperation.py:38: in test_eth_sendUserOperation_invalid_signature\n    assert_rpc_error(\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32500 == <RPCErrorCode.INVALID_SIGNATURE: -32507>\nE    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3000000008', data=None, id=315).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "166": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.015"
+        }
+      }
+    },
+    "stackup": {
+      "name": "stackup",
+      "errors": "0",
+      "failures": "49",
+      "skipped": "0",
+      "tests": "167",
+      "time": "30.538",
+      "timestamp": "2023-10-08T16:22:51.589826",
+      "hostname": "fv-az306-7",
+      "testcase": {
+        "0": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.120"
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.090"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.107"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.107"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.114"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.136"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.149"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]",
+          "time": "0.343",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]",
+          "time": "0.204",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]",
+          "time": "0.198",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "10": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]",
+          "time": "0.193",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "11": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]",
+          "time": "0.192",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "12": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]",
+          "time": "0.195",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "13": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]",
+          "time": "0.223",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "14": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]",
+          "time": "0.192",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "15": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]",
+          "time": "0.191",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "16": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender",
+          "time": "0.299"
+        },
+        "17": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender",
+          "time": "0.410"
+        },
+        "18": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_op_access_other_ops_sender_in_bundle",
+          "time": "0.359",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:335: in test_ban_user_op_access_other_ops_sender_in_bundle\n    assert response2.result is None\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "19": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_sender_double_role_in_bundle",
+          "time": "0.240",
+          "failure": {
+            "message": "Exception: expected error object, got:\nOk(result='0x8e7a00653fe334708da4ff8587eeb7180d83b04340e4156d4f20ffa2c51806f5', id=113)",
+            "#text": "tests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AttributeError: 'Ok' object has no attribute 'code'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_bundle.py:359: in test_ban_user_sender_double_role_in_bundle\n    assert_rpc_error(\ntests/utils.py:118: in assert_rpc_error\n    raise Exception(f\"expected error object, got:\\n{response}\") from exc\nE   Exception: expected error object, got:\nE   Ok(result='0x8e7a00653fe334708da4ff8587eeb7180d83b04340e4156d4f20ffa2c51806f5', id=113)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "20": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_stake_check_in_bundler",
+          "time": "0.061",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:382: in test_stake_check_in_bundler\n    response = get_stake_status(paymaster_contract.address, entrypoint_contract.address)\ntests/utils.py:165: in get_stake_status\n    .result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "21": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed",
+          "time": "0.446"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][paymaster][no_storage][ok]",
+          "time": "0.149"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]unstaked][paymaster][storage][drop]",
+          "time": "0.152"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]",
+          "time": "0.168"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.265"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][paymaster][account_storage][ok]",
+          "time": "0.158"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.157"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.175"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]",
+          "time": "0.182",
+          "failure": {
+            "message": "AssertionError: assert -32602 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32602 = Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=146).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32602 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32602 = Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=146).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]unstaked][paymaster][context][drop]",
+          "time": "0.129"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][external_storage][drop]",
+          "time": "0.157"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]",
+          "time": "0.186",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.156"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][paymaster][no_storage][ok]",
+          "time": "0.182"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][storage][ok]",
+          "time": "0.183"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage][ok]",
+          "time": "0.188"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.195"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][paymaster][account_storage][ok]",
+          "time": "0.186"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]",
+          "time": "0.189"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.196"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.205",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=170)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=170)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]staked][paymaster][context][ok]",
+          "time": "0.162"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][external_storage][drop]",
+          "time": "0.289"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][out_of_gas][drop]",
+          "time": "0.320",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.201",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][no_storage][ok]",
+          "time": "0.225"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][storage][drop]",
+          "time": "0.231"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][reference_storage][drop]",
+          "time": "0.232"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.238"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][factory][account_storage][ok]",
+          "time": "0.239"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]",
+          "time": "0.234"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.238"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][external_storage][drop]",
+          "time": "0.234"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]",
+          "time": "0.228"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.228",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.227",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.251",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "58": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]",
+          "time": "0.227",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "59": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]",
+          "time": "0.225",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "60": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.252",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "61": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]",
+          "time": "0.220",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "62": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][out_of_gas][drop]",
+          "time": "0.268",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "63": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]",
+          "time": "0.234"
+        },
+        "64": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][no_storage][ok]",
+          "time": "0.258"
+        },
+        "65": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][factory][storage][ok]",
+          "time": "0.259"
+        },
+        "66": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage][ok]",
+          "time": "0.264"
+        },
+        "67": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage_struct][ok]",
+          "time": "0.271"
+        },
+        "68": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][factory][account_storage][ok]",
+          "time": "0.261"
+        },
+        "69": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage][ok]",
+          "time": "0.264"
+        },
+        "70": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.275"
+        },
+        "71": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][external_storage][drop]",
+          "time": "0.263"
+        },
+        "72": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][out_of_gas][drop]",
+          "time": "0.303",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "73": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]",
+          "time": "0.282",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "74": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][no_storage][ok]",
+          "time": "0.193"
+        },
+        "75": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][account][account_storage][ok]",
+          "time": "0.154"
+        },
+        "76": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage][ok]",
+          "time": "0.150"
+        },
+        "77": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.170",
+          "failure": {
+            "message": "AssertionError: assert -32602 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32602 = Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=242).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32602 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32602 = Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=242).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "78": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]",
+          "time": "0.246",
+          "failure": {
+            "message": "Exception: expected result object, got:\nError(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=244)",
+            "#text": "tests/utils.py:108: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/utils.py:110: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=244)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "79": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]",
+          "time": "0.198",
+          "failure": {
+            "message": "AssertionError: assert -32602 == <RPCErrorCode.BANNED_OPCODE: -32502>\n +  where -32602 = Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=246).code",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32602 == <RPCErrorCode.BANNED_OPCODE: -32502>\nE    +  where -32602 = Error(code=-32602, message='verificationGasLimit: exceeds maxVerificationGas of 1500000', data='verificationGasLimit: exceeds maxVerificationGas of 1500000', id=246).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "80": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.159"
+        },
+        "81": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][external_storage][drop]",
+          "time": "0.149"
+        },
+        "82": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][out_of_gas][drop]",
+          "time": "0.176",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "83": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]",
+          "time": "0.154",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "84": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][no_storage][ok]",
+          "time": "0.282"
+        },
+        "85": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][account][account_storage][ok]",
+          "time": "0.175"
+        },
+        "86": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage][ok]",
+          "time": "0.182"
+        },
+        "87": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]",
+          "time": "0.186"
+        },
+        "88": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][out_of_gas][drop]",
+          "time": "0.201",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "89": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]",
+          "time": "0.181",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "90": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][external_storage][drop]",
+          "time": "0.279"
+        },
+        "91": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]",
+          "time": "0.153",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "92": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]",
+          "time": "0.151",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "93": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]",
+          "time": "0.158"
+        },
+        "94": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]",
+          "time": "0.269"
+        },
+        "95": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.143",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "96": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.140",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "97": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.142",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "98": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]",
+          "time": "0.142",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "99": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]",
+          "time": "0.147",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "100": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]",
+          "time": "0.142",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "101": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]",
+          "time": "0.142",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "102": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]",
+          "time": "0.136",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "103": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.141",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "104": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]",
+          "time": "0.141",
+          "failure": {
+            "message": "AttributeError: 'Ok' object has no attribute 'message'",
+            "#text": "tests/bundle/test_storage_rules.py:737: in test_rule\n    case.assert_func(response)\ntests/bundle/test_storage_rules.py:19: in assert_error\n    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)\nE   AttributeError: 'Ok' object has no attribute 'message'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "105": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]",
+          "time": "0.153"
+        },
+        "106": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.095"
+        },
+        "107": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.094"
+        },
+        "108": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.099"
+        },
+        "109": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.097"
+        },
+        "110": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.099"
+        },
+        "111": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.097"
+        },
+        "112": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.097"
+        },
+        "113": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.103"
+        },
+        "114": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.097"
+        },
+        "115": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.102"
+        },
+        "116": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.098"
+        },
+        "117": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.101"
+        },
+        "118": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.107"
+        },
+        "119": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.104"
+        },
+        "120": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.107"
+        },
+        "121": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS CALL]",
+          "time": "0.115"
+        },
+        "122": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS DELEGATECALL]",
+          "time": "0.118"
+        },
+        "123": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.121"
+        },
+        "124": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.125"
+        },
+        "125": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.229"
+        },
+        "126": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.135"
+        },
+        "127": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.162"
+        },
+        "128": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.124"
+        },
+        "129": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.129"
+        },
+        "130": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.124"
+        },
+        "131": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.129"
+        },
+        "132": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.124"
+        },
+        "133": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.129"
+        },
+        "134": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.129"
+        },
+        "135": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.135"
+        },
+        "136": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.129"
+        },
+        "137": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.135"
+        },
+        "138": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.192"
+        },
+        "139": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.305"
+        },
+        "140": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.208"
+        },
+        "141": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.200"
+        },
+        "142": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.203"
+        },
+        "143": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.195"
+        },
+        "144": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.200"
+        },
+        "145": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.203"
+        },
+        "146": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.206"
+        },
+        "147": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.234"
+        },
+        "148": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.211"
+        },
+        "149": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.200"
+        },
+        "150": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.211"
+        },
+        "151": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.211"
+        },
+        "152": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.210"
+        },
+        "153": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[with_factory]",
+          "time": "0.181",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/reputation/test_reputation.py:70: in test_staked_entity_reputation_threshold\n    reputations = dump_reputation()\ntests/utils.py:175: in dump_reputation\n    .result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "154": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[without_factory]",
+          "time": "0.096",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/reputation/test_reputation.py:70: in test_staked_entity_reputation_threshold\n    reputations = dump_reputation()\ntests/utils.py:175: in dump_reputation\n    .result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "155": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.008"
+        },
+        "156": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.086",
+          "failure": {
+            "message": "jsonschema.exceptions.ValidationError: 'verificationGasLimit' is a required property\n\nFailed validating 'required' in schema:\n    {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                'type': 'string'},\n                                               {'type': 'number'}],\n                                     'title': 'callGasLimit'},\n                    'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                      'type': 'string'},\n                                                     {'type': 'number'}],\n                                           'title': 'preVerificationGas'},\n                    'verificationGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\n                                                        'type': 'string'},\n                                                       {'type': 'number'}],\n                                             'title': 'verificationGasLimit'}},\n     'required': ['callGasLimit',\n                  'preVerificationGas',\n                  'verificationGasLimit'],\n     'title': 'UserOperation Gas parameters',\n     'type': 'object'}\n\nOn instance:\n    {'callGasLimit': 44181,\n     'preVerificationGas': 42316,\n     'verificationGas': 337129}",
+            "#text": "tests/rpc/test_eth_estimateUserOperationGas.py:20: in test_eth_estimateUserOperationGas\n    validate(instance=response.result, schema=schema)\n.venv/lib/python3.10/site-packages/jsonschema/validators.py:1121: in validate\n    raise error\nE   jsonschema.exceptions.ValidationError: 'verificationGasLimit' is a required property\nE   \nE   Failed validating 'required' in schema:\nE       {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                   'type': 'string'},\nE                                                  {'type': 'number'}],\nE                                        'title': 'callGasLimit'},\nE                       'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                         'type': 'string'},\nE                                                        {'type': 'number'}],\nE                                              'title': 'preVerificationGas'},\nE                       'verificationGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',\nE                                                           'type': 'string'},\nE                                                          {'type': 'number'}],\nE                                                'title': 'verificationGasLimit'}},\nE        'required': ['callGasLimit',\nE                     'preVerificationGas',\nE                     'verificationGasLimit'],\nE        'title': 'UserOperation Gas parameters',\nE        'type': 'object'}\nE   \nE   On instance:\nE       {'callGasLimit': 44181,\nE        'preVerificationGas': 42316,\nE        'verificationGas': 337129}"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "157": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.081"
+        },
+        "158": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.044"
+        },
+        "159": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.134"
+        },
+        "160": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.008"
+        },
+        "161": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.139"
+        },
+        "162": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.008"
+        },
+        "163": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.107"
+        },
+        "164": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.075"
+        },
+        "165": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.067"
+        },
+        "166": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.014"
+        }
+      }
+    },
+    "skandha": {
+      "name": "skandha",
+      "errors": "0",
+      "failures": "13",
+      "skipped": "0",
+      "tests": "167",
+      "time": "189.908",
+      "timestamp": "2023-10-08T16:19:06.231622",
+      "hostname": "fv-az306-7",
+      "testcase": {
+        "0": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.294"
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.214"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.215"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.203"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.225"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.361"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.470"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]",
+          "time": "0.765",
+          "failure": {
+            "message": "AssertionError: assert [UserOperatio...gnature='0x')] == []\n  Left contains one more item: UserOperation(sender='0xc6809AcA2B8B4af2AdB5974E59914Ab70Fd58f7A', nonce='0x0', initCode='0x9ea3D0D865292e2c726537C081...ityFeePerGas='0x3b9aca00', paymasterAndData='0x2cb463a9aaca6a9f6011d1538c771c90827080266e6f7468696e67', signature='0x')\n  Full diff:\n    [\n  -  ,\n  +  UserOperation(sender='0xc6809AcA2B8B4af2AdB5974E59914Ab70Fd58f7A',\n  +                nonce='0x0',\n  +                initCode='0x9ea3D0D865292e2c726537C0818221073095F36f0d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  +                callGasLimit='0x493e0',\n  +                verificationGasLimit='0xf4240',\n  +                preVerificationGas='0x493e0',\n  +                maxFeePerGas='0x77359400',\n  +                maxPriorityFeePerGas='0x3b9aca00',\n  +                paymasterAndData='0x2cb463a9aaca6a9f6011d1538c771c90827080266e6f7468696e67',\n  +                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities\n    assert dump_mempool() == wallet_ops\nE   AssertionError: assert [UserOperatio...gnature='0x')] == []\nE     Left contains one more item: UserOperation(sender='0xc6809AcA2B8B4af2AdB5974E59914Ab70Fd58f7A', nonce='0x0', initCode='0x9ea3D0D865292e2c726537C081...ityFeePerGas='0x3b9aca00', paymasterAndData='0x2cb463a9aaca6a9f6011d1538c771c90827080266e6f7468696e67', signature='0x')\nE     Full diff:\nE       [\nE     -  ,\nE     +  UserOperation(sender='0xc6809AcA2B8B4af2AdB5974E59914Ab70Fd58f7A',\nE     +                nonce='0x0',\nE     +                initCode='0x9ea3D0D865292e2c726537C0818221073095F36f0d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     +                callGasLimit='0x493e0',\nE     +                verificationGasLimit='0xf4240',\nE     +                preVerificationGas='0x493e0',\nE     +                maxFeePerGas='0x77359400',\nE     +                maxPriorityFeePerGas='0x3b9aca00',\nE     +                paymasterAndData='0x2cb463a9aaca6a9f6011d1538c771c90827080266e6f7468696e67',\nE     +                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]",
+          "time": "0.714",
+          "failure": {
+            "message": "AssertionError: assert [UserOperatio...gnature='0x')] == []\n  Left contains one more item: UserOperation(sender='0xa05C5e7087a46C8677acc683F41716C7D68B2e19', nonce='0x0', initCode='0xF324ddbB19804EbaE4555a1ffE...ityFeePerGas='0x3b9aca00', paymasterAndData='0x80d4de70e056da335cae43463ac70f87be25299b6e6f7468696e67', signature='0x')\n  Full diff:\n    [\n  -  ,\n  +  UserOperation(sender='0xa05C5e7087a46C8677acc683F41716C7D68B2e19',\n  +                nonce='0x0',\n  +                initCode='0xF324ddbB19804EbaE4555a1ffE7b0B34CDAD4bd40d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  +                callGasLimit='0x493e0',\n  +                verificationGasLimit='0xf4240',\n  +                preVerificationGas='0x493e0',\n  +                maxFeePerGas='0x77359400',\n  +                maxPriorityFeePerGas='0x3b9aca00',\n  +                paymasterAndData='0x80d4de70e056da335cae43463ac70f87be25299b6e6f7468696e67',\n  +                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities\n    assert dump_mempool() == wallet_ops\nE   AssertionError: assert [UserOperatio...gnature='0x')] == []\nE     Left contains one more item: UserOperation(sender='0xa05C5e7087a46C8677acc683F41716C7D68B2e19', nonce='0x0', initCode='0xF324ddbB19804EbaE4555a1ffE...ityFeePerGas='0x3b9aca00', paymasterAndData='0x80d4de70e056da335cae43463ac70f87be25299b6e6f7468696e67', signature='0x')\nE     Full diff:\nE       [\nE     -  ,\nE     +  UserOperation(sender='0xa05C5e7087a46C8677acc683F41716C7D68B2e19',\nE     +                nonce='0x0',\nE     +                initCode='0xF324ddbB19804EbaE4555a1ffE7b0B34CDAD4bd40d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     +                callGasLimit='0x493e0',\nE     +                verificationGasLimit='0xf4240',\nE     +                preVerificationGas='0x493e0',\nE     +                maxFeePerGas='0x77359400',\nE     +                maxPriorityFeePerGas='0x3b9aca00',\nE     +                paymasterAndData='0x80d4de70e056da335cae43463ac70f87be25299b6e6f7468696e67',\nE     +                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]",
+          "time": "0.627",
+          "failure": {
+            "message": "AssertionError: assert [UserOperatio...gnature='0x')] == []\n  Left contains one more item: UserOperation(sender='0x7e965593cf53B2918de25Fb2bF1F5C1915810005', nonce='0x0', initCode='0x07003E024AE2126a4F293d9AeB...ityFeePerGas='0x3b9aca00', paymasterAndData='0x549bb447d82cd18c5ce691a7ffdc9d9e863a9c496e6f7468696e67', signature='0x')\n  Full diff:\n    [\n  -  ,\n  +  UserOperation(sender='0x7e965593cf53B2918de25Fb2bF1F5C1915810005',\n  +                nonce='0x0',\n  +                initCode='0x07003E024AE2126a4F293d9AeB6F32e674b0A7950d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  +                callGasLimit='0x493e0',\n  +                verificationGasLimit='0xf4240',\n  +                preVerificationGas='0x493e0',\n  +                maxFeePerGas='0x77359400',\n  +                maxPriorityFeePerGas='0x3b9aca00',\n  +                paymasterAndData='0x549bb447d82cd18c5ce691a7ffdc9d9e863a9c496e6f7468696e67',\n  +                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities\n    assert dump_mempool() == wallet_ops\nE   AssertionError: assert [UserOperatio...gnature='0x')] == []\nE     Left contains one more item: UserOperation(sender='0x7e965593cf53B2918de25Fb2bF1F5C1915810005', nonce='0x0', initCode='0x07003E024AE2126a4F293d9AeB...ityFeePerGas='0x3b9aca00', paymasterAndData='0x549bb447d82cd18c5ce691a7ffdc9d9e863a9c496e6f7468696e67', signature='0x')\nE     Full diff:\nE       [\nE     -  ,\nE     +  UserOperation(sender='0x7e965593cf53B2918de25Fb2bF1F5C1915810005',\nE     +                nonce='0x0',\nE     +                initCode='0x07003E024AE2126a4F293d9AeB6F32e674b0A7950d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     +                callGasLimit='0x493e0',\nE     +                verificationGasLimit='0xf4240',\nE     +                preVerificationGas='0x493e0',\nE     +                maxFeePerGas='0x77359400',\nE     +                maxPriorityFeePerGas='0x3b9aca00',\nE     +                paymasterAndData='0x549bb447d82cd18c5ce691a7ffdc9d9e863a9c496e6f7468696e67',\nE     +                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "10": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]",
+          "time": "2.794",
+          "failure": {
+            "message": "AssertionError: assert -32600 == -32504\n +  where -32600 = Error(code=-32600, message='0x4B6646a0c729509Bfb97a27Ae5A64056e72786D2 is banned', data=None, id=65).code",
+            "#text": "tests/bundle/test_bundle.py:233: in test_mempool_reputation_rules_all_entities\n    assert_rpc_error(response, case.stake_status, case.errorCode)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32600 == -32504\nE    +  where -32600 = Error(code=-32600, message='0x4B6646a0c729509Bfb97a27Ae5A64056e72786D2 is banned', data=None, id=65).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "11": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]",
+          "time": "2.772",
+          "failure": {
+            "message": "AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]\n  Left contains one more item: UserOperation(sender='0x5647DD9076A74Fc98C5c29964b7f612E99323F0F', nonce='0x40000000000000000', initCode='0x240Bfae93F...ityFeePerGas='0x3b9aca00', paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67', signature='0x')\n  Full diff:\n    [\n     UserOperation(sender='0x7127b557FC0B80bc9B5f72d0544705f440c5fC3c',\n                   nonce='0x0',\n                   initCode='0x42370ea62573FC3B9eD02028cF223472539cF35c0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x51A5B197aF703A682d05150526Db4107a45b47b5',\n                   nonce='0x10000000000000000',\n                   initCode='0x87212Fd6CBEf09e7247F6f44D57601FF877851bc0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x645075626a24F0B77BbBb109F6466dC1E94647e5',\n                   nonce='0x20000000000000000',\n                   initCode='0x320d7C14D2d8EC63560Bfb2Ce735a05953ac1ae50d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x5647DD9076A74Fc98C5c29964b7f612E99323F0F',\n                   nonce='0x30000000000000000',\n                   initCode='0x240Bfae93FDAabF37c81Cea40E2e9Ef6A4F9570B0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\n                   signature='0x'),\n  +  UserOperation(sender='0x5647DD9076A74Fc98C5c29964b7f612E99323F0F',\n  +                nonce='0x40000000000000000',\n  +                initCode='0x240Bfae93FDAabF37c81Cea40E2e9Ef6A4F9570B0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  +                callGasLimit='0x493e0',\n  +                verificationGasLimit='0xf4240',\n  +                preVerificationGas='0x493e0',\n  +                maxFeePerGas='0x77359400',\n  +                maxPriorityFeePerGas='0x3b9aca00',\n  +                paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\n  +                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities\n    assert dump_mempool() == wallet_ops\nE   AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]\nE     Left contains one more item: UserOperation(sender='0x5647DD9076A74Fc98C5c29964b7f612E99323F0F', nonce='0x40000000000000000', initCode='0x240Bfae93F...ityFeePerGas='0x3b9aca00', paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67', signature='0x')\nE     Full diff:\nE       [\nE        UserOperation(sender='0x7127b557FC0B80bc9B5f72d0544705f440c5fC3c',\nE                      nonce='0x0',\nE                      initCode='0x42370ea62573FC3B9eD02028cF223472539cF35c0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x51A5B197aF703A682d05150526Db4107a45b47b5',\nE                      nonce='0x10000000000000000',\nE                      initCode='0x87212Fd6CBEf09e7247F6f44D57601FF877851bc0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x645075626a24F0B77BbBb109F6466dC1E94647e5',\nE                      nonce='0x20000000000000000',\nE                      initCode='0x320d7C14D2d8EC63560Bfb2Ce735a05953ac1ae50d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x5647DD9076A74Fc98C5c29964b7f612E99323F0F',\nE                      nonce='0x30000000000000000',\nE                      initCode='0x240Bfae93FDAabF37c81Cea40E2e9Ef6A4F9570B0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\nE                      signature='0x'),\nE     +  UserOperation(sender='0x5647DD9076A74Fc98C5c29964b7f612E99323F0F',\nE     +                nonce='0x40000000000000000',\nE     +                initCode='0x240Bfae93FDAabF37c81Cea40E2e9Ef6A4F9570B0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     +                callGasLimit='0x493e0',\nE     +                verificationGasLimit='0xf4240',\nE     +                preVerificationGas='0x493e0',\nE     +                maxFeePerGas='0x77359400',\nE     +                maxPriorityFeePerGas='0x3b9aca00',\nE     +                paymasterAndData='0x7630fe6f79c05c9eb69ff3bc36f9b4ce33981f0c6e6f7468696e67',\nE     +                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "12": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]",
+          "time": "2.701",
+          "failure": {
+            "message": "AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]\n  Left contains one more item: UserOperation(sender='0xf3Ec456e3DF37468c87Ee86BfA07Bd5E997d1caA', nonce='0x40000000000000000', initCode='0x0aB46451d3...ityFeePerGas='0x3b9aca00', paymasterAndData='0x51c93693b5ce53b093106ad394a1b11c2769c9666e6f7468696e67', signature='0x')\n  Full diff:\n    [\n     UserOperation(sender='0x518e46578A0cAed1De05B4065023548d77c798EA',\n                   nonce='0x0',\n                   initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xe4338e33b764d71bf5194d7286454a9c038cec946e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xC2Ef8C993920276f9d41bA41e98f08eEF2afa8e7',\n                   nonce='0x10000000000000000',\n                   initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x84fd91356f4bbb7581f60f1fb82a8df51e5453146e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x9f10b6383E92c0cC30dC7919BCB7dB2430836199',\n                   nonce='0x20000000000000000',\n                   initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x7ceaed6d50910417d03c646b7c0d1f74d905e0cf6e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xf3Ec456e3DF37468c87Ee86BfA07Bd5E997d1caA',\n                   nonce='0x30000000000000000',\n                   initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x51c93693b5ce53b093106ad394a1b11c2769c9666e6f7468696e67',\n                   signature='0x'),\n  +  UserOperation(sender='0xf3Ec456e3DF37468c87Ee86BfA07Bd5E997d1caA',\n  +                nonce='0x40000000000000000',\n  +                initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  +                callGasLimit='0x493e0',\n  +                verificationGasLimit='0xf4240',\n  +                preVerificationGas='0x493e0',\n  +                maxFeePerGas='0x77359400',\n  +                maxPriorityFeePerGas='0x3b9aca00',\n  +                paymasterAndData='0x51c93693b5ce53b093106ad394a1b11c2769c9666e6f7468696e67',\n  +                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities\n    assert dump_mempool() == wallet_ops\nE   AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]\nE     Left contains one more item: UserOperation(sender='0xf3Ec456e3DF37468c87Ee86BfA07Bd5E997d1caA', nonce='0x40000000000000000', initCode='0x0aB46451d3...ityFeePerGas='0x3b9aca00', paymasterAndData='0x51c93693b5ce53b093106ad394a1b11c2769c9666e6f7468696e67', signature='0x')\nE     Full diff:\nE       [\nE        UserOperation(sender='0x518e46578A0cAed1De05B4065023548d77c798EA',\nE                      nonce='0x0',\nE                      initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xe4338e33b764d71bf5194d7286454a9c038cec946e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xC2Ef8C993920276f9d41bA41e98f08eEF2afa8e7',\nE                      nonce='0x10000000000000000',\nE                      initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x84fd91356f4bbb7581f60f1fb82a8df51e5453146e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x9f10b6383E92c0cC30dC7919BCB7dB2430836199',\nE                      nonce='0x20000000000000000',\nE                      initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x7ceaed6d50910417d03c646b7c0d1f74d905e0cf6e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xf3Ec456e3DF37468c87Ee86BfA07Bd5E997d1caA',\nE                      nonce='0x30000000000000000',\nE                      initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x51c93693b5ce53b093106ad394a1b11c2769c9666e6f7468696e67',\nE                      signature='0x'),\nE     +  UserOperation(sender='0xf3Ec456e3DF37468c87Ee86BfA07Bd5E997d1caA',\nE     +                nonce='0x40000000000000000',\nE     +                initCode='0x0aB46451d36dFd071d95e21749eAB2fc13FCe3660d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     +                callGasLimit='0x493e0',\nE     +                verificationGasLimit='0xf4240',\nE     +                preVerificationGas='0x493e0',\nE     +                maxFeePerGas='0x77359400',\nE     +                maxPriorityFeePerGas='0x3b9aca00',\nE     +                paymasterAndData='0x51c93693b5ce53b093106ad394a1b11c2769c9666e6f7468696e67',\nE     +                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "13": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]",
+          "time": "2.632",
+          "failure": {
+            "message": "AssertionError: assert -32600 == -32505\n +  where -32600 = Error(code=-32600, message='0x1d071D77232d83d4cDCC5ecb04FbCa828e58AebB stake 0 is too low (min=1)', data=None, id=98).code",
+            "#text": "tests/bundle/test_bundle.py:233: in test_mempool_reputation_rules_all_entities\n    assert_rpc_error(response, case.stake_status, case.errorCode)\ntests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AssertionError: assert -32600 == -32505\nE    +  where -32600 = Error(code=-32600, message='0x1d071D77232d83d4cDCC5ecb04FbCa828e58AebB stake 0 is too low (min=1)', data=None, id=98).code"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "14": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]",
+          "time": "6.501",
+          "failure": {
+            "message": "AssertionError: assert [UserOperatio...re='0x'), ...] == [UserOperatio...re='0x'), ...]\n  Left contains one more item: UserOperation(sender='0x7B0356b85db6aFF1640Ef211F8e18A99f64A72eF', nonce='0xb0000000000000000', initCode='0xdbF7A8Cb71...ityFeePerGas='0x3b9aca00', paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67', signature='0x')\n  Full diff:\n    [\n     UserOperation(sender='0xc35f6127808a687980CD16978F9E97173dec0Bee',\n                   nonce='0x0',\n                   initCode='0xA13Bc04e662FC1D24375beF9040D046774FC249e0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xdF566c3B42B993Be08Fcdf831426f2DFcE085398',\n                   nonce='0x10000000000000000',\n                   initCode='0xFDe86CBb69e8Cd9d8CB0B2de557E80E0cEcd18620d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xF22663A6C634a0579424727Da2E1649d03a86FfD',\n                   nonce='0x20000000000000000',\n                   initCode='0x347C0A8A831E9E5F74BD5A89df58eBFC8a9cb8D10d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x7Ba75553E6bB251f4A213D7d88a2d7684ed3c4C8',\n                   nonce='0x30000000000000000',\n                   initCode='0xB5Dc7A8A8BB2e056A22dff74D8E1411879a216960d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xAEdaF22509f22cF618A3545d5d7a4Df6c676Fe4C',\n                   nonce='0x40000000000000000',\n                   initCode='0x9892053792878B006Ef763a309C4EF127Bf820B60d058fe3000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x8cfa9A755AE1e619e3276A62B8076aB957a65dc4',\n                   nonce='0x50000000000000000',\n                   initCode='0xe52ee64657Ff77528B453f3525FD28Ce366204950d058fe3000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x87f2a2FCAB8139cAFBadf61F5A4d978108f5C4e0',\n                   nonce='0x60000000000000000',\n                   initCode='0x00AfE5885111c8349Bd83C18EfF44bCa016B14580d058fe3000000000000000000000000000000000000000000000000000000000000008100000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x91500E9d90523D2121723fE79418448E38E62B8c',\n                   nonce='0x70000000000000000',\n                   initCode='0x46D0714A09B67280b7B9288f5E7307d722636e010d058fe3000000000000000000000000000000000000000000000000000000000000008200000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xf5fdb89c62983b5992592a8338892a0ecbc46E90',\n                   nonce='0x80000000000000000',\n                   initCode='0xAfd92D1eDDeC4b8d945Ad25F26a677cE7b1347fC0d058fe3000000000000000000000000000000000000000000000000000000000000008300000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xb47811DA5E5eC9F88E6761417a8182437f8b873b',\n                   nonce='0x90000000000000000',\n                   initCode='0xEd356b6d1596669e90874632415b8BF330AAed9D0d058fe3000000000000000000000000000000000000000000000000000000000000008400000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x7B0356b85db6aFF1640Ef211F8e18A99f64A72eF',\n                   nonce='0xa0000000000000000',\n                   initCode='0xdbF7A8Cb7191f8337960D9Cb6195f33E27E9FB8b0d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n                   signature='0x'),\n  +  UserOperation(sender='0x7B0356b85db6aFF1640Ef211F8e18A99f64A72eF',\n  +                nonce='0xb0000000000000000',\n  +                initCode='0xdbF7A8Cb7191f8337960D9Cb6195f33E27E9FB8b0d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  +                callGasLimit='0x493e0',\n  +                verificationGasLimit='0xf4240',\n  +                preVerificationGas='0x493e0',\n  +                maxFeePerGas='0x77359400',\n  +                maxPriorityFeePerGas='0x3b9aca00',\n  +                paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\n  +                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities\n    assert dump_mempool() == wallet_ops\nE   AssertionError: assert [UserOperatio...re='0x'), ...] == [UserOperatio...re='0x'), ...]\nE     Left contains one more item: UserOperation(sender='0x7B0356b85db6aFF1640Ef211F8e18A99f64A72eF', nonce='0xb0000000000000000', initCode='0xdbF7A8Cb71...ityFeePerGas='0x3b9aca00', paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67', signature='0x')\nE     Full diff:\nE       [\nE        UserOperation(sender='0xc35f6127808a687980CD16978F9E97173dec0Bee',\nE                      nonce='0x0',\nE                      initCode='0xA13Bc04e662FC1D24375beF9040D046774FC249e0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xdF566c3B42B993Be08Fcdf831426f2DFcE085398',\nE                      nonce='0x10000000000000000',\nE                      initCode='0xFDe86CBb69e8Cd9d8CB0B2de557E80E0cEcd18620d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xF22663A6C634a0579424727Da2E1649d03a86FfD',\nE                      nonce='0x20000000000000000',\nE                      initCode='0x347C0A8A831E9E5F74BD5A89df58eBFC8a9cb8D10d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x7Ba75553E6bB251f4A213D7d88a2d7684ed3c4C8',\nE                      nonce='0x30000000000000000',\nE                      initCode='0xB5Dc7A8A8BB2e056A22dff74D8E1411879a216960d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xAEdaF22509f22cF618A3545d5d7a4Df6c676Fe4C',\nE                      nonce='0x40000000000000000',\nE                      initCode='0x9892053792878B006Ef763a309C4EF127Bf820B60d058fe3000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x8cfa9A755AE1e619e3276A62B8076aB957a65dc4',\nE                      nonce='0x50000000000000000',\nE                      initCode='0xe52ee64657Ff77528B453f3525FD28Ce366204950d058fe3000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x87f2a2FCAB8139cAFBadf61F5A4d978108f5C4e0',\nE                      nonce='0x60000000000000000',\nE                      initCode='0x00AfE5885111c8349Bd83C18EfF44bCa016B14580d058fe3000000000000000000000000000000000000000000000000000000000000008100000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x91500E9d90523D2121723fE79418448E38E62B8c',\nE                      nonce='0x70000000000000000',\nE                      initCode='0x46D0714A09B67280b7B9288f5E7307d722636e010d058fe3000000000000000000000000000000000000000000000000000000000000008200000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xf5fdb89c62983b5992592a8338892a0ecbc46E90',\nE                      nonce='0x80000000000000000',\nE                      initCode='0xAfd92D1eDDeC4b8d945Ad25F26a677cE7b1347fC0d058fe3000000000000000000000000000000000000000000000000000000000000008300000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xb47811DA5E5eC9F88E6761417a8182437f8b873b',\nE                      nonce='0x90000000000000000',\nE                      initCode='0xEd356b6d1596669e90874632415b8BF330AAed9D0d058fe3000000000000000000000000000000000000000000000000000000000000008400000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x7B0356b85db6aFF1640Ef211F8e18A99f64A72eF',\nE                      nonce='0xa0000000000000000',\nE                      initCode='0xdbF7A8Cb7191f8337960D9Cb6195f33E27E9FB8b0d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE                      signature='0x'),\nE     +  UserOperation(sender='0x7B0356b85db6aFF1640Ef211F8e18A99f64A72eF',\nE     +                nonce='0xb0000000000000000',\nE     +                initCode='0xdbF7A8Cb7191f8337960D9Cb6195f33E27E9FB8b0d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     +                callGasLimit='0x493e0',\nE     +                verificationGasLimit='0xf4240',\nE     +                preVerificationGas='0x493e0',\nE     +                maxFeePerGas='0x77359400',\nE     +                maxPriorityFeePerGas='0x3b9aca00',\nE     +                paymasterAndData='0xd1fab61afaba161103198fd959c260b7a9cae5a76e6f7468696e67',\nE     +                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "15": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]",
+          "time": "6.370",
+          "failure": {
+            "message": "AssertionError: assert [UserOperatio...re='0x'), ...] == [UserOperatio...re='0x'), ...]\n  Left contains one more item: UserOperation(sender='0xCE7287284f8a0F56Bdc5Aeb48f9fb41b311F9bBd', nonce='0xb0000000000000000', initCode='0xCd6bc1db12...ityFeePerGas='0x3b9aca00', paymasterAndData='0x8d9cabfa1c7e7f8369ed5dbad5c45a2c1d7967316e6f7468696e67', signature='0x')\n  Full diff:\n    [\n     UserOperation(sender='0x47011e3f6e866146D9934665054923e1573eb53F',\n                   nonce='0x0',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xc4a2d341e9d7516e0c388f9f0ac487313da03f326e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x8a4379AbD687331547cb65518114E5942B1c3ED9',\n                   nonce='0x10000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xf6e2406fc77e468cb016e37053e37c8d4e9583446e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xF31566284D4D6E5b5B5a7CBc01cC792016B4068E',\n                   nonce='0x20000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xde2db78f36df91982ef52830454f6e163b4065606e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xD8FE0EC5e6AB8e713940A3210CD99aF4e38CA17c',\n                   nonce='0x30000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xdb7c71dc1c47f04a99f7fbfe347bdd42a755d9226e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x38F9dd9e9C81A0E7420C24d6343C6a5CF1108242',\n                   nonce='0x40000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x4fa1519a3de0e43ddbc46aa2ffaa2cd19a90b2e96e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x669dfE39C4229293e7136e7aCEff8299312FD223',\n                   nonce='0x50000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xdf0c1a82df77ff762b512306f885977db178b9366e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xbAE11e9DF2260008Cf6026e24C751CAC3701DF87',\n                   nonce='0x60000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008100000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x847b112deb354483460ae3e44509411c25c040da6e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xcc56b88f018E79cf119B6F7F949262Ad8C52b06d',\n                   nonce='0x70000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008200000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xc54ae1e5671ff0a27a51d0dc028f557be16c74276e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x6690d84328704c1E47bFb2E06E3Ee1CCCa6006A7',\n                   nonce='0x80000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008300000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xd1ea084606f6c9673653e69c6b3ad339207b625d6e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0x6FC8A2630d9B59E3D6910c97461d2211B0D693c9',\n                   nonce='0x90000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008400000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0xa6382f72e0a08097602ae7f503610dc6222a99346e6f7468696e67',\n                   signature='0x'),\n     UserOperation(sender='0xCE7287284f8a0F56Bdc5Aeb48f9fb41b311F9bBd',\n                   nonce='0xa0000000000000000',\n                   initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n                   callGasLimit='0x493e0',\n                   verificationGasLimit='0xf4240',\n                   preVerificationGas='0x493e0',\n                   maxFeePerGas='0x77359400',\n                   maxPriorityFeePerGas='0x3b9aca00',\n                   paymasterAndData='0x8d9cabfa1c7e7f8369ed5dbad5c45a2c1d7967316e6f7468696e67',\n                   signature='0x'),\n  +  UserOperation(sender='0xCE7287284f8a0F56Bdc5Aeb48f9fb41b311F9bBd',\n  +                nonce='0xb0000000000000000',\n  +                initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\n  +                callGasLimit='0x493e0',\n  +                verificationGasLimit='0xf4240',\n  +                preVerificationGas='0x493e0',\n  +                maxFeePerGas='0x77359400',\n  +                maxPriorityFeePerGas='0x3b9aca00',\n  +                paymasterAndData='0x8d9cabfa1c7e7f8369ed5dbad5c45a2c1d7967316e6f7468696e67',\n  +                signature='0x'),\n    ]",
+            "#text": "tests/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities\n    assert dump_mempool() == wallet_ops\nE   AssertionError: assert [UserOperatio...re='0x'), ...] == [UserOperatio...re='0x'), ...]\nE     Left contains one more item: UserOperation(sender='0xCE7287284f8a0F56Bdc5Aeb48f9fb41b311F9bBd', nonce='0xb0000000000000000', initCode='0xCd6bc1db12...ityFeePerGas='0x3b9aca00', paymasterAndData='0x8d9cabfa1c7e7f8369ed5dbad5c45a2c1d7967316e6f7468696e67', signature='0x')\nE     Full diff:\nE       [\nE        UserOperation(sender='0x47011e3f6e866146D9934665054923e1573eb53F',\nE                      nonce='0x0',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xc4a2d341e9d7516e0c388f9f0ac487313da03f326e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x8a4379AbD687331547cb65518114E5942B1c3ED9',\nE                      nonce='0x10000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xf6e2406fc77e468cb016e37053e37c8d4e9583446e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xF31566284D4D6E5b5B5a7CBc01cC792016B4068E',\nE                      nonce='0x20000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xde2db78f36df91982ef52830454f6e163b4065606e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xD8FE0EC5e6AB8e713940A3210CD99aF4e38CA17c',\nE                      nonce='0x30000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xdb7c71dc1c47f04a99f7fbfe347bdd42a755d9226e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x38F9dd9e9C81A0E7420C24d6343C6a5CF1108242',\nE                      nonce='0x40000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x4fa1519a3de0e43ddbc46aa2ffaa2cd19a90b2e96e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x669dfE39C4229293e7136e7aCEff8299312FD223',\nE                      nonce='0x50000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xdf0c1a82df77ff762b512306f885977db178b9366e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xbAE11e9DF2260008Cf6026e24C751CAC3701DF87',\nE                      nonce='0x60000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008100000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x847b112deb354483460ae3e44509411c25c040da6e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xcc56b88f018E79cf119B6F7F949262Ad8C52b06d',\nE                      nonce='0x70000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008200000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xc54ae1e5671ff0a27a51d0dc028f557be16c74276e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x6690d84328704c1E47bFb2E06E3Ee1CCCa6006A7',\nE                      nonce='0x80000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008300000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xd1ea084606f6c9673653e69c6b3ad339207b625d6e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0x6FC8A2630d9B59E3D6910c97461d2211B0D693c9',\nE                      nonce='0x90000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008400000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0xa6382f72e0a08097602ae7f503610dc6222a99346e6f7468696e67',\nE                      signature='0x'),\nE        UserOperation(sender='0xCE7287284f8a0F56Bdc5Aeb48f9fb41b311F9bBd',\nE                      nonce='0xa0000000000000000',\nE                      initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE                      callGasLimit='0x493e0',\nE                      verificationGasLimit='0xf4240',\nE                      preVerificationGas='0x493e0',\nE                      maxFeePerGas='0x77359400',\nE                      maxPriorityFeePerGas='0x3b9aca00',\nE                      paymasterAndData='0x8d9cabfa1c7e7f8369ed5dbad5c45a2c1d7967316e6f7468696e67',\nE                      signature='0x'),\nE     +  UserOperation(sender='0xCE7287284f8a0F56Bdc5Aeb48f9fb41b311F9bBd',\nE     +                nonce='0xb0000000000000000',\nE     +                initCode='0xCd6bc1db12Dc149D37b87ab988e22FF4d9Fc74290d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\nE     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',\nE     +                callGasLimit='0x493e0',\nE     +                verificationGasLimit='0xf4240',\nE     +                preVerificationGas='0x493e0',\nE     +                maxFeePerGas='0x77359400',\nE     +                maxPriorityFeePerGas='0x3b9aca00',\nE     +                paymasterAndData='0x8d9cabfa1c7e7f8369ed5dbad5c45a2c1d7967316e6f7468696e67',\nE     +                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "16": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender",
+          "time": "1.080"
+        },
+        "17": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender",
+          "time": "1.343"
+        },
+        "18": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_op_access_other_ops_sender_in_bundle",
+          "time": "0.992"
+        },
+        "19": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_sender_double_role_in_bundle",
+          "time": "0.471",
+          "failure": {
+            "message": "Exception: expected error object, got:\nOk(result='0xc1d308ca148c6ac2ffa4a78cca2d11e7d12b6b7704d3cf51e71debc594f707c7', id=178)",
+            "#text": "tests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AttributeError: 'Ok' object has no attribute 'code'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_bundle.py:359: in test_ban_user_sender_double_role_in_bundle\n    assert_rpc_error(\ntests/utils.py:118: in assert_rpc_error\n    raise Exception(f\"expected error object, got:\\n{response}\") from exc\nE   Exception: expected error object, got:\nE   Ok(result='0xc1d308ca148c6ac2ffa4a78cca2d11e7d12b6b7704d3cf51e71debc594f707c7', id=178)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "20": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_stake_check_in_bundler",
+          "time": "0.051",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:382: in test_stake_check_in_bundler\n    response = get_stake_status(paymaster_contract.address, entrypoint_contract.address)\ntests/utils.py:165: in get_stake_status\n    .result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "21": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed",
+          "time": "1.294"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][paymaster][no_storage][ok]",
+          "time": "0.344"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]unstaked][paymaster][storage][drop]",
+          "time": "0.342"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]",
+          "time": "0.354"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.371"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][paymaster][account_storage][ok]",
+          "time": "0.363"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.379"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.393"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]",
+          "time": "0.631"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]unstaked][paymaster][context][drop]",
+          "time": "0.261"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][external_storage][drop]",
+          "time": "0.356"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]",
+          "time": "0.454"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.369"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][paymaster][no_storage][ok]",
+          "time": "0.382"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][storage][ok]",
+          "time": "0.409"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage][ok]",
+          "time": "0.407"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.417"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][paymaster][account_storage][ok]",
+          "time": "0.422"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]",
+          "time": "0.413"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.426"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.689"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]staked][paymaster][context][ok]",
+          "time": "0.331"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][external_storage][drop]",
+          "time": "0.404"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][out_of_gas][drop]",
+          "time": "0.475"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.398"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][no_storage][ok]",
+          "time": "0.522"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][storage][drop]",
+          "time": "0.505"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][reference_storage][drop]",
+          "time": "0.515"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.559"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][factory][account_storage][ok]",
+          "time": "0.536"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]",
+          "time": "0.545"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.534"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][external_storage][drop]",
+          "time": "0.520"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]",
+          "time": "0.491"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.476"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.467"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.473"
+        },
+        "58": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]",
+          "time": "0.466"
+        },
+        "59": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]",
+          "time": "0.468"
+        },
+        "60": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.468"
+        },
+        "61": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]",
+          "time": "0.482"
+        },
+        "62": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][out_of_gas][drop]",
+          "time": "0.611"
+        },
+        "63": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]",
+          "time": "0.532"
+        },
+        "64": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][no_storage][ok]",
+          "time": "0.563"
+        },
+        "65": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][factory][storage][ok]",
+          "time": "0.563"
+        },
+        "66": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage][ok]",
+          "time": "0.577"
+        },
+        "67": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage_struct][ok]",
+          "time": "0.606"
+        },
+        "68": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][factory][account_storage][ok]",
+          "time": "0.576"
+        },
+        "69": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage][ok]",
+          "time": "0.579"
+        },
+        "70": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.606"
+        },
+        "71": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][external_storage][drop]",
+          "time": "0.553"
+        },
+        "72": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][out_of_gas][drop]",
+          "time": "0.675"
+        },
+        "73": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]",
+          "time": "0.560"
+        },
+        "74": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][no_storage][ok]",
+          "time": "0.362"
+        },
+        "75": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][account][account_storage][ok]",
+          "time": "0.336"
+        },
+        "76": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage][ok]",
+          "time": "0.342"
+        },
+        "77": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.503"
+        },
+        "78": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]",
+          "time": "0.607"
+        },
+        "79": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]",
+          "time": "0.628"
+        },
+        "80": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.370"
+        },
+        "81": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][external_storage][drop]",
+          "time": "0.344"
+        },
+        "82": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][out_of_gas][drop]",
+          "time": "0.414"
+        },
+        "83": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]",
+          "time": "0.315"
+        },
+        "84": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][no_storage][ok]",
+          "time": "0.345"
+        },
+        "85": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][account][account_storage][ok]",
+          "time": "0.362"
+        },
+        "86": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage][ok]",
+          "time": "0.399"
+        },
+        "87": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]",
+          "time": "0.384"
+        },
+        "88": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][out_of_gas][drop]",
+          "time": "0.543"
+        },
+        "89": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]",
+          "time": "0.349"
+        },
+        "90": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][external_storage][drop]",
+          "time": "0.340"
+        },
+        "91": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]",
+          "time": "0.330"
+        },
+        "92": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]",
+          "time": "0.317"
+        },
+        "93": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]",
+          "time": "0.416"
+        },
+        "94": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]",
+          "time": "0.384"
+        },
+        "95": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.273"
+        },
+        "96": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.267"
+        },
+        "97": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.274"
+        },
+        "98": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]",
+          "time": "0.290"
+        },
+        "99": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]",
+          "time": "0.301"
+        },
+        "100": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]",
+          "time": "0.298"
+        },
+        "101": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]",
+          "time": "0.264"
+        },
+        "102": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]",
+          "time": "0.263"
+        },
+        "103": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.263"
+        },
+        "104": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]",
+          "time": "0.270"
+        },
+        "105": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]",
+          "time": "0.384"
+        },
+        "106": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.205"
+        },
+        "107": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.203"
+        },
+        "108": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.310"
+        },
+        "109": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.208"
+        },
+        "110": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.222"
+        },
+        "111": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.214"
+        },
+        "112": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.225"
+        },
+        "113": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.222"
+        },
+        "114": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.222"
+        },
+        "115": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.226"
+        },
+        "116": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.329"
+        },
+        "117": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.226"
+        },
+        "118": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.240"
+        },
+        "119": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.242"
+        },
+        "120": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.248"
+        },
+        "121": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS CALL]",
+          "time": "0.302"
+        },
+        "122": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS DELEGATECALL]",
+          "time": "0.299"
+        },
+        "123": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.268"
+        },
+        "124": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.273"
+        },
+        "125": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.280"
+        },
+        "126": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.277"
+        },
+        "127": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.281"
+        },
+        "128": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.278"
+        },
+        "129": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.289"
+        },
+        "130": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.287"
+        },
+        "131": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.390"
+        },
+        "132": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.287"
+        },
+        "133": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.300"
+        },
+        "134": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.296"
+        },
+        "135": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.405"
+        },
+        "136": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.318"
+        },
+        "137": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.307"
+        },
+        "138": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.433"
+        },
+        "139": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.430"
+        },
+        "140": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.431"
+        },
+        "141": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.430"
+        },
+        "142": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.438"
+        },
+        "143": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.436"
+        },
+        "144": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.452"
+        },
+        "145": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.473"
+        },
+        "146": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.449"
+        },
+        "147": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.566"
+        },
+        "148": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.475"
+        },
+        "149": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.456"
+        },
+        "150": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.462"
+        },
+        "151": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.472"
+        },
+        "152": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.466"
+        },
+        "153": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[with_factory]",
+          "time": "79.001",
+          "failure": {
+            "message": "ValueError: invalid literal for int() with base 16: 'banned'",
+            "#text": "tests/reputation/test_reputation.py:127: in test_staked_entity_reputation_threshold\n    assert_reputation_status(\ntests/reputation/test_reputation.py:49: in assert_reputation_status\n    assert int(reputation.get(\"status\", \"-0x1\"), 16) == status, (\nE   ValueError: invalid literal for int() with base 16: 'banned'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "154": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[without_factory]",
+          "time": "23.630",
+          "failure": {
+            "message": "TypeError: string indices must be integers",
+            "#text": "tests/reputation/test_reputation.py:134: in test_staked_entity_reputation_threshold\n    assert_reputation_status(\ntests/reputation/test_reputation.py:39: in assert_reputation_status\n    reputations = dump_reputation()\ntests/utils.py:174: in dump_reputation\n    .send()\ntests/types.py:68: in send\n    res = jsonrpcclient.responses.to_result(\n.venv/lib/python3.10/site-packages/jsonrpcclient/responses.py:35: in to_result\n    response[\"error\"][\"code\"],\nE   TypeError: string indices must be integers"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "155": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.008"
+        },
+        "156": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.043"
+        },
+        "157": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.035"
+        },
+        "158": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.033"
+        },
+        "159": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.429"
+        },
+        "160": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.005"
+        },
+        "161": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.435"
+        },
+        "162": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.010"
+        },
+        "163": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.376"
+        },
+        "164": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.151"
+        },
+        "165": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.160"
+        },
+        "166": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.015"
+        }
+      }
+    },
+    "silius": {
+      "name": "silius",
+      "errors": "1",
+      "failures": "18",
+      "skipped": "0",
+      "tests": "167",
+      "time": "157.453",
+      "timestamp": "2023-10-08T16:16:01.380534",
+      "hostname": "fv-az306-7",
+      "testcase": {
+        "0": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.206"
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.180"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.181"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.177"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.174"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.438"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.307"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]",
+          "time": "0.338",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]",
+          "time": "0.205",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]",
+          "time": "0.195",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "10": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]",
+          "time": "0.201",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "11": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]",
+          "time": "0.194",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "12": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]",
+          "time": "0.191",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "13": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]",
+          "time": "0.229",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "14": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]",
+          "time": "0.196",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "15": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]",
+          "time": "0.193",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities\n    set_reputation(\ntests/utils.py:200: in set_reputation\n    )\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "16": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender",
+          "time": "0.856"
+        },
+        "17": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender",
+          "time": "1.116"
+        },
+        "18": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_op_access_other_ops_sender_in_bundle",
+          "time": "0.935"
+        },
+        "19": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_sender_double_role_in_bundle",
+          "time": "0.439",
+          "failure": {
+            "message": "Exception: expected error object, got:\nOk(result='0xeee5d5f82f2351a4cc0b48098e14cd44efbe874cc53f4f9699c2de5f74dbea13', id=113)",
+            "#text": "tests/utils.py:115: in assert_rpc_error\n    assert response.code == code\nE   AttributeError: 'Ok' object has no attribute 'code'\n\nThe above exception was the direct cause of the following exception:\ntests/bundle/test_bundle.py:359: in test_ban_user_sender_double_role_in_bundle\n    assert_rpc_error(\ntests/utils.py:118: in assert_rpc_error\n    raise Exception(f\"expected error object, got:\\n{response}\") from exc\nE   Exception: expected error object, got:\nE   Ok(result='0xeee5d5f82f2351a4cc0b48098e14cd44efbe874cc53f4f9699c2de5f74dbea13', id=113)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "20": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_stake_check_in_bundler",
+          "time": "0.160",
+          "failure": {
+            "message": "AttributeError: 'Error' object has no attribute 'result'",
+            "#text": "tests/bundle/test_bundle.py:382: in test_stake_check_in_bundler\n    response = get_stake_status(paymaster_contract.address, entrypoint_contract.address)\ntests/utils.py:165: in get_stake_status\n    .result\nE   AttributeError: 'Error' object has no attribute 'result'"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "21": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed",
+          "time": "1.209"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][paymaster][no_storage][ok]",
+          "time": "0.324"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]unstaked][paymaster][storage][drop]",
+          "time": "0.332"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]",
+          "time": "0.460"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.366"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][paymaster][account_storage][ok]",
+          "time": "0.345"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.459"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.474"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]",
+          "time": "0.618"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]unstaked][paymaster][context][drop]",
+          "time": "0.253"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][external_storage][drop]",
+          "time": "0.384"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]",
+          "time": "0.450"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.377"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][paymaster][no_storage][ok]",
+          "time": "0.367"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][storage][ok]",
+          "time": "0.366"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage][ok]",
+          "time": "0.410"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.398"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][paymaster][account_storage][ok]",
+          "time": "0.370"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]",
+          "time": "0.380"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.399"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.653"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]staked][paymaster][context][ok]",
+          "time": "0.292"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][external_storage][drop]",
+          "time": "0.389"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][out_of_gas][drop]",
+          "time": "0.486"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.391"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][no_storage][ok]",
+          "time": "0.479"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][storage][drop]",
+          "time": "0.487"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][reference_storage][drop]",
+          "time": "0.506"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.537"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][factory][account_storage][ok]",
+          "time": "0.502"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]",
+          "time": "0.506"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.525"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][external_storage][drop]",
+          "time": "0.513"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]",
+          "time": "0.451"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.463"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.474"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.465"
+        },
+        "58": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]",
+          "time": "0.453"
+        },
+        "59": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]",
+          "time": "0.473"
+        },
+        "60": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.466"
+        },
+        "61": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]",
+          "time": "0.481"
+        },
+        "62": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][out_of_gas][drop]",
+          "time": "0.610"
+        },
+        "63": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]",
+          "time": "0.624"
+        },
+        "64": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][no_storage][ok]",
+          "time": "0.617"
+        },
+        "65": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][factory][storage][ok]",
+          "time": "0.523"
+        },
+        "66": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage][ok]",
+          "time": "0.537"
+        },
+        "67": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage_struct][ok]",
+          "time": "0.564"
+        },
+        "68": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][factory][account_storage][ok]",
+          "time": "0.529"
+        },
+        "69": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage][ok]",
+          "time": "0.540"
+        },
+        "70": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.559"
+        },
+        "71": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][external_storage][drop]",
+          "time": "0.539"
+        },
+        "72": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][out_of_gas][drop]",
+          "time": "0.654"
+        },
+        "73": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]",
+          "time": "0.549"
+        },
+        "74": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][no_storage][ok]",
+          "time": "0.332"
+        },
+        "75": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][account][account_storage][ok]",
+          "time": "0.294"
+        },
+        "76": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage][ok]",
+          "time": "0.345"
+        },
+        "77": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.584"
+        },
+        "78": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]",
+          "time": "0.650"
+        },
+        "79": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]",
+          "time": "0.554"
+        },
+        "80": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.320"
+        },
+        "81": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][external_storage][drop]",
+          "time": "0.312"
+        },
+        "82": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][out_of_gas][drop]",
+          "time": "0.402"
+        },
+        "83": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]",
+          "time": "0.314"
+        },
+        "84": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][no_storage][ok]",
+          "time": "0.305"
+        },
+        "85": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][account][account_storage][ok]",
+          "time": "0.328"
+        },
+        "86": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage][ok]",
+          "time": "0.344"
+        },
+        "87": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]",
+          "time": "0.372"
+        },
+        "88": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][out_of_gas][drop]",
+          "time": "0.428"
+        },
+        "89": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]",
+          "time": "0.348"
+        },
+        "90": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][external_storage][drop]",
+          "time": "0.348"
+        },
+        "91": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]",
+          "time": "0.323"
+        },
+        "92": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]",
+          "time": "0.321"
+        },
+        "93": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]",
+          "time": "0.335"
+        },
+        "94": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]",
+          "time": "0.343"
+        },
+        "95": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.259"
+        },
+        "96": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.260"
+        },
+        "97": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.258"
+        },
+        "98": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]",
+          "time": "0.283"
+        },
+        "99": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]",
+          "time": "0.284"
+        },
+        "100": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]",
+          "time": "0.289"
+        },
+        "101": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]",
+          "time": "0.254"
+        },
+        "102": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]",
+          "time": "0.252"
+        },
+        "103": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.270"
+        },
+        "104": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]",
+          "time": "0.361"
+        },
+        "105": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]",
+          "time": "0.303"
+        },
+        "106": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.199"
+        },
+        "107": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.200"
+        },
+        "108": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.224"
+        },
+        "109": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.202"
+        },
+        "110": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.208"
+        },
+        "111": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.208"
+        },
+        "112": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.208"
+        },
+        "113": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.210"
+        },
+        "114": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.214"
+        },
+        "115": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.215"
+        },
+        "116": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.320"
+        },
+        "117": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.224"
+        },
+        "118": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.234"
+        },
+        "119": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.232"
+        },
+        "120": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.231"
+        },
+        "121": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS CALL]",
+          "time": "0.268"
+        },
+        "122": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS DELEGATECALL]",
+          "time": "0.265"
+        },
+        "123": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.264"
+        },
+        "124": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.264"
+        },
+        "125": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.300"
+        },
+        "126": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.267"
+        },
+        "127": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.276"
+        },
+        "128": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.269"
+        },
+        "129": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.277"
+        },
+        "130": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.376"
+        },
+        "131": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.274"
+        },
+        "132": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.292"
+        },
+        "133": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.397"
+        },
+        "134": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.288"
+        },
+        "135": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.301"
+        },
+        "136": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.296"
+        },
+        "137": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.302"
+        },
+        "138": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.413"
+        },
+        "139": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.420"
+        },
+        "140": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.424"
+        },
+        "141": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.429"
+        },
+        "142": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.431"
+        },
+        "143": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.438"
+        },
+        "144": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.434"
+        },
+        "145": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.432"
+        },
+        "146": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.435"
+        },
+        "147": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.453"
+        },
+        "148": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.564"
+        },
+        "149": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.439"
+        },
+        "150": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.457"
+        },
+        "151": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.461"
+        },
+        "152": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.458"
+        },
+        "153": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[with_factory]",
+          "time": "75.267",
+          "failure": {
+            "message": "TypeError: int() can't convert non-string with explicit base",
+            "#text": "tests/reputation/test_reputation.py:127: in test_staked_entity_reputation_threshold\n    assert_reputation_status(\ntests/reputation/test_reputation.py:49: in assert_reputation_status\n    assert int(reputation.get(\"status\", \"-0x1\"), 16) == status, (\nE   TypeError: int() can't convert non-string with explicit base"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "154": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[without_factory]",
+          "time": "20.954",
+          "failure": {
+            "message": "TypeError: int() can't convert non-string with explicit base",
+            "#text": "tests/reputation/test_reputation.py:134: in test_staked_entity_reputation_threshold\n    assert_reputation_status(\ntests/reputation/test_reputation.py:49: in assert_reputation_status\n    assert int(reputation.get(\"status\", \"-0x1\"), 16) == status, (\nE   TypeError: int() can't convert non-string with explicit base"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "155": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.009"
+        },
+        "156": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.156"
+        },
+        "157": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.159"
+        },
+        "158": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.030"
+        },
+        "159": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.636"
+        },
+        "160": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.003"
+        },
+        "161": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.155",
+          "error": {
+            "message": "failed on setup with \"requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))\"",
+            "#text": ".venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen\n    httplib_response = self._make_request(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:449: in _make_request\n    six.raise_from(e, None)\n<string>:3: in raise_from\n    ???\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:444: in _make_request\n    httplib_response = conn.getresponse()\n/usr/lib/python3.10/http/client.py:1375: in getresponse\n    response.begin()\n/usr/lib/python3.10/http/client.py:318: in begin\n    version, status, reason = self._read_status()\n/usr/lib/python3.10/http/client.py:287: in _read_status\n    raise RemoteDisconnected(\"Remote end closed connection without\"\nE   http.client.RemoteDisconnected: Remote end closed connection without response\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send\n    resp = conn.urlopen(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen\n    retries = retries.increment(\n.venv/lib/python3.10/site-packages/urllib3/util/retry.py:550: in increment\n    raise six.reraise(type(error), error, _stacktrace)\n.venv/lib/python3.10/site-packages/urllib3/packages/six.py:769: in reraise\n    raise value.with_traceback(tb)\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen\n    httplib_response = self._make_request(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:449: in _make_request\n    six.raise_from(e, None)\n<string>:3: in raise_from\n    ???\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:444: in _make_request\n    httplib_response = conn.getresponse()\n/usr/lib/python3.10/http/client.py:1375: in getresponse\n    response.begin()\n/usr/lib/python3.10/http/client.py:318: in begin\n    version, status, reason = self._read_status()\n/usr/lib/python3.10/http/client.py:287: in _read_status\n    raise RemoteDisconnected(\"Remote end closed connection without\"\nE   urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))\n\nDuring handling of the above exception, another exception occurred:\ntests/conftest.py:106: in execute_user_operation\n    userop.send()\ntests/types.py:52: in send\n    ).send(url)\ntests/types.py:69: in send\n    requests.post(url, json=asdict(self), timeout=10).json()\n.venv/lib/python3.10/site-packages/requests/api.py:115: in post\n    return request(\"post\", url, data=data, json=json, **kwargs)\n.venv/lib/python3.10/site-packages/requests/api.py:59: in request\n    return session.request(method=method, url=url, **kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request\n    resp = self.send(prep, **send_kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send\n    r = adapter.send(request, **kwargs)\n.venv/lib/python3.10/site-packages/requests/adapters.py:547: in send\n    raise ConnectionError(err, request=request)\nE   requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+          }
+        },
+        "162": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.002",
+          "failure": {
+            "message": "requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f94d9a20>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+            "#text": ".venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn\n    conn = connection.create_connection(\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection\n    raise err\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection\n    sock.connect(sa)\nE   ConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen\n    httplib_response = self._make_request(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request\n    conn.request(method, url, **httplib_request_kw)\n.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request\n    super(HTTPConnection, self).request(method, url, body=body, headers=headers)\n/usr/lib/python3.10/http/client.py:1283: in request\n    self._send_request(method, url, body, headers, encode_chunked)\n/usr/lib/python3.10/http/client.py:1329: in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1278: in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1038: in _send_output\n    self.send(msg)\n/usr/lib/python3.10/http/client.py:976: in send\n    self.connect()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect\n    conn = self._new_conn()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn\n    raise NewConnectionError(\nE   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f13f94d9a20>: Failed to establish a new connection: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send\n    resp = conn.urlopen(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen\n    retries = retries.increment(\n.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment\n    raise MaxRetryError(_pool, url, error or ResponseError(cause))\nE   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f94d9a20>: Failed to establish a new connection: [Errno 111] Connection refused'))\n\nDuring handling of the above exception, another exception occurred:\ntests/rpc/test_eth_getUserOperationReceipt.py:25: in test_eth_getUserOperationReceipt_error\n    response = RPCRequest(method=\"eth_getUserOperationReceipt\", params=[\"\"]).send()\ntests/types.py:69: in send\n    requests.post(url, json=asdict(self), timeout=10).json()\n.venv/lib/python3.10/site-packages/requests/api.py:115: in post\n    return request(\"post\", url, data=data, json=json, **kwargs)\n.venv/lib/python3.10/site-packages/requests/api.py:59: in request\n    return session.request(method=method, url=url, **kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request\n    resp = self.send(prep, **send_kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send\n    r = adapter.send(request, **kwargs)\n.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send\n    raise ConnectionError(e, request=request)\nE   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f94d9a20>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "163": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.029",
+          "failure": {
+            "message": "requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f95035b0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+            "#text": ".venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn\n    conn = connection.create_connection(\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection\n    raise err\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection\n    sock.connect(sa)\nE   ConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen\n    httplib_response = self._make_request(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request\n    conn.request(method, url, **httplib_request_kw)\n.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request\n    super(HTTPConnection, self).request(method, url, body=body, headers=headers)\n/usr/lib/python3.10/http/client.py:1283: in request\n    self._send_request(method, url, body, headers, encode_chunked)\n/usr/lib/python3.10/http/client.py:1329: in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1278: in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1038: in _send_output\n    self.send(msg)\n/usr/lib/python3.10/http/client.py:976: in send\n    self.connect()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect\n    conn = self._new_conn()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn\n    raise NewConnectionError(\nE   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f13f95035b0>: Failed to establish a new connection: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send\n    resp = conn.urlopen(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen\n    retries = retries.increment(\n.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment\n    raise MaxRetryError(_pool, url, error or ResponseError(cause))\nE   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f95035b0>: Failed to establish a new connection: [Errno 111] Connection refused'))\n\nDuring handling of the above exception, another exception occurred:\ntests/rpc/test_eth_sendUserOperation.py:16: in test_eth_sendUserOperation\n    response = userop.send()\ntests/types.py:52: in send\n    ).send(url)\ntests/types.py:69: in send\n    requests.post(url, json=asdict(self), timeout=10).json()\n.venv/lib/python3.10/site-packages/requests/api.py:115: in post\n    return request(\"post\", url, data=data, json=json, **kwargs)\n.venv/lib/python3.10/site-packages/requests/api.py:59: in request\n    return session.request(method=method, url=url, **kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request\n    resp = self.send(prep, **send_kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send\n    r = adapter.send(request, **kwargs)\n.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send\n    raise ConnectionError(e, request=request)\nE   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f95035b0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "164": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.029",
+          "failure": {
+            "message": "requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9168a00>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+            "#text": ".venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn\n    conn = connection.create_connection(\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection\n    raise err\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection\n    sock.connect(sa)\nE   ConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen\n    httplib_response = self._make_request(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request\n    conn.request(method, url, **httplib_request_kw)\n.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request\n    super(HTTPConnection, self).request(method, url, body=body, headers=headers)\n/usr/lib/python3.10/http/client.py:1283: in request\n    self._send_request(method, url, body, headers, encode_chunked)\n/usr/lib/python3.10/http/client.py:1329: in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1278: in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1038: in _send_output\n    self.send(msg)\n/usr/lib/python3.10/http/client.py:976: in send\n    self.connect()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect\n    conn = self._new_conn()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn\n    raise NewConnectionError(\nE   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f13f9168a00>: Failed to establish a new connection: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send\n    resp = conn.urlopen(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen\n    retries = retries.increment(\n.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment\n    raise MaxRetryError(_pool, url, error or ResponseError(cause))\nE   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9168a00>: Failed to establish a new connection: [Errno 111] Connection refused'))\n\nDuring handling of the above exception, another exception occurred:\ntests/rpc/test_eth_sendUserOperation.py:28: in test_eth_sendUserOperation_revert\n    response = bad_sig_userop.send()\ntests/types.py:52: in send\n    ).send(url)\ntests/types.py:69: in send\n    requests.post(url, json=asdict(self), timeout=10).json()\n.venv/lib/python3.10/site-packages/requests/api.py:115: in post\n    return request(\"post\", url, data=data, json=json, **kwargs)\n.venv/lib/python3.10/site-packages/requests/api.py:59: in request\n    return session.request(method=method, url=url, **kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request\n    resp = self.send(prep, **send_kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send\n    r = adapter.send(request, **kwargs)\n.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send\n    raise ConnectionError(e, request=request)\nE   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9168a00>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "165": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.024",
+          "failure": {
+            "message": "requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9328310>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+            "#text": ".venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn\n    conn = connection.create_connection(\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection\n    raise err\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection\n    sock.connect(sa)\nE   ConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen\n    httplib_response = self._make_request(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request\n    conn.request(method, url, **httplib_request_kw)\n.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request\n    super(HTTPConnection, self).request(method, url, body=body, headers=headers)\n/usr/lib/python3.10/http/client.py:1283: in request\n    self._send_request(method, url, body, headers, encode_chunked)\n/usr/lib/python3.10/http/client.py:1329: in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1278: in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1038: in _send_output\n    self.send(msg)\n/usr/lib/python3.10/http/client.py:976: in send\n    self.connect()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect\n    conn = self._new_conn()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn\n    raise NewConnectionError(\nE   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f13f9328310>: Failed to establish a new connection: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send\n    resp = conn.urlopen(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen\n    retries = retries.increment(\n.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment\n    raise MaxRetryError(_pool, url, error or ResponseError(cause))\nE   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9328310>: Failed to establish a new connection: [Errno 111] Connection refused'))\n\nDuring handling of the above exception, another exception occurred:\ntests/rpc/test_eth_sendUserOperation.py:39: in test_eth_sendUserOperation_invalid_signature\n    invalid_sig_userop.send(),\ntests/types.py:52: in send\n    ).send(url)\ntests/types.py:69: in send\n    requests.post(url, json=asdict(self), timeout=10).json()\n.venv/lib/python3.10/site-packages/requests/api.py:115: in post\n    return request(\"post\", url, data=data, json=json, **kwargs)\n.venv/lib/python3.10/site-packages/requests/api.py:59: in request\n    return session.request(method=method, url=url, **kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request\n    resp = self.send(prep, **send_kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send\n    r = adapter.send(request, **kwargs)\n.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send\n    raise ConnectionError(e, request=request)\nE   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9328310>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        "166": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.012",
+          "failure": {
+            "message": "requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9205570>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+            "#text": ".venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn\n    conn = connection.create_connection(\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection\n    raise err\n.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection\n    sock.connect(sa)\nE   ConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen\n    httplib_response = self._make_request(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request\n    conn.request(method, url, **httplib_request_kw)\n.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request\n    super(HTTPConnection, self).request(method, url, body=body, headers=headers)\n/usr/lib/python3.10/http/client.py:1283: in request\n    self._send_request(method, url, body, headers, encode_chunked)\n/usr/lib/python3.10/http/client.py:1329: in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1278: in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n/usr/lib/python3.10/http/client.py:1038: in _send_output\n    self.send(msg)\n/usr/lib/python3.10/http/client.py:976: in send\n    self.connect()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect\n    conn = self._new_conn()\n.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn\n    raise NewConnectionError(\nE   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f13f9205570>: Failed to establish a new connection: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send\n    resp = conn.urlopen(\n.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen\n    retries = retries.increment(\n.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment\n    raise MaxRetryError(_pool, url, error or ResponseError(cause))\nE   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9205570>: Failed to establish a new connection: [Errno 111] Connection refused'))\n\nDuring handling of the above exception, another exception occurred:\ntests/rpc/test_eth_supportedEntryPoints.py:8: in test_eth_supportedEntryPoints\n    response = RPCRequest(method=\"eth_supportedEntryPoints\").send(CommandLineArgs.url)\ntests/types.py:69: in send\n    requests.post(url, json=asdict(self), timeout=10).json()\n.venv/lib/python3.10/site-packages/requests/api.py:115: in post\n    return request(\"post\", url, data=data, json=json, **kwargs)\n.venv/lib/python3.10/site-packages/requests/api.py:59: in request\n    return session.request(method=method, url=url, **kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request\n    resp = self.send(prep, **send_kwargs)\n.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send\n    r = adapter.send(request, **kwargs)\n.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send\n    raise ConnectionError(e, request=request)\nE   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f13f9205570>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        }
+      }
+    },
+    "aabundler": {
+      "name": "aabundler",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "167",
+      "time": "445.331",
+      "timestamp": "2023-10-08T16:08:13.980666",
+      "hostname": "fv-az306-7",
+      "testcase": {
+        "0": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "time": "0.444"
+        },
+        "1": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[only_max_fee_bump]",
+          "time": "0.478"
+        },
+        "2": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_same_fee]",
+          "time": "0.367"
+        },
+        "3": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[with_less_fee]",
+          "time": "0.372"
+        },
+        "4": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "time": "0.377"
+        },
+        "5": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "time": "0.375"
+        },
+        "6": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "time": "0.358"
+        },
+        "7": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]",
+          "time": "0.738"
+        },
+        "8": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]",
+          "time": "0.623"
+        },
+        "9": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]",
+          "time": "0.602"
+        },
+        "10": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]",
+          "time": "2.609"
+        },
+        "11": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]",
+          "time": "2.649"
+        },
+        "12": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]",
+          "time": "2.813"
+        },
+        "13": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]",
+          "time": "2.567"
+        },
+        "14": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]",
+          "time": "6.361"
+        },
+        "15": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]",
+          "time": "6.427"
+        },
+        "16": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_unstaked_sender",
+          "time": "1.112"
+        },
+        "17": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_max_allowed_ops_staked_sender",
+          "time": "1.220"
+        },
+        "18": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_op_access_other_ops_sender_in_bundle",
+          "time": "0.988"
+        },
+        "19": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_ban_user_sender_double_role_in_bundle",
+          "time": "0.844"
+        },
+        "20": {
+          "classname": "tests.bundle.test_bundle",
+          "name": "test_stake_check_in_bundler",
+          "time": "0.143"
+        },
+        "21": {
+          "classname": "tests.bundle.test_codehash",
+          "name": "test_codehash_changed",
+          "time": "1.066"
+        },
+        "22": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][paymaster][no_storage][ok]",
+          "time": "0.351"
+        },
+        "23": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]unstaked][paymaster][storage][drop]",
+          "time": "0.456"
+        },
+        "24": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]",
+          "time": "0.466"
+        },
+        "25": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]",
+          "time": "0.385"
+        },
+        "26": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][paymaster][account_storage][ok]",
+          "time": "0.375"
+        },
+        "27": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]",
+          "time": "0.388"
+        },
+        "28": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.408"
+        },
+        "29": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]",
+          "time": "0.654"
+        },
+        "30": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]unstaked][paymaster][context][drop]",
+          "time": "0.282"
+        },
+        "31": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][paymaster][external_storage][drop]",
+          "time": "0.374"
+        },
+        "32": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]",
+          "time": "0.480"
+        },
+        "33": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.384"
+        },
+        "34": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][paymaster][no_storage][ok]",
+          "time": "0.391"
+        },
+        "35": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][storage][ok]",
+          "time": "0.397"
+        },
+        "36": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage][ok]",
+          "time": "0.409"
+        },
+        "37": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]",
+          "time": "0.429"
+        },
+        "38": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][paymaster][account_storage][ok]",
+          "time": "0.408"
+        },
+        "39": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]",
+          "time": "0.415"
+        },
+        "40": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]",
+          "time": "0.434"
+        },
+        "41": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]",
+          "time": "0.693"
+        },
+        "42": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[EREP-050]staked][paymaster][context][ok]",
+          "time": "0.312"
+        },
+        "43": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][paymaster][external_storage][drop]",
+          "time": "0.403"
+        },
+        "44": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][out_of_gas][drop]",
+          "time": "0.551"
+        },
+        "45": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]",
+          "time": "0.417"
+        },
+        "46": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][no_storage][ok]",
+          "time": "0.514"
+        },
+        "47": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][storage][drop]",
+          "time": "0.517"
+        },
+        "48": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][reference_storage][drop]",
+          "time": "0.535"
+        },
+        "49": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]",
+          "time": "0.548"
+        },
+        "50": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][factory][account_storage][ok]",
+          "time": "0.540"
+        },
+        "51": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]",
+          "time": "0.547"
+        },
+        "52": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]",
+          "time": "0.556"
+        },
+        "53": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][factory][external_storage][drop]",
+          "time": "0.543"
+        },
+        "54": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]",
+          "time": "0.485"
+        },
+        "55": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.488"
+        },
+        "56": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.494"
+        },
+        "57": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.505"
+        },
+        "58": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]",
+          "time": "0.482"
+        },
+        "59": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]",
+          "time": "0.484"
+        },
+        "60": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.492"
+        },
+        "61": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]",
+          "time": "0.491"
+        },
+        "62": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][out_of_gas][drop]",
+          "time": "0.641"
+        },
+        "63": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]",
+          "time": "0.548"
+        },
+        "64": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][no_storage][ok]",
+          "time": "0.578"
+        },
+        "65": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-031]staked][factory][storage][ok]",
+          "time": "0.601"
+        },
+        "66": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage][ok]",
+          "time": "0.579"
+        },
+        "67": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-032]staked][factory][reference_storage_struct][ok]",
+          "time": "0.593"
+        },
+        "68": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][factory][account_storage][ok]",
+          "time": "0.681"
+        },
+        "69": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage][ok]",
+          "time": "0.586"
+        },
+        "70": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]",
+          "time": "0.601"
+        },
+        "71": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][factory][external_storage][drop]",
+          "time": "0.564"
+        },
+        "72": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][out_of_gas][drop]",
+          "time": "0.671"
+        },
+        "73": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]",
+          "time": "0.578"
+        },
+        "74": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][no_storage][ok]",
+          "time": "0.361"
+        },
+        "75": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]unstaked][account][account_storage][ok]",
+          "time": "0.327"
+        },
+        "76": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage][ok]",
+          "time": "0.338"
+        },
+        "77": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]",
+          "time": "0.512"
+        },
+        "78": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]",
+          "time": "0.576"
+        },
+        "79": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]",
+          "time": "0.586"
+        },
+        "80": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]",
+          "time": "0.356"
+        },
+        "81": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]unstaked][account][external_storage][drop]",
+          "time": "0.325"
+        },
+        "82": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][out_of_gas][drop]",
+          "time": "0.427"
+        },
+        "83": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]",
+          "time": "0.334"
+        },
+        "84": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][no_storage][ok]",
+          "time": "0.331"
+        },
+        "85": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-010]staked][account][account_storage][ok]",
+          "time": "0.394"
+        },
+        "86": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage][ok]",
+          "time": "0.366"
+        },
+        "87": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]",
+          "time": "0.403"
+        },
+        "88": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][out_of_gas][drop]",
+          "time": "0.466"
+        },
+        "89": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]",
+          "time": "0.372"
+        },
+        "90": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[STO-000]staked][account][external_storage][drop]",
+          "time": "0.356"
+        },
+        "91": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]",
+          "time": "0.340"
+        },
+        "92": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]",
+          "time": "0.330"
+        },
+        "93": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]",
+          "time": "0.370"
+        },
+        "94": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]",
+          "time": "0.373"
+        },
+        "95": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]",
+          "time": "0.274"
+        },
+        "96": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]",
+          "time": "0.292"
+        },
+        "97": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]",
+          "time": "0.281"
+        },
+        "98": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]",
+          "time": "0.305"
+        },
+        "99": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]",
+          "time": "0.319"
+        },
+        "100": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]",
+          "time": "0.305"
+        },
+        "101": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]",
+          "time": "0.268"
+        },
+        "102": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]",
+          "time": "0.271"
+        },
+        "103": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]",
+          "time": "0.280"
+        },
+        "104": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]",
+          "time": "0.276"
+        },
+        "105": {
+          "classname": "tests.bundle.test_storage_rules",
+          "name": "test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]",
+          "time": "0.345"
+        },
+        "106": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GAS]",
+          "time": "0.212"
+        },
+        "107": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[NUMBER]",
+          "time": "0.216"
+        },
+        "108": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[TIMESTAMP]",
+          "time": "0.215"
+        },
+        "109": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[COINBASE]",
+          "time": "0.324"
+        },
+        "110": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[DIFFICULTY]",
+          "time": "0.221"
+        },
+        "111": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BASEFEE]",
+          "time": "0.221"
+        },
+        "112": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASLIMIT]",
+          "time": "0.224"
+        },
+        "113": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[GASPRICE]",
+          "time": "0.225"
+        },
+        "114": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFBALANCE]",
+          "time": "0.228"
+        },
+        "115": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BALANCE]",
+          "time": "0.228"
+        },
+        "116": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[ORIGIN]",
+          "time": "0.231"
+        },
+        "117": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[BLOCKHASH]",
+          "time": "0.233"
+        },
+        "118": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE]",
+          "time": "0.261"
+        },
+        "119": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[CREATE2]",
+          "time": "0.253"
+        },
+        "120": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "time": "0.266"
+        },
+        "121": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS CALL]",
+          "time": "0.294"
+        },
+        "122": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_account_allowed_opcode_sequence[GAS DELEGATECALL]",
+          "time": "0.299"
+        },
+        "123": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GAS]",
+          "time": "0.274"
+        },
+        "124": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[NUMBER]",
+          "time": "0.281"
+        },
+        "125": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "time": "0.288"
+        },
+        "126": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[COINBASE]",
+          "time": "0.285"
+        },
+        "127": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "time": "0.290"
+        },
+        "128": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BASEFEE]",
+          "time": "0.291"
+        },
+        "129": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "time": "0.297"
+        },
+        "130": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[GASPRICE]",
+          "time": "0.398"
+        },
+        "131": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "time": "0.295"
+        },
+        "132": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BALANCE]",
+          "time": "0.300"
+        },
+        "133": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[ORIGIN]",
+          "time": "0.301"
+        },
+        "134": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "time": "0.304"
+        },
+        "135": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE]",
+          "time": "0.327"
+        },
+        "136": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[CREATE2]",
+          "time": "0.315"
+        },
+        "137": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "time": "0.316"
+        },
+        "138": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GAS]",
+          "time": "0.449"
+        },
+        "139": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[NUMBER]",
+          "time": "0.470"
+        },
+        "140": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[TIMESTAMP]",
+          "time": "0.455"
+        },
+        "141": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[COINBASE]",
+          "time": "0.483"
+        },
+        "142": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[DIFFICULTY]",
+          "time": "0.454"
+        },
+        "143": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BASEFEE]",
+          "time": "0.465"
+        },
+        "144": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASLIMIT]",
+          "time": "0.452"
+        },
+        "145": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[GASPRICE]",
+          "time": "0.458"
+        },
+        "146": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFBALANCE]",
+          "time": "0.471"
+        },
+        "147": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BALANCE]",
+          "time": "0.463"
+        },
+        "148": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[ORIGIN]",
+          "time": "0.473"
+        },
+        "149": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[BLOCKHASH]",
+          "time": "0.465"
+        },
+        "150": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE]",
+          "time": "0.481"
+        },
+        "151": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[CREATE2]",
+          "time": "0.492"
+        },
+        "152": {
+          "classname": "tests.opbanning.test_op_banning",
+          "name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "time": "0.500"
+        },
+        "153": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[with_factory]",
+          "time": "245.548"
+        },
+        "154": {
+          "classname": "tests.reputation.test_reputation",
+          "name": "test_staked_entity_reputation_threshold[without_factory]",
+          "time": "110.880"
+        },
+        "155": {
+          "classname": "tests.rpc.test_eth_chainId",
+          "name": "test_eth_chainId[]",
+          "time": "0.011"
+        },
+        "156": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas[]",
+          "time": "0.040"
+        },
+        "157": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_execution_revert",
+          "time": "0.043"
+        },
+        "158": {
+          "classname": "tests.rpc.test_eth_estimateUserOperationGas",
+          "name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "time": "0.030"
+        },
+        "159": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash[]",
+          "time": "0.676"
+        },
+        "160": {
+          "classname": "tests.rpc.test_eth_getUserOperationByHash",
+          "name": "test_eth_getUserOperationByHash_error",
+          "time": "0.003"
+        },
+        "161": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt[]",
+          "time": "0.466"
+        },
+        "162": {
+          "classname": "tests.rpc.test_eth_getUserOperationReceipt",
+          "name": "test_eth_getUserOperationReceipt_error",
+          "time": "0.003"
+        },
+        "163": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation[]",
+          "time": "0.390"
+        },
+        "164": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_revert",
+          "time": "0.163"
+        },
+        "165": {
+          "classname": "tests.rpc.test_eth_sendUserOperation",
+          "name": "test_eth_sendUserOperation_invalid_signature",
+          "time": "0.170"
+        },
+        "166": {
+          "classname": "tests.rpc.test_eth_supportedEntryPoints",
+          "name": "test_eth_supportedEntryPoints[]",
+          "time": "0.016"
+        }
+      }
+    }
+  },
   "20230618/113102": {
     "voltaire-bundler-launcher": {
       "name": "Voltaire-Bundler",
