@@ -1,0 +1,40 @@
+Running bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/voltaire/voltaire.yml, name=voltaire
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 167 items / 164 deselected / 3 selected
+
+tests/opbanning/test_op_banning.py FFF                                   [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_account_banned_opcode[GASPRICE] _____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3338581937', data=None, id=0).code
+____________________ test_paymaster_banned_opcode[GASPRICE] ____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3237099419', data=None, id=1).code
+_____________________ test_factory_banned_opcode[GASPRICE] _____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3149962588', data=None, id=2).code
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/voltaire.xml -
+=========================== short test summary info ============================
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3338581937', data=None, id=0).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3237099419', data=None, id=1).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3149962588', data=None, id=2).code
+====================== 3 failed, 164 deselected in 0.85s =======================

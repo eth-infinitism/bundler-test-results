@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="voltaire" errors="0" failures="3" skipped="0" tests="3" time="0.856" timestamp="2023-10-08T11:30:46.898119" hostname="fv-az488-416"><testcase classname="tests.opbanning.test_op_banning" name="test_account_banned_opcode[GASPRICE]" time="0.123"><failure message="AssertionError: assert -32500 == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;&#10; +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3338581937', data=None, id=0).code">tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;
+E    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3338581937', data=None, id=0).code</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GASPRICE]" time="0.158"><failure message="AssertionError: assert -32500 == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;&#10; +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3237099419', data=None, id=1).code">tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;
+E    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3237099419', data=None, id=1).code</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.opbanning.test_op_banning" name="test_factory_banned_opcode[GASPRICE]" time="0.204"><failure message="AssertionError: assert -32500 == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;&#10; +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3149962588', data=None, id=2).code">tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;
+E    +  where -32500 = Error(code=-32500, message='Max fee per gas is too low. it should be minimum : 3149962588', data=None, id=2).code</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>
