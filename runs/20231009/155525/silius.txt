@@ -1,0 +1,935 @@
+Running bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/silius/silius.yml, name=silius
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 167 items
+
+tests/bundle/test_bundle.py .......FFFFFFFFF...FF                        [ 12%]
+tests/bundle/test_codehash.py .                                          [ 13%]
+tests/bundle/test_storage_rules.py ..................................... [ 35%]
+...............................................                          [ 63%]
+tests/opbanning/test_op_banning.py ..................................... [ 85%]
+..........                                                               [ 91%]
+tests/reputation/test_reputation.py FF                                   [ 92%]
+tests/rpc/test_eth_chainId.py .                                          [ 93%]
+tests/rpc/test_eth_estimateUserOperationGas.py FFF                       [ 95%]
+tests/rpc/test_eth_getUserOperationByHash.py EF                          [ 96%]
+tests/rpc/test_eth_getUserOperationReceipt.py EF                         [ 97%]
+tests/rpc/test_eth_sendUserOperation.py FFF                              [ 99%]
+tests/rpc/test_eth_supportedEntryPoints.py F                             [100%]
+
+==================================== ERRORS ====================================
+_____________ ERROR at setup of test_eth_getUserOperationByHash[] ______________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f955f00>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f955f00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/conftest.py:106: in execute_user_operation
+    userop.send()
+tests/types.py:52: in send
+    ).send(url)
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f955f00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+_____________ ERROR at setup of test_eth_getUserOperationReceipt[] _____________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f7053f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f7053f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/conftest.py:106: in execute_user_operation
+    userop.send()
+tests/types.py:52: in send
+    ).send(url)
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f7053f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+=================================== FAILURES ===================================
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender] _
+tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster] _
+tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory] _
+tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender] _
+tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster] _
+tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory] _
+tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender] _
+tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster] _
+tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory] _
+tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+__________________ test_ban_user_sender_double_role_in_bundle __________________
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AttributeError: 'Ok' object has no attribute 'code'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_bundle.py:359: in test_ban_user_sender_double_role_in_bundle
+    assert_rpc_error(
+tests/utils.py:118: in assert_rpc_error
+    raise Exception(f"expected error object, got:\n{response}") from exc
+E   Exception: expected error object, got:
+E   Ok(result='0xd98453e9d0fcd798303b8f4b4b7e4ab078b18635f70cb9a3914c5b6d5bbed290', id=113)
+_________________________ test_stake_check_in_bundler __________________________
+tests/bundle/test_bundle.py:382: in test_stake_check_in_bundler
+    response = get_stake_status(paymaster_contract.address, entrypoint_contract.address)
+tests/utils.py:165: in get_stake_status
+    .result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________ test_staked_entity_reputation_threshold[with_factory] _____________
+tests/reputation/test_reputation.py:127: in test_staked_entity_reputation_threshold
+    assert_reputation_status(
+tests/reputation/test_reputation.py:49: in assert_reputation_status
+    assert int(reputation.get("status", "-0x1"), 16) == status, (
+E   TypeError: int() can't convert non-string with explicit base
+___________ test_staked_entity_reputation_threshold[without_factory] ___________
+tests/reputation/test_reputation.py:134: in test_staked_entity_reputation_threshold
+    assert_reputation_status(
+tests/reputation/test_reputation.py:49: in assert_reputation_status
+    assert int(reputation.get("status", "-0x1"), 16) == status, (
+E   TypeError: int() can't convert non-string with explicit base
+_____________________ test_eth_estimateUserOperationGas[] ______________________
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:449: in _make_request
+    six.raise_from(e, None)
+<string>:3: in raise_from
+    ???
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:444: in _make_request
+    httplib_response = conn.getresponse()
+/usr/lib/python3.10/http/client.py:1375: in getresponse
+    response.begin()
+/usr/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/usr/lib/python3.10/http/client.py:287: in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+E   http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:550: in increment
+    raise six.reraise(type(error), error, _stacktrace)
+.venv/lib/python3.10/site-packages/urllib3/packages/six.py:769: in reraise
+    raise value.with_traceback(tb)
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:449: in _make_request
+    six.raise_from(e, None)
+<string>:3: in raise_from
+    ???
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:444: in _make_request
+    httplib_response = conn.getresponse()
+/usr/lib/python3.10/http/client.py:1375: in getresponse
+    response.begin()
+/usr/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/usr/lib/python3.10/http/client.py:287: in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+E   urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_estimateUserOperationGas.py:18: in test_eth_estimateUserOperationGas
+    ).send()
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:547: in send
+    raise ConnectionError(err, request=request)
+E   requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+______________ test_eth_estimateUserOperationGas_execution_revert ______________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f7fe3e0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f7fe3e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_estimateUserOperationGas.py:28: in test_eth_estimateUserOperationGas_execution_revert
+    ).send()
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f7fe3e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+_____________ test_eth_estimateUserOperationGas_simulation_revert ______________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f9c66e0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f9c66e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_estimateUserOperationGas.py:36: in test_eth_estimateUserOperationGas_simulation_revert
+    ).send()
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f9c66e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+____________________ test_eth_getUserOperationByHash_error _____________________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f8a42e0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f8a42e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_getUserOperationByHash.py:27: in test_eth_getUserOperationByHash_error
+    response = RPCRequest(method="eth_getUserOperationByHash", params=[""]).send()
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f8a42e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+____________________ test_eth_getUserOperationReceipt_error ____________________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f736b30>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f736b30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_getUserOperationReceipt.py:25: in test_eth_getUserOperationReceipt_error
+    response = RPCRequest(method="eth_getUserOperationReceipt", params=[""]).send()
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f736b30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+_________________________ test_eth_sendUserOperation[] _________________________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f53ff40>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f53ff40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_sendUserOperation.py:16: in test_eth_sendUserOperation
+    response = userop.send()
+tests/types.py:52: in send
+    ).send(url)
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f53ff40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+______________________ test_eth_sendUserOperation_revert _______________________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f4112a0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f4112a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_sendUserOperation.py:28: in test_eth_sendUserOperation_revert
+    response = bad_sig_userop.send()
+tests/types.py:52: in send
+    ).send(url)
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f4112a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+_________________ test_eth_sendUserOperation_invalid_signature _________________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f57e680>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f57e680>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_sendUserOperation.py:39: in test_eth_sendUserOperation_invalid_signature
+    invalid_sig_userop.send(),
+tests/types.py:52: in send
+    ).send(url)
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f57e680>: Failed to establish a new connection: [Errno 111] Connection refused'))
+_______________________ test_eth_supportedEntryPoints[] ________________________
+.venv/lib/python3.10/site-packages/urllib3/connection.py:174: in _new_conn
+    conn = connection.create_connection(
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:95: in create_connection
+    raise err
+.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:703: in urlopen
+    httplib_response = self._make_request(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+.venv/lib/python3.10/site-packages/urllib3/connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+/usr/lib/python3.10/http/client.py:1283: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.10/http/client.py:1329: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1278: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.10/http/client.py:1038: in _send_output
+    self.send(msg)
+/usr/lib/python3.10/http/client.py:976: in send
+    self.connect()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:205: in connect
+    conn = self._new_conn()
+.venv/lib/python3.10/site-packages/urllib3/connection.py:186: in _new_conn
+    raise NewConnectionError(
+E   urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f112f62ded0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+.venv/lib/python3.10/site-packages/requests/adapters.py:489: in send
+    resp = conn.urlopen(
+.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    retries = retries.increment(
+.venv/lib/python3.10/site-packages/urllib3/util/retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f62ded0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+tests/rpc/test_eth_supportedEntryPoints.py:8: in test_eth_supportedEntryPoints
+    response = RPCRequest(method="eth_supportedEntryPoints").send(CommandLineArgs.url)
+tests/types.py:69: in send
+    requests.post(url, json=asdict(self), timeout=10).json()
+.venv/lib/python3.10/site-packages/requests/api.py:115: in post
+    return request("post", url, data=data, json=json, **kwargs)
+.venv/lib/python3.10/site-packages/requests/api.py:59: in request
+    return session.request(method=method, url=url, **kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:587: in request
+    resp = self.send(prep, **send_kwargs)
+.venv/lib/python3.10/site-packages/requests/sessions.py:701: in send
+    r = adapter.send(request, **kwargs)
+.venv/lib/python3.10/site-packages/requests/adapters.py:565: in send
+    raise ConnectionError(e, request=request)
+E   requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f62ded0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+=============================== warnings summary ===============================
+tests/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x6e180704672b8e4384b435467e4d5e8be128f4dba2211705bbb4a2df94ef6200') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xbee9a9e93cb5664f083da27eae4f3a94adf517da39dec4b8b2da0ce904971639') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xe2d726f3d1ca3561efa46ab27c88308c54fb7565109e3cd51d745ff33b28508e') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x66b514a188381eb435f7d3aad7789073c8a3b675f958889ca5e3dd8fdb086ae6') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/silius.xml -
+=========================== short test summary info ============================
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold]
+PASSED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold]
+PASSED tests/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender
+PASSED tests/bundle/test_bundle.py::test_max_allowed_ops_staked_sender
+PASSED tests/bundle/test_bundle.py::test_ban_user_op_access_other_ops_sender_in_bundle
+PASSED tests/bundle/test_codehash.py::test_codehash_changed
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][paymaster][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][paymaster][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[EREP-050]unstaked][paymaster][context][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][paymaster][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-010]staked][paymaster][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[EREP-050]staked][paymaster][context][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][factory][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-010]staked][factory][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][account][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][no_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-010]staked][account][account_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][external_storage][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]
+PASSED tests/bundle/test_storage_rules.py::test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT]
+PASSED tests/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS CALL]
+PASSED tests/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS DELEGATECALL]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2]
+PASSED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT]
+PASSED tests/rpc/test_eth_chainId.py::test_eth_chainId[]
+ERROR tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[] - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f955f00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ERROR tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[] - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f7053f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_ban_user_sender_double_role_in_bundle - Exception: expected error object, got:
+Ok(result='0xd98453e9d0fcd798303b8f4b4b7e4ab078b18635f70cb9a3914c5b6d5bbed290', id=113)
+FAILED tests/bundle/test_bundle.py::test_stake_check_in_bundler - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/reputation/test_reputation.py::test_staked_entity_reputation_threshold[with_factory] - TypeError: int() can't convert non-string with explicit base
+FAILED tests/reputation/test_reputation.py::test_staked_entity_reputation_threshold[without_factory] - TypeError: int() can't convert non-string with explicit base
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[] - requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f7fe3e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f9c66e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f8a42e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f736b30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[] - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f53ff40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f4112a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f57e680>: Failed to establish a new connection: [Errno 111] Connection refused'))
+FAILED tests/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[] - requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /rpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f112f62ded0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+======= 22 failed, 143 passed, 4 warnings, 2 errors in 157.37s (0:02:37) =======
