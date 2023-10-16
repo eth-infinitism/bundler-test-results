@@ -1,0 +1,1861 @@
+Running bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/voltaire/voltaire.yml, name=voltaire
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 167 items
+
+tests/bundle/test_bundle.py FFFFFFFFFFFFFFFFFFFFF                        [ 12%]
+tests/bundle/test_codehash.py F                                          [ 13%]
+tests/bundle/test_storage_rules.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 35%]
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                          [ 63%]
+tests/opbanning/test_op_banning.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 85%]
+FFFFFFFFFF                                                               [ 91%]
+tests/reputation/test_reputation.py FF                                   [ 92%]
+tests/rpc/test_eth_chainId.py .                                          [ 93%]
+tests/rpc/test_eth_estimateUserOperationGas.py F..                       [ 95%]
+tests/rpc/test_eth_getUserOperationByHash.py F.                          [ 96%]
+tests/rpc/test_eth_getUserOperationReceipt.py F.                         [ 97%]
+tests/rpc/test_eth_sendUserOperation.py FFF                              [ 99%]
+tests/rpc/test_eth_supportedEntryPoints.py .                             [100%]
+
+=================================== FAILURES ===================================
+________________ test_bundle_replace_op[only_priority_fee_bump] ________________
+tests/bundle/test_bundle.py:81: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+__________________ test_bundle_replace_op[only_max_fee_bump] ___________________
+tests/bundle/test_bundle.py:81: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_bundle_replace_op[with_same_fee] _____________________
+tests/bundle/test_bundle.py:81: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_bundle_replace_op[with_less_fee] _____________________
+tests/bundle/test_bundle.py:81: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+_______________ test_bundle_replace_op[fee_bump_below_threshold] _______________
+tests/bundle/test_bundle.py:81: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+________________ test_bundle_replace_op[fee_bump_at_threshold] _________________
+tests/bundle/test_bundle.py:81: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+_______________ test_bundle_replace_op[fee_bump_above_threshold] _______________
+tests/bundle/test_bundle.py:81: in test_bundle_replace_op
+    assert new_op.send().result
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender] _
+tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster] _
+tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory] _
+tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender] _
+tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster] _
+tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory] _
+tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender] _
+tests/bundle/test_bundle.py:148: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster] _
+tests/bundle/test_bundle.py:154: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory] _
+tests/bundle/test_bundle.py:160: in test_mempool_reputation_rules_all_entities
+    set_reputation(
+tests/utils.py:200: in set_reputation
+    )
+E   AttributeError: 'Error' object has no attribute 'result'
+_____________________ test_max_allowed_ops_unstaked_sender _____________________
+tests/bundle/test_bundle.py:248: in test_max_allowed_ops_unstaked_sender
+    assert dump_mempool() == wallet_ops[: i + 1]
+E   AssertionError: assert [] == [UserOperatio...gnature='0x')]
+E     Right contains one more item: UserOperation(sender='0x1Eb69f84146016F06E823F1272A70dFC6293edb9', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     +  ,
+E     -  UserOperation(sender='0x1Eb69f84146016F06E823F1272A70dFC6293edb9',
+E     -                nonce='0x0',
+E     -                initCode='0x',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0x3b9aca00',
+E     -                paymasterAndData='0x',
+E     -                signature='0x'),
+E       ]
+______________________ test_max_allowed_ops_staked_sender ______________________
+tests/bundle/test_bundle.py:275: in test_max_allowed_ops_staked_sender
+    assert dump_mempool() == wallet_ops[: i + 1]
+E   AssertionError: assert [] == [UserOperatio...gnature='0x')]
+E     Right contains one more item: UserOperation(sender='0x623a599259d20a99c5B0F96E78969203C50b7a8c', nonce='0x10000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     +  ,
+E     -  UserOperation(sender='0x623a599259d20a99c5B0F96E78969203C50b7a8c',
+E     -                nonce='0x10000000000000000',
+E     -                initCode='0x',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0x3b9aca00',
+E     -                paymasterAndData='0x',
+E     -                signature='0x'),
+E       ]
+______________ test_ban_user_op_access_other_ops_sender_in_bundle ______________
+tests/bundle/test_bundle.py:319: in test_ban_user_op_access_other_ops_sender_in_bundle
+    assert dump_mempool() == [user_op2]
+E   AssertionError: assert [] == [UserOperatio...gnature='0x')]
+E     Right contains one more item: UserOperation(sender='0x7d1d5baF08638284c72D0A22a0a765aaFafEb1d2', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     +  ,
+E     -  UserOperation(sender='0x7d1d5baF08638284c72D0A22a0a765aaFafEb1d2',
+E     -                nonce='0x0',
+E     -                initCode='0x',
+E     -                callData='0x',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0x3b9aca00',
+E     -                paymasterAndData='0x',
+E     -                signature='0x'),
+E       ]
+__________________ test_ban_user_sender_double_role_in_bundle __________________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_bundle.py:358: in test_ban_user_sender_double_role_in_bundle
+    assert_ok(response1)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=66)
+_________________________ test_stake_check_in_bundler __________________________
+tests/bundle/test_bundle.py:382: in test_stake_check_in_bundler
+    response = get_stake_status(paymaster_contract.address, entrypoint_contract.address)
+tests/utils.py:165: in get_stake_status
+    .result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________________ test_codehash_changed _____________________________
+tests/bundle/test_codehash.py:44: in test_codehash_changed
+    assert response.result, "userop dropped by bundler"
+E   AttributeError: 'Error' object has no attribute 'result'
+___________ test_rule[[STO-000]unstaked][paymaster][no_storage][ok] ____________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=75)
+____________ test_rule[[STO-031]unstaked][paymaster][storage][drop] ____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=77).code
+_______ test_rule[[STO-032]unstaked][paymaster][reference_storage][drop] _______
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=79).code
+___ test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop] ____
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=81).code
+_________ test_rule[[STO-010]unstaked][paymaster][account_storage][ok] _________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=83)
+____ test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok] ____
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=85)
+_ test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok] _
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=87)
+_ test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0] _
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=89).code
+___________ test_rule[[EREP-050]unstaked][paymaster][context][drop] ____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=91).code
+_______ test_rule[[STO-032]unstaked][paymaster][external_storage][drop] ________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=93).code
+___________ test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop] ___________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=95).code
+_______ test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop] ________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=97).code
+____________ test_rule[[STO-000]staked][paymaster][no_storage][ok] _____________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=99)
+______________ test_rule[[STO-031]staked][paymaster][storage][ok] ______________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=101)
+_________ test_rule[[STO-032]staked][paymaster][reference_storage][ok] _________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=103)
+_____ test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok] ______
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=105)
+__________ test_rule[[STO-010]staked][paymaster][account_storage][ok] __________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=107)
+_____ test_rule[[STO-021]staked][paymaster][account_reference_storage][ok] _____
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=109)
+_ test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok] __
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=111)
+_ test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok] _
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=113)
+_____________ test_rule[[EREP-050]staked][paymaster][context][ok] ______________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=115)
+________ test_rule[[STO-031]staked][paymaster][external_storage][drop] _________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=117).code
+____________ test_rule[[OP-020]staked][paymaster][out_of_gas][drop] ____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=119).code
+________ test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop] _________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=121).code
+____________ test_rule[[STO-000]unstaked][factory][no_storage][ok] _____________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=123)
+_____________ test_rule[[STO-000]unstaked][factory][storage][drop] _____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=125).code
+________ test_rule[[STO-000]unstaked][factory][reference_storage][drop] ________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=127).code
+____ test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop] _____
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=129).code
+__________ test_rule[[STO-010]unstaked][factory][account_storage][ok] __________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=131)
+____ test_rule[[STO-021]unstaked][factory][account_reference_storage][drop] ____
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=133).code
+_ test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop] _
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=135).code
+________ test_rule[[STO-000]unstaked][factory][external_storage][drop] _________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=137).code
+__ test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok] __
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=139)
+_ test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=141).code
+_ test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=143).code
+_ test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=145).code
+_____ test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop] _____
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=147).code
+___ test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop] ___
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=149).code
+_ test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop] _
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=151).code
+__ test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=153).code
+____________ test_rule[[OP-020]unstaked][factory][out_of_gas][drop] ____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=155).code
+________ test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop] _________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=157).code
+_____________ test_rule[[STO-000]staked][factory][no_storage][ok] ______________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=159)
+_______________ test_rule[[STO-031]staked][factory][storage][ok] _______________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=161)
+__________ test_rule[[STO-032]staked][factory][reference_storage][ok] __________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=163)
+______ test_rule[[STO-032]staked][factory][reference_storage_struct][ok] _______
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=165)
+___________ test_rule[[STO-010]staked][factory][account_storage][ok] ___________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=167)
+______ test_rule[[STO-021]staked][factory][account_reference_storage][ok] ______
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=169)
+__ test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok] ___
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=171)
+_________ test_rule[[STO-000]staked][factory][external_storage][drop] __________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=173).code
+_____________ test_rule[[OP-020]staked][factory][out_of_gas][drop] _____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=175).code
+_________ test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop] __________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=177).code
+____________ test_rule[[STO-000]unstaked][account][no_storage][ok] _____________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=179)
+__________ test_rule[[STO-010]unstaked][account][account_storage][ok] __________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=181)
+_____ test_rule[[STO-021]unstaked][account][account_reference_storage][ok] _____
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=183)
+_ test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop] _
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=185).code
+_ test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok] _
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=187)
+_ test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1] _
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=189).code
+_ test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok] __
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=191)
+________ test_rule[[STO-000]unstaked][account][external_storage][drop] _________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=193).code
+____________ test_rule[[OP-020]unstaked][account][out_of_gas][drop] ____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=195).code
+________ test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop] _________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=197).code
+_____________ test_rule[[STO-000]staked][account][no_storage][ok] ______________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=199)
+___________ test_rule[[STO-010]staked][account][account_storage][ok] ___________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=201)
+______ test_rule[[STO-021]staked][account][account_reference_storage][ok] ______
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=203)
+__ test_rule[[STO-021]staked][account][account_reference_storage_struct][ok] ___
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=205)
+_____________ test_rule[[OP-020]staked][account][out_of_gas][drop] _____________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=207).code
+_________ test_rule[[OP-020]staked][account][sstore_out_of_gas][drop] __________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=209).code
+_________ test_rule[[STO-000]staked][account][external_storage][drop] __________
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=211).code
+____ test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop] _____
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=213).code
+___ test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop] ___
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=215).code
+___ test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok] ____
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=217)
+_ test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok] _
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=219)
+_ test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=221).code
+_ test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=223).code
+_ test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=225).code
+______ test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop] ______
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=227).code
+______ test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop] ______
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=229).code
+______ test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop] ______
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=231).code
+_____ test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop] _____
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=233).code
+___ test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop] ___
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=235).code
+_ test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop] _
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=237).code
+__ test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop] __
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=239).code
+_ test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok] _
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/bundle/test_storage_rules.py:737: in test_rule
+    case.assert_func(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=241)
+_______________________ test_account_banned_opcode[GAS] ________________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=242).code
+______________________ test_account_banned_opcode[NUMBER] ______________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=243).code
+____________________ test_account_banned_opcode[TIMESTAMP] _____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=244).code
+_____________________ test_account_banned_opcode[COINBASE] _____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=245).code
+____________________ test_account_banned_opcode[DIFFICULTY] ____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=246).code
+_____________________ test_account_banned_opcode[BASEFEE] ______________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=247).code
+_____________________ test_account_banned_opcode[GASLIMIT] _____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=248).code
+_____________________ test_account_banned_opcode[GASPRICE] _____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=249).code
+___________________ test_account_banned_opcode[SELFBALANCE] ____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=250).code
+_____________________ test_account_banned_opcode[BALANCE] ______________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=251).code
+______________________ test_account_banned_opcode[ORIGIN] ______________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=252).code
+____________________ test_account_banned_opcode[BLOCKHASH] _____________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=253).code
+______________________ test_account_banned_opcode[CREATE] ______________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=254).code
+_____________________ test_account_banned_opcode[CREATE2] ______________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=255).code
+___________________ test_account_banned_opcode[SELFDESTRUCT] ___________________
+tests/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=256).code
+________________ test_account_allowed_opcode_sequence[GAS CALL] ________________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/opbanning/test_op_banning.py:58: in test_account_allowed_opcode_sequence
+    assert_ok(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=257)
+____________ test_account_allowed_opcode_sequence[GAS DELEGATECALL] ____________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/opbanning/test_op_banning.py:58: in test_account_allowed_opcode_sequence
+    assert_ok(response)
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=258)
+______________________ test_paymaster_banned_opcode[GAS] _______________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=259).code
+_____________________ test_paymaster_banned_opcode[NUMBER] _____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=260).code
+___________________ test_paymaster_banned_opcode[TIMESTAMP] ____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=261).code
+____________________ test_paymaster_banned_opcode[COINBASE] ____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=262).code
+___________________ test_paymaster_banned_opcode[DIFFICULTY] ___________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=263).code
+____________________ test_paymaster_banned_opcode[BASEFEE] _____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=264).code
+____________________ test_paymaster_banned_opcode[GASLIMIT] ____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=265).code
+____________________ test_paymaster_banned_opcode[GASPRICE] ____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=266).code
+__________________ test_paymaster_banned_opcode[SELFBALANCE] ___________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=267).code
+____________________ test_paymaster_banned_opcode[BALANCE] _____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=268).code
+_____________________ test_paymaster_banned_opcode[ORIGIN] _____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=269).code
+___________________ test_paymaster_banned_opcode[BLOCKHASH] ____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=270).code
+_____________________ test_paymaster_banned_opcode[CREATE] _____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=271).code
+____________________ test_paymaster_banned_opcode[CREATE2] _____________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=272).code
+__________________ test_paymaster_banned_opcode[SELFDESTRUCT] __________________
+tests/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=273).code
+_______________________ test_factory_banned_opcode[GAS] ________________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=274).code
+______________________ test_factory_banned_opcode[NUMBER] ______________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=275).code
+____________________ test_factory_banned_opcode[TIMESTAMP] _____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=276).code
+_____________________ test_factory_banned_opcode[COINBASE] _____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=277).code
+____________________ test_factory_banned_opcode[DIFFICULTY] ____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=278).code
+_____________________ test_factory_banned_opcode[BASEFEE] ______________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=279).code
+_____________________ test_factory_banned_opcode[GASLIMIT] _____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=280).code
+_____________________ test_factory_banned_opcode[GASPRICE] _____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=281).code
+___________________ test_factory_banned_opcode[SELFBALANCE] ____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=282).code
+_____________________ test_factory_banned_opcode[BALANCE] ______________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=283).code
+______________________ test_factory_banned_opcode[ORIGIN] ______________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=284).code
+____________________ test_factory_banned_opcode[BLOCKHASH] _____________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=285).code
+______________________ test_factory_banned_opcode[CREATE] ______________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=286).code
+_____________________ test_factory_banned_opcode[CREATE2] ______________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=287).code
+___________________ test_factory_banned_opcode[SELFDESTRUCT] ___________________
+tests/opbanning/test_op_banning.py:84: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=288).code
+____________ test_staked_entity_reputation_threshold[with_factory] _____________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/reputation/test_reputation.py:124: in test_staked_entity_reputation_threshold
+    assert_ok(userop.send())
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=293)
+___________ test_staked_entity_reputation_threshold[without_factory] ___________
+tests/utils.py:108: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/reputation/test_reputation.py:124: in test_staked_entity_reputation_threshold
+    assert_ok(userop.send())
+tests/utils.py:110: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=298)
+_____________________ test_eth_estimateUserOperationGas[] ______________________
+tests/rpc/test_eth_estimateUserOperationGas.py:20: in test_eth_estimateUserOperationGas
+    validate(instance=response.result, schema=schema)
+.venv/lib/python3.10/site-packages/jsonschema/validators.py:1121: in validate
+    raise error
+E   jsonschema.exceptions.ValidationError: 'verificationGasLimit' is a required property
+E   
+E   Failed validating 'required' in schema:
+E       {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+E                                                   'type': 'string'},
+E                                                  {'type': 'number'}],
+E                                        'title': 'callGasLimit'},
+E                       'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+E                                                         'type': 'string'},
+E                                                        {'type': 'number'}],
+E                                              'title': 'preVerificationGas'},
+E                       'verificationGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+E                                                           'type': 'string'},
+E                                                          {'type': 'number'}],
+E                                                'title': 'verificationGasLimit'}},
+E        'required': ['callGasLimit',
+E                     'preVerificationGas',
+E                     'verificationGasLimit'],
+E        'title': 'UserOperation Gas parameters',
+E        'type': 'object'}
+E   
+E   On instance:
+E       {'callGasLimit': '0xab10',
+E        'deadline': 281474976710655,
+E        'preVerificationGas': 48220,
+E        'verificationGas': 334329}
+______________________ test_eth_getUserOperationByHash[] _______________________
+tests/rpc/test_eth_getUserOperationByHash.py:16: in test_eth_getUserOperationByHash
+    ) == userop_hash(helper_contract, userop), "user operation mismatch"
+E   AttributeError: 'Error' object has no attribute 'result'
+______________________ test_eth_getUserOperationReceipt[] ______________________
+tests/rpc/test_eth_getUserOperationReceipt.py:15: in test_eth_getUserOperationReceipt
+    assert response.result["userOpHash"] == userop_hash(helper_contract, userop)
+E   AttributeError: 'Error' object has no attribute 'result'
+_________________________ test_eth_sendUserOperation[] _________________________
+tests/rpc/test_eth_sendUserOperation.py:19: in test_eth_sendUserOperation
+    assert response.result == userop_hash(helper_contract, userop)
+E   AttributeError: 'Error' object has no attribute 'result'
+______________________ test_eth_sendUserOperation_revert _______________________
+tests/rpc/test_eth_sendUserOperation.py:32: in test_eth_sendUserOperation_revert
+    assert_rpc_error(
+tests/utils.py:116: in assert_rpc_error
+    assert message.lower() in response.message.lower()
+E   AssertionError: assert 'testwallet: dead signature' in 'max priority fee per gas is too low. it should be minimum : 3000000000'
+E    +  where 'testwallet: dead signature' = <built-in method lower of str object at 0x7fd54eb41020>()
+E    +    where <built-in method lower of str object at 0x7fd54eb41020> = 'testWallet: dead signature'.lower
+E    +  and   'max priority fee per gas is too low. it should be minimum : 3000000000' = <built-in method lower of str object at 0x7fd54e3ea6b0>()
+E    +    where <built-in method lower of str object at 0x7fd54e3ea6b0> = 'Max priority fee per gas is too low. it should be minimum : 3000000000'.lower
+E    +      where 'Max priority fee per gas is too low. it should be minimum : 3000000000' = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=313).message
+_________________ test_eth_sendUserOperation_invalid_signature _________________
+tests/rpc/test_eth_sendUserOperation.py:38: in test_eth_sendUserOperation_invalid_signature
+    assert_rpc_error(
+tests/utils.py:115: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == <RPCErrorCode.INVALID_SIGNATURE: -32507>
+E    +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=315).code
+=============================== warnings summary ===============================
+tests/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x3708c8311025b3c4131c70a297ccf0c49a31b6e82aaa3ade0f873b3f1ce34544') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/voltaire.xml -
+=========================== short test summary info ============================
+PASSED tests/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert
+PASSED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert
+PASSED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+PASSED tests/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender - AssertionError: assert [] == [UserOperatio...gnature='0x')]
+  Right contains one more item: UserOperation(sender='0x1Eb69f84146016F06E823F1272A70dFC6293edb9', nonce='0x0', initCode='0x', callData='0xa9e966b7000...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+  Full diff:
+    [
+  +  ,
+  -  UserOperation(sender='0x1Eb69f84146016F06E823F1272A70dFC6293edb9',
+  -                nonce='0x0',
+  -                initCode='0x',
+  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  -                callGasLimit='0x493e0',
+  -                verificationGasLimit='0xf4240',
+  -                preVerificationGas='0x493e0',
+  -                maxFeePerGas='0xee6b2800',
+  -                maxPriorityFeePerGas='0x3b9aca00',
+  -                paymasterAndData='0x',
+  -                signature='0x'),
+    ]
+FAILED tests/bundle/test_bundle.py::test_max_allowed_ops_staked_sender - AssertionError: assert [] == [UserOperatio...gnature='0x')]
+  Right contains one more item: UserOperation(sender='0x623a599259d20a99c5B0F96E78969203C50b7a8c', nonce='0x10000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+  Full diff:
+    [
+  +  ,
+  -  UserOperation(sender='0x623a599259d20a99c5B0F96E78969203C50b7a8c',
+  -                nonce='0x10000000000000000',
+  -                initCode='0x',
+  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  -                callGasLimit='0x493e0',
+  -                verificationGasLimit='0xf4240',
+  -                preVerificationGas='0x493e0',
+  -                maxFeePerGas='0xee6b2800',
+  -                maxPriorityFeePerGas='0x3b9aca00',
+  -                paymasterAndData='0x',
+  -                signature='0x'),
+    ]
+FAILED tests/bundle/test_bundle.py::test_ban_user_op_access_other_ops_sender_in_bundle - AssertionError: assert [] == [UserOperatio...gnature='0x')]
+  Right contains one more item: UserOperation(sender='0x7d1d5baF08638284c72D0A22a0a765aaFafEb1d2', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0x3b9aca00', paymasterAndData='0x', signature='0x')
+  Full diff:
+    [
+  +  ,
+  -  UserOperation(sender='0x7d1d5baF08638284c72D0A22a0a765aaFafEb1d2',
+  -                nonce='0x0',
+  -                initCode='0x',
+  -                callData='0x',
+  -                callGasLimit='0x493e0',
+  -                verificationGasLimit='0xf4240',
+  -                preVerificationGas='0x493e0',
+  -                maxFeePerGas='0xee6b2800',
+  -                maxPriorityFeePerGas='0x3b9aca00',
+  -                paymasterAndData='0x',
+  -                signature='0x'),
+    ]
+FAILED tests/bundle/test_bundle.py::test_ban_user_sender_double_role_in_bundle - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=66)
+FAILED tests/bundle/test_bundle.py::test_stake_check_in_bundler - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_codehash.py::test_codehash_changed - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][paymaster][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=75)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=77).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=79).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=81).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][paymaster][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=83)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=85)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=87)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=89).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[EREP-050]unstaked][paymaster][context][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=91).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][external_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=93).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=95).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=97).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][paymaster][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=99)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=101)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=103)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=105)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-010]staked][paymaster][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=107)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=109)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=111)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=113)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[EREP-050]staked][paymaster][context][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=115)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][external_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=117).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=119).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=121).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=123)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=125).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][reference_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=127).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=129).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][factory][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=131)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=133).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=135).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][external_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=137).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=139)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=141).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=143).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=145).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=147).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=149).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=151).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=153).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=155).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=157).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=159)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=161)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=163)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=165)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-010]staked][factory][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=167)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=169)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=171)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][external_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=173).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=175).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=177).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=179)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][account][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=181)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=183)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=185).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=187)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=189).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=191)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][external_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=193).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=195).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=197).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][no_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=199)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-010]staked][account][account_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=201)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=203)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage_struct][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=205)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=207).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][sstore_out_of_gas][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=209).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][external_storage][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=211).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=213).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=215).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=217)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=219)
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=221).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=223).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=225).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=227).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=229).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=231).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=233).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=235).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=237).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=239).code
+FAILED tests/bundle/test_storage_rules.py::test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=241)
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GAS] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=242).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=243).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=244).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=245).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=246).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=247).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=248).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=249).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=250).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=251).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=252).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=253).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=254).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=255).code
+FAILED tests/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=256).code
+FAILED tests/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS CALL] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=257)
+FAILED tests/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS DELEGATECALL] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=258)
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=259).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=260).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=261).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=262).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=263).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=264).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=265).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=266).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=267).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=268).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=269).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=270).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=271).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=272).code
+FAILED tests/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=273).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=274).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=275).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=276).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=277).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=278).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=279).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=280).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=281).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=282).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=283).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=284).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=285).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=286).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=287).code
+FAILED tests/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT] - AssertionError: assert -32500 == <RPCErrorCode.BANNED_OPCODE: -32502>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=288).code
+FAILED tests/reputation/test_reputation.py::test_staked_entity_reputation_threshold[with_factory] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=293)
+FAILED tests/reputation/test_reputation.py::test_staked_entity_reputation_threshold[without_factory] - Exception: expected result object, got:
+Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=298)
+FAILED tests/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[] - jsonschema.exceptions.ValidationError: 'verificationGasLimit' is a required property
+
+Failed validating 'required' in schema:
+    {'properties': {'callGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+                                                'type': 'string'},
+                                               {'type': 'number'}],
+                                     'title': 'callGasLimit'},
+                    'preVerificationGas': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+                                                      'type': 'string'},
+                                                     {'type': 'number'}],
+                                           'title': 'preVerificationGas'},
+                    'verificationGasLimit': {'oneOf': [{'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$',
+                                                        'type': 'string'},
+                                                       {'type': 'number'}],
+                                             'title': 'verificationGasLimit'}},
+     'required': ['callGasLimit',
+                  'preVerificationGas',
+                  'verificationGasLimit'],
+     'title': 'UserOperation Gas parameters',
+     'type': 'object'}
+
+On instance:
+    {'callGasLimit': '0xab10',
+     'deadline': 281474976710655,
+     'preVerificationGas': 48220,
+     'verificationGas': 334329}
+FAILED tests/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[] - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert - AssertionError: assert 'testwallet: dead signature' in 'max priority fee per gas is too low. it should be minimum : 3000000000'
+ +  where 'testwallet: dead signature' = <built-in method lower of str object at 0x7fd54eb41020>()
+ +    where <built-in method lower of str object at 0x7fd54eb41020> = 'testWallet: dead signature'.lower
+ +  and   'max priority fee per gas is too low. it should be minimum : 3000000000' = <built-in method lower of str object at 0x7fd54e3ea6b0>()
+ +    where <built-in method lower of str object at 0x7fd54e3ea6b0> = 'Max priority fee per gas is too low. it should be minimum : 3000000000'.lower
+ +      where 'Max priority fee per gas is too low. it should be minimum : 3000000000' = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=313).message
+FAILED tests/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature - AssertionError: assert -32500 == <RPCErrorCode.INVALID_SIGNATURE: -32507>
+ +  where -32500 = Error(code=-32500, message='Max priority fee per gas is too low. it should be minimum : 3000000000', data=None, id=315).code
+============= 161 failed, 6 passed, 1 warning in 70.48s (0:01:10) ==============
