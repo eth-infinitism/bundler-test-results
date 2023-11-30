@@ -1,0 +1,901 @@
+{
+  "testsuites": {
+    "testsuite": {
+      "@name": "okbund",
+      "@errors": "0",
+      "@failures": "5",
+      "@skipped": "0",
+      "@tests": "171",
+      "@time": "290.124",
+      "@timestamp": "2023-11-30T11:43:51.676761",
+      "@hostname": "fv-az1251-432",
+      "testcase": [
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_bundle_replace_op[only_priority_fee_bump]",
+          "@time": "0.533"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_bundle_replace_op[only_max_fee_bump]",
+          "@time": "0.379"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_bundle_replace_op[with_same_fee]",
+          "@time": "0.284"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_bundle_replace_op[with_less_fee]",
+          "@time": "0.290"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_bundle_replace_op[fee_bump_below_threshold]",
+          "@time": "0.334"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_bundle_replace_op[fee_bump_at_threshold]",
+          "@time": "0.322"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_bundle_replace_op[fee_bump_above_threshold]",
+          "@time": "0.286"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]",
+          "@time": "0.614"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]",
+          "@time": "0.497"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]",
+          "@time": "0.585"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]",
+          "@time": "2.144"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]",
+          "@time": "2.165"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]",
+          "@time": "2.169"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]",
+          "@time": "2.161"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]",
+          "@time": "5.225"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]",
+          "@time": "5.218"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_max_allowed_ops_unstaked_sender",
+          "@time": "1.955"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_max_allowed_ops_staked_sender",
+          "@time": "1.929"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_ban_user_op_access_other_ops_sender_in_bundle",
+          "@time": "1.720",
+          "failure": {
+            "@message": "AssertionError: assert [] == [UserOperatio...gnature='0x')]\n  Right contains one more item: UserOperation(sender='0x6B7e7331F10027c3172DAd1181CDecaAbDAAedbC', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')\n  Full diff:\n    [\n  +  ,\n  -  UserOperation(sender='0x6B7e7331F10027c3172DAd1181CDecaAbDAAedbC',\n  -                nonce='0x0',\n  -                initCode='0x',\n  -                callData='0x',\n  -                callGasLimit='0x493e0',\n  -                verificationGasLimit='0xf4240',\n  -                preVerificationGas='0x493e0',\n  -                maxFeePerGas='0xee6b2800',\n  -                maxPriorityFeePerGas='0xb2d05e00',\n  -                paymasterAndData='0x',\n  -                signature='0x'),\n    ]",
+            "#text": "tests/single/bundle/test_bundle.py:319: in test_ban_user_op_access_other_ops_sender_in_bundle\n    assert dump_mempool() == [user_op2]\nE   AssertionError: assert [] == [UserOperatio...gnature='0x')]\nE     Right contains one more item: UserOperation(sender='0x6B7e7331F10027c3172DAd1181CDecaAbDAAedbC', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')\nE     Full diff:\nE       [\nE     +  ,\nE     -  UserOperation(sender='0x6B7e7331F10027c3172DAd1181CDecaAbDAAedbC',\nE     -                nonce='0x0',\nE     -                initCode='0x',\nE     -                callData='0x',\nE     -                callGasLimit='0x493e0',\nE     -                verificationGasLimit='0xf4240',\nE     -                preVerificationGas='0x493e0',\nE     -                maxFeePerGas='0xee6b2800',\nE     -                maxPriorityFeePerGas='0xb2d05e00',\nE     -                paymasterAndData='0x',\nE     -                signature='0x'),\nE       ]"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_ban_user_sender_double_role_in_bundle",
+          "@time": "0.744"
+        },
+        {
+          "@classname": "tests.single.bundle.test_bundle",
+          "@name": "test_stake_check_in_bundler",
+          "@time": "0.125"
+        },
+        {
+          "@classname": "tests.single.bundle.test_codehash",
+          "@name": "test_codehash_changed",
+          "@time": "2.845"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]unstaked][paymaster][no_storage][ok]",
+          "@time": "0.280"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-031]unstaked][paymaster][storage][drop]",
+          "@time": "0.349"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]",
+          "@time": "0.407"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]",
+          "@time": "0.307"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-010]unstaked][paymaster][account_storage][ok]",
+          "@time": "0.296"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]",
+          "@time": "0.307"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]",
+          "@time": "0.363"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]",
+          "@time": "0.538"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[EREP-050]unstaked][paymaster][context][drop]",
+          "@time": "0.224"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop]",
+          "@time": "0.348"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]",
+          "@time": "0.411"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]",
+          "@time": "0.343"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]staked][paymaster][no_storage][ok]",
+          "@time": "0.306"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-031]staked][paymaster][storage][ok]",
+          "@time": "0.310"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]staked][paymaster][reference_storage][ok]",
+          "@time": "0.430"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]",
+          "@time": "0.330"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-033]staked][paymaster][reference_storage_struct][ok]",
+          "@time": "0.327"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-010]staked][paymaster][account_storage][ok]",
+          "@time": "0.315"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]",
+          "@time": "0.348"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]",
+          "@time": "0.332"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]",
+          "@time": "0.559"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[EREP-050]staked][paymaster][context][ok]",
+          "@time": "0.246"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-033]staked][paymaster][external_storage_write][drop]",
+          "@time": "0.339"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-033]staked][paymaster][external_storage_read][ok]",
+          "@time": "0.331",
+          "failure": {
+            "@message": "Exception: expected result object, got:\nError(code=-32502, message='paymaster has forbidden read from 0xa56CF58Cc3601f57E0c87edfAfeF570AeDe95Ccb slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'paymaster': '0x256576fe36239203971C449e536746133413e2a0'}, id=245)",
+            "#text": "tests/utils.py:109: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/single/bundle/test_storage_rules.py:769: in test_rule\n    case.assert_func(response)\ntests/utils.py:111: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32502, message='paymaster has forbidden read from 0xa56CF58Cc3601f57E0c87edfAfeF570AeDe95Ccb slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'paymaster': '0x256576fe36239203971C449e536746133413e2a0'}, id=245)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]staked][paymaster][out_of_gas][drop]",
+          "@time": "0.456"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]",
+          "@time": "0.383"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]unstaked][factory][no_storage][ok]",
+          "@time": "0.454"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]unstaked][factory][storage][drop]",
+          "@time": "0.421"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]unstaked][factory][reference_storage][drop]",
+          "@time": "0.433"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]",
+          "@time": "0.438"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-010]unstaked][factory][account_storage][ok]",
+          "@time": "0.433"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]",
+          "@time": "0.441"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]",
+          "@time": "0.449"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]unstaked][factory][external_storage_read][drop]",
+          "@time": "0.446"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]",
+          "@time": "0.383"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]",
+          "@time": "0.398"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]",
+          "@time": "0.401"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]",
+          "@time": "0.422"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]",
+          "@time": "0.394"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]",
+          "@time": "0.394"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]",
+          "@time": "0.396"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]",
+          "@time": "0.401"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]unstaked][factory][out_of_gas][drop]",
+          "@time": "0.524"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]",
+          "@time": "0.451"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]staked][factory][no_storage][ok]",
+          "@time": "0.438"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-031]staked][factory][storage][ok]",
+          "@time": "0.447"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]staked][factory][reference_storage][ok]",
+          "@time": "0.500"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-032]staked][factory][reference_storage_struct][ok]",
+          "@time": "0.563"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-010]staked][factory][account_storage][ok]",
+          "@time": "0.447"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]staked][factory][account_reference_storage][ok]",
+          "@time": "0.465"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]",
+          "@time": "0.467"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-033]staked][factory][external_storage_write][drop]",
+          "@time": "0.492"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-033]staked][factory][external_storage_read][ok]",
+          "@time": "0.469",
+          "failure": {
+            "@message": "Exception: expected result object, got:\nError(code=-32502, message='factory has forbidden read from 0x2A630C9F0d7744261c8063A347d3AD4B2b411fa1 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'factory': '0x5903E7Ae271ee7e181451DCd3EFe24981aa9dBC2'}, id=303)",
+            "#text": "tests/utils.py:109: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/single/bundle/test_storage_rules.py:769: in test_rule\n    case.assert_func(response)\ntests/utils.py:111: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32502, message='factory has forbidden read from 0x2A630C9F0d7744261c8063A347d3AD4B2b411fa1 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'factory': '0x5903E7Ae271ee7e181451DCd3EFe24981aa9dBC2'}, id=303)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]staked][factory][out_of_gas][drop]",
+          "@time": "0.551"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]",
+          "@time": "0.472"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]unstaked][account][no_storage][ok]",
+          "@time": "0.280"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-010]unstaked][account][account_storage][ok]",
+          "@time": "0.259"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]unstaked][account][account_reference_storage][ok]",
+          "@time": "0.260"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]",
+          "@time": "0.455"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]",
+          "@time": "0.455"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]",
+          "@time": "0.484"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]",
+          "@time": "0.269"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]unstaked][account][external_storage_read][drop]",
+          "@time": "0.264"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]unstaked][account][out_of_gas][drop]",
+          "@time": "0.345"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]",
+          "@time": "0.273"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-000]staked][account][no_storage][ok]",
+          "@time": "0.262"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-010]staked][account][account_storage][ok]",
+          "@time": "0.280"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]staked][account][account_reference_storage][ok]",
+          "@time": "0.288"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]",
+          "@time": "0.283"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]staked][account][out_of_gas][drop]",
+          "@time": "0.380"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]",
+          "@time": "0.295"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-033]staked][account][external_storage_write][drop]",
+          "@time": "0.301"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[STO-033]staked][account][external_storage_read][ok]",
+          "@time": "0.290",
+          "failure": {
+            "@message": "Exception: expected result object, got:\nError(code=-32502, message='account has forbidden read from 0x8c70bA830D02034Fb4eb4801098FC3795b4B8c69 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'account': '0xd003f87eE1C39e46a2A40cAA0db70c12B000e6C1'}, id=343)",
+            "#text": "tests/utils.py:109: in assert_ok\n    assert response.result\nE   AttributeError: 'Error' object has no attribute 'result'\n\nThe above exception was the direct cause of the following exception:\ntests/single/bundle/test_storage_rules.py:769: in test_rule\n    case.assert_func(response)\ntests/utils.py:111: in assert_ok\n    raise Exception(f\"expected result object, got:\\n{response}\") from exc\nE   Exception: expected result object, got:\nE   Error(code=-32502, message='account has forbidden read from 0x8c70bA830D02034Fb4eb4801098FC3795b4B8c69 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'account': '0xd003f87eE1C39e46a2A40cAA0db70c12B000e6C1'}, id=343)"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]",
+          "@time": "0.282"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]",
+          "@time": "0.407"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]",
+          "@time": "0.284"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]",
+          "@time": "0.290"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]",
+          "@time": "0.228"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]",
+          "@time": "0.226"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]",
+          "@time": "0.228"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]",
+          "@time": "0.244"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]",
+          "@time": "0.249"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]",
+          "@time": "0.247"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]",
+          "@time": "0.242"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]",
+          "@time": "0.215"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]",
+          "@time": "0.218"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]",
+          "@time": "0.218"
+        },
+        {
+          "@classname": "tests.single.bundle.test_storage_rules",
+          "@name": "test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]",
+          "@time": "0.259"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GAS]",
+          "@time": "0.168"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[NUMBER]",
+          "@time": "0.172"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[TIMESTAMP]",
+          "@time": "0.173"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[COINBASE]",
+          "@time": "0.179"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[DIFFICULTY]",
+          "@time": "0.177"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BASEFEE]",
+          "@time": "0.178"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GASLIMIT]",
+          "@time": "0.184"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[GASPRICE]",
+          "@time": "0.206"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[SELFBALANCE]",
+          "@time": "0.190"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BALANCE]",
+          "@time": "0.193"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[ORIGIN]",
+          "@time": "0.216"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[BLOCKHASH]",
+          "@time": "0.190"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[CREATE]",
+          "@time": "0.203"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[CREATE2]",
+          "@time": "0.242"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.211"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_allowed_opcode_sequence[GAS CALL]",
+          "@time": "0.225"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_account_allowed_opcode_sequence[GAS DELEGATECALL]",
+          "@time": "0.229"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GAS]",
+          "@time": "0.229"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[NUMBER]",
+          "@time": "0.229"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[TIMESTAMP]",
+          "@time": "0.231"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[COINBASE]",
+          "@time": "0.272"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[DIFFICULTY]",
+          "@time": "0.313"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BASEFEE]",
+          "@time": "0.298"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GASLIMIT]",
+          "@time": "0.238"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[GASPRICE]",
+          "@time": "0.242"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[SELFBALANCE]",
+          "@time": "0.243"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BALANCE]",
+          "@time": "0.242"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[ORIGIN]",
+          "@time": "0.246"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[BLOCKHASH]",
+          "@time": "0.243"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[CREATE]",
+          "@time": "0.257"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[CREATE2]",
+          "@time": "0.255"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_paymaster_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.257"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GAS]",
+          "@time": "0.356"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[NUMBER]",
+          "@time": "0.359"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[TIMESTAMP]",
+          "@time": "0.357"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[COINBASE]",
+          "@time": "0.363"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[DIFFICULTY]",
+          "@time": "0.370"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BASEFEE]",
+          "@time": "0.364"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GASLIMIT]",
+          "@time": "0.367"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[GASPRICE]",
+          "@time": "0.370"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[SELFBALANCE]",
+          "@time": "0.389"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BALANCE]",
+          "@time": "0.377"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[ORIGIN]",
+          "@time": "0.370"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[BLOCKHASH]",
+          "@time": "0.374"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[CREATE]",
+          "@time": "0.391"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[CREATE2]",
+          "@time": "0.391"
+        },
+        {
+          "@classname": "tests.single.opbanning.test_op_banning",
+          "@name": "test_factory_banned_opcode[SELFDESTRUCT]",
+          "@time": "0.417"
+        },
+        {
+          "@classname": "tests.single.reputation.test_reputation",
+          "@name": "test_staked_entity_reputation_threshold[with_factory]",
+          "@time": "190.553"
+        },
+        {
+          "@classname": "tests.single.reputation.test_reputation",
+          "@name": "test_staked_entity_reputation_threshold[without_factory]",
+          "@time": "18.068",
+          "failure": {
+            "@message": "AssertionError: opsIncluded mismatch\nassert (0 is None or 0 == 2)\n +  where 2 = int('0x2', 16)\n +    where '0x2' = <built-in method get of dict object at 0x7fbb82b3a600>('opsIncluded')\n +      where <built-in method get of dict object at 0x7fbb82b3a600> = {'address': '0x662A57758207cA7604378A05823E795cc21Fcf06', 'opsIncluded': '0x2', 'opsSeen': '0x6d', 'status': '0x0'}.get",
+            "#text": "tests/single/reputation/test_reputation.py:134: in test_staked_entity_reputation_threshold\n    assert_reputation_status(\ntests/single/reputation/test_reputation.py:55: in assert_reputation_status\n    assert ops_included is None or ops_included == int(\nE   AssertionError: opsIncluded mismatch\nE   assert (0 is None or 0 == 2)\nE    +  where 2 = int('0x2', 16)\nE    +    where '0x2' = <built-in method get of dict object at 0x7fbb82b3a600>('opsIncluded')\nE    +      where <built-in method get of dict object at 0x7fbb82b3a600> = {'address': '0x662A57758207cA7604378A05823E795cc21Fcf06', 'opsIncluded': '0x2', 'opsSeen': '0x6d', 'status': '0x0'}.get"
+          },
+          "system-out": "--------------------------------- Captured Log ---------------------------------\n\n--------------------------------- Captured Out ---------------------------------",
+          "system-err": "--------------------------------- Captured Err ---------------------------------"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_chainId",
+          "@name": "test_eth_chainId[]",
+          "@time": "0.007"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas[]",
+          "@time": "0.031"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas_execution_revert",
+          "@time": "0.025"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_estimateUserOperationGas",
+          "@name": "test_eth_estimateUserOperationGas_simulation_revert",
+          "@time": "0.022"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_getUserOperationByHash",
+          "@name": "test_eth_getUserOperationByHash[]",
+          "@time": "1.464"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_getUserOperationByHash",
+          "@name": "test_eth_getUserOperationByHash_error",
+          "@time": "0.004"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_getUserOperationReceipt",
+          "@name": "test_eth_getUserOperationReceipt[]",
+          "@time": "1.302"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_getUserOperationReceipt",
+          "@name": "test_eth_getUserOperationReceipt_error",
+          "@time": "0.003"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_sendUserOperation",
+          "@name": "test_eth_sendUserOperation[]",
+          "@time": "1.270"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_sendUserOperation",
+          "@name": "test_eth_sendUserOperation_revert",
+          "@time": "0.034"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_sendUserOperation",
+          "@name": "test_eth_sendUserOperation_invalid_signature",
+          "@time": "0.027"
+        },
+        {
+          "@classname": "tests.single.rpc.test_eth_supportedEntryPoints",
+          "@name": "test_eth_supportedEntryPoints[]",
+          "@time": "0.019"
+        }
+      ]
+    }
+  }
+}
