@@ -1,0 +1,710 @@
+Wed Dec  6 17:05:40 UTC 2023: starting bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/transeptor/transeptor.yml, name=transeptor
+Wed Dec  6 17:06:06 UTC 2023: started bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/transeptor/transeptor.yml, name=transeptor
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 171 items
+
+tests/single/bundle/test_bundle.py .......FFFFFFFFF...FF                 [ 12%]
+tests/single/bundle/test_codehash.py .                                   [ 12%]
+tests/single/bundle/test_storage_rules.py .......................F...... [ 30%]
+......................F...................F...............               [ 64%]
+tests/single/opbanning/test_op_banning.py .............................. [ 81%]
+.................                                                        [ 91%]
+tests/single/reputation/test_reputation.py FF                            [ 92%]
+tests/single/rpc/test_eth_chainId.py .                                   [ 93%]
+tests/single/rpc/test_eth_estimateUserOperationGas.py ...                [ 95%]
+tests/single/rpc/test_eth_getUserOperationByHash.py ..                   [ 96%]
+tests/single/rpc/test_eth_getUserOperationReceipt.py ..                  [ 97%]
+tests/single/rpc/test_eth_sendUserOperation.py ...                       [ 99%]
+tests/single/rpc/test_eth_supportedEntryPoints.py .                      [100%]
+
+=================================== FAILURES ===================================
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender] _
+tests/single/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities
+    assert dump_mempool() == wallet_ops
+E   AssertionError: assert [UserOperatio...gnature='0x')] == []
+E     Left contains one more item: UserOperation(sender='0xa688dE98537A941AAa76269f9De57d6d857822Cd', nonce='0x0', initCode='0xc1693d931371ad1d06DFb462f2...ityFeePerGas='0xb2d05e00', paymasterAndData='0x5694225bc6168670474322e1a8c1d8cfb23ba4506e6f7468696e67', signature='0x')
+E     Full diff:
+E       [
+E     -  ,
+E     +  UserOperation(sender='0xa688dE98537A941AAa76269f9De57d6d857822Cd',
+E     +                nonce='0x0',
+E     +                initCode='0xc1693d931371ad1d06DFb462f2e2132fC39E52f30d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0x5694225bc6168670474322e1a8c1d8cfb23ba4506e6f7468696e67',
+E     +                signature='0x'),
+E       ]
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster] _
+tests/single/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities
+    assert dump_mempool() == wallet_ops
+E   AssertionError: assert [UserOperatio...gnature='0x')] == []
+E     Left contains one more item: UserOperation(sender='0x219f779B423940A7d3E3624305dD532Db19E5E5A', nonce='0x0', initCode='0x679B3Bb8D440A37E13E4eE8AcD...ityFeePerGas='0xb2d05e00', paymasterAndData='0x6d91e80f5153b00435181335079ca8e9c8360cc76e6f7468696e67', signature='0x')
+E     Full diff:
+E       [
+E     -  ,
+E     +  UserOperation(sender='0x219f779B423940A7d3E3624305dD532Db19E5E5A',
+E     +                nonce='0x0',
+E     +                initCode='0x679B3Bb8D440A37E13E4eE8AcD2c36F2C79405450d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0x6d91e80f5153b00435181335079ca8e9c8360cc76e6f7468696e67',
+E     +                signature='0x'),
+E       ]
+_ test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory] _
+tests/single/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities
+    assert dump_mempool() == wallet_ops
+E   AssertionError: assert [UserOperatio...gnature='0x')] == []
+E     Left contains one more item: UserOperation(sender='0x9189DDd70b338537944ACA6ec46792C5Cc7d61f7', nonce='0x0', initCode='0x947CAdf9B2C3Dcf22721439686...ityFeePerGas='0xb2d05e00', paymasterAndData='0xaf8a4cb08a18a5f275d0956c23c659008ab353696e6f7468696e67', signature='0x')
+E     Full diff:
+E       [
+E     -  ,
+E     +  UserOperation(sender='0x9189DDd70b338537944ACA6ec46792C5Cc7d61f7',
+E     +                nonce='0x0',
+E     +                initCode='0x947CAdf9B2C3Dcf22721439686A6DB8de30fE15A0d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0xaf8a4cb08a18a5f275d0956c23c659008ab353696e6f7468696e67',
+E     +                signature='0x'),
+E       ]
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender] _
+tests/single/bundle/test_bundle.py:233: in test_mempool_reputation_rules_all_entities
+    assert_rpc_error(response, case.stake_status, case.errorCode)
+tests/utils.py:117: in assert_rpc_error
+    assert message.lower() in response.message.lower()
+E   AssertionError: assert 'throttled' in 'account 0x1cc441326c17b81f08944812dd93ddfc5f8bbcd6 is banned'
+E    +  where 'throttled' = <built-in method lower of str object at 0x7f7eb37c3630>()
+E    +    where <built-in method lower of str object at 0x7f7eb37c3630> = 'throttled'.lower
+E    +  and   'account 0x1cc441326c17b81f08944812dd93ddfc5f8bbcd6 is banned' = <built-in method lower of str object at 0x7f7eb33cfc90>()
+E    +    where <built-in method lower of str object at 0x7f7eb33cfc90> = 'account 0x1Cc441326C17B81f08944812DD93ddFC5f8BBcd6 is banned'.lower
+E    +      where 'account 0x1Cc441326C17B81f08944812DD93ddFC5f8BBcd6 is banned' = Error(code=-32504, message='account 0x1Cc441326C17B81f08944812DD93ddFC5f8BBcd6 is banned', data=None, id=65).message
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster] _
+tests/single/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities
+    assert dump_mempool() == wallet_ops
+E   AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]
+E     Left contains one more item: UserOperation(sender='0x016abFe56250f17D243bd850a5aDAce0b8fFc9D8', nonce='0x40000000000000000', initCode='0x3FAA340A04...ityFeePerGas='0xb2d05e00', paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67', signature='0x')
+E     Full diff:
+E       [
+E        UserOperation(sender='0xD1d2eB2Ea8F48594fB9BB1DA4670A47A91a48d1f',
+E                      nonce='0x0',
+E                      initCode='0x15f5F86740B583a95687B9b4EcC5607a702Cf1200d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+E                      signature='0x'),
+E        UserOperation(sender='0x79b1E91aA2487da3095924014253B7375f42E5f2',
+E                      nonce='0x10000000000000000',
+E                      initCode='0x26b2093143f16395435e6C7fc2d5697d6b0247460d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+E                      signature='0x'),
+E        UserOperation(sender='0x4219e68906F08ba603456b970b2F1f47cE8c650D',
+E                      nonce='0x20000000000000000',
+E                      initCode='0x9C5B4FF1b353540C8ce151c0155018D2018F78940d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+E                      signature='0x'),
+E        UserOperation(sender='0x016abFe56250f17D243bd850a5aDAce0b8fFc9D8',
+E                      nonce='0x30000000000000000',
+E                      initCode='0x3FAA340A04c20D5C2BBd29dC3C1512f8E3A1DAD80d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+E                      signature='0x'),
+E     +  UserOperation(sender='0x016abFe56250f17D243bd850a5aDAce0b8fFc9D8',
+E     +                nonce='0x40000000000000000',
+E     +                initCode='0x3FAA340A04c20D5C2BBd29dC3C1512f8E3A1DAD80d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+E     +                signature='0x'),
+E       ]
+_ test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory] _
+tests/single/bundle/test_bundle.py:225: in test_mempool_reputation_rules_all_entities
+    assert dump_mempool() == wallet_ops
+E   AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]
+E     Left contains one more item: UserOperation(sender='0xE8F2693b26be2280182Bb2D521EFd5785b9b33E8', nonce='0x40000000000000000', initCode='0x53d187715B...ityFeePerGas='0xb2d05e00', paymasterAndData='0x80231a1cd8cb537d388404840371ceed95dad40e6e6f7468696e67', signature='0x')
+E     Full diff:
+E       [
+E        UserOperation(sender='0xB393588FFCb82e45545145F2Fa688B193fe71486',
+E                      nonce='0x0',
+E                      initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x847891db67a33ff7e3213e769705866b86a4fd956e6f7468696e67',
+E                      signature='0x'),
+E        UserOperation(sender='0x94BBE1CBF32490DbF51a1eec99782DE36450c8E4',
+E                      nonce='0x10000000000000000',
+E                      initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0xf36682cde68370341c552c3975bacea0f8e0baf56e6f7468696e67',
+E                      signature='0x'),
+E        UserOperation(sender='0x9d2546EC3B157e7eC6ca5f29D3B0233e0047B97A',
+E                      nonce='0x20000000000000000',
+E                      initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0xce3dba54aa5632481e826a45655634c5200d883a6e6f7468696e67',
+E                      signature='0x'),
+E        UserOperation(sender='0xE8F2693b26be2280182Bb2D521EFd5785b9b33E8',
+E                      nonce='0x30000000000000000',
+E                      initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x80231a1cd8cb537d388404840371ceed95dad40e6e6f7468696e67',
+E                      signature='0x'),
+E     +  UserOperation(sender='0xE8F2693b26be2280182Bb2D521EFd5785b9b33E8',
+E     +                nonce='0x40000000000000000',
+E     +                initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0x80231a1cd8cb537d388404840371ceed95dad40e6e6f7468696e67',
+E     +                signature='0x'),
+E       ]
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender] _
+tests/single/bundle/test_bundle.py:233: in test_mempool_reputation_rules_all_entities
+    assert_rpc_error(response, case.stake_status, case.errorCode)
+tests/utils.py:117: in assert_rpc_error
+    assert message.lower() in response.message.lower()
+E   AssertionError: assert 'unstaked' in 'account 0x92179c90c815b48b452bb0086b6773edb05dab9b stake 0 is too low (min=1000000000000000000)'
+E    +  where 'unstaked' = <built-in method lower of str object at 0x7f7eb37c3670>()
+E    +    where <built-in method lower of str object at 0x7f7eb37c3670> = 'unstaked'.lower
+E    +  and   'account 0x92179c90c815b48b452bb0086b6773edb05dab9b stake 0 is too low (min=1000000000000000000)' = <built-in method lower of str object at 0x7f7eb2fc3900>()
+E    +    where <built-in method lower of str object at 0x7f7eb2fc3900> = 'account 0x92179c90c815b48B452Bb0086b6773EdB05daB9b stake 0 is too low (min=1000000000000000000)'.lower
+E    +      where 'account 0x92179c90c815b48B452Bb0086b6773EdB05daB9b stake 0 is too low (min=1000000000000000000)' = Error(code=-32505, message='account 0x92179c90c815b48B452Bb0086b6773EdB05daB9b stake 0 is too low (min=1000000000000000000)', data=None, id=98).message
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster] _
+tests/single/bundle/test_bundle.py:233: in test_mempool_reputation_rules_all_entities
+    assert_rpc_error(response, case.stake_status, case.errorCode)
+tests/utils.py:116: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == -32505
+E    +  where -32500 = Error(code=-32500, message='account validation failed: AA10 sender already constructed', data=None, id=116).code
+_ test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory] _
+tests/single/bundle/test_bundle.py:233: in test_mempool_reputation_rules_all_entities
+    assert_rpc_error(response, case.stake_status, case.errorCode)
+tests/utils.py:116: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32500 == -32505
+E    +  where -32500 = Error(code=-32500, message='account validation failed: AA10 sender already constructed', data=None, id=134).code
+__________________ test_ban_user_sender_double_role_in_bundle __________________
+tests/utils.py:116: in assert_rpc_error
+    assert response.code == code
+E   AttributeError: 'Ok' object has no attribute 'code'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_bundle.py:359: in test_ban_user_sender_double_role_in_bundle
+    assert_rpc_error(
+tests/utils.py:119: in assert_rpc_error
+    raise Exception(f"expected error object, got:\n{response}") from exc
+E   Exception: expected error object, got:
+E   Ok(result='0xecdb2ecb3aa8f1c1521793492c808499afd12b128bbac8d511d1c58b479f3cdb', id=178)
+_________________________ test_stake_check_in_bundler __________________________
+tests/single/bundle/test_bundle.py:382: in test_stake_check_in_bundler
+    response = get_stake_status(paymaster_contract.address, entrypoint_contract.address)
+tests/utils.py:186: in get_stake_status
+    .result
+E   AttributeError: 'Error' object has no attribute 'result'
+_______ test_rule[[STO-033]staked][paymaster][external_storage_read][ok] _______
+tests/utils.py:109: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:769: in test_rule
+    case.assert_func(response)
+tests/utils.py:111: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32502, message='paymaster has forbidden read from 0x95cc3dc288699c1ce58e657f13fbcb63d7155928 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data=None, id=243)
+________ test_rule[[STO-033]staked][factory][external_storage_read][ok] ________
+tests/utils.py:109: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:769: in test_rule
+    case.assert_func(response)
+tests/utils.py:111: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32502, message='factory has forbidden read from 0x6028e74287d27b429207d9aa0cb7a8d587bde3aa slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data=None, id=301)
+________ test_rule[[STO-033]staked][account][external_storage_read][ok] ________
+tests/utils.py:109: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:769: in test_rule
+    case.assert_func(response)
+tests/utils.py:111: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32502, message='account has forbidden read from 0x031486532919646207273dbdd3fc8929f3624be9 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data=None, id=341)
+____________ test_staked_entity_reputation_threshold[with_factory] _____________
+tests/single/reputation/test_reputation.py:127: in test_staked_entity_reputation_threshold
+    assert_reputation_status(
+tests/single/reputation/test_reputation.py:49: in assert_reputation_status
+    assert int(reputation.get("status", "-0x1"), 16) == status, (
+E   AssertionError: Incorrect reputation status of 0x7a673d0179f81edb36e3f8cb83d74bfe72ec5621
+E   assert -1 == 0
+E    +  where -1 = int('-0x1', 16)
+E    +    where '-0x1' = <built-in method get of dict object at 0x7f7eb2f739c0>('status', '-0x1')
+E    +      where <built-in method get of dict object at 0x7f7eb2f739c0> = {'address': '0x7a673d0179f81edb36e3f8cb83d74bfe72ec5621', 'opsIncluded': '0x0', 'opsSeen': '0x6d'}.get
+___________ test_staked_entity_reputation_threshold[without_factory] ___________
+tests/single/reputation/test_reputation.py:134: in test_staked_entity_reputation_threshold
+    assert_reputation_status(
+tests/single/reputation/test_reputation.py:49: in assert_reputation_status
+    assert int(reputation.get("status", "-0x1"), 16) == status, (
+E   AssertionError: Incorrect reputation status of 0x5c7078104dbff78e693bc20445403d03607dcb8d
+E   assert -1 == 0
+E    +  where -1 = int('-0x1', 16)
+E    +    where '-0x1' = <built-in method get of dict object at 0x7f7eb2beb140>('status', '-0x1')
+E    +      where <built-in method get of dict object at 0x7f7eb2beb140> = {'address': '0x5c7078104dbff78e693bc20445403d03607dcb8d', 'opsIncluded': '0x0', 'opsSeen': '0x6d'}.get
+=============================== warnings summary ===============================
+tests/single/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xa6ac9e888cd9d4d6b249f43d1ad5263a371adf335613334cdfd778c6cf0faa33') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/single/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0x410e2be3cfcedd03c76fef19e8bccf512a97ff9097876e16efe21be08b162400') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/single/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xac2467a3c98886dfaf7e56b9d64a9a78af492d3c8b9a1d2d314ad384d248e2ce') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+tests/single/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/web3/contract.py:1190: UserWarning: The log with transaction hash: HexBytes('0xc245b5b6b953b2b530bea68ddf3400c3e41b9e628957c82e148939ddb9a9c844') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/transeptor.xml -
+=========================== short test summary info ============================
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender
+PASSED tests/single/bundle/test_bundle.py::test_max_allowed_ops_staked_sender
+PASSED tests/single/bundle/test_bundle.py::test_ban_user_op_access_other_ops_sender_in_bundle
+PASSED tests/single/bundle/test_codehash.py::test_codehash_changed
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][paymaster][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][paymaster][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050]unstaked][paymaster][context][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][paymaster][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][paymaster][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050]staked][paymaster][context][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][reference_storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][factory][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][external_storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][factory][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][account][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][external_storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][account][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GAS]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS CALL]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS DELEGATECALL]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT]
+PASSED tests/single/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[]
+PASSED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert
+PASSED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert
+PASSED tests/single/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[]
+PASSED tests/single/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/single/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[]
+PASSED tests/single/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+PASSED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[]
+PASSED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert
+PASSED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature
+PASSED tests/single/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender] - AssertionError: assert [UserOperatio...gnature='0x')] == []
+  Left contains one more item: UserOperation(sender='0xa688dE98537A941AAa76269f9De57d6d857822Cd', nonce='0x0', initCode='0xc1693d931371ad1d06DFb462f2...ityFeePerGas='0xb2d05e00', paymasterAndData='0x5694225bc6168670474322e1a8c1d8cfb23ba4506e6f7468696e67', signature='0x')
+  Full diff:
+    [
+  -  ,
+  +  UserOperation(sender='0xa688dE98537A941AAa76269f9De57d6d857822Cd',
+  +                nonce='0x0',
+  +                initCode='0xc1693d931371ad1d06DFb462f2e2132fC39E52f30d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  +                callGasLimit='0x493e0',
+  +                verificationGasLimit='0xf4240',
+  +                preVerificationGas='0x493e0',
+  +                maxFeePerGas='0xee6b2800',
+  +                maxPriorityFeePerGas='0xb2d05e00',
+  +                paymasterAndData='0x5694225bc6168670474322e1a8c1d8cfb23ba4506e6f7468696e67',
+  +                signature='0x'),
+    ]
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster] - AssertionError: assert [UserOperatio...gnature='0x')] == []
+  Left contains one more item: UserOperation(sender='0x219f779B423940A7d3E3624305dD532Db19E5E5A', nonce='0x0', initCode='0x679B3Bb8D440A37E13E4eE8AcD...ityFeePerGas='0xb2d05e00', paymasterAndData='0x6d91e80f5153b00435181335079ca8e9c8360cc76e6f7468696e67', signature='0x')
+  Full diff:
+    [
+  -  ,
+  +  UserOperation(sender='0x219f779B423940A7d3E3624305dD532Db19E5E5A',
+  +                nonce='0x0',
+  +                initCode='0x679B3Bb8D440A37E13E4eE8AcD2c36F2C79405450d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  +                callGasLimit='0x493e0',
+  +                verificationGasLimit='0xf4240',
+  +                preVerificationGas='0x493e0',
+  +                maxFeePerGas='0xee6b2800',
+  +                maxPriorityFeePerGas='0xb2d05e00',
+  +                paymasterAndData='0x6d91e80f5153b00435181335079ca8e9c8360cc76e6f7468696e67',
+  +                signature='0x'),
+    ]
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory] - AssertionError: assert [UserOperatio...gnature='0x')] == []
+  Left contains one more item: UserOperation(sender='0x9189DDd70b338537944ACA6ec46792C5Cc7d61f7', nonce='0x0', initCode='0x947CAdf9B2C3Dcf22721439686...ityFeePerGas='0xb2d05e00', paymasterAndData='0xaf8a4cb08a18a5f275d0956c23c659008ab353696e6f7468696e67', signature='0x')
+  Full diff:
+    [
+  -  ,
+  +  UserOperation(sender='0x9189DDd70b338537944ACA6ec46792C5Cc7d61f7',
+  +                nonce='0x0',
+  +                initCode='0x947CAdf9B2C3Dcf22721439686A6DB8de30fE15A0d058fe300000000000000000000000000000000000000000000000000000000000001c800000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  +                callGasLimit='0x493e0',
+  +                verificationGasLimit='0xf4240',
+  +                preVerificationGas='0x493e0',
+  +                maxFeePerGas='0xee6b2800',
+  +                maxPriorityFeePerGas='0xb2d05e00',
+  +                paymasterAndData='0xaf8a4cb08a18a5f275d0956c23c659008ab353696e6f7468696e67',
+  +                signature='0x'),
+    ]
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender] - AssertionError: assert 'throttled' in 'account 0x1cc441326c17b81f08944812dd93ddfc5f8bbcd6 is banned'
+ +  where 'throttled' = <built-in method lower of str object at 0x7f7eb37c3630>()
+ +    where <built-in method lower of str object at 0x7f7eb37c3630> = 'throttled'.lower
+ +  and   'account 0x1cc441326c17b81f08944812dd93ddfc5f8bbcd6 is banned' = <built-in method lower of str object at 0x7f7eb33cfc90>()
+ +    where <built-in method lower of str object at 0x7f7eb33cfc90> = 'account 0x1Cc441326C17B81f08944812DD93ddFC5f8BBcd6 is banned'.lower
+ +      where 'account 0x1Cc441326C17B81f08944812DD93ddFC5f8BBcd6 is banned' = Error(code=-32504, message='account 0x1Cc441326C17B81f08944812DD93ddFC5f8BBcd6 is banned', data=None, id=65).message
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster] - AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]
+  Left contains one more item: UserOperation(sender='0x016abFe56250f17D243bd850a5aDAce0b8fFc9D8', nonce='0x40000000000000000', initCode='0x3FAA340A04...ityFeePerGas='0xb2d05e00', paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67', signature='0x')
+  Full diff:
+    [
+     UserOperation(sender='0xD1d2eB2Ea8F48594fB9BB1DA4670A47A91a48d1f',
+                   nonce='0x0',
+                   initCode='0x15f5F86740B583a95687B9b4EcC5607a702Cf1200d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+                   signature='0x'),
+     UserOperation(sender='0x79b1E91aA2487da3095924014253B7375f42E5f2',
+                   nonce='0x10000000000000000',
+                   initCode='0x26b2093143f16395435e6C7fc2d5697d6b0247460d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+                   signature='0x'),
+     UserOperation(sender='0x4219e68906F08ba603456b970b2F1f47cE8c650D',
+                   nonce='0x20000000000000000',
+                   initCode='0x9C5B4FF1b353540C8ce151c0155018D2018F78940d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+                   signature='0x'),
+     UserOperation(sender='0x016abFe56250f17D243bd850a5aDAce0b8fFc9D8',
+                   nonce='0x30000000000000000',
+                   initCode='0x3FAA340A04c20D5C2BBd29dC3C1512f8E3A1DAD80d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+                   signature='0x'),
+  +  UserOperation(sender='0x016abFe56250f17D243bd850a5aDAce0b8fFc9D8',
+  +                nonce='0x40000000000000000',
+  +                initCode='0x3FAA340A04c20D5C2BBd29dC3C1512f8E3A1DAD80d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  +                callGasLimit='0x493e0',
+  +                verificationGasLimit='0xf4240',
+  +                preVerificationGas='0x493e0',
+  +                maxFeePerGas='0xee6b2800',
+  +                maxPriorityFeePerGas='0xb2d05e00',
+  +                paymasterAndData='0x0db2f940f4a061e555df71ada02f917f8344a2686e6f7468696e67',
+  +                signature='0x'),
+    ]
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory] - AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]
+  Left contains one more item: UserOperation(sender='0xE8F2693b26be2280182Bb2D521EFd5785b9b33E8', nonce='0x40000000000000000', initCode='0x53d187715B...ityFeePerGas='0xb2d05e00', paymasterAndData='0x80231a1cd8cb537d388404840371ceed95dad40e6e6f7468696e67', signature='0x')
+  Full diff:
+    [
+     UserOperation(sender='0xB393588FFCb82e45545145F2Fa688B193fe71486',
+                   nonce='0x0',
+                   initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0x847891db67a33ff7e3213e769705866b86a4fd956e6f7468696e67',
+                   signature='0x'),
+     UserOperation(sender='0x94BBE1CBF32490DbF51a1eec99782DE36450c8E4',
+                   nonce='0x10000000000000000',
+                   initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0xf36682cde68370341c552c3975bacea0f8e0baf56e6f7468696e67',
+                   signature='0x'),
+     UserOperation(sender='0x9d2546EC3B157e7eC6ca5f29D3B0233e0047B97A',
+                   nonce='0x20000000000000000',
+                   initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0xce3dba54aa5632481e826a45655634c5200d883a6e6f7468696e67',
+                   signature='0x'),
+     UserOperation(sender='0xE8F2693b26be2280182Bb2D521EFd5785b9b33E8',
+                   nonce='0x30000000000000000',
+                   initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+                   callGasLimit='0x493e0',
+                   verificationGasLimit='0xf4240',
+                   preVerificationGas='0x493e0',
+                   maxFeePerGas='0xee6b2800',
+                   maxPriorityFeePerGas='0xb2d05e00',
+                   paymasterAndData='0x80231a1cd8cb537d388404840371ceed95dad40e6e6f7468696e67',
+                   signature='0x'),
+  +  UserOperation(sender='0xE8F2693b26be2280182Bb2D521EFd5785b9b33E8',
+  +                nonce='0x40000000000000000',
+  +                initCode='0x53d187715B67f1DdE3A72b943eD2855D219988AD0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000005ff137d4b0fdcd49dca30c7cf57e578a026d278900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+  +                callGasLimit='0x493e0',
+  +                verificationGasLimit='0xf4240',
+  +                preVerificationGas='0x493e0',
+  +                maxFeePerGas='0xee6b2800',
+  +                maxPriorityFeePerGas='0xb2d05e00',
+  +                paymasterAndData='0x80231a1cd8cb537d388404840371ceed95dad40e6e6f7468696e67',
+  +                signature='0x'),
+    ]
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender] - AssertionError: assert 'unstaked' in 'account 0x92179c90c815b48b452bb0086b6773edb05dab9b stake 0 is too low (min=1000000000000000000)'
+ +  where 'unstaked' = <built-in method lower of str object at 0x7f7eb37c3670>()
+ +    where <built-in method lower of str object at 0x7f7eb37c3670> = 'unstaked'.lower
+ +  and   'account 0x92179c90c815b48b452bb0086b6773edb05dab9b stake 0 is too low (min=1000000000000000000)' = <built-in method lower of str object at 0x7f7eb2fc3900>()
+ +    where <built-in method lower of str object at 0x7f7eb2fc3900> = 'account 0x92179c90c815b48B452Bb0086b6773EdB05daB9b stake 0 is too low (min=1000000000000000000)'.lower
+ +      where 'account 0x92179c90c815b48B452Bb0086b6773EdB05daB9b stake 0 is too low (min=1000000000000000000)' = Error(code=-32505, message='account 0x92179c90c815b48B452Bb0086b6773EdB05daB9b stake 0 is too low (min=1000000000000000000)', data=None, id=98).message
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster] - AssertionError: assert -32500 == -32505
+ +  where -32500 = Error(code=-32500, message='account validation failed: AA10 sender already constructed', data=None, id=116).code
+FAILED tests/single/bundle/test_bundle.py::test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory] - AssertionError: assert -32500 == -32505
+ +  where -32500 = Error(code=-32500, message='account validation failed: AA10 sender already constructed', data=None, id=134).code
+FAILED tests/single/bundle/test_bundle.py::test_ban_user_sender_double_role_in_bundle - Exception: expected error object, got:
+Ok(result='0xecdb2ecb3aa8f1c1521793492c808499afd12b128bbac8d511d1c58b479f3cdb', id=178)
+FAILED tests/single/bundle/test_bundle.py::test_stake_check_in_bundler - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_read][ok] - Exception: expected result object, got:
+Error(code=-32502, message='paymaster has forbidden read from 0x95cc3dc288699c1ce58e657f13fbcb63d7155928 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data=None, id=243)
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_read][ok] - Exception: expected result object, got:
+Error(code=-32502, message='factory has forbidden read from 0x6028e74287d27b429207d9aa0cb7a8d587bde3aa slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data=None, id=301)
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_read][ok] - Exception: expected result object, got:
+Error(code=-32502, message='account has forbidden read from 0x031486532919646207273dbdd3fc8929f3624be9 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data=None, id=341)
+FAILED tests/single/reputation/test_reputation.py::test_staked_entity_reputation_threshold[with_factory] - AssertionError: Incorrect reputation status of 0x7a673d0179f81edb36e3f8cb83d74bfe72ec5621
+assert -1 == 0
+ +  where -1 = int('-0x1', 16)
+ +    where '-0x1' = <built-in method get of dict object at 0x7f7eb2f739c0>('status', '-0x1')
+ +      where <built-in method get of dict object at 0x7f7eb2f739c0> = {'address': '0x7a673d0179f81edb36e3f8cb83d74bfe72ec5621', 'opsIncluded': '0x0', 'opsSeen': '0x6d'}.get
+FAILED tests/single/reputation/test_reputation.py::test_staked_entity_reputation_threshold[without_factory] - AssertionError: Incorrect reputation status of 0x5c7078104dbff78e693bc20445403d03607dcb8d
+assert -1 == 0
+ +  where -1 = int('-0x1', 16)
+ +    where '-0x1' = <built-in method get of dict object at 0x7f7eb2beb140>('status', '-0x1')
+ +      where <built-in method get of dict object at 0x7f7eb2beb140> = {'address': '0x5c7078104dbff78e693bc20445403d03607dcb8d', 'opsIncluded': '0x0', 'opsSeen': '0x6d'}.get
+============ 16 failed, 155 passed, 4 warnings in 198.05s (0:03:18) ============
+Wed Dec  6 17:09:25 UTC 2023: done bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/transeptor/transeptor.yml, name=transeptor
+              Container                           Repository                Tag          Image Id       Size  
+--------------------------------------------------------------------------------------------------------------
+bundler-test-executor_bundler-waiter_1   ghcr.io/foundry-rs/foundry     latest         11a73703d5f6   143.7 MB
+bundler-test-executor_bundler_1          transeptorlabs/bundler         latest         83dbaae05278   353.4 MB
+bundler-test-executor_deployer_1         accountabstraction/deployer    0.6            7e3c6d5f0f4d   143.1 MB
+bundler-test-executor_funder_1           bundler-test-executor_funder   latest         4cc747cffea9   147.4 MB
+geth-1.10                                ethereum/client-go             release-1.10   c16c2e0da325   49.69 MB
