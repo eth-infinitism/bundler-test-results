@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="aabundler" errors="3" failures="0" skipped="0" tests="3" time="0.218" timestamp="2024-02-22T15:22:23.399437" hostname="fv-az914-43"><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[GASPRICE]" time="0.019"><error message="failed on setup with &quot;solcx.exceptions.SolcError: An error occurred during execution&#10;&gt; command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`&#10;&gt; return code: `1`&#10;&gt; stdout:&#10;&#10;&gt; stderr:&#10;Error: Identifier not found or not unique.&#10;  --&gt; &lt;stdin&gt;:33:29:&#10;   |&#10;33 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingAccountFunds)&#10;   |                             ^^^^^^^^^^^^^&quot;">tests/conftest.py:88: in rules_account_contract
+    return deploy_and_deposit(w3, entrypoint_contract, "TestRulesAccount", False)
+tests/utils.py:50: in deploy_and_deposit
+    contract = deploy_contract(
+tests/utils.py:34: in deploy_contract
+    interface = compile_contract(contractname)
+tests/utils.py:20: in compile_contract
+    compiled_sol = compile_source(
+.venv/lib/python3.10/site-packages/solcx/main.py:112: in compile_source
+    return _compile_combined_json(
+.venv/lib/python3.10/site-packages/solcx/main.py:291: in _compile_combined_json
+    stdoutdata, stderrdata, command, proc = wrapper.solc_wrapper(
+.venv/lib/python3.10/site-packages/solcx/wrapper.py:158: in solc_wrapper
+    raise SolcError(
+E   solcx.exceptions.SolcError: An error occurred during execution
+E   &gt; command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+E   &gt; return code: `1`
+E   &gt; stdout:
+E   
+E   &gt; stderr:
+E   Error: Identifier not found or not unique.
+E     --&gt; &lt;stdin&gt;:33:29:
+E      |
+E   33 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingAccountFunds)
+E      |                             ^^^^^^^^^^^^^</error></testcase><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GASPRICE]" time="0.010"><error message="failed on setup with &quot;solcx.exceptions.SolcError: An error occurred during execution&#10;&gt; command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`&#10;&gt; return code: `1`&#10;&gt; stdout:&#10;&#10;&gt; stderr:&#10;Error: Identifier not found or not unique.&#10;  --&gt; SimpleWallet.sol:31:29:&#10;   |&#10;31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)&#10;   |                             ^^^^^^^^^^^^^&quot;">tests/conftest.py:78: in paymaster_contract
+    return deploy_and_deposit(w3, entrypoint_contract, "TestRulesPaymaster", False)
+tests/utils.py:50: in deploy_and_deposit
+    contract = deploy_contract(
+tests/utils.py:34: in deploy_contract
+    interface = compile_contract(contractname)
+tests/utils.py:20: in compile_contract
+    compiled_sol = compile_source(
+.venv/lib/python3.10/site-packages/solcx/main.py:112: in compile_source
+    return _compile_combined_json(
+.venv/lib/python3.10/site-packages/solcx/main.py:291: in _compile_combined_json
+    stdoutdata, stderrdata, command, proc = wrapper.solc_wrapper(
+.venv/lib/python3.10/site-packages/solcx/wrapper.py:158: in solc_wrapper
+    raise SolcError(
+E   solcx.exceptions.SolcError: An error occurred during execution
+E   &gt; command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+E   &gt; return code: `1`
+E   &gt; stdout:
+E   
+E   &gt; stderr:
+E   Error: Identifier not found or not unique.
+E     --&gt; SimpleWallet.sol:31:29:
+E      |
+E   31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)
+E      |                             ^^^^^^^^^^^^^</error></testcase><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[GASPRICE]" time="0.010"><error message="failed on setup with &quot;solcx.exceptions.SolcError: An error occurred during execution&#10;&gt; command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`&#10;&gt; return code: `1`&#10;&gt; stdout:&#10;&#10;&gt; stderr:&#10;Error: Identifier not found or not unique.&#10;  --&gt; SimpleWallet.sol:31:29:&#10;   |&#10;31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)&#10;   |                             ^^^^^^^^^^^^^&quot;">tests/conftest.py:83: in factory_contract
+    return deploy_and_deposit(w3, entrypoint_contract, "TestRulesFactory", False)
+tests/utils.py:50: in deploy_and_deposit
+    contract = deploy_contract(
+tests/utils.py:34: in deploy_contract
+    interface = compile_contract(contractname)
+tests/utils.py:20: in compile_contract
+    compiled_sol = compile_source(
+.venv/lib/python3.10/site-packages/solcx/main.py:112: in compile_source
+    return _compile_combined_json(
+.venv/lib/python3.10/site-packages/solcx/main.py:291: in _compile_combined_json
+    stdoutdata, stderrdata, command, proc = wrapper.solc_wrapper(
+.venv/lib/python3.10/site-packages/solcx/wrapper.py:158: in solc_wrapper
+    raise SolcError(
+E   solcx.exceptions.SolcError: An error occurred during execution
+E   &gt; command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+E   &gt; return code: `1`
+E   &gt; stdout:
+E   
+E   &gt; stderr:
+E   Error: Identifier not found or not unique.
+E     --&gt; SimpleWallet.sol:31:29:
+E      |
+E   31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)
+E      |                             ^^^^^^^^^^^^^</error></testcase></testsuite></testsuites>

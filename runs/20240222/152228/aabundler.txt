@@ -1,0 +1,133 @@
+Thu Feb 22 15:21:52 UTC 2024: starting bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/aabundler/aabundler.yml, name=aabundler
+Thu Feb 22 15:22:21 UTC 2024: started bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/aabundler/aabundler.yml, name=aabundler
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.2.0, pluggy-1.0.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+plugins: web3-5.31.1
+collected 171 items / 168 deselected / 3 selected
+
+tests/single/opbanning/test_op_banning.py EEE                            [100%]
+
+==================================== ERRORS ====================================
+____________ ERROR at setup of test_account_banned_opcode[GASPRICE] ____________
+tests/conftest.py:88: in rules_account_contract
+    return deploy_and_deposit(w3, entrypoint_contract, "TestRulesAccount", False)
+tests/utils.py:50: in deploy_and_deposit
+    contract = deploy_contract(
+tests/utils.py:34: in deploy_contract
+    interface = compile_contract(contractname)
+tests/utils.py:20: in compile_contract
+    compiled_sol = compile_source(
+.venv/lib/python3.10/site-packages/solcx/main.py:112: in compile_source
+    return _compile_combined_json(
+.venv/lib/python3.10/site-packages/solcx/main.py:291: in _compile_combined_json
+    stdoutdata, stderrdata, command, proc = wrapper.solc_wrapper(
+.venv/lib/python3.10/site-packages/solcx/wrapper.py:158: in solc_wrapper
+    raise SolcError(
+E   solcx.exceptions.SolcError: An error occurred during execution
+E   > command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+E   > return code: `1`
+E   > stdout:
+E   
+E   > stderr:
+E   Error: Identifier not found or not unique.
+E     --> <stdin>:33:29:
+E      |
+E   33 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingAccountFunds)
+E      |                             ^^^^^^^^^^^^^
+___________ ERROR at setup of test_paymaster_banned_opcode[GASPRICE] ___________
+tests/conftest.py:78: in paymaster_contract
+    return deploy_and_deposit(w3, entrypoint_contract, "TestRulesPaymaster", False)
+tests/utils.py:50: in deploy_and_deposit
+    contract = deploy_contract(
+tests/utils.py:34: in deploy_contract
+    interface = compile_contract(contractname)
+tests/utils.py:20: in compile_contract
+    compiled_sol = compile_source(
+.venv/lib/python3.10/site-packages/solcx/main.py:112: in compile_source
+    return _compile_combined_json(
+.venv/lib/python3.10/site-packages/solcx/main.py:291: in _compile_combined_json
+    stdoutdata, stderrdata, command, proc = wrapper.solc_wrapper(
+.venv/lib/python3.10/site-packages/solcx/wrapper.py:158: in solc_wrapper
+    raise SolcError(
+E   solcx.exceptions.SolcError: An error occurred during execution
+E   > command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+E   > return code: `1`
+E   > stdout:
+E   
+E   > stderr:
+E   Error: Identifier not found or not unique.
+E     --> SimpleWallet.sol:31:29:
+E      |
+E   31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)
+E      |                             ^^^^^^^^^^^^^
+____________ ERROR at setup of test_factory_banned_opcode[GASPRICE] ____________
+tests/conftest.py:83: in factory_contract
+    return deploy_and_deposit(w3, entrypoint_contract, "TestRulesFactory", False)
+tests/utils.py:50: in deploy_and_deposit
+    contract = deploy_contract(
+tests/utils.py:34: in deploy_contract
+    interface = compile_contract(contractname)
+tests/utils.py:20: in compile_contract
+    compiled_sol = compile_source(
+.venv/lib/python3.10/site-packages/solcx/main.py:112: in compile_source
+    return _compile_combined_json(
+.venv/lib/python3.10/site-packages/solcx/main.py:291: in _compile_combined_json
+    stdoutdata, stderrdata, command, proc = wrapper.solc_wrapper(
+.venv/lib/python3.10/site-packages/solcx/wrapper.py:158: in solc_wrapper
+    raise SolcError(
+E   solcx.exceptions.SolcError: An error occurred during execution
+E   > command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+E   > return code: `1`
+E   > stdout:
+E   
+E   > stderr:
+E   Error: Identifier not found or not unique.
+E     --> SimpleWallet.sol:31:29:
+E      |
+E   31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)
+E      |                             ^^^^^^^^^^^^^
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/aabundler.xml -
+=========================== short test summary info ============================
+ERROR tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE] - solcx.exceptions.SolcError: An error occurred during execution
+> command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+> return code: `1`
+> stdout:
+
+> stderr:
+Error: Identifier not found or not unique.
+  --> <stdin>:33:29:
+   |
+33 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingAccountFunds)
+   |                             ^^^^^^^^^^^^^
+ERROR tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE] - solcx.exceptions.SolcError: An error occurred during execution
+> command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+> return code: `1`
+> stdout:
+
+> stderr:
+Error: Identifier not found or not unique.
+  --> SimpleWallet.sol:31:29:
+   |
+31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)
+   |                             ^^^^^^^^^^^^^
+ERROR tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE] - solcx.exceptions.SolcError: An error occurred during execution
+> command: `/home/runner/.solcx/solc-v0.8.15 @account-abstraction=../../@account-abstraction --combined-json abi,bin --base-path /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/contracts/ --allow-paths ../../@account-abstraction -`
+> return code: `1`
+> stdout:
+
+> stderr:
+Error: Identifier not found or not unique.
+  --> SimpleWallet.sol:31:29:
+   |
+31 |     function validateUserOp(UserOperation calldata userOp, bytes32, uint256 missingWalletFunds)
+   |                             ^^^^^^^^^^^^^
+====================== 168 deselected, 3 errors in 0.21s =======================
+Thu Feb 22 15:22:23 UTC 2024: done bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/aabundler/aabundler.yml, name=aabundler
+              Container                           Repository                Tag          Image Id       Size  
+--------------------------------------------------------------------------------------------------------------
+bundler-test-executor_bundler-waiter_1   ghcr.io/foundry-rs/foundry     latest         ede4b0fce330   148.5 MB
+bundler-test-executor_bundler_1          accountabstraction/bundler     0.7.0          7f7dbdb068a2   201.2 MB
+bundler-test-executor_deployer_1         accountabstraction/deployer    0.6            7e3c6d5f0f4d   143.1 MB
+bundler-test-executor_funder_1           bundler-test-executor_funder   latest         3be38d748335   152.2 MB
+geth-1.10                                ethereum/client-go             release-1.10   c16c2e0da325   49.69 MB
