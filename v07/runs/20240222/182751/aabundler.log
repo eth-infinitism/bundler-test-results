@@ -1,0 +1,65 @@
+Attaching to bundler-test-executor_bundler-waiter_1, bundler-test-executor_bundler_1, bundler-test-executor_deployer_1, bundler-test-executor_funder_1, geth-1.10
+[33mbundler_1         |[0m 2024-02-22T18:27:41.178088793Z command-line arguments:  {
+[33mbundler_1         |[0m 2024-02-22T18:27:41.178129800Z   config: 'workdir/bundler.config.json',
+[33mbundler_1         |[0m 2024-02-22T18:27:41.178136082Z   auto: false,
+[33mbundler_1         |[0m 2024-02-22T18:27:41.178141041Z   network: 'http://eth-node:8545'
+[33mbundler_1         |[0m 2024-02-22T18:27:41.178145830Z }
+[33mbundler_1         |[0m 2024-02-22T18:27:41.179214181Z Merged configuration: {"port":"3000","entryPoint":"0x0000000071727De22E5E9d8BAf0edAc6f37da032","unsafe":false,"conditionalRpc":false,"minStake":"1","minUnstakeDelay":0,"gasFactor":"1","beneficiary":"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266","minBalance":"1","mnemonic":"./workdir/mnemonic.txt","maxBundleGas":5000000,"autoBundleInterval":3,"autoBundleMempoolSize":10,"network":"http://eth-node:8545"}
+[33mbundler_1         |[0m 2024-02-22T18:27:41.179350689Z url= http://eth-node:8545
+[33mbundler_1         |[0m 2024-02-22T18:27:41.828514400Z == debugrpc was undefined
+[33mbundler_1         |[0m 2024-02-22T18:27:41.849316581Z deployed EntryPoint at 0x0000000071727De22E5E9d8BAf0edAc6f37da032
+[33mbundler_1         |[0m 2024-02-22T18:27:41.883695882Z url= http://eth-node:8545
+[33mbundler_1         |[0m 2024-02-22T18:27:41.919451611Z signer 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 balance 20.0
+[33mbundler_1         |[0m 2024-02-22T18:27:41.919789033Z Bundle interval (seconds) 3
+[33mbundler_1         |[0m 2024-02-22T18:27:41.922566901Z connected to network { name: 'unknown', chainId: 1337 }
+[33mbundler_1         |[0m 2024-02-22T18:27:41.922603196Z running on http://localhost:3000/rpc
+[33mbundler_1         |[0m 2024-02-22T18:27:45.950895912Z UserOperation: Sender=0x1cFcEf84d5bE48a6292f67D85F1850d48a1Bfe9e  Nonce=0 EntryPoint=0x0000000071727De22E5E9d8BAf0edAc6f37da032 Paymaster=
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106148549Z failed:  eth_sendUserOperation error: {"message":"account uses banned opcode: GASPRICE","code":-32502} RpcError: account uses banned opcode: GASPRICE
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106171432Z     at requireCond (webpack:///../../packages/utils/dist/src/Utils.js?:35:15)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106180439Z     at eval (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:195:72)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106188544Z     at Array.forEach (<anonymous>)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106195868Z     at eval (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:195:30)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106203001Z     at Array.forEach (<anonymous>)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106207590Z     at tracerResultParser (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:179:39)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106212028Z     at ValidationManager.validateUserOp (webpack:///../../packages/validation-manager/dist/src/ValidationManager.js?:154:91)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106216376Z     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106220584Z     at async eval (webpack:///../../packages/bundler/dist/src/modules/ExecutionManager.js?:34:38) {
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106224892Z   code: -32502,
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106229080Z   data: undefined
+[33mbundler_1         |[0m 2024-02-22T18:27:46.106233208Z }
+[33mbundler_1         |[0m 2024-02-22T18:27:46.263412114Z UserOperation: Sender=0x85016BBfD816a96D2Aaae9051670c1D165Ca889E  Nonce=0 EntryPoint=0x0000000071727De22E5E9d8BAf0edAc6f37da032 Paymaster=0xc9911689A425096A661eF009e957b6D692316805
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459054817Z failed:  eth_sendUserOperation error: {"message":"paymaster uses banned opcode: GASPRICE","code":-32502} RpcError: paymaster uses banned opcode: GASPRICE
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459086136Z     at requireCond (webpack:///../../packages/utils/dist/src/Utils.js?:35:15)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459092939Z     at eval (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:195:72)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459098880Z     at Array.forEach (<anonymous>)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459104711Z     at eval (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:195:30)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459110672Z     at Array.forEach (<anonymous>)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459116383Z     at tracerResultParser (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:179:39)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459121542Z     at ValidationManager.validateUserOp (webpack:///../../packages/validation-manager/dist/src/ValidationManager.js?:154:91)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459127143Z     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459132483Z     at async eval (webpack:///../../packages/bundler/dist/src/modules/ExecutionManager.js?:34:38) {
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459138384Z   code: -32502,
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459144095Z   data: undefined
+[33mbundler_1         |[0m 2024-02-22T18:27:46.459149134Z }
+[33mbundler_1         |[0m 2024-02-22T18:27:46.598034457Z UserOperation: Sender=0xf036CcF38eB673bbb21c191C4aFBC25F78a53A7B  Nonce=0 EntryPoint=0x0000000071727De22E5E9d8BAf0edAc6f37da032 Paymaster=
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877874435Z failed:  eth_sendUserOperation error: {"message":"factory uses banned opcode: GASPRICE","code":-32502} RpcError: factory uses banned opcode: GASPRICE
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877904431Z     at requireCond (webpack:///../../packages/utils/dist/src/Utils.js?:35:15)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877910132Z     at eval (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:195:72)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877922946Z     at Array.forEach (<anonymous>)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877927936Z     at eval (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:195:30)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877932725Z     at Array.forEach (<anonymous>)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877937614Z     at tracerResultParser (webpack:///../../packages/validation-manager/dist/src/TracerResultParser.js?:179:39)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877942152Z     at ValidationManager.validateUserOp (webpack:///../../packages/validation-manager/dist/src/ValidationManager.js?:154:91)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877946721Z     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877951089Z     at async eval (webpack:///../../packages/bundler/dist/src/modules/ExecutionManager.js?:34:38) {
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877955768Z   code: -32502,
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877960466Z   data: undefined
+[33mbundler_1         |[0m 2024-02-22T18:27:46.877964745Z }
+[32mdeployer_1        |[0m 2024-02-22T18:27:34.134996129Z Deploying entrypoint at 0x0000000071727De22E5E9d8BAf0edAc6f37da032
+[32mdeployer_1        |[0m 2024-02-22T18:27:34.218439843Z deploying:
+[36mbundler-waiter_1  |[0m 2024-02-22T18:27:42.751454672Z "0x539"
+[35mfunder_1          |[0m 2024-02-22T18:27:33.605166553Z funded: 0x43378ff8C70109Ee4Dbe85aF34428ab0615EBd23
+[35mfunder_1          |[0m 2024-02-22T18:27:33.627156169Z funded: 0x43378ff8C70109Ee4Dbe85aF34428ab0615EBd23
+[35mfunder_1          |[0m 2024-02-22T18:27:33.648724710Z funded: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+[35mfunder_1          |[0m 2024-02-22T18:27:33.669997455Z funded: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+[34mgeth-1.10         |[0m 2024-02-22T18:27:27.530071868Z ERROR[02-22|18:27:27.529] Failed to check db for legacy receipts   err="this operation is not supported"
