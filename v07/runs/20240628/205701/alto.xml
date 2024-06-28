@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="alto" errors="0" failures="9" skipped="0" tests="171" time="192.596" timestamp="2024-06-28T20:37:35.138288" hostname="fv-az888-565"><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[only_priority_fee_bump]" time="0.350" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[only_max_fee_bump]" time="0.298" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[with_same_fee]" time="0.301" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[with_less_fee]" time="0.293" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[fee_bump_below_threshold]" time="0.301" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[fee_bump_at_threshold]" time="0.287" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[fee_bump_above_threshold]" time="0.288" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]" time="0.817" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]" time="0.668" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]" time="0.665" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]" time="2.874" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]" time="1.791"><failure message="AssertionError: assert [] == [UserOperatio...it='0x10000')]&#10;  Right contains 4 more items, first extra item: UserOperation(sender='0xD8328714473bEE2e4017e2d5fe06Db2fFFB33f2e', nonce='0x0', factory='0x906D3917f1504fc9788348880E2...e='0x', paymaster=None, paymasterData=None, paymasterVerificationGasLimit='0x10000', paymasterPostOpGasLimit='0x10000')&#10;  Full diff:&#10;    [&#10;  +  ,&#10;  -  UserOperation(sender='0xD8328714473bEE2e4017e2d5fe06Db2fFFB33f2e',&#10;  -                nonce='0x0',&#10;  -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x1e761103B62B157C67eBcC9F8943cae31a58C952',&#10;  -                nonce='0x10000000000000000',&#10;  -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x455EC885c0ecdE8FaeDe19B263f143385027AE97',&#10;  -                nonce='0x20000000000000000',&#10;  -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x58e126f29c1b38e171b3C1D2A7F17DDB75E84389',&#10;  -                nonce='0x30000000000000000',&#10;  -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;    ]">tests/single/bundle/test_bundle.py:210: in test_mempool_reputation_rules_all_entities
+    assert dump_mempool() == wallet_ops
+E   AssertionError: assert [] == [UserOperatio...it='0x10000')]
+E     Right contains 4 more items, first extra item: UserOperation(sender='0xD8328714473bEE2e4017e2d5fe06Db2fFFB33f2e', nonce='0x0', factory='0x906D3917f1504fc9788348880E2...e='0x', paymaster=None, paymasterData=None, paymasterVerificationGasLimit='0x10000', paymasterPostOpGasLimit='0x10000')
+E     Full diff:
+E       [
+E     +  ,
+E     -  UserOperation(sender='0xD8328714473bEE2e4017e2d5fe06Db2fFFB33f2e',
+E     -                nonce='0x0',
+E     -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x1e761103B62B157C67eBcC9F8943cae31a58C952',
+E     -                nonce='0x10000000000000000',
+E     -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x455EC885c0ecdE8FaeDe19B263f143385027AE97',
+E     -                nonce='0x20000000000000000',
+E     -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x58e126f29c1b38e171b3C1D2A7F17DDB75E84389',
+E     -                nonce='0x30000000000000000',
+E     -                factory='0x906D3917f1504fc9788348880E22b04834C2085a',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E       ]</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]" time="2.620" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]" time="3.068" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]" time="4.351"><failure message="AssertionError: assert [] == [UserOperatio...x10000'), ...]&#10;  Right contains 11 more items, first extra item: UserOperation(sender='0xc3681218e7368470eB87979b42CD8B18d5A95503', nonce='0x0', factory='0xD893eb76cA0DcbA630E92D35f3B...e='0x', paymaster=None, paymasterData=None, paymasterVerificationGasLimit='0x10000', paymasterPostOpGasLimit='0x10000')&#10;  Full diff:&#10;    [&#10;  +  ,&#10;  -  UserOperation(sender='0xc3681218e7368470eB87979b42CD8B18d5A95503',&#10;  -                nonce='0x0',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x2A7BFDd08186A1FA6D1D8b6536751f503f702Ac7',&#10;  -                nonce='0x10000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0xF4647738E19299207D99de4bf89698BDdc6019F4',&#10;  -                nonce='0x20000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x8592455298766Ed652ab181a660d0e9007EC80a8',&#10;  -                nonce='0x30000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0xF7299dFD12730CF8bD03e2Ceb2Ee9dF8d961504f',&#10;  -                nonce='0x40000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x6849a1F80C4ABBe8fa5360fEd062601B2EBe36C1',&#10;  -                nonce='0x50000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x032147C5B54Cf100A64d15A9E883968BA98fB977',&#10;  -                nonce='0x60000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008100000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x4ec3a1e016b90D2C950e0dc4fd682315D203a108',&#10;  -                nonce='0x70000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008200000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0xbe1A7304f073ae74eCa45dA750a47403C19f34B1',&#10;  -                nonce='0x80000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008300000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0xa4203ec42c4eeAfDcc06e7f537005F83f0fB7766',&#10;  -                nonce='0x90000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008400000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;  -  UserOperation(sender='0x185f46040c6c4A3Cd85A58Da2726cC5eb5237D6A',&#10;  -                nonce='0xa0000000000000000',&#10;  -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',&#10;  -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',&#10;  -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  -                callGasLimit='0x493e0',&#10;  -                verificationGasLimit='0xf4240',&#10;  -                preVerificationGas='0x493e0',&#10;  -                maxFeePerGas='0xee6b2800',&#10;  -                maxPriorityFeePerGas='0xb2d05e00',&#10;  -                signature='0x',&#10;  -                paymaster=None,&#10;  -                paymasterData=None,&#10;  -                paymasterVerificationGasLimit='0x10000',&#10;  -                paymasterPostOpGasLimit='0x10000'),&#10;    ]">tests/single/bundle/test_bundle.py:210: in test_mempool_reputation_rules_all_entities
+    assert dump_mempool() == wallet_ops
+E   AssertionError: assert [] == [UserOperatio...x10000'), ...]
+E     Right contains 11 more items, first extra item: UserOperation(sender='0xc3681218e7368470eB87979b42CD8B18d5A95503', nonce='0x0', factory='0xD893eb76cA0DcbA630E92D35f3B...e='0x', paymaster=None, paymasterData=None, paymasterVerificationGasLimit='0x10000', paymasterPostOpGasLimit='0x10000')
+E     Full diff:
+E       [
+E     +  ,
+E     -  UserOperation(sender='0xc3681218e7368470eB87979b42CD8B18d5A95503',
+E     -                nonce='0x0',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x2A7BFDd08186A1FA6D1D8b6536751f503f702Ac7',
+E     -                nonce='0x10000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007c00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0xF4647738E19299207D99de4bf89698BDdc6019F4',
+E     -                nonce='0x20000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x8592455298766Ed652ab181a660d0e9007EC80a8',
+E     -                nonce='0x30000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007e00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0xF7299dFD12730CF8bD03e2Ceb2Ee9dF8d961504f',
+E     -                nonce='0x40000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x6849a1F80C4ABBe8fa5360fEd062601B2EBe36C1',
+E     -                nonce='0x50000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x032147C5B54Cf100A64d15A9E883968BA98fB977',
+E     -                nonce='0x60000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008100000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x4ec3a1e016b90D2C950e0dc4fd682315D203a108',
+E     -                nonce='0x70000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008200000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0xbe1A7304f073ae74eCa45dA750a47403C19f34B1',
+E     -                nonce='0x80000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008300000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0xa4203ec42c4eeAfDcc06e7f537005F83f0fB7766',
+E     -                nonce='0x90000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008400000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E     -  UserOperation(sender='0x185f46040c6c4A3Cd85A58Da2726cC5eb5237D6A',
+E     -                nonce='0xa0000000000000000',
+E     -                factory='0xD893eb76cA0DcbA630E92D35f3B136fD879e142B',
+E     -                factoryData='0x0d058fe3000000000000000000000000000000000000000000000000000000000000008500000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000071727de22e5e9d8baf0edac6f37da03200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+E     -                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     -                callGasLimit='0x493e0',
+E     -                verificationGasLimit='0xf4240',
+E     -                preVerificationGas='0x493e0',
+E     -                maxFeePerGas='0xee6b2800',
+E     -                maxPriorityFeePerGas='0xb2d05e00',
+E     -                signature='0x',
+E     -                paymaster=None,
+E     -                paymasterData=None,
+E     -                paymasterVerificationGasLimit='0x10000',
+E     -                paymasterPostOpGasLimit='0x10000'),
+E       ]</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]" time="6.211" /><testcase classname="tests.single.bundle.test_bundle" name="test_max_allowed_ops_unstaked_sender" time="0.995" /><testcase classname="tests.single.bundle.test_bundle" name="test_max_allowed_ops_staked_sender" time="1.742" /><testcase classname="tests.single.bundle.test_bundle" name="test_ban_user_op_access_other_ops_sender_in_bundle" time="0.653" /><testcase classname="tests.single.bundle.test_bundle" name="test_ban_user_sender_double_role_in_bundle" time="1.054" /><testcase classname="tests.single.bundle.test_bundle" name="test_stake_check_in_bundler" time="0.421" /><testcase classname="tests.single.bundle.test_codehash" name="test_codehash_changed" time="0.216"><failure message="web3.exceptions.ContractLogicError: execution reverted">tests/single/bundle/test_codehash.py:52: in test_codehash_changed
+    account1, codehash1 = create_account(
+tests/single/bundle/test_codehash.py:25: in create_account
+    ).transact({"from": w3.eth.accounts[0], "value": 10**18})
+.venv/lib/python3.10/site-packages/web3/contract.py:1010: in transact
+    return transact_with_contract_function(
+.venv/lib/python3.10/site-packages/web3/contract.py:1614: in transact_with_contract_function
+    txn_hash = web3.eth.send_transaction(transact_transaction)
+.venv/lib/python3.10/site-packages/web3/eth.py:828: in send_transaction
+    return self._send_transaction(transaction)
+.venv/lib/python3.10/site-packages/web3/module.py:57: in caller
+    result = w3.manager.request_blocking(method_str,
+.venv/lib/python3.10/site-packages/web3/manager.py:197: in request_blocking
+    response = self._make_request(method, params)
+.venv/lib/python3.10/site-packages/web3/manager.py:150: in _make_request
+    return request_func(method, params)
+.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware
+    response = make_request(method, params)
+.venv/lib/python3.10/site-packages/web3/middleware/gas_price_strategy.py:89: in middleware
+    return make_request(method, (transaction,))
+.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware
+    response = make_request(method, params)
+.venv/lib/python3.10/site-packages/web3/middleware/attrdict.py:33: in middleware
+    response = make_request(method, params)
+.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware
+    response = make_request(method, params)
+.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware
+    response = make_request(method, params)
+.venv/lib/python3.10/site-packages/web3/middleware/formatting.py:94: in middleware
+    response = make_request(method, params)
+.venv/lib/python3.10/site-packages/web3/middleware/buffered_gas_estimate.py:37: in middleware
+    hex(get_buffered_gas_estimate(web3, transaction)),
+.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:134: in get_buffered_gas_estimate
+    gas_estimate = web3.eth.estimate_gas(gas_estimate_transaction)
+.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas
+    return self._estimate_gas(transaction, block_identifier)
+.venv/lib/python3.10/site-packages/web3/module.py:57: in caller
+    result = w3.manager.request_blocking(method_str,
+.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking
+    return self.formatted_response(response,
+.venv/lib/python3.10/site-packages/web3/manager.py:170: in formatted_response
+    apply_error_formatters(error_formatters, response)
+.venv/lib/python3.10/site-packages/web3/manager.py:70: in apply_error_formatters
+    formatted_resp = pipe(response, error_formatters)
+cytoolz/functoolz.pyx:666: in cytoolz.functoolz.pipe
+    ???
+cytoolz/functoolz.pyx:641: in cytoolz.functoolz.c_pipe
+    ???
+.venv/lib/python3.10/site-packages/web3/_utils/method_formatters.py:580: in raise_solidity_error_on_revert
+    raise ContractLogicError('execution reverted')
+E   web3.exceptions.ContractLogicError: execution reverted</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][paymaster][no_storage][ok]" time="0.493" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-031]unstaked][paymaster][storage][drop]" time="0.400" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]" time="0.411" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]" time="0.409" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]unstaked][paymaster][account_storage][ok]" time="0.402" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]" time="0.416" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]" time="0.417" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]" time="0.710" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[EREP-050]unstaked][paymaster][context][drop]" time="0.441"><failure message="AttributeError: 'Ok' object has no attribute 'message'">tests/single/bundle/test_storage_rules.py:774: in test_rule
+    case.assert_func(response)
+tests/single/bundle/test_storage_rules.py:19: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+E   AttributeError: 'Ok' object has no attribute 'message'</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop]" time="0.421" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]" time="0.492" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]" time="0.421" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]staked][paymaster][no_storage][ok]" time="0.514" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-031]staked][paymaster][storage][ok]" time="0.422" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][paymaster][reference_storage][ok]" time="0.442" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]" time="0.432" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][paymaster][reference_storage_struct][ok]" time="0.636" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]staked][paymaster][account_storage][ok]" time="0.430" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]" time="0.541" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]" time="0.539" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]" time="0.840" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[EREP-050]staked][paymaster][context][ok]" time="0.461" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][paymaster][external_storage_write][drop]" time="0.540" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][paymaster][external_storage_read][ok]" time="0.753" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][paymaster][out_of_gas][drop]" time="0.520" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]" time="0.651" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][no_storage][ok]" time="0.491" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][storage][drop]" time="0.501" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][reference_storage][drop]" time="0.511" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]" time="0.520" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]unstaked][factory][account_storage][ok]" time="0.519" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]" time="0.511" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]" time="0.515" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][external_storage_read][drop]" time="0.515" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]" time="0.468" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]" time="0.474" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]" time="0.479" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]" time="0.479" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]" time="0.471" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]" time="0.469" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]" time="0.576" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]" time="0.481" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][factory][out_of_gas][drop]" time="0.591" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]" time="0.522" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]staked][factory][no_storage][ok]" time="0.510" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-031]staked][factory][storage][ok]" time="0.522" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][factory][reference_storage][ok]" time="0.638" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][factory][reference_storage_struct][ok]" time="0.537" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]staked][factory][account_storage][ok]" time="0.527" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][factory][account_reference_storage][ok]" time="0.539" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]" time="0.536" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][factory][external_storage_write][drop]" time="0.641" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][factory][external_storage_read][ok]" time="0.540" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][factory][out_of_gas][drop]" time="0.619" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]" time="0.540" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][account][no_storage][ok]" time="0.401" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]unstaked][account][account_storage][ok]" time="0.357" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][account][account_reference_storage][ok]" time="0.368" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]" time="0.594" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]" time="0.660" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]" time="0.754" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]" time="0.363" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][account][external_storage_read][drop]" time="0.366" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][account][out_of_gas][drop]" time="0.475" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]" time="0.375" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]staked][account][no_storage][ok]" time="0.365" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]staked][account][account_storage][ok]" time="0.373" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][account][account_reference_storage][ok]" time="0.485" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]" time="0.399" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][account][out_of_gas][drop]" time="0.465" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]" time="0.395" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][account][external_storage_write][drop]" time="0.398" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][account][external_storage_read][ok]" time="0.494" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]" time="0.378" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]" time="0.362" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]" time="0.387" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]" time="0.389" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]" time="0.326" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]" time="0.327" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]" time="0.332" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]" time="0.347" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]" time="0.350" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]" time="0.350" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]" time="0.324" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]" time="0.322" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]" time="0.327" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]" time="0.327" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]" time="0.360" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[GAS]" time="0.274" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[NUMBER]" time="0.279" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[TIMESTAMP]" time="0.282" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[COINBASE]" time="0.387" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[DIFFICULTY]" time="0.283" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[BASEFEE]" time="0.284" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[GASLIMIT]" time="0.285" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[GASPRICE]" time="0.289" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[SELFBALANCE]" time="0.289" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[BALANCE]" time="0.295" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[ORIGIN]" time="0.297" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[BLOCKHASH]" time="0.291" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[CREATE]" time="0.309" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[CREATE2]" time="0.306" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[SELFDESTRUCT]" time="0.305" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_allowed_opcode_sequence[GAS CALL]" time="0.329" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_allowed_opcode_sequence[GAS DELEGATECALL]" time="0.336" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GAS]" time="0.439" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[NUMBER]" time="0.445" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[TIMESTAMP]" time="0.542" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[COINBASE]" time="0.447" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[DIFFICULTY]" time="0.447" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[BASEFEE]" time="0.551" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GASLIMIT]" time="0.554" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GASPRICE]" time="0.563" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[SELFBALANCE]" time="0.456" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[BALANCE]" time="0.556" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[ORIGIN]" time="0.587" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[BLOCKHASH]" time="0.559" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[CREATE]" time="0.471" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[CREATE2]" time="0.577" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[SELFDESTRUCT]" time="0.580" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[GAS]" time="0.437" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[NUMBER]" time="0.443" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[TIMESTAMP]" time="0.440" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[COINBASE]" time="0.451" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[DIFFICULTY]" time="0.447" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[BASEFEE]" time="0.449" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[GASLIMIT]" time="0.650" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[GASPRICE]" time="0.449" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[SELFBALANCE]" time="0.453" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[BALANCE]" time="0.452" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[ORIGIN]" time="0.454" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[BLOCKHASH]" time="0.469" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[CREATE]" time="0.467" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[CREATE2]" time="0.469" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[SELFDESTRUCT]" time="0.469" /><testcase classname="tests.single.reputation.test_reputation" name="test_staked_entity_reputation_threshold[with_factory]" time="5.220"><failure message="TypeError: deposit_to_undeployed_sender() missing 1 required positional argument: 'factory_data'">tests/single/reputation/test_reputation.py:95: in test_staked_entity_reputation_threshold
+    wallet_ops = [
+tests/single/reputation/test_reputation.py:97: in &lt;listcomp&gt;
+    sender=deposit_to_undeployed_sender(
+E   TypeError: deposit_to_undeployed_sender() missing 1 required positional argument: 'factory_data'</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.reputation.test_reputation" name="test_staked_entity_reputation_threshold[without_factory]" time="91.834" /><testcase classname="tests.single.rpc.test_eth_chainId" name="test_eth_chainId[]" time="0.006" /><testcase classname="tests.single.rpc.test_eth_estimateUserOperationGas" name="test_eth_estimateUserOperationGas[]" time="0.133" /><testcase classname="tests.single.rpc.test_eth_estimateUserOperationGas" name="test_eth_estimateUserOperationGas_execution_revert" time="0.126"><failure message="AssertionError: assert 'test fail' in 'useroperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000'&#10; +  where 'test fail' = &lt;built-in method lower of str object at 0x7f370018fdb0&gt;()&#10; +    where &lt;built-in method lower of str object at 0x7f370018fdb0&gt; = 'test fail'.lower&#10; +  and   'useroperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000' = &lt;built-in method lower of str object at 0x7f3701943c30&gt;()&#10; +    where &lt;built-in method lower of str object at 0x7f3701943c30&gt; = 'UserOperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000'.lower&#10; +      where 'UserOperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000' = Error(code=-32521, message='UserOperation reverted during simulation with reason: 0x08c379a000000000000000000000000000...00000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000', data=None, id=1063).message">tests/single/rpc/test_eth_estimateUserOperationGas.py:29: in test_eth_estimateUserOperationGas_execution_revert
+    assert_rpc_error(response, "test fail", RPCErrorCode.EXECUTION_REVERTED)
+tests/utils.py:155: in assert_rpc_error
+    assert message.lower() in response.message.lower()
+E   AssertionError: assert 'test fail' in 'useroperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000'
+E    +  where 'test fail' = &lt;built-in method lower of str object at 0x7f370018fdb0&gt;()
+E    +    where &lt;built-in method lower of str object at 0x7f370018fdb0&gt; = 'test fail'.lower
+E    +  and   'useroperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000' = &lt;built-in method lower of str object at 0x7f3701943c30&gt;()
+E    +    where &lt;built-in method lower of str object at 0x7f3701943c30&gt; = 'UserOperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000'.lower
+E    +      where 'UserOperation reverted during simulation with reason: 0x08c379a000000000000000000000000000000000000000000000000000000...00000000000000000000000000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000' = Error(code=-32521, message='UserOperation reverted during simulation with reason: 0x08c379a000000000000000000000000000...00000000000000000000000000000000974657374206661696c0000000000000000000000000000000000000000000000', data=None, id=1063).message</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.rpc.test_eth_estimateUserOperationGas" name="test_eth_estimateUserOperationGas_simulation_revert" time="0.127"><failure message="AssertionError: assert -32521 == &lt;RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500&gt;&#10; +  where -32521 = Error(code=-32521, message='UserOperation reverted during simulation with reason: testWallet: dead signature', data=None, id=1064).code">tests/single/rpc/test_eth_estimateUserOperationGas.py:37: in test_eth_estimateUserOperationGas_simulation_revert
+    assert_rpc_error(response, "dead signature", RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT)
+tests/utils.py:154: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32521 == &lt;RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500&gt;
+E    +  where -32521 = Error(code=-32521, message='UserOperation reverted during simulation with reason: testWallet: dead signature', data=None, id=1064).code</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.rpc.test_eth_getUserOperationByHash" name="test_eth_getUserOperationByHash[]" time="0.443"><failure message="jsonschema.exceptions.ValidationError: None is not of type 'string'&#10;&#10;Failed validating 'type' in schema['properties']['userOperation']['properties']['factory']:&#10;    {'description': 'Address of the account factory, only for new accounts',&#10;     'pattern': '^0x[0-9,a-f,A-F]{40}$',&#10;     'title': 'factory',&#10;     'type': 'string'}&#10;&#10;On instance['userOperation']['factory']:&#10;    None">tests/single/rpc/test_eth_getUserOperationByHash.py:23: in test_eth_getUserOperationByHash
+    validate(instance=response.result, schema=schema)
+.venv/lib/python3.10/site-packages/jsonschema/validators.py:1312: in validate
+    raise error
+E   jsonschema.exceptions.ValidationError: None is not of type 'string'
+E   
+E   Failed validating 'type' in schema['properties']['userOperation']['properties']['factory']:
+E       {'description': 'Address of the account factory, only for new accounts',
+E        'pattern': '^0x[0-9,a-f,A-F]{40}$',
+E        'title': 'factory',
+E        'type': 'string'}
+E   
+E   On instance['userOperation']['factory']:
+E       None</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+pack_uints 0xf4240 0x493e0
+pack_uints 0xb2d05e00 0xee6b2800
+pack_uints 0xf4240 0x493e0
+pack_uints 0xb2d05e00 0xee6b2800
+pack_uints 0xf4240 0x493e0
+pack_uints 0xb2d05e00 0xee6b2800
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.rpc.test_eth_getUserOperationByHash" name="test_eth_getUserOperationByHash_error" time="0.003" /><testcase classname="tests.single.rpc.test_eth_getUserOperationReceipt" name="test_eth_getUserOperationReceipt[]" time="1.143" /><testcase classname="tests.single.rpc.test_eth_getUserOperationReceipt" name="test_eth_getUserOperationReceipt_error" time="0.003" /><testcase classname="tests.single.rpc.test_eth_sendUserOperation" name="test_eth_sendUserOperation[]" time="0.952" /><testcase classname="tests.single.rpc.test_eth_sendUserOperation" name="test_eth_sendUserOperation_revert" time="0.129" /><testcase classname="tests.single.rpc.test_eth_sendUserOperation" name="test_eth_sendUserOperation_invalid_signature" time="0.228"><failure message="AssertionError: assert 'invalid userop signature or paymaster signature' in 'aa24 signature error'&#10; +  where 'invalid userop signature or paymaster signature' = &lt;built-in method lower of str object at 0x7f37001a4150&gt;()&#10; +    where &lt;built-in method lower of str object at 0x7f37001a4150&gt; = 'Invalid UserOp signature or paymaster signature'.lower&#10; +  and   'aa24 signature error' = &lt;built-in method lower of str object at 0x7f36ff477be0&gt;()&#10; +    where &lt;built-in method lower of str object at 0x7f36ff477be0&gt; = 'AA24 signature error'.lower&#10; +      where 'AA24 signature error' = Error(code=-32507, message='AA24 signature error', data=None, id=1077).message">tests/single/rpc/test_eth_sendUserOperation.py:38: in test_eth_sendUserOperation_invalid_signature
+    assert_rpc_error(
+tests/utils.py:155: in assert_rpc_error
+    assert message.lower() in response.message.lower()
+E   AssertionError: assert 'invalid userop signature or paymaster signature' in 'aa24 signature error'
+E    +  where 'invalid userop signature or paymaster signature' = &lt;built-in method lower of str object at 0x7f37001a4150&gt;()
+E    +    where &lt;built-in method lower of str object at 0x7f37001a4150&gt; = 'Invalid UserOp signature or paymaster signature'.lower
+E    +  and   'aa24 signature error' = &lt;built-in method lower of str object at 0x7f36ff477be0&gt;()
+E    +    where &lt;built-in method lower of str object at 0x7f36ff477be0&gt; = 'AA24 signature error'.lower
+E    +      where 'AA24 signature error' = Error(code=-32507, message='AA24 signature error', data=None, id=1077).message</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.rpc.test_eth_supportedEntryPoints" name="test_eth_supportedEntryPoints[]" time="0.014" /></testsuite></testsuites>

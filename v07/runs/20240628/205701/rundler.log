@@ -1,0 +1,881 @@
+Attaching to bundler-test-executor_bundler-waiter_1, bundler-test-executor_bundler_1, bundler-test-executor_deployer_1, bundler-test-executor_funder_1, geth-1.14
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676711253Z   [2m2024-06-28T20:44:50.676530Z[0m [32m INFO[0m [1;32mrundler::cli[0m[32m: [32mParsed CLI options: Cli {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676748623Z     command: Node(
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676758531Z         NodeCliArgs {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676764061Z             pool: PoolArgs {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676768349Z                 port: 50051,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676772507Z                 host: "127.0.0.1",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676775973Z                 max_size_in_bytes: 500000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676779300Z                 same_sender_mempool_count: 4,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676782716Z                 min_replacement_fee_increase_percentage: 10,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676786052Z                 blocklist_path: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676789358Z                 allowlist_path: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676792644Z                 chain_history_size: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676795991Z                 chain_update_channel_capacity: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676799287Z                 throttled_entity_mempool_count: 4,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676802583Z                 throttled_entity_live_blocks: 20,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676805879Z                 paymaster_tracking_enabled: true,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676809175Z                 paymaster_cache_length: 10000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676812471Z                 reputation_tracking_enabled: true,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676815808Z                 drop_min_num_blocks: 10,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676819103Z             },
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676822370Z             builder: BuilderArgs {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676825676Z                 port: 50051,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676828962Z                 host: "127.0.0.1",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676832298Z                 private_key: Some(
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676835604Z                     "c6cbc5ffad570fdad0544d1b5358a36edeb98d163b6567912ac4754e144d4edb",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676839061Z                 ),
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676842367Z                 aws_kms_key_ids: [],
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676845673Z                 redis_uri: "",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676849029Z                 redis_lock_ttl_millis: 60000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676852345Z                 max_bundle_size: 128,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676855611Z                 sender_type: Raw,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676858888Z                 submit_url: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676862164Z                 flashbots_relay_builders: [
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676865460Z                     "flashbots",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676868866Z                 ],
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676872192Z                 flashbots_relay_auth_key: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676875499Z                 bloxroute_auth_header: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676885938Z                 max_blocks_to_wait_for_mine: 2,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676891468Z                 replacement_fee_percent_increase: 10,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676896618Z                 max_fee_increases: 7,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676901517Z                 builder_index_offset: 0,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676906596Z             },
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676911435Z             rpc: RpcArgs {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676916294Z                 port: 3000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676921434Z                 host: "0.0.0.0",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676926393Z                 api: [
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676930862Z                     "eth",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676934218Z                     "debug",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676937544Z                 ],
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676940790Z                 timeout_seconds: "20",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676944216Z                 max_connections: 100,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676947502Z             },
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676950748Z         },
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676953994Z     ),
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676957291Z     common: CommonArgs {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676961679Z         network: Some(
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676965085Z             "dev",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676968421Z         ),
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676971718Z         chain_spec: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676975034Z         node_http: Some(
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676978330Z             "http://eth-node:8545",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676981706Z         ),
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676984942Z         unsafe_mode: false,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676988248Z         max_verification_gas: 5000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676992596Z         max_bundle_gas: 25000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676996013Z         min_stake_value: 1000000000000000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.676999740Z         min_unstake_delay: 2,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677003156Z         user_operation_event_block_distance: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677006572Z         max_simulate_handle_ops_gas: 20000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677009878Z         verification_estimation_gas_fee: 1000000000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677013195Z         bundle_priority_fee_overhead_percent: 0,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677016481Z         priority_fee_mode_kind: "base_fee_percent",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677019867Z         priority_fee_mode_value: 0,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677023173Z         base_fee_accept_percent: 50,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677026500Z         pre_verification_gas_accept_percent: 50,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677029906Z         eth_poll_interval_millis: 100,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677033182Z         aws_region: "us-east-1",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677041307Z         mempool_config_path: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677044673Z         disable_entry_point_v0_6: true,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677047969Z         num_builders_v0_6: 1,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677051246Z         disable_entry_point_v0_7: false,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677054552Z         num_builders_v0_7: 1,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677057888Z     },
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677061184Z     metrics: MetricsArgs {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677064480Z         port: 8080,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677067776Z         host: "0.0.0.0",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677071103Z         tags: [],
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677074369Z         sample_interval_millis: 1000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677077665Z     },
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677080911Z     logs: LogsArgs {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677084197Z         file: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677087453Z         json: false,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677090699Z     },
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677093975Z }[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677097492Z     [2;3mat[0m bin/rundler/src/cli/mod.rs:42
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677100998Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677608703Z   [2m2024-06-28T20:44:50.677517Z[0m [32m INFO[0m [1;32mrundler::cli[0m[32m: [32mChain spec: ChainSpec {
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677620224Z     name: "Ethereum Devnet",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677625294Z     id: 1337,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677628760Z     entry_point_address_v0_6: 0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677632186Z     entry_point_address_v0_7: 0x0000000071727de22e5e9d8baf0edac6f37da032,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677635573Z     deposit_transfer_overhead: 30000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677639009Z     max_transaction_size_bytes: 131072,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677642365Z     calldata_pre_verification_gas: false,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677645692Z     l1_gas_oracle_contract_type: None,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677649048Z     l1_gas_oracle_contract_address: 0x0000000000000000000000000000000000000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677652444Z     include_l1_gas_in_gas_limit: true,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677658515Z     eip1559_enabled: true,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677664236Z     priority_fee_oracle_type: Provider,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677669646Z     min_max_priority_fee_per_gas: 50000000,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677674585Z     max_max_priority_fee_per_gas: 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677678022Z     bundle_max_send_interval_millis: 250,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677681338Z     flashbots_enabled: true,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677684734Z     flashbots_relay_url: Some(
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677688060Z         "https://relay.flashbots.net",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677718637Z     ),
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677725280Z     flashbots_status_url: Some(
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677731151Z         "https://protect.flashbots.net/tx/",
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677736621Z     ),
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677741680Z     bloxroute_enabled: false,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677745738Z     chain_history_size: 64,
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677749094Z }[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677752530Z     [2;3mat[0m bin/rundler/src/cli/mod.rs:53
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677756007Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677759523Z   [2m2024-06-28T20:44:50.677542Z[0m [32m INFO[0m [1;32mrundler::cli::pool[0m[32m: [32mblocklist: None[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677763491Z     [2;3mat[0m bin/rundler/src/cli/pool.rs:172
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677767027Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677770353Z   [2m2024-06-28T20:44:50.677544Z[0m [32m INFO[0m [1;32mrundler::cli::pool[0m[32m: [32mallowlist: None[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677774100Z     [2;3mat[0m bin/rundler/src/cli/pool.rs:173
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677777537Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677780853Z   [2m2024-06-28T20:44:50.677546Z[0m [32m INFO[0m [1;32mrundler::cli::pool[0m[32m: [32mMempool channel configs: MempoolConfigs({})[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677785201Z     [2;3mat[0m bin/rundler/src/cli/pool.rs:181
+[33mbundler_1         |[0m 2024-06-28T20:44:50.677788748Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.678727164Z   [2m2024-06-28T20:44:50.678662Z[0m [32m INFO[0m [1;32mrundler_pool::task[0m[32m: [32mChain id: 1337[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.678736461Z     [2;3mat[0m crates/pool/src/task.rs:72
+[33mbundler_1         |[0m 2024-06-28T20:44:50.678742011Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.678745407Z   [2m2024-06-28T20:44:50.678671Z[0m [32m INFO[0m [1;32mrundler_pool::task[0m[32m: [32mHttp url: "http://eth-node:8545"[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.678749375Z     [2;3mat[0m crates/pool/src/task.rs:73
+[33mbundler_1         |[0m 2024-06-28T20:44:50.678752841Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679121247Z   [2m2024-06-28T20:44:50.679060Z[0m [32m INFO[0m [1;32mrundler_pool::task[0m[32m: [32mStarted op_pool[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679129653Z     [2;3mat[0m crates/pool/src/task.rs:146
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679135083Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679358719Z   [2m2024-06-28T20:44:50.679298Z[0m [32m INFO[0m [1;32mrundler_builder::task[0m[32m: [32mMempool config for ep v0.7: {}[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679367215Z     [2;3mat[0m crates/builder/src/task.rs:307
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679372775Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679434679Z   [2m2024-06-28T20:44:50.679380Z[0m [32m INFO[0m [1;32mrundler_builder::task[0m[32m: [32mUsing local signer[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679454355Z     [2;3mat[0m crates/builder/src/task.rs:363
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679458222Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679828431Z   [2m2024-06-28T20:44:50.679757Z[0m [32m INFO[0m [1;32mrundler_rpc::task[0m[32m: [32mStarting rpc server on 0.0.0.0:3000[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679841365Z     [2;3mat[0m crates/rpc/src/task.rs:97
+[33mbundler_1         |[0m 2024-06-28T20:44:50.679847777Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.680129413Z   [2m2024-06-28T20:44:50.680067Z[0m [32m INFO[0m [1;32mrundler_rpc::task[0m[32m: [32mStarted RPC server[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.680137598Z     [2;3mat[0m crates/rpc/src/task.rs:203
+[33mbundler_1         |[0m 2024-06-28T20:44:50.680141285Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.736929172Z   [2m2024-06-28T20:44:50.736809Z[0m [32m INFO[0m [1;32mrundler_builder::task[0m[32m: [32mStarted bundle builder[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.736962734Z     [2;3mat[0m crates/builder/src/task.rs:202
+[33mbundler_1         |[0m 2024-06-28T20:44:50.736982441Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:50.737158408Z   [2m2024-06-28T20:44:50.737076Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:50.737172464Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:44:50.737179297Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:53.837112306Z   [2m2024-06-28T20:44:53.836967Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x03b0836f302ba561376c973efe277895cadf6218285ef13e0153dc55a116baf4    Sender: 0x6554678f1bad647c6949bbcb360afcc48219b2af    maxFeePerGas: 5000000000    maxPriorityFeePerGas: 1000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:53.837149145Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:53.837156498Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:53.976080261Z   [2m2024-06-28T20:44:53.975917Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x424a8679f424accb16f8e279552f3ce85c039bb405a6b2dd8f334dc10773f3cf    Sender: 0x98331ea7d260727327f3c4e5968ef376f23d860c    maxFeePerGas: 5000000000    maxPriorityFeePerGas: 1000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:53.976112270Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:53.976118532Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:54.110982520Z   [2m2024-06-28T20:44:54.110830Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x444ee3b897f54de557f623fe49ba8e94279563b8084239fc49ee7f791e08cf77    Sender: 0xee02f563297d6ffeb00f33b04201cf32976c8b4d    maxFeePerGas: 5000000000    maxPriorityFeePerGas: 1000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:54.111025200Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:54.111030860Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:54.246074154Z   [2m2024-06-28T20:44:54.245926Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xadf7ecdd1d56c0d4b60b0be43ad8c9ee7af2c048dc90adb74f8047729a7e044e    Sender: 0xce736f3463caa0b75a0d2b97e029508c80aa55d7    maxFeePerGas: 5000000000    maxPriorityFeePerGas: 1000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:54.246105252Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:54.246112465Z 
+[36mbundler-waiter_1  |[0m 2024-06-28T20:44:52.139804629Z "0x539"
+[33mbundler_1         |[0m 2024-06-28T20:44:54.381332649Z   [2m2024-06-28T20:44:54.381179Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x7f3c0a53a4b245e4fe098a2bd043e84d21bd702834bf09e2b824da8ef631da5a    Sender: 0xf8a1bfdc1cfdd1b86e091487d3d44ce6cd00e62f    maxFeePerGas: 5000000000    maxPriorityFeePerGas: 1000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:54.381362995Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:54.381369557Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:54.517511533Z   [2m2024-06-28T20:44:54.517362Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6cb0c6a4ec72ee70f3ac4a0038740a9770518125362123d5799d7e842b0c366b    Sender: 0xd4f7e3a20669815f74dfe40e45dccab529169016    maxFeePerGas: 5000000000    maxPriorityFeePerGas: 1000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:54.517539846Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:54.517571615Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:54.624424133Z   [2m2024-06-28T20:44:54.624268Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x0555fb9ea98851dec38a0bca8acb1ac765749194bdd570978301495849488764    Sender: 0xd4f7e3a20669815f74dfe40e45dccab529169016    maxFeePerGas: 5500000000    maxPriorityFeePerGas: 1100000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:54.624452986Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:54.624457625Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:54.755620269Z   [2m2024-06-28T20:44:54.755492Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x09a4feb57af82e0f5c6a1ee425481ea1454843e7e03cae98f1fe060cf0ffaa73    Sender: 0xb8d0ab89fc2265aa6736dc2e05e13c31e50d55e3    maxFeePerGas: 5000000000    maxPriorityFeePerGas: 1000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:54.755657378Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:54.755666916Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:54.861778667Z   [2m2024-06-28T20:44:54.861638Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4951a5f63a52fb6e820137979fd7e04c197d57815b0125da334c1bbc0dd50233    Sender: 0xb8d0ab89fc2265aa6736dc2e05e13c31e50d55e3    maxFeePerGas: 5550000000    maxPriorityFeePerGas: 1110000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:54.861802130Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:54.861806939Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.275900712Z   [2m2024-06-28T20:44:58.275743Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x0f3d62eb567a8b1c274df5a7a6b95d1488bd1c1992d6617554a50ab7493cac92    Sender: 0xe1a168afb0c590983e264645463ab706d9b8239b    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.275942429Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:58.275947529Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.383386096Z   [2m2024-06-28T20:44:58.383254Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xa704b151d5030870164433f94038846b658e75339b70e35c937d112eaef83bd5    Sender: 0xe1a168afb0c590983e264645463ab706d9b8239b    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.383429005Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:58.383438122Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.492000551Z   [2m2024-06-28T20:44:58.491855Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x2fe2e432456a9816708a5f76837fe56c22fdeb73c54e02123a0de0d991a83a9e    Sender: 0xe1a168afb0c590983e264645463ab706d9b8239b    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.492032740Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:58.492041837Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.598544806Z   [2m2024-06-28T20:44:58.598408Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xbfb5ccf40bb3da06e982418c4c34db58902255b3f28a46a49603c4cae9f74c60    Sender: 0xe1a168afb0c590983e264645463ab706d9b8239b    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.598583468Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:58.598590271Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.813270088Z   [2m2024-06-28T20:44:58.813145Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mSelected bundle with 1 op(s), with 0 rejected op(s) and 0 updated entities[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.813300605Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:562
+[33mbundler_1         |[0m 2024-06-28T20:44:58.813307077Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:44:58.813313689Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.814891125Z   [2m2024-06-28T20:44:58.814772Z[0m [32m INFO[0m [1;32mrundler_builder::transaction_tracker[0m[32m: [32mSent transaction 0x54098f8cef7e1c30ecc9edf47d5b645ad432f57c95de682a9290a405e1c27a2a nonce: 0[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.814908117Z     [2;3mat[0m crates/builder/src/transaction_tracker.rs:235
+[33mbundler_1         |[0m 2024-06-28T20:44:58.814914178Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:44:58.814934065Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.815016469Z   [2m2024-06-28T20:44:58.814945Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mBundle transaction sent!    Builder index: 0    Transaction hash: 0x54098f8cef7e1c30ecc9edf47d5b645ad432f57c95de682a9290a405e1c27a2a    Nonce: 0    Fee increases: 0    Required maxFeePerGas: (default)    Required maxPriorityFeePerGas: (default)    Op hashes: 0x0f3d62eb567a8b1c274df5a7a6b95d1488bd1c1992d6617554a50ab7493cac92    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.815031196Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:58.815037878Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.909341741Z   [2m2024-06-28T20:44:58.909258Z[0m [32m INFO[0m [1;32mrundler_pool::mempool::uo_pool[0m[32m: [32m1 op(s) mined on entry point 0x0000000071727de22e5e9d8baf0edac6f37da032 when advancing to block with number 71, hash 0x7b8cab26badcae67ae4e6aab586f4563cfff58d90d0c767c1d8f74b7edfd4ac1.[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.909356668Z     [2;3mat[0m crates/pool/src/mempool/uo_pool.rs:224
+[33mbundler_1         |[0m 2024-06-28T20:44:58.909363381Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.918959171Z   [2m2024-06-28T20:44:58.918876Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mBundle with hash 0x54098f8cef7e1c30ecc9edf47d5b645ad432f57c95de682a9290a405e1c27a2a landed in block 71[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.918973338Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:220
+[33mbundler_1         |[0m 2024-06-28T20:44:58.918979920Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:44:58.918986632Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:58.918994677Z   [2m2024-06-28T20:44:58.918909Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mTransaction mined!    Builder index: 0    Transaction hash: 0x54098f8cef7e1c30ecc9edf47d5b645ad432f57c95de682a9290a405e1c27a2a    Nonce: 0    Block number: 71    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:58.919000829Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:58.919006940Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.108497848Z   [2m2024-06-28T20:44:59.108335Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd8db1c43c492277d273b6fa74258ab354c2b9ef7862c71306a6e7461740134f8    Sender: 0x953251cc767661784d36489af3f21a5695445834    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.108537611Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:59.108542811Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.228503815Z   [2m2024-06-28T20:44:59.228341Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xdd53ab5ed98c8bb7daba1ab261e518b581aeb75e3f5068e7eac83fbe36cfeb01    Sender: 0x953251cc767661784d36489af3f21a5695445834    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.228549701Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:59.228554900Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.348055190Z   [2m2024-06-28T20:44:59.347909Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd8349b5b077057b8c05f13b6a6450e3b905b5cb52a433dc79e7dd802c7a68bd8    Sender: 0x953251cc767661784d36489af3f21a5695445834    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.348081499Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:59.348087650Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.469161583Z   [2m2024-06-28T20:44:59.468982Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x314a5217a35e0edc74e6d7803c171d1b312cc9625b02f655639dbe0fca7f798e    Sender: 0x953251cc767661784d36489af3f21a5695445834    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.469198722Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:59.469205635Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.587226811Z   [2m2024-06-28T20:44:59.587073Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x5c0715a406cdba6d5a1c93daff3ec40d9723047bcc65909a8c661be8df217255    Sender: 0x953251cc767661784d36489af3f21a5695445834    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.587267196Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:59.587272466Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.709723915Z   [2m2024-06-28T20:44:59.709568Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mSelected bundle with 1 op(s), with 0 rejected op(s) and 0 updated entities[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.709752548Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:562
+[33mbundler_1         |[0m 2024-06-28T20:44:59.709759772Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:44:59.709767556Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.710369555Z   [2m2024-06-28T20:44:59.710282Z[0m [32m INFO[0m [1;32mrundler_builder::transaction_tracker[0m[32m: [32mSent transaction 0x35830c1be61f099b3ec74cde3c5d2334440a43efd2ae283c251f25163ab47613 nonce: 1[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.710381547Z     [2;3mat[0m crates/builder/src/transaction_tracker.rs:235
+[33mbundler_1         |[0m 2024-06-28T20:44:59.710387588Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:44:59.710393489Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.710452158Z   [2m2024-06-28T20:44:59.710383Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mBundle transaction sent!    Builder index: 0    Transaction hash: 0x35830c1be61f099b3ec74cde3c5d2334440a43efd2ae283c251f25163ab47613    Nonce: 1    Fee increases: 0    Required maxFeePerGas: (default)    Required maxPriorityFeePerGas: (default)    Op hashes: 0xd8db1c43c492277d273b6fa74258ab354c2b9ef7862c71306a6e7461740134f8    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.710479208Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:59.710485570Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.724647447Z   [2m2024-06-28T20:44:59.724500Z[0m [32m INFO[0m [1;32mrundler_pool::mempool::uo_pool[0m[32m: [32m1 op(s) mined on entry point 0x0000000071727de22e5e9d8baf0edac6f37da032 when advancing to block with number 75, hash 0xafdaacba696092135a707ef28a86c9aae8ef489dd11009054ffb22697cb5d21e.[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.724669067Z     [2;3mat[0m crates/pool/src/mempool/uo_pool.rs:224
+[33mbundler_1         |[0m 2024-06-28T20:44:59.724677553Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.813768128Z   [2m2024-06-28T20:44:59.813655Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mBundle with hash 0x35830c1be61f099b3ec74cde3c5d2334440a43efd2ae283c251f25163ab47613 landed in block 75[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.813786693Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:220
+[33mbundler_1         |[0m 2024-06-28T20:44:59.813792995Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:44:59.813800649Z 
+[33mbundler_1         |[0m 2024-06-28T20:44:59.813806750Z   [2m2024-06-28T20:44:59.813687Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mTransaction mined!    Builder index: 0    Transaction hash: 0x35830c1be61f099b3ec74cde3c5d2334440a43efd2ae283c251f25163ab47613    Nonce: 1    Block number: 75    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:44:59.813813713Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:44:59.813819153Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.091905953Z   [2m2024-06-28T20:45:00.091752Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x470b7712c946b62929964aaa061a12af797bb2d03da6f05d2fc677813376a427    Sender: 0x0f4643f2dd728047aeafb74d235c04dd800df0d3    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.091944024Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:00.091948533Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.222180710Z   [2m2024-06-28T20:45:00.222048Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x93227414e5b327f95a8b4a40afc6ab89c87a4e385fbebebb49e5366dead1181d    Sender: 0x605df2b9f65f3e39d004ba3161a90807cf00f87f    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.222206308Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:00.222226916Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367121388Z   [2m2024-06-28T20:45:00.366981Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_proposer[0m[32m: [32mExcluding op from 0x605df2b9f65f3e39d004ba3161a90807cf00f87f because it accessed the address of another sender in the bundle.[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367152346Z     [2;3mat[0m crates/builder/src/bundle_proposer.rs:481
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367158778Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367165069Z 
+[32mdeployer_1        |[0m 2024-06-28T20:44:37.622886618Z Deploying entrypoint at 0x0000000071727De22E5E9d8BAf0edAc6f37da032
+[32mdeployer_1        |[0m 2024-06-28T20:44:43.708229758Z deploying:
+[35mfunder_1          |[0m 2024-06-28T20:44:37.120847028Z funded: 0x43378ff8C70109Ee4Dbe85aF34428ab0615EBd23
+[35mfunder_1          |[0m 2024-06-28T20:44:37.140145255Z funded: 0x43378ff8C70109Ee4Dbe85aF34428ab0615EBd23
+[35mfunder_1          |[0m 2024-06-28T20:44:37.160185015Z funded: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+[35mfunder_1          |[0m 2024-06-28T20:44:37.180082880Z funded: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367245890Z   [2m2024-06-28T20:45:00.367111Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mOp skipped in bundle (but remains in pool).   Builder index: 0    Op hash: 0x93227414e5b327f95a8b4a40afc6ab89c87a4e385fbebebb49e5366dead1181d    Reason: AccessedOtherSender { other_sender: 0x0f4643f2dd728047aeafb74d235c04dd800df0d3 }    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367259836Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367264875Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367742814Z   [2m2024-06-28T20:45:00.367669Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mSelected bundle with 1 op(s), with 0 rejected op(s) and 0 updated entities[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367754957Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:562
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367760277Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:45:00.367764655Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.368435654Z   [2m2024-06-28T20:45:00.368344Z[0m [32m INFO[0m [1;32mrundler_builder::transaction_tracker[0m[32m: [32mSent transaction 0xdccf7d910c8dadf734d4ceef18f3759facee760701ab8f0f7f79fe37f427ac6f nonce: 2[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.368448328Z     [2;3mat[0m crates/builder/src/transaction_tracker.rs:235
+[33mbundler_1         |[0m 2024-06-28T20:45:00.368454669Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:45:00.368461081Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.368473364Z   [2m2024-06-28T20:45:00.368421Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mBundle transaction sent!    Builder index: 0    Transaction hash: 0xdccf7d910c8dadf734d4ceef18f3759facee760701ab8f0f7f79fe37f427ac6f    Nonce: 2    Fee increases: 0    Required maxFeePerGas: (default)    Required maxPriorityFeePerGas: (default)    Op hashes: 0x470b7712c946b62929964aaa061a12af797bb2d03da6f05d2fc677813376a427    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.368482351Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:00.368488002Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.440692127Z   [2m2024-06-28T20:45:00.440594Z[0m [32m INFO[0m [1;32mrundler_pool::mempool::uo_pool[0m[32m: [32m1 op(s) mined on entry point 0x0000000071727de22e5e9d8baf0edac6f37da032 when advancing to block with number 84, hash 0xf5d5a6fd61f1412572f6852ed7c078b55574409cc581daae2a7a0c737e5cee12.[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.440732091Z     [2;3mat[0m crates/pool/src/mempool/uo_pool.rs:224
+[33mbundler_1         |[0m 2024-06-28T20:45:00.440742080Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.472794471Z   [2m2024-06-28T20:45:00.472713Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mBundle with hash 0xdccf7d910c8dadf734d4ceef18f3759facee760701ab8f0f7f79fe37f427ac6f landed in block 84[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.472810060Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:220
+[33mbundler_1         |[0m 2024-06-28T20:45:00.472816912Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:45:00.472823364Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.472834285Z   [2m2024-06-28T20:45:00.472780Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mTransaction mined!    Builder index: 0    Transaction hash: 0xdccf7d910c8dadf734d4ceef18f3759facee760701ab8f0f7f79fe37f427ac6f    Nonce: 2    Block number: 84    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.472841779Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:00.472847830Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.699567822Z   [2m2024-06-28T20:45:00.699441Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6823feb4315b66a490f163b98f85a802c17a303450ec038d262f8933d499afee    Sender: 0x19b6bbf1835f549c0610d64c74238d71829ad797    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.699607265Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:00.699614579Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.738316484Z   [2m2024-06-28T20:45:00.738206Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.738342603Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:45:00.738353122Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:00.848224017Z   [2m2024-06-28T20:45:00.848063Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x55923c5c64bf4fcadad847f6023cf7d84e38844547e08a025c6ddb905673ecd7    Sender: 0x9729347eef35fe1b0c5f12cceedfc954fe6a34bb    Paymaster: 0x19b6bbf1835f549c0610d64c74238d71829ad797    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:00.848265123Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:00.848271095Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:01.166479100Z   [2m2024-06-28T20:45:01.166298Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x330425e5a9518c78616c21195f0d356a04092692f9022d3131750d778ea66f4b    Sender: 0x38d8ffc547b3aa5bf8ca479c18f0448bf69d4bb8    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:01.166513945Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:01.166521088Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:01.614941030Z   [2m2024-06-28T20:45:01.614798Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xfe8ad5df77755998e5460d80d59ea3617ce7635cfc6fb82780c33dcfc79c0ce1    Sender: 0xe921652180da196e9fca27d9b8d601a264659707    Paymaster: 0x32ec1bb1d2a40bb3d1668e5ebd21011e75a768dd    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:01.614965506Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:01.614972068Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:03.119181993Z   [2m2024-06-28T20:45:03.119029Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xc8f65c9b2ed280294acdf6952626b83cb3130031a187444e72d54dd914bae1d3    Sender: 0x80e2643f5272200d3c42ec1bd370c71ace05c6d0    Paymaster: 0xc35c1ff0084a9f9ec7e3e9c9fd4ee19ebc879cf6    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:03.119216207Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:03.119222879Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:03.499823598Z   [2m2024-06-28T20:45:03.499665Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x02236a67f2f96f196c082c4ef80fb6cdd60e1dcfcefa08d17a37034b2d15eb01    Sender: 0x63b816279c5d10c8d852710155fc1ee95f2e835a    Paymaster: 0x7e49273ee86d2753051f595d5ada11e9af00d202    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:03.499862701Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:03.499868812Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:03.885715876Z   [2m2024-06-28T20:45:03.885546Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6306a02b6168032b5e6e1d159ef2ce3da474c2d6a488e7bc8fe1a429b4d66f87    Sender: 0x0533a24c41dd5b596a07e846f84760922fdb4e67    Paymaster: 0x731c7182e6c53ab61836e33cce37bacc450e7991    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:03.885736284Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:03.885740742Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:04.894282040Z   [2m2024-06-28T20:45:04.894107Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xe6927d8a3b643a596edcfd89a6f9b8b5643a04a72277ef3bcb5359b3cc7b74c8    Sender: 0x08f2c6cc3de3fc7ad27047f8709828aee640bff1    Paymaster: 0x37b6fc32cfa01b260035a4aea070bfdc3cc51209    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:04.894312497Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:04.894333526Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:06.513566563Z   [2m2024-06-28T20:45:06.513414Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x862131360337e4a36ae14ae3e2a67479ea0f5c609e27bb46da5de79721bf05bc    Sender: 0x571ef20cf92400278d665595f7d0d70074597450    Paymaster: 0xc1ede65253cf676e45a0a199be0fa2bee9b93a08    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:06.513596839Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:06.513604253Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:07.003800272Z   [2m2024-06-28T20:45:07.003653Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x246df0fe10fbcd53785308f7e30695f1eee382a9d81bcbdd2205ee2f4d9d4d53    Sender: 0x5990cb112968b06e4082cbf0bdf4a8691bb7e477    Paymaster: 0x870d6147136062178ee879e059829b410f4a4df1    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:07.003829978Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:07.003837301Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:07.404337785Z   [2m2024-06-28T20:45:07.404180Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x0f472f4a599ad3bc2883b5f68a324bff8db385bc7bdacc4bf232a9d5b85af959    Sender: 0x4775c93ff55244956cd9e2adfe4031e1d906a2ab    Paymaster: 0xee3633955d6caa79736a10fd9fe833c6cbc91104    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:07.404378421Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:07.404384813Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:07.805301304Z   [2m2024-06-28T20:45:07.805160Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x71f8f9261a4721c2ffc419ff0a37f84be67d20c672a6a9b7bb97f6844d5492eb    Sender: 0x7bf239264628cacd349bcce486ed671dc90b960c    Paymaster: 0xf8144ebde0326f7950aa41968132b5658f8f32b0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:07.805345326Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:07.805369250Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:08.202800902Z   [2m2024-06-28T20:45:08.202649Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xc5ade6cc0c34bac6f86be74d76b54a085a86c2f362091c3dd0dd7314d1ab53a5    Sender: 0x5fa1f08ec0c933ff33d75990cf173152e85eaec8    Paymaster: 0x82fd0960988f0a8c3535535ee2b10d60fcb513a3    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:08.202831760Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:08.202838492Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:08.593950160Z   [2m2024-06-28T20:45:08.593800Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xb04be12efaf5c2af2a358d6c9eab8bb8c21e3951108ac2a3bab8cf6aa9419952    Sender: 0xbd5a324293f3a42f564b4270878035c6a2f5f313    Paymaster: 0x1bfa35b585cf73f6937f51a9b13145b516c3f2d6    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:08.594008920Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:08.594015242Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:09.000083791Z   [2m2024-06-28T20:45:08.999936Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6fa9e87d3fb68fa4adeb75b5ffb6656fad9b143d46ae8011116850e4bf2af95f    Sender: 0x261c003304d8a882593ede2eb266c8ae551fb784    Paymaster: 0x84aad2aba423b8a3817099e6162521b0d449d935    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:09.000108737Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:09.000113276Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:09.504150842Z   [2m2024-06-28T20:45:09.503998Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x167690f4f14518361af6096358875ccf0538f4fad21a28598f0ee6b3d1d1621b    Sender: 0xc2f7f3d328b1b1410c744901343a2827d9af46bd    Paymaster: 0xc0592d542e32c47a0129d07f7e15c70cc10af69b    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:09.504196657Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:09.504201827Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:10.290374324Z   [2m2024-06-28T20:45:10.290235Z[0m [32m INFO[0m [1;32mrundler_sim::simulation::simulator[0m[32m: [32mAssociated storage accessed by staked entity during deploy, and entity is staked[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:10.290406554Z     [2;3mat[0m crates/sim/src/simulation/simulator.rs:288
+[33mbundler_1         |[0m 2024-06-28T20:45:10.290413126Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:10.290925458Z   [2m2024-06-28T20:45:10.290830Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6446d97318eda2abefc0a514ca49f220ff9e0d6f1d0c66cd4f9a73b721038915    Sender: 0xb5b2308f7233cd77a5ab8a0d17414c8b23372bf0    Factory: 0xbdfbd51dc7c1959f56890114f9bbe1e33c2b63d6    Paymaster: 0x3bc9c99d705dcc37ee3892cfc39276bc65c08c25    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:10.290938082Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:10.290944714Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:10.628640461Z   [2m2024-06-28T20:45:10.628491Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xeb1fead28d60af0dcb0b2d87b467e43bc852131d7c10dcfb39acf1ea97634c6d    Sender: 0x18e4e8009fa199f799c460d14ef08c141c7d678c    Paymaster: 0x975a1a643eea2cf81f39913c90564f626d126498    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:10.628683511Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:10.628689151Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:10.739823673Z   [2m2024-06-28T20:45:10.739699Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:10.739861494Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:45:10.739871573Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:11.446875172Z   [2m2024-06-28T20:45:11.446721Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xc3dec0c9b0966f1b4a48c189c3f74df0a75747941d564226b362472b40b3fac8    Sender: 0x5a2c0c0960df345bb7b36e60b1f9b6fb33094ea5    Paymaster: 0xd238cb99388457fb4f6dae05c8e955c587d09051    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:11.446916048Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:11.446922310Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:12.883973379Z   [2m2024-06-28T20:45:12.883832Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9f4ee9656c83cd5e5c2367a588b511d0711a2c11d13106ce7efbe0814ad5ca2c    Sender: 0x63fbe6f0b42f1f213f104ead87a03440669939a2    Factory: 0x11448a015b14965c0d6b5fbdabee29a6b066b935    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:12.884006241Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:12.884029464Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:14.743970151Z   [2m2024-06-28T20:45:14.743822Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xad338f92ca5dde36ee1252c954745f88546ce13eb21bfb6c78a424c27d5a7ed7    Sender: 0xc4098ce595720d8884b18e9a083abf367a357c7a    Factory: 0xf77b2e742e22850587841b9558fd8fe346f076fe    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:14.744012230Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:14.744019203Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:16.585012895Z   [2m2024-06-28T20:45:16.584856Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x2827d727078c3e8d0ea1fdd3061b08195dc3424ef0b0ca09ee7122c13a146006    Sender: 0x4bb350cfd68beafd3b05289e58e5320e0b686f3a    Factory: 0x4b460c6cbf41f067163c86224e6b0f03beee7b83    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:16.585057698Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:16.585062708Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:20.741785159Z   [2m2024-06-28T20:45:20.741620Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:20.741823250Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:45:20.741832487Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:21.148047151Z   [2m2024-06-28T20:45:21.147887Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x21ebef35020b7dfe33f80e3acdac1e72eef6b658e47138f52f4556379628b177    Sender: 0xa490d33687a03ce7823bd021a87625e0d4d974fb    Factory: 0x407ef971603d46f982b3efdef6cc8ffd63dcdfbe    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:21.148104117Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:21.148109327Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:21.627492806Z   [2m2024-06-28T20:45:21.627336Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xa4d089465b0f539aca81998c3df17073071cccc94ba1a075ff52354b092a9dc0    Sender: 0x7f72f5114b8af7c78e995ee87aee394fe4d69c24    Factory: 0x23ccd3cefe9ad2eee99f9cfacb22374b66eca7af    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:21.627535525Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:21.627541988Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:22.118588936Z   [2m2024-06-28T20:45:22.118436Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xf9bc90d4262d631c67c45c9565f633bca48a61d63c63d6170c21bfd9d0f6579c    Sender: 0xc3db65b42060dee86af63ff0b12c167e9c5eafbf    Factory: 0xd8d92d6bdcd5ae7dce3951912674b0242b341bc8    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:22.118618721Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:22.118625394Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:22.607477370Z   [2m2024-06-28T20:45:22.607331Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x22d9e4b7daa0fe52f0edd072abdd8a3fccc16db459dfc8628318802f58fc7a9a    Sender: 0xed1fe5179ea7cb786b8c2da3af253c437af853e2    Factory: 0x2a5fa60bfe542ab91eb0cee1b36f89a93106dba1    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:22.607519107Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:22.607525189Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:23.093834095Z   [2m2024-06-28T20:45:23.093654Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x292ae0685395e1fdacda6896d0d678e69b50a601d27541a8dea4889fb5c2add0    Sender: 0xd516ce0dddccd9bcdd201bfdd33a15a651d0f24e    Factory: 0xd0e4bfc1a0a6fdf2e1fd5c55200025847f67091d    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:23.094262903Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:23.094273753Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:23.589552847Z   [2m2024-06-28T20:45:23.589404Z[0m [32m INFO[0m [1;32mrundler_sim::simulation::simulator[0m[32m: [32mAssociated storage accessed by staked entity during deploy, and factory is staked[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:23.589582001Z     [2;3mat[0m crates/sim/src/simulation/simulator.rs:294
+[33mbundler_1         |[0m 2024-06-28T20:45:23.589588663Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:23.590128399Z   [2m2024-06-28T20:45:23.590031Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x0bec8ce1e9ac33a29eda84b71dd1f8985f1188f5eea373f9aa43adb4626a9ba0    Sender: 0x61830699bd276c1ab97b44660df46268265ceec8    Factory: 0xb05a700d89a7d445f4fac25a13e0a56b0f4a55ef    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:23.590158976Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:23.590165378Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:24.083851164Z   [2m2024-06-28T20:45:24.083701Z[0m [32m INFO[0m [1;32mrundler_sim::simulation::simulator[0m[32m: [32mAssociated storage accessed by staked entity during deploy, and factory is staked[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:24.083884065Z     [2;3mat[0m crates/sim/src/simulation/simulator.rs:294
+[33mbundler_1         |[0m 2024-06-28T20:45:24.083890357Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:24.084329538Z   [2m2024-06-28T20:45:24.084245Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd2abf78aedc229be1da6a84f05374ef77fd45aa9fdb4a007af8f699989521aeb    Sender: 0xce9519649d410fb4171cf7d643586cec56745488    Factory: 0x9b16a466af6efc4a3944e47703b828356ad7d84c    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:24.084346610Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:24.084353282Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:25.180701540Z   [2m2024-06-28T20:45:25.180546Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x19f2bda180948025b85d6b36f147bc063edb8ba7945cb97bce777030b3e51436    Sender: 0x85daed4cc4858a9c2b8a3c5b5a3691a93c0319ea    Factory: 0x837ba8d52f09666b7f3c7132561c2716cb1cb35a    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:25.180739481Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:25.180745873Z 
+[34mgeth-1.14         |[0m 2024-06-28T20:44:37.044875892Z ERROR[06-28|20:44:37.044] Head block is not reachable
+[33mbundler_1         |[0m 2024-06-28T20:45:26.616040708Z   [2m2024-06-28T20:45:26.615898Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9eb8520a2dac49b48730a87fb1631567c8cdc0a3c39a30c2412e2d69bdaaa6d6    Sender: 0xe86088e8375332c7b3563a1616cb606ddf3e51cb    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:26.616071646Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:26.616078779Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:26.949448959Z   [2m2024-06-28T20:45:26.949311Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x816c08de185cdf9307419011969483508a8678898a2ee06798a06559fa6f15d5    Sender: 0x8341be83a7560edd8f4d3d7c222ede27202a7ff9    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:26.949494394Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:26.949501367Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:27.286740314Z   [2m2024-06-28T20:45:27.286592Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x350babdfd9836b693d3e96b1e1e8e9b1a41d56383f2b521fc3f9a8de53f08121    Sender: 0x053a5b8aad53990397705af343296fe334e6dd46    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:27.286798893Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:27.286804103Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:28.571773607Z   [2m2024-06-28T20:45:28.571633Z[0m [32m INFO[0m [1;32mrundler_sim::simulation::simulator[0m[32m: [32mAssociated storage accessed by staked entity during deploy, and factory is staked[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:28.571810596Z     [2;3mat[0m crates/sim/src/simulation/simulator.rs:294
+[33mbundler_1         |[0m 2024-06-28T20:45:28.571816427Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:28.572281062Z   [2m2024-06-28T20:45:28.572183Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4c3dc59d257304b7b8e66673a3eb8495f6f52036ad775c48537734af898ff3b1    Sender: 0xee42ee4488ec9f9834bfa7eecbec578a862c050c    Factory: 0x6999200953ca41f3cab38168ff5a83a2f0933380    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:28.572297683Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:28.572302852Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:29.312437669Z   [2m2024-06-28T20:45:29.312293Z[0m [32m INFO[0m [1;32mrundler_sim::simulation::simulator[0m[32m: [32mAssociated storage accessed by staked entity during deploy, and factory is staked[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:29.312469388Z     [2;3mat[0m crates/sim/src/simulation/simulator.rs:294
+[33mbundler_1         |[0m 2024-06-28T20:45:29.312475990Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:29.312930838Z   [2m2024-06-28T20:45:29.312837Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x425398144bb460e7d0328b2161f9dbfd0b1047c4424c1e15dec79d1325a8e04d    Sender: 0xe44285d6298c19ec3148edbed52b4f9d869e329f    Factory: 0xd6e483e41ed198761e9f3e644c32bf3343204d2e    Paymaster: 0x7e4418123878b41b9562392f4cc67aa113755e4b    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:29.312945896Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:29.312951637Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:29.657097127Z   [2m2024-06-28T20:45:29.656937Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xc9d391e399c35ba71c847df92402d0de76d5e350181a079f36d236f67e01509b    Sender: 0x11b992a85f077cc067cacb9a76384b143f2b52df    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:29.657129067Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:29.657133896Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:30.743714764Z   [2m2024-06-28T20:45:30.743573Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:30.743746544Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:45:30.743771951Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:31.098222353Z   [2m2024-06-28T20:45:31.098066Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x0881953184ae87d216397ee2b68ff78607c97da60b2daa88b511a25241ec4d2f    Sender: 0x46f7ac4773182708906a2486ede2ba98f30f22a7    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:31.098257810Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:31.098267027Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:31.449918194Z   [2m2024-06-28T20:45:31.449766Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x475aae0ac0a1daa1951c5a6fcf5e3e57f63cd3bcbf4ad08f748be5f84f96c6c1    Sender: 0x9ce60dfa90c0ddfa51459b5dda2f07a8bcef242b    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:31.449957567Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:31.449962457Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:31.806409134Z   [2m2024-06-28T20:45:31.806252Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xdfc36389fd435cc6b7dc9000f54b6fe88f96e46daab6fea4f704fab4c4d358fa    Sender: 0x9076feb8bc13e631700686edc96ec9db196c7fd7    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:31.806446945Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:31.806451954Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:32.168428770Z   [2m2024-06-28T20:45:32.168280Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4df74b8883541cebe733d98a50cec9e8ecad065552764dfda5be12e39ecd4830    Sender: 0xc9638a991caa4c8d408dc69657c37895793693ed    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:32.168460228Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:32.168467863Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:33.694528784Z   [2m2024-06-28T20:45:33.694369Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x2fb218886cd405fd156a8038fbf9de35b40f8717835e3e39f739d64c93091757    Sender: 0x13a74f93e9eead1a99c41b9224acae009117ec59    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:33.694579028Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:33.694591181Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:34.857533651Z   [2m2024-06-28T20:45:34.857383Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xc1a4344cbbf7979b4fdf0ef7953e9edce92876e9ad7c95b68f84674313e753cd    Sender: 0x68af6515a2ac1765ebcf4b56c60c164a46750fae    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:34.857570029Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:34.857591168Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:35.222668244Z   [2m2024-06-28T20:45:35.222533Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x3e2206ae5b7d1c9c1bc624b0eae328b5dd791db65eb60597d1f258815c215be0    Sender: 0x2f85a6403614a9e8a098aef3059e6512fa7cf5e1    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:35.222701576Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:35.222708429Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:38.745833315Z   [2m2024-06-28T20:45:38.745683Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x7cde6b49df70be3590f5872b4adc86f544344d55f38cd8ef431c4edbc655b684    Sender: 0xd91cf6eeef7a1a388d62bd40985cd114db897e00    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:38.745886444Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:38.745896764Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:40.745256179Z   [2m2024-06-28T20:45:40.745116Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:40.745287217Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:45:40.745296594Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:43.096537393Z   [2m2024-06-28T20:45:43.096395Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xfaf72a1724104e755b410c217f513fcd366ef880f67a43f887e61e8106ab2be8    Sender: 0x9ac18ebc6849fc2d5e3aad408756c2ffce87d2ab    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:43.096579340Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:43.096585873Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:43.407544748Z   [2m2024-06-28T20:45:43.407384Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xb6fec05779ddbecd659ed4a35588e1572293fc1e5843ab1b9527a089f854e0cb    Sender: 0x3a99b57baa91c20459732ec14fe1a6d376913c63    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:43.407573782Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:45:43.407579774Z 
+[33mbundler_1         |[0m 2024-06-28T20:45:50.746671011Z   [2m2024-06-28T20:45:50.746543Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:45:50.746708020Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:45:50.746715414Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:00.748637393Z   [2m2024-06-28T20:46:00.748511Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:00.748686414Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:46:00.748694149Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:01.739169570Z   [2m2024-06-28T20:46:01.739023Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4bcc182c2c1261dbe5d7d2b6b3a74512df780029e3fe2c100562b137492744db    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:01.739216297Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:01.739222609Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:01.895885399Z   [2m2024-06-28T20:46:01.895735Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9a5207f40e12b7fb4c7cb526ca21e5ad8c34f9462035b2428850b881f20be311    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:01.895926927Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:01.895932036Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:02.048368402Z   [2m2024-06-28T20:46:02.048228Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x92d3cd5d017383467190fb16efd972083a53118df173a90479453694e67111f8    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:02.048409419Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:02.048415851Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:02.200044375Z   [2m2024-06-28T20:46:02.199915Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9a58aa2d5167eaa083fffac21d94c2baef90953293ced26701236105a1995e77    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:02.200087045Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:02.200091844Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:02.353399831Z   [2m2024-06-28T20:46:02.353267Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x69e049c3b3007e3ca575639a876197a4c827d52fc11eb1415a5da9330be47112    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:02.353425489Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:02.353431861Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:02.506465428Z   [2m2024-06-28T20:46:02.506331Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x11d3873c373082065dd8efb58b3abb2a8d94b77ef88d7eda7025a6c36ad8fac2    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:02.506510633Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:02.506518627Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:02.657377278Z   [2m2024-06-28T20:46:02.657203Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x29a340255806a4a181e3ab6813392fd50f48a6bec4b9c4e06be255619916d97f    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:02.657418235Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:02.657424546Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:02.808764112Z   [2m2024-06-28T20:46:02.808640Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x7b0c582cf1e394600469baf69690292254d132f78149b781eda5015d9724182d    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:02.808791883Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:02.808798446Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:02.963927956Z   [2m2024-06-28T20:46:02.963787Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x49d7378f041d89c34062385fbc8a3dabb0f6ced18f81d194bbcd90a77b3af33c    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:02.963974963Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:02.963984511Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:03.114314015Z   [2m2024-06-28T20:46:03.114178Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x96dd10823c5d2dc5830bc12dcc557c578b80a25002fced58aee93aaaf041df41    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:03.114339743Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:03.114350573Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:03.266966526Z   [2m2024-06-28T20:46:03.266826Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4b03f808bd9a00245011502f0c29dd1db7eae22806157bf83ff635f136ffaa47    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:03.267015366Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:03.267020316Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:03.417888424Z   [2m2024-06-28T20:46:03.417722Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4e712eef411359b5a3eaa6312b7c1010aaa5a6f6caabc95d0b669da37336b1e3    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:03.417920794Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:03.417926835Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:03.572049037Z   [2m2024-06-28T20:46:03.571923Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4081594b8dfb1568b6fd913a885f3db0979854149158141251ddcc1f4a69f20a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:03.572084353Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:03.572090405Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:03.724275265Z   [2m2024-06-28T20:46:03.724107Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x2f55dae7e9e34016cfa255a46a5b055e1f3de4bf9203e5bca25aa01908dd35b1    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:03.724309969Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:03.724317804Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:03.876711401Z   [2m2024-06-28T20:46:03.876553Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x86ba37ed30167248a7dfd1173fae5e9ccbf5932953d1aefa77146fc22f7d2124    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:03.876755914Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:03.876762255Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:04.033569158Z   [2m2024-06-28T20:46:04.033420Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xcc2d9258299a097f101f673b9cedd09e6e5cf70aa3181f1c361204aa444ef0c4    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:04.033594315Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:04.033602339Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:04.185540596Z   [2m2024-06-28T20:46:04.185397Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xce77e744022cfb2d4f20e7cd2599d33a8501a764066bd8b0bc5bcb97feb20c7d    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:04.185580320Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:04.185585549Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:04.334650425Z   [2m2024-06-28T20:46:04.334521Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x894d6bbf3995175091aebf79bbccc91e859a4f7abdf2abf5c512ad151c77c9c7    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:04.334687214Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:04.334692263Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:04.486339927Z   [2m2024-06-28T20:46:04.486198Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x17044d1361376d9c86c831ffc3ece2417f53076b5aae6d683fb3ed61199f128a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:04.486370534Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:04.486377186Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:04.638676282Z   [2m2024-06-28T20:46:04.638532Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x15144f11749d4d162c689c251445766b5d8141a9504eb80b3de126428653e640    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:04.638716116Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:04.638722498Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:04.793501289Z   [2m2024-06-28T20:46:04.793351Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xec47a70ba7efe2dcb34d1ab5aa2ca96726878daff1a90200a60ed3fa47fc4645    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:04.793532317Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:04.793537937Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:04.948175767Z   [2m2024-06-28T20:46:04.948049Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x68420a30431bb923e6e8a65cab5eec3602ef2339b9046232d57412832a3d0ec7    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:04.948203639Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:04.948229938Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:05.098683338Z   [2m2024-06-28T20:46:05.098537Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x8460a5b868ea11f4c72775f3fa5e99ac8cd3cc186e133fa2cfc62c52a0c92143    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:05.098731156Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:05.098737528Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:05.253501352Z   [2m2024-06-28T20:46:05.253366Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x901b1bdfdbce8eaf51d8651197aef2bf11834adfcf653ce3972c9fc2f12dba5c    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:05.253538140Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:05.253543079Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:05.407351915Z   [2m2024-06-28T20:46:05.407203Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4a39dc033d89f9da29689f20260ffae2c35252980c564058bd596d34958ea26d    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:05.407382793Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:05.407389725Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:05.558192206Z   [2m2024-06-28T20:46:05.558060Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x3a95473aa7c2733a925937ad32e443b391ef6873b2db2bbae2d5e0f84b1d88ab    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:05.558220308Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:05.558226430Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:05.708574395Z   [2m2024-06-28T20:46:05.708419Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xf0dae77f686720d1386ce405579b0449a40af59642438681d01f268bf05b6bb7    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:05.708612335Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:05.708617826Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:05.864248562Z   [2m2024-06-28T20:46:05.864061Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x7a2ef87cdb4ff43412c3356326fb7b8eddea72f1b05696a857a1d262ee757af8    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:05.864313002Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:05.864322560Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:06.017149318Z   [2m2024-06-28T20:46:06.017012Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x02835515dc0024c7e43868ad441036f4a6d61d4415eb3c0a30c222ea6ec60beb    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:06.017185104Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:06.017190274Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:06.165309773Z   [2m2024-06-28T20:46:06.165182Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x37c78b2f3af1b40e18296df94cefcf92ceecc40fd66dde6ac95a2822a88914ca    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:06.165331513Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:06.165337725Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:06.316499595Z   [2m2024-06-28T20:46:06.316386Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x12dc267f1175182117d37325b5b940be9b076fb9761cd378763b355b17269f95    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:06.316522968Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:06.316528369Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:06.467340145Z   [2m2024-06-28T20:46:06.467175Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd0a99d8de9d5b61ed8caacf2ac14e75a3142c3f9300bc5e3ebe3e2ca4fe15a81    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:06.467372565Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:06.467379358Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:06.623041875Z   [2m2024-06-28T20:46:06.622868Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x812c64bd057df74c559038a1ab508325a5df24749a2bce502fbaf62bf88f164f    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:06.623068976Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:06.623085877Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:06.773205846Z   [2m2024-06-28T20:46:06.773038Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x230dab519fe1147f0528ec79f4853481ffc5703508a42b6a975e9ef8f2ab6bc2    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:06.773245109Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:06.773251341Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:06.925389068Z   [2m2024-06-28T20:46:06.925229Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x61a74b81c626d3a8eab0c3152a581b6a3642487d6da22b91d9c1df5c07aebad7    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:06.925416309Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:06.925422951Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:07.076550847Z   [2m2024-06-28T20:46:07.076413Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9b0080c4dd5e9708f771a213d7b5ca76807a01910cf9beac6a9ef161121d917c    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:07.076590681Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:07.076599999Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:07.231716336Z   [2m2024-06-28T20:46:07.231566Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9a6cfb037f9c817c03802948a3091158a5351ff211166659c665940c6cc423a4    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:07.231748085Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:07.231757092Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:07.381649249Z   [2m2024-06-28T20:46:07.381515Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x2ba8d5173d48eac55dc9bfff6c351d0fff53ea7b8e75f35a3f367b99da12d211    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:07.381685527Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:07.381692640Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:07.532086422Z   [2m2024-06-28T20:46:07.531958Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9d79336e72fcf7b6583e2fcc4010cbf0a0f61e8784ce1266a520bf5d070c262b    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:07.532132988Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:07.532140302Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:07.682236126Z   [2m2024-06-28T20:46:07.682082Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x57b35c6371ff5c3a5f164e3640aa8bebe80db62963f75e310bc25be957608d62    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:07.682273044Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:07.682277864Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:07.834792321Z   [2m2024-06-28T20:46:07.834626Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xf07bc685cd4c17796b5937bd4cb6c9444c5bd8ee3c32ac9f6924835b35ebc486    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:07.834825292Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:07.834831804Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:07.987929348Z   [2m2024-06-28T20:46:07.987784Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xdd1e1fe5cd36b8cce830442a1d95988f5faf591712974e33cc00937efb4ea26e    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:07.987959754Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:07.987967388Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:08.139162119Z   [2m2024-06-28T20:46:08.139009Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xef9c0759e55ee4864e33592757ccbd8e897b8f26896cc9422cbec82ab8b492d4    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:08.139192205Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:08.139198937Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:08.289478424Z   [2m2024-06-28T20:46:08.289330Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x72af25ee75df4070426f81bf1a4b100bf086c2fc0bcb4473d0a6e025b836989f    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:08.289508800Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:08.289518288Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:08.443592849Z   [2m2024-06-28T20:46:08.443458Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x20e4a8e64290ff790a06e02599a947fe6a06f986dc4f87a405b7d16781231f6f    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:08.443624859Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:08.443631982Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:08.599361962Z   [2m2024-06-28T20:46:08.599192Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xb6539395c3e0e5299a42c7fb172e228c0da519673e6e250c74ebccdb13bc98b2    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:08.599393801Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:08.599402257Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:08.751560852Z   [2m2024-06-28T20:46:08.751422Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x962c093fc9e3e66f54288cbffa6dbbeaf7808ad83568252c9b3869b401c68911    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:08.751592711Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:08.751601637Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:08.902564989Z   [2m2024-06-28T20:46:08.902418Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x0d75a2200615aec6f2a74c985d984acca03c0cad50e2c886b72a8da8823ae63e    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:08.902599193Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:08.902606256Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:09.054809253Z   [2m2024-06-28T20:46:09.054677Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x02961478876199cbc726daac0c785b91dac390c52603fd1e8e9aa7883fec5ed0    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:09.054842896Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:09.054850670Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:09.204571156Z   [2m2024-06-28T20:46:09.204453Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6c7f54723f1877aa187d157a06e82a07849fe9d49774099bdf9da56e31bf71cd    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:09.204613986Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:09.204621500Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:09.357421528Z   [2m2024-06-28T20:46:09.357279Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x5a7ef6ed82b2d77e5e3b42ae2163722e193b0bf3c97a5e0401e9d529a1dac95d    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:09.357451244Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:09.357457425Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:09.508974006Z   [2m2024-06-28T20:46:09.508811Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xa773d7b525de74bedb78398e64fe10a7d843f5885290f1d2857754c4464a869d    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:09.509011576Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:09.509017357Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:09.662939564Z   [2m2024-06-28T20:46:09.662799Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xb8ceff9812abf3a4b942d4330c6b7e3a8627968b2bc30bf84487c12879dd25ae    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:09.662965682Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:09.662970511Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:09.813174017Z   [2m2024-06-28T20:46:09.813033Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xec41b0185a4702f0e4ed3ee6cc1fbf29da370b886c0666542e6a66b071cfe380    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:09.813215224Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:09.813222628Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:09.969080024Z   [2m2024-06-28T20:46:09.968938Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xbef7d610d590cf85a40505c21a301d52d25ee44ecc25b5c464d97a4b22d6dfd1    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:09.969120350Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:09.969125159Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:10.121658202Z   [2m2024-06-28T20:46:10.121512Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xe9cdd017a6119dbae8c0af538a70060200179345ef0cdfb71263ca10dec6f2a1    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:10.121681525Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:10.121687837Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:10.275205500Z   [2m2024-06-28T20:46:10.275066Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xfe8725ec6f2bf84679f7b901e086928f467ad818156542c42b74ce5042668234    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:10.275240275Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:10.275245565Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:10.424923844Z   [2m2024-06-28T20:46:10.424796Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x8ea54ca7b39dc4ecd3cc44be8a35074206685c78984685fffa13acfd87a5ef27    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:10.424957927Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:10.424963137Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:10.577507638Z   [2m2024-06-28T20:46:10.577368Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xa734f8bb4324bb6223e52f866f40cc4a06525d258bb0a7ba00dc57086d688e26    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:10.577537614Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:10.577543525Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:10.728401629Z   [2m2024-06-28T20:46:10.728282Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x326a54ceec94f9ce776efa61ab014ff910cc162064bb379af1c73bf75a91f858    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:10.728426876Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:10.728433348Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:10.750895152Z   [2m2024-06-28T20:46:10.750788Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.003453[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:10.750914468Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:46:10.750930879Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:10.883872279Z   [2m2024-06-28T20:46:10.883736Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xbd902414814914672326a0b25891e120ef1256e41c9a1ae270b0fbdd88a8bead    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:10.883915179Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:10.883926650Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:11.037542064Z   [2m2024-06-28T20:46:11.037418Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x73a2d30f37ba6869c72ce5deb7af94966a2e647e6bb4c6a59775b843b57fa081    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:11.037565799Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:11.037581789Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:11.187841530Z   [2m2024-06-28T20:46:11.187699Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd62b62b04b27bf730e158bde7ba83b17bea14e3afc0c4dbfec95cff04a1953e8    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:11.187871486Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:11.187878719Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:11.341946095Z   [2m2024-06-28T20:46:11.341809Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6c4a6e013314a298d77f4d15fde069dc509be1e0792d5b2b15c2c40e003aea6a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:11.341973646Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:11.341978195Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:11.498538633Z   [2m2024-06-28T20:46:11.498384Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xbec483a9cdc2460cd5933527e498a3a8fa76484abcb997e5387cdb0963e74c84    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:11.498567627Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:11.498573348Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:11.651260224Z   [2m2024-06-28T20:46:11.651083Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x59e94ff14bbbe48fbc6e6646617fd3967e90a0d130da17b9dd7833f4d7cd2793    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:11.651308183Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:11.651313433Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:11.802702156Z   [2m2024-06-28T20:46:11.802524Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x19adc5007a6a41c52edb7856ecf75ad095e2099ce04bf0734a518e44a84801fb    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:11.802732833Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:11.802739055Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:11.960047410Z   [2m2024-06-28T20:46:11.959880Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x866811908e12e18f4bdac99b2e784ae4ee1e9946c699d9b66ea0fcee45719067    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:11.960082104Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:11.960089118Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:12.113051569Z   [2m2024-06-28T20:46:12.112903Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x11394ab840c9d5856de96c5148b6f30a4455a96a9a8b0eef37192c02dcc8656f    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:12.113095090Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:12.113104588Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:12.264390108Z   [2m2024-06-28T20:46:12.264252Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x20a3471e896c32352030c783f58f65083a7dfc0d36e038bff4b2a61a64c5e0d5    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:12.264416978Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:12.264423410Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:12.416341156Z   [2m2024-06-28T20:46:12.416200Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x3589ce8f80464a47c63334fc835cb82abd3f16a88292606b5af6ebb18e28ab0e    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:12.416369119Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:12.416376472Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:12.567939427Z   [2m2024-06-28T20:46:12.567779Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xdad38825ccf09a8a4ce944ca4bc79835adf115071c72a3aa470c9af6e5c644e8    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:12.567969523Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:12.567976015Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:12.725146508Z   [2m2024-06-28T20:46:12.725016Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x30fceaa04ae5097e67603d74186ed9420b55e3f18ad4f347b585949c6728a91c    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:12.725181353Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:12.725189298Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:12.876623173Z   [2m2024-06-28T20:46:12.876466Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x040477559b9c2a0100c1842c060739b4f6f5ec3019b44fb67de2043ec3d24c14    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:12.876650483Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:12.876655563Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:13.031124647Z   [2m2024-06-28T20:46:13.031005Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x258352d3c8fefa936533cb5053f9955a265ca6d59fa408907e570dbf30a29578    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:13.031150415Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:13.031156727Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:13.181642108Z   [2m2024-06-28T20:46:13.181495Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xfa899df5a19dfd8b2767704d9267ede842b26f95a7d249afb8dae0517d87cac0    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:13.181667685Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:13.181674107Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:13.340094145Z   [2m2024-06-28T20:46:13.339952Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xf9d301ee3e2c40ff30f4d4cba84b4940f2fbe976d8094054ab7de15271ae779a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:13.340142424Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:13.340147464Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:13.491430981Z   [2m2024-06-28T20:46:13.491294Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x10256d852d507a19196962ff18b9d0a1b051e052fc213517ff501833c8defc2b    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:13.491456398Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:13.491463301Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:13.641314472Z   [2m2024-06-28T20:46:13.641170Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x99c28006f13cede521df3960582ebcc4fc32e6b96ac49c249a16fd41128cb4c3    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:13.641357211Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:13.641363743Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:13.791461483Z   [2m2024-06-28T20:46:13.791312Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xb5142f01b674cf96b9d80403e9271a4c058829bb50b533df20e39c4ad55c9b47    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:13.791501628Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:13.791506377Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:13.947655276Z   [2m2024-06-28T20:46:13.947508Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x53c2aa4de85d42aa7d8283b622e264bfca4dd65b646c2628f14129a3cc25a0cd    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:13.947683778Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:13.947689900Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:14.100541316Z   [2m2024-06-28T20:46:14.100395Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xfb368133822f4deeac99992557409ea88d86389f24311e45b2bbbef4b7e217ee    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:14.100582642Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:14.100590427Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:14.251909027Z   [2m2024-06-28T20:46:14.251764Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xfe5a368981fd71e89d39440e56f25cde7f2d047c5a589b966026f967940b3386    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:14.251967315Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:14.251975520Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:14.402512718Z   [2m2024-06-28T20:46:14.402367Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9d0a93d1d0ceb4f5524b8353e9c2a96d9f130f43a9681099d40d445b1a792589    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:14.402542764Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:14.402549196Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:14.555828887Z   [2m2024-06-28T20:46:14.555672Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd84930a5642a7649cb5614ff8a70df32c63f0bbc6f806958c7766eff8beafca1    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:14.555857290Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:14.555863692Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:14.707747747Z   [2m2024-06-28T20:46:14.707609Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd35d3534c9efe1ef5c742c74e6f8b25db0674a5cc95d1ae5c66fb64410c7e059    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:14.707773785Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:14.707778484Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:14.863344899Z   [2m2024-06-28T20:46:14.863191Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x61d082641c14b6aca1eeb63ff43b67d0b7e331ccbcd5b0d2b923a18f78e0e96a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:14.863381557Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:14.863386497Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:15.015464092Z   [2m2024-06-28T20:46:15.015332Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x1aef0c7e4961699602abd9e4ae65212bd8613c97ba47cf2db7fe44ddf5abab21    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:15.015509386Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:15.015517752Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:15.168988769Z   [2m2024-06-28T20:46:15.168835Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x21f640dd4107c5123c9d9942cba1901a3d2badb31321ec881da0a09ed1c316f3    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:15.169014176Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:15.169021049Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:15.320143665Z   [2m2024-06-28T20:46:15.319999Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xfddb722990f348ba0031fde348e85b5b2510ee4fa6682f4df187712e59952f0a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:15.320183630Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:15.320190463Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:15.476138880Z   [2m2024-06-28T20:46:15.476002Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x11c5fb247616b5914606dd56e0b80a7ab0d223105c4bc67fef16304f12f15936    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:15.476160420Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:15.476166071Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:15.626636622Z   [2m2024-06-28T20:46:15.626492Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xe759268f17f6577db9ad2db24babfa408925baee352ebe6fe87b481ccdd2ed60    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:15.626676076Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:15.626682568Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:15.790283837Z   [2m2024-06-28T20:46:15.790109Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x20509f069febb57865b4a4dd215702edf251f59297f0309db9acd2b09ab274c7    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:15.790306981Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:15.790313853Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:15.943171741Z   [2m2024-06-28T20:46:15.943002Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x8ee9e56a3d298408b398f1b8165fe6439fb90ede8cb611a478b6d9b820bce241    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:15.943445100Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:15.943454377Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:16.099776608Z   [2m2024-06-28T20:46:16.099626Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xf1cd4ef7c2aa0376a92b077cfab03503dc808caee685d46444002539cfa148aa    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:16.099798629Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:16.099804250Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:16.248310910Z   [2m2024-06-28T20:46:16.248175Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x3c1f223d133808a0ae288a48f18e3f4ec38352c97b5dc31ad262f1e76c57deca    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:16.248333161Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:16.248340054Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:16.403248845Z   [2m2024-06-28T20:46:16.403126Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x4a8b5770a7cbb1192f07ecec8b5423f91c0377bb7ef61985bb80169ff83765f9    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:16.403273241Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:16.403280434Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:16.555222866Z   [2m2024-06-28T20:46:16.555060Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x98c08c08358c07779dfd0cc3cb871defda02da322c812f98fa9de5e924df87e1    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:16.555251129Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:16.555257260Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:16.713630712Z   [2m2024-06-28T20:46:16.713511Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xc77dd87fc3cf75d1b0b2afbdbc99d82d50fcbd5731e85cf85c10f9558fae9860    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:16.713672570Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:16.713679764Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:16.869884699Z   [2m2024-06-28T20:46:16.869721Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xbb40b2eb47bb9929fc11baf1a76be7fb45f6f913c8243a72463302b76461e61e    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:16.869910457Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:16.869916238Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:17.028105614Z   [2m2024-06-28T20:46:17.027948Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x9ada3959ff67126e31c7852851266fa1dbafe626134637dc5be172aba47c5105    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:17.028137974Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:17.028143635Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:17.179832835Z   [2m2024-06-28T20:46:17.179687Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xe92f4770f4d2c5e6bb90d812536869a013f5600e149c072ab779ce1d92761a4d    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:17.179859865Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:17.179869213Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:17.330657930Z   [2m2024-06-28T20:46:17.330526Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x6729297d04438a7c9f532a1d476108af539eba96fb36add71c7f151c7c63a31b    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:17.330685502Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:17.330692605Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:17.485565198Z   [2m2024-06-28T20:46:17.485416Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xb24839d947ed498aa30e009998fa935a43f49762fee758de98fa45de3aae3e9a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:17.485604602Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:17.485609411Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:17.639467098Z   [2m2024-06-28T20:46:17.639302Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xf280e6a09eb3bfb814dd09e93d6e27af368db3059a91529b61fa72f608a7be1a    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:17.639513684Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:17.639518994Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:17.791294175Z   [2m2024-06-28T20:46:17.791150Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xc29fbdc937a551be12a7af174d84af40859d86e184afae39ebbd9d973998c12e    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:17.791327497Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:17.791335432Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:17.944357876Z   [2m2024-06-28T20:46:17.944206Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xe89cc2f89737fca5b5007588a49103c729b3f151d84e84f3a46966844db5adae    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:17.944382973Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:17.944388303Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:18.094190121Z   [2m2024-06-28T20:46:18.094038Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x70c23e9b55a2fe27bbfd2ef38f5ce813339676dacb5d31180ab22f0ae128a2eb    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:18.094222301Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:18.094230286Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:18.249019675Z   [2m2024-06-28T20:46:18.248884Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xe2f43fc3ea4b7e1e228270a32f2a979b95a724a7c30785f7ff8926f9b3a26d03    Sender: 0xcc13524ceb1461c921423edb56aa34cca67d9d96    Paymaster: 0x868bd77ef95344a3e89891f808591580c47297f0    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:18.249049731Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:18.249055962Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:18.767751217Z   [2m2024-06-28T20:46:18.767610Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xcd0286094c0bb3e1a5e263f507fa2197b9cf9da97a4ff5fd10b4120a0f119cf9    Sender: 0x057f10fa2d583912618557d54add7ff54e145176    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:18.767795288Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:18.767824403Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:18.925436244Z   [2m2024-06-28T20:46:18.925302Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mSelected bundle with 2 op(s), with 0 rejected op(s) and 0 updated entities[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:18.925466591Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:562
+[33mbundler_1         |[0m 2024-06-28T20:46:18.925473794Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:18.925481408Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:18.926195319Z   [2m2024-06-28T20:46:18.926094Z[0m [32m INFO[0m [1;32mrundler_builder::transaction_tracker[0m[32m: [32mSent transaction 0x21e66dcf3d57174d917a0ee4d8712de6b4bad54c11efb45d54cbcaf3e70bd298 nonce: 3[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:18.926211168Z     [2;3mat[0m crates/builder/src/transaction_tracker.rs:235
+[33mbundler_1         |[0m 2024-06-28T20:46:18.926217219Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:18.926223611Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:18.926252575Z   [2m2024-06-28T20:46:18.926182Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mBundle transaction sent!    Builder index: 0    Transaction hash: 0x21e66dcf3d57174d917a0ee4d8712de6b4bad54c11efb45d54cbcaf3e70bd298    Nonce: 3    Fee increases: 0    Required maxFeePerGas: (default)    Required maxPriorityFeePerGas: (default)    Op hashes: 0xe2f43fc3ea4b7e1e228270a32f2a979b95a724a7c30785f7ff8926f9b3a26d03, 0xcd0286094c0bb3e1a5e263f507fa2197b9cf9da97a4ff5fd10b4120a0f119cf9    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:18.926267142Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:18.926274165Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.002609494Z   [2m2024-06-28T20:46:19.002518Z[0m [32m INFO[0m [1;32mrundler_pool::mempool::uo_pool[0m[32m: [32m2 op(s) mined on entry point 0x0000000071727de22e5e9d8baf0edac6f37da032 when advancing to block with number 544, hash 0xbc82083b87709e2cbe01e18016aa1bcd996ed40eff282caf6042db397f85843a.[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.002624762Z     [2;3mat[0m crates/pool/src/mempool/uo_pool.rs:224
+[33mbundler_1         |[0m 2024-06-28T20:46:19.002631034Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.029726278Z   [2m2024-06-28T20:46:19.029621Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mBundle with hash 0x21e66dcf3d57174d917a0ee4d8712de6b4bad54c11efb45d54cbcaf3e70bd298 landed in block 544[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.029740525Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:220
+[33mbundler_1         |[0m 2024-06-28T20:46:19.029747317Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:19.029753849Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.029759520Z   [2m2024-06-28T20:46:19.029652Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mTransaction mined!    Builder index: 0    Transaction hash: 0x21e66dcf3d57174d917a0ee4d8712de6b4bad54c11efb45d54cbcaf3e70bd298    Nonce: 3    Block number: 544    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.029783966Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:19.029790678Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.300101551Z   [2m2024-06-28T20:46:19.299957Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0xd47fad3876e5f381c6848920cbea6d3b1233b4a2015bb09d756c77ca0f754335    Sender: 0x16803652b5f33bf18ace6353f47a03f4f6f42903    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.300144431Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:19.300150983Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.405507840Z   [2m2024-06-28T20:46:19.405375Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mSelected bundle with 1 op(s), with 0 rejected op(s) and 0 updated entities[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.405539659Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:562
+[33mbundler_1         |[0m 2024-06-28T20:46:19.405547424Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:19.405555308Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.406174152Z   [2m2024-06-28T20:46:19.406063Z[0m [32m INFO[0m [1;32mrundler_builder::transaction_tracker[0m[32m: [32mSent transaction 0x911f80cb56452ee3e2a9f70c40f958e3f9165d88ce46aed7d9d847586e212d2a nonce: 4[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.406191023Z     [2;3mat[0m crates/builder/src/transaction_tracker.rs:235
+[33mbundler_1         |[0m 2024-06-28T20:46:19.406197525Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:19.406204448Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.406231338Z   [2m2024-06-28T20:46:19.406168Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mBundle transaction sent!    Builder index: 0    Transaction hash: 0x911f80cb56452ee3e2a9f70c40f958e3f9165d88ce46aed7d9d847586e212d2a    Nonce: 4    Fee increases: 0    Required maxFeePerGas: (default)    Required maxPriorityFeePerGas: (default)    Op hashes: 0xd47fad3876e5f381c6848920cbea6d3b1233b4a2015bb09d756c77ca0f754335    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.406240505Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:19.406246506Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.410004881Z   [2m2024-06-28T20:46:19.409921Z[0m [32m INFO[0m [1;32mrundler_pool::mempool::uo_pool[0m[32m: [32m1 op(s) mined on entry point 0x0000000071727de22e5e9d8baf0edac6f37da032 when advancing to block with number 546, hash 0x35d79c9ee5c6070646924543ea39e82249a4a33a5ba69506cf68a136b31e3a4d.[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.410019889Z     [2;3mat[0m crates/pool/src/mempool/uo_pool.rs:224
+[33mbundler_1         |[0m 2024-06-28T20:46:19.410043432Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.509000349Z   [2m2024-06-28T20:46:19.508888Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mBundle with hash 0x911f80cb56452ee3e2a9f70c40f958e3f9165d88ce46aed7d9d847586e212d2a landed in block 546[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.509019233Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:220
+[33mbundler_1         |[0m 2024-06-28T20:46:19.509027288Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:19.509035904Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.509043429Z   [2m2024-06-28T20:46:19.508928Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mTransaction mined!    Builder index: 0    Transaction hash: 0x911f80cb56452ee3e2a9f70c40f958e3f9165d88ce46aed7d9d847586e212d2a    Nonce: 4    Block number: 546    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.509053377Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:19.509060991Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.792301988Z   [2m2024-06-28T20:46:19.792153Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mPool accepted op.    Op hash: 0x46cb89c2ba53e1e202da82db8e72ce5574ade42226a85b3277f364362e505bb6    Sender: 0x0b0c158b7fee07efc96800f5f75f9e8cf42cd435    maxFeePerGas: 4000000000    maxPriorityFeePerGas: 3000000000    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.792330882Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:19.792338847Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.894712883Z   [2m2024-06-28T20:46:19.894601Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mSelected bundle with 1 op(s), with 0 rejected op(s) and 0 updated entities[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.894733702Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:562
+[33mbundler_1         |[0m 2024-06-28T20:46:19.894741156Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:19.894748440Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.895363606Z   [2m2024-06-28T20:46:19.895274Z[0m [32m INFO[0m [1;32mrundler_builder::transaction_tracker[0m[32m: [32mSent transaction 0x1bb9840e4ec0c93c52de5e3fab70b33cc8731a08b02b62d5696a67f3a9cfdb57 nonce: 5[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.895381930Z     [2;3mat[0m crates/builder/src/transaction_tracker.rs:235
+[33mbundler_1         |[0m 2024-06-28T20:46:19.895389464Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:19.895396728Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.895499349Z   [2m2024-06-28T20:46:19.895413Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mBundle transaction sent!    Builder index: 0    Transaction hash: 0x1bb9840e4ec0c93c52de5e3fab70b33cc8731a08b02b62d5696a67f3a9cfdb57    Nonce: 5    Fee increases: 0    Required maxFeePerGas: (default)    Required maxPriorityFeePerGas: (default)    Op hashes: 0x46cb89c2ba53e1e202da82db8e72ce5574ade42226a85b3277f364362e505bb6    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.895525537Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:19.895531829Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.919479072Z   [2m2024-06-28T20:46:19.919360Z[0m [32m INFO[0m [1;32mrundler_pool::mempool::uo_pool[0m[32m: [32m1 op(s) mined on entry point 0x0000000071727de22e5e9d8baf0edac6f37da032 when advancing to block with number 548, hash 0xf98ebb9ac395af3d20807252c52ef07c36b0f0e4c0ee4d5ae7615267817ef654.[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.919498878Z     [2;3mat[0m crates/pool/src/mempool/uo_pool.rs:224
+[33mbundler_1         |[0m 2024-06-28T20:46:19.919508146Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.998694556Z   [2m2024-06-28T20:46:19.998610Z[0m [32m INFO[0m [1;32mrundler_builder::bundle_sender[0m[32m: [32mBundle with hash 0x1bb9840e4ec0c93c52de5e3fab70b33cc8731a08b02b62d5696a67f3a9cfdb57 landed in block 548[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.998709755Z     [2;3mat[0m crates/builder/src/bundle_sender.rs:220
+[33mbundler_1         |[0m 2024-06-28T20:46:19.998714203Z     [2;3min[0m rundler_builder::bundle_sender::[1msend_bundles_in_loop[0m [2;3mwith[0m [1mentry_point[0m: "0x0000…a032", [1mbuilder_index[0m: 0
+[33mbundler_1         |[0m 2024-06-28T20:46:19.998718441Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:19.998722058Z   [2m2024-06-28T20:46:19.998640Z[0m [32m INFO[0m [1;32mrundler_utils::emit[0m[32m: [32mTransaction mined!    Builder index: 0    Transaction hash: 0x1bb9840e4ec0c93c52de5e3fab70b33cc8731a08b02b62d5696a67f3a9cfdb57    Nonce: 5    Block number: 548    Entrypoint: 0x0000000071727de22e5e9d8baf0edac6f37da032[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:19.998727668Z     [2;3mat[0m crates/utils/src/emit.rs:93
+[33mbundler_1         |[0m 2024-06-28T20:46:19.998733569Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:20.226630450Z   [2m2024-06-28T20:46:20.226519Z[0m [31mERROR[0m [1;31mrundler_rpc::debug[0m[31m: [31mError sending bundle Other(no ops to send)[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:20.226668752Z     [2;3mat[0m crates/rpc/src/debug.rs:236
+[33mbundler_1         |[0m 2024-06-28T20:46:20.226677037Z 
+[33mbundler_1         |[0m 2024-06-28T20:46:20.752410159Z   [2m2024-06-28T20:46:20.752283Z[0m [32m INFO[0m [1;32mrundler_builder::signer[0m[32m: [32maccount 0x43378ff8c70109ee4dbe85af34428ab0615ebd23 balance: 20.00794[0m
+[33mbundler_1         |[0m 2024-06-28T20:46:20.752432030Z     [2;3mat[0m crates/builder/src/signer/mod.rs:65
+[33mbundler_1         |[0m 2024-06-28T20:46:20.752439273Z 
