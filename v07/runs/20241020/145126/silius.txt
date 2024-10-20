@@ -1,0 +1,417 @@
+Sun Oct 20 14:44:21 UTC 2024: starting bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/silius/silius.yml, name=silius
+Sun Oct 20 14:44:40 UTC 2024: started bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/silius/silius.yml, name=silius
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+configfile: pyproject.toml
+collected 184 items
+
+tests/single/bundle/test_bundle.py .......sssssssss.....                 [ 11%]
+tests/single/bundle/test_codehash.py s                                   [ 11%]
+tests/single/bundle/test_paymaster.py F                                  [ 12%]
+tests/single/bundle/test_storage_rules.py ...FF.......F................. [ 28%]
+.................................................................        [ 64%]
+tests/single/opbanning/test_op_banning.py ..............FF.............. [ 80%]
+..FF..............FF                                                     [ 91%]
+tests/single/reputation/test_erep.py FF                                  [ 92%]
+tests/single/reputation/test_reputation.py ss                            [ 93%]
+tests/single/rpc/test_eth_chainId.py .                                   [ 94%]
+tests/single/rpc/test_eth_estimateUserOperationGas.py .FF                [ 95%]
+tests/single/rpc/test_eth_getUserOperationByHash.py F.                   [ 96%]
+tests/single/rpc/test_eth_getUserOperationReceipt.py ..                  [ 97%]
+tests/single/rpc/test_eth_sendUserOperation.py .FF                       [ 99%]
+tests/single/rpc/test_eth_supportedEntryPoints.py .                      [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_paymaster_deposit ____________________________
+tests/utils.py:193: in assert_rpc_error
+    assert response.code == code
+E   AttributeError: 'Ok' object has no attribute 'code'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_paymaster.py:47: in test_paymaster_deposit
+    assert_rpc_error(res, "too low", RPCErrorCode.PAYMASTER_DEPOSIT_TOO_LOW)
+tests/utils.py:198: in assert_rpc_error
+    raise AttributeError(f"expected error object, got:\n{response}") from exc
+E   AttributeError: expected error object, got:
+E   Ok(result='0x5400ae2749c9da9851318d512957b48382fc4975ed53f899c2b962bca8fad697', id=98)
+_ test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tstore][drop] _
+tests/single/bundle/test_storage_rules.py:850: in test_rule
+    case.assert_func(response)
+tests/single/bundle/test_storage_rules.py:18: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+E   AttributeError: 'Ok' object has no attribute 'message'
+_ test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tload][drop] _
+tests/single/bundle/test_storage_rules.py:850: in test_rule
+    case.assert_func(response)
+tests/single/bundle/test_storage_rules.py:18: in assert_error
+    assert_rpc_error(response, response.message, RPCErrorCode.BANNED_OPCODE)
+E   AttributeError: 'Ok' object has no attribute 'message'
+_______ test_rule[[EREP-050-regression]unstaked][paymaster][context][ok] _______
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:850: in test_rule
+    case.assert_func(response)
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='A unstaked paymaster at 0xb8357e27dde59d87de1f4cfec061009a6e13e612: must not return context', data=None, id=124)
+_______________ test_account_allowed_opcode_when_staked[BALANCE] _______________
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_op_banning.py:60: in test_account_allowed_opcode_when_staked
+    assert_ok(response)
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='account uses banned opcode: BALANCE', data=None, id=318)
+_____________ test_account_allowed_opcode_when_staked[SELFBALANCE] _____________
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_op_banning.py:60: in test_account_allowed_opcode_when_staked
+    assert_ok(response)
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='account uses banned opcode: SELFBALANCE', data=None, id=320)
+______________ test_paymaster_allowed_opcode_when_staked[BALANCE] ______________
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_op_banning.py:98: in test_paymaster_allowed_opcode_when_staked
+    assert_ok(response)
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='paymaster uses banned opcode: BALANCE', data=None, id=354)
+____________ test_paymaster_allowed_opcode_when_staked[SELFBALANCE] ____________
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_op_banning.py:98: in test_paymaster_allowed_opcode_when_staked
+    assert_ok(response)
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='paymaster uses banned opcode: SELFBALANCE', data=None, id=356)
+_______________ test_factory_allowed_opcode_when_staked[BALANCE] _______________
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_op_banning.py:138: in test_factory_allowed_opcode_when_staked
+    assert_ok(response)
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='factory uses banned opcode: BALANCE', data=None, id=386)
+_____________ test_factory_allowed_opcode_when_staked[SELFBALANCE] _____________
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_op_banning.py:138: in test_factory_allowed_opcode_when_staked
+    assert_ok(response)
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='factory uses banned opcode: SELFBALANCE', data=None, id=388)
+______________________ test_paymaster_on_account_failure _______________________
+tests/single/reputation/test_erep.py:64: in test_paymaster_on_account_failure
+    set_reputation(paymaster.address, ops_seen=5, ops_included=2)
+tests/utils.py:304: in set_reputation
+    assert res.result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_staked_factory_on_account_failure ____________________
+tests/utils.py:186: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/reputation/test_erep.py:112: in test_staked_factory_on_account_failure
+    send_bundle_now()
+tests/utils.py:217: in send_bundle_now
+    assert_ok(RPCRequest(method="debug_bundler_sendBundleNow").send(url))
+tests/utils.py:188: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32603, message='gRPC error: Send bundle now with error: (code: 3, message: execution reverted, data: Some(String("0x65c8fd4d0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000d4141323320726576657274656400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006408c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000114e6f2062756e646c6520666f7220796f7500000000000000000000000000000000000000000000000000000000000000000000000000000000000000")))\n\nLocation:\n    /app/crates/bundler/src/bundler.rs:123:29', data=None, id=398)
+______________ test_eth_estimateUserOperationGas_execution_revert ______________
+tests/utils.py:193: in assert_rpc_error
+    assert response.code == code
+E   AttributeError: 'Ok' object has no attribute 'code'
+
+The above exception was the direct cause of the following exception:
+tests/single/rpc/test_eth_estimateUserOperationGas.py:31: in test_eth_estimateUserOperationGas_execution_revert
+    assert_rpc_error(response, "test fail", RPCErrorCode.EXECUTION_REVERTED)
+tests/utils.py:198: in assert_rpc_error
+    raise AttributeError(f"expected error object, got:\n{response}") from exc
+E   AttributeError: expected error object, got:
+E   Ok(result={'preVerificationGas': '0xb413', 'verificationGasLimit': '0xeffe', 'callGasLimit': '0x2f44'}, id=404)
+_____________ test_eth_estimateUserOperationGas_simulation_revert ______________
+tests/single/rpc/test_eth_estimateUserOperationGas.py:39: in test_eth_estimateUserOperationGas_simulation_revert
+    assert_rpc_error(response, "dead signature", RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT)
+tests/utils.py:193: in assert_rpc_error
+    assert response.code == code
+E   assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+E    +  where -32603 = Error(code=-32603, message='other error: FailedOpWithRevert(FailedOpWithRevert { op_index: 0, reason: "AA23 reverted",...00000000000000000000000000001a7465737457616c6c65743a2064656164207369676e6174757265000000000000) })', data=None, id=406).code
+______________________ test_eth_getUserOperationByHash[] _______________________
+tests/single/rpc/test_eth_getUserOperationByHash.py:23: in test_eth_getUserOperationByHash
+    validate(instance=response.result, schema=schema)
+.venv/lib/python3.10/site-packages/jsonschema/validators.py:1332: in validate
+    raise error
+E   jsonschema.exceptions.ValidationError: None is not valid under any of the given schemas
+E   
+E   Failed validating 'oneOf' in schema['properties']['userOperation']['properties']['paymasterVerificationGasLimit']:
+E       {'title': 'paymaster verification gas limit',
+E        'oneOf': [{'type': 'string', 'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$'},
+E                  {'type': 'number'}],
+E        'description': 'The amount of gas to allocate for the paymaster '
+E                       'validation code'}
+E   
+E   On instance['userOperation']['paymasterVerificationGasLimit']:
+E       None
+______________________ test_eth_sendUserOperation_revert _______________________
+tests/single/rpc/test_eth_sendUserOperation.py:32: in test_eth_sendUserOperation_revert
+    assert_rpc_error(
+tests/utils.py:193: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+E    +  where -32603 = Error(code=-32603, message='other error: 0, AA23 reverted, 0x08c379a00000000000000000000000000000000000000000000000000...000000000000000000000000000000001a7465737457616c6c65743a2064656164207369676e6174757265000000000000', data=None, id=423).code
+_________________ test_eth_sendUserOperation_invalid_signature _________________
+tests/single/rpc/test_eth_sendUserOperation.py:39: in test_eth_sendUserOperation_invalid_signature
+    assert_rpc_error(
+tests/utils.py:193: in assert_rpc_error
+    assert response.code == code
+E   AssertionError: assert -32503 == <RPCErrorCode.INVALID_SIGNATURE: -32507>
+E    +  where -32503 = Error(code=-32503, message='already expired', data=None, id=426).code
+=============================== warnings summary ===============================
+tests/single/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/eth_utils/functional.py:47: UserWarning: The log with transaction hash: HexBytes('0xd61c7295b41e3f1b1084dd36b3b85d1dd432c09eabaa40b7c075194f77c37305') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    return callback(fn(*args, **kwargs))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/silius.xml -
+=========================== short test summary info ============================
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender
+PASSED tests/single/bundle/test_bundle.py::test_max_allowed_ops_staked_sender
+PASSED tests/single/bundle/test_bundle.py::test_ban_user_op_access_other_ops_sender_in_bundle
+PASSED tests/single/bundle/test_bundle.py::test_ban_user_sender_double_role_in_bundle
+PASSED tests/single/bundle/test_bundle.py::test_stake_check_in_bundler
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][paymaster][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][paymaster][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-010)]unstaked][paymaster][account_transient_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][paymaster][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_read][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_write][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][paymaster][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]staked][paymaster][context][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_read][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][reference_storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][factory][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][external_storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_read][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_write][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][factory][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_read][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][account][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][external_storage_read][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][no_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][account][account_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_write][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_read][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GAS]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS CALL]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS DELEGATECALL]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2]
+PASSED tests/single/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[]
+PASSED tests/single/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/single/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[]
+PASSED tests/single/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+PASSED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[]
+PASSED tests/single/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+SKIPPED [9] tests/single/bundle/test_bundle.py:122: skipped
+SKIPPED [1] tests/single/bundle/test_codehash.py:53: no self destruct. can't check code change..
+SKIPPED [2] tests/single/reputation/test_reputation.py:60: skipped
+FAILED tests/single/bundle/test_paymaster.py::test_paymaster_deposit - AttributeError: expected error object, got:
+Ok(result='0x5400ae2749c9da9851318d512957b48382fc4975ed53f899c2b962bca8fad697', id=98)
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tstore][drop] - AttributeError: 'Ok' object has no attribute 'message'
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tload][drop] - AttributeError: 'Ok' object has no attribute 'message'
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]unstaked][paymaster][context][ok] - AttributeError: expected result object, got:
+Error(code=-32502, message='A unstaked paymaster at 0xb8357e27dde59d87de1f4cfec061009a6e13e612: must not return context', data=None, id=124)
+FAILED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[BALANCE] - AttributeError: expected result object, got:
+Error(code=-32502, message='account uses banned opcode: BALANCE', data=None, id=318)
+FAILED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[SELFBALANCE] - AttributeError: expected result object, got:
+Error(code=-32502, message='account uses banned opcode: SELFBALANCE', data=None, id=320)
+FAILED tests/single/opbanning/test_op_banning.py::test_paymaster_allowed_opcode_when_staked[BALANCE] - AttributeError: expected result object, got:
+Error(code=-32502, message='paymaster uses banned opcode: BALANCE', data=None, id=354)
+FAILED tests/single/opbanning/test_op_banning.py::test_paymaster_allowed_opcode_when_staked[SELFBALANCE] - AttributeError: expected result object, got:
+Error(code=-32502, message='paymaster uses banned opcode: SELFBALANCE', data=None, id=356)
+FAILED tests/single/opbanning/test_op_banning.py::test_factory_allowed_opcode_when_staked[BALANCE] - AttributeError: expected result object, got:
+Error(code=-32502, message='factory uses banned opcode: BALANCE', data=None, id=386)
+FAILED tests/single/opbanning/test_op_banning.py::test_factory_allowed_opcode_when_staked[SELFBALANCE] - AttributeError: expected result object, got:
+Error(code=-32502, message='factory uses banned opcode: SELFBALANCE', data=None, id=388)
+FAILED tests/single/reputation/test_erep.py::test_paymaster_on_account_failure - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/single/reputation/test_erep.py::test_staked_factory_on_account_failure - AttributeError: expected result object, got:
+Error(code=-32603, message='gRPC error: Send bundle now with error: (code: 3, message: execution reverted, data: Some(String("0x65c8fd4d0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000d4141323320726576657274656400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006408c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000114e6f2062756e646c6520666f7220796f7500000000000000000000000000000000000000000000000000000000000000000000000000000000000000")))\n\nLocation:\n    /app/crates/bundler/src/bundler.rs:123:29', data=None, id=398)
+FAILED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert - AttributeError: expected error object, got:
+Ok(result={'preVerificationGas': '0xb413', 'verificationGasLimit': '0xeffe', 'callGasLimit': '0x2f44'}, id=404)
+FAILED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert - assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+ +  where -32603 = Error(code=-32603, message='other error: FailedOpWithRevert(FailedOpWithRevert { op_index: 0, reason: "AA23 reverted",...00000000000000000000000000001a7465737457616c6c65743a2064656164207369676e6174757265000000000000) })', data=None, id=406).code
+FAILED tests/single/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[] - jsonschema.exceptions.ValidationError: None is not valid under any of the given schemas
+
+Failed validating 'oneOf' in schema['properties']['userOperation']['properties']['paymasterVerificationGasLimit']:
+    {'title': 'paymaster verification gas limit',
+     'oneOf': [{'type': 'string', 'pattern': '^0x([1-9a-f]+[0-9a-f]*|0)$'},
+               {'type': 'number'}],
+     'description': 'The amount of gas to allocate for the paymaster '
+                    'validation code'}
+
+On instance['userOperation']['paymasterVerificationGasLimit']:
+    None
+FAILED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert - AssertionError: assert -32603 == <RPCErrorCode.REJECTED_BY_EP_OR_ACCOUNT: -32500>
+ +  where -32603 = Error(code=-32603, message='other error: 0, AA23 reverted, 0x08c379a00000000000000000000000000000000000000000000000000...000000000000000000000000000000001a7465737457616c6c65743a2064656164207369676e6174757265000000000000', data=None, id=423).code
+FAILED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature - AssertionError: assert -32503 == <RPCErrorCode.INVALID_SIGNATURE: -32507>
+ +  where -32503 = Error(code=-32503, message='already expired', data=None, id=426).code
+======= 17 failed, 155 passed, 12 skipped, 1 warning in 77.80s (0:01:17) =======
+Sun Oct 20 14:45:59 UTC 2024: done bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/silius/silius.yml, name=silius
+CONTAINER                                REPOSITORY                     TAG                 IMAGE ID            SIZE
+bundler-test-executor-bundler-1          ghcr.io/silius-rs/silius       v07-latest          d6dcd87b73d1        66.1MB
+bundler-test-executor-bundler-waiter-1   ghcr.io/foundry-rs/foundry     latest              e5c8015b4c70        212MB
+bundler-test-executor-deployer-1         accountabstraction/deployer    0.7                 addeb628e58d        174MB
+bundler-test-executor-funder-1           bundler-test-executor-funder   latest              d072d3aba0c8        216MB
+geth-1.14                                ethereum/client-go             release-1.14        57a85d868fa9        53.1MB
