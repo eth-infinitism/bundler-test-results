@@ -1,0 +1,830 @@
+Mon Mar 31 17:18:21 UTC 2025: starting bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/skandha/skandha.yml, name=skandha
+Mon Mar 31 17:18:41 UTC 2025: started bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/skandha/skandha.yml, name=skandha
+============================= test session starts ==============================
+platform linux -- Python 3.10.16, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests
+configfile: pyproject.toml
+collected 481 items / 1 skipped
+
+tests/single/bundle/test_bundle.py .......sssssssss.....                 [  4%]
+tests/single/bundle/test_codehash.py s                                   [  4%]
+tests/single/bundle/test_paymaster.py .                                  [  4%]
+tests/single/bundle/test_storage_rules.py .............................. [ 11%]
+........................................................................ [ 25%]
+........................................................................ [ 40%]
+...........................FFF.......................................... [ 55%]
+.......................................                                  [ 64%]
+tests/single/eip7702/test_eip7702_tuple_userop.py .FF.....               [ 65%]
+tests/single/opbanning/test_create.py .....F.F.FF                        [ 67%]
+tests/single/opbanning/test_op_banning.py .............................. [ 74%]
+........................................................................ [ 89%]
+..........................F......                                        [ 96%]
+tests/single/reputation/test_erep.py FFF.                                [ 96%]
+tests/single/reputation/test_replace.py F                                [ 97%]
+tests/single/reputation/test_reputation.py ss                            [ 97%]
+tests/single/rpc/test_eth_chainId.py .                                   [ 97%]
+tests/single/rpc/test_eth_estimateUserOperationGas.py ...                [ 98%]
+tests/single/rpc/test_eth_getUserOperationByHash.py ..                   [ 98%]
+tests/single/rpc/test_eth_getUserOperationReceipt.py ..                  [ 99%]
+tests/single/rpc/test_eth_sendUserOperation.py ...                       [ 99%]
+tests/single/rpc/test_eth_supportedEntryPoints.py .                      [100%]
+
+=================================== FAILURES ===================================
+_ test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][ok-] _
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:864: in test_rule
+    case.assert_func(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='unstaked paymaster accessed 0x993c8c089284e05ba267e527b404cb83e63a16b3 slot 0xb074bc299047fcad351de62f0cd2053a453fd7f04d93ccfa2c2644fa9bad428e', data={'paymaster': '0x3B8D126DCCA7c9093c30EF509F4Ec4bB6D77CaC2'}, id=502)
+_ test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][ok-CALL:>] _
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:864: in test_rule
+    case.assert_func(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='unstaked paymaster accessed 0x9e9680a57190d1f41fb09b7f67fa63fdca5e80cd slot 0xebe9c0fde87745ce45b318f8a398541e4a4fb766d55437a35bfc80235c5c88b2', data={'paymaster': '0x9A5640E901F5832E5E7CDcec080B8b21ad0616E9'}, id=504)
+_ test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][ok-DELEGATECALL:>] _
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:864: in test_rule
+    case.assert_func(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='unstaked paymaster accessed 0x795d418af485b0465c9edf91304a07ec99c40211 slot 0x9a88ca9d976d893f3f3c952cb79be794cfa42457232d55d3066cd53ed8f7e301', data={'paymaster': '0xF96162c58025f2b66839D95d220Bc3E48a23Ee8E'}, id=506)
+_____________________ test_send_eip_7702_tx_with_initcode ______________________
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/eip7702/test_eip7702_tuple_userop.py:85: in test_send_eip_7702_tx_with_initcode
+    assert_ok(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32600, message='Invalid Request', data={'data': {'errors': [{'target': {'userOp': {'sender': '0x7F6B31347236179777ECFdEd006d94CB88ECF35A', 'nonce': '0x0', 'factory': '0x7702', 'factoryData': '0xa9e966b70000000000000000000000000000000000000000000000000000000000001e16', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0x175fF52a84D038c489701Be29766EF30cC664e81', 'nonce': '0x0', 'yParity': '0x0', 'r': '0xfc515443681a5a71dec2cad8cc75a9b4121ec5f62381a5d73bf49895d11ca9b7', 's': '0x5ff526a6a8832a77df268a0905cef14fa34598f6ed48301afbb4c39cceec55ab', 'signer_private_key': None}}, 'entryPoint': '0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108'}, 'value': {'sender': '0x7F6B31347236179777ECFdEd006d94CB88ECF35A', 'nonce': '0x0', 'factory': '0x7702', 'factoryData': '0xa9e966b70000000000000000000000000000000000000000000000000000000000001e16', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0x175fF52a84D038c489701Be29766EF30cC664e81', 'nonce': '0x0', 'yParity': '0x0', 'r': '0xfc515443681a5a71dec2cad8cc75a9b4121ec5f62381a5d73bf49895d11ca9b7', 's': '0x5ff526a6a8832a77df268a0905cef14fa34598f6ed48301afbb4c39cceec55ab', 'signer_private_key': None}}, 'property': 'userOp', 'children': [{'target': {'sender': '0x7F6B31347236179777ECFdEd006d94CB88ECF35A', 'nonce': '0x0', 'factory': '0x7702', 'factoryData': '0xa9e966b70000000000000000000000000000000000000000000000000000000000001e16', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0x175fF52a84D038c489701Be29766EF30cC664e81', 'nonce': '0x0', 'yParity': '0x0', 'r': '0xfc515443681a5a71dec2cad8cc75a9b4121ec5f62381a5d73bf49895d11ca9b7', 's': '0x5ff526a6a8832a77df268a0905cef14fa34598f6ed48301afbb4c39cceec55ab', 'signer_private_key': None}}, 'value': '0x7702', 'property': 'factory', 'children': [], 'constraints': {'isEthereumAddress': 'factory must be an Ethereum address'}}]}]}}, id=673)
+_________________ test_send_eip_7702_tx_with_flag_no_initcode __________________
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/eip7702/test_eip7702_tuple_userop.py:127: in test_send_eip_7702_tx_with_flag_no_initcode
+    assert_ok(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32600, message='Invalid Request', data={'data': {'errors': [{'target': {'userOp': {'sender': '0x4a7ee0b8f036F54373a281bECC4c9740EAfadE67', 'nonce': '0x0', 'factory': '0x7702', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0xbDeD4997e23C0be802098A304ec5783cc0ECdb77', 'nonce': '0x0', 'yParity': '0x1', 'r': '0x9ae96640a5f3c16cc756e33a09f679dd01c2a717a09ec84ffdd86005c41aa8b2', 's': '0x50c665a770a1fe05e2c08d70b219c23c76d1abd475951e7813cee6ebfcecd34f', 'signer_private_key': None}}, 'entryPoint': '0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108'}, 'value': {'sender': '0x4a7ee0b8f036F54373a281bECC4c9740EAfadE67', 'nonce': '0x0', 'factory': '0x7702', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0xbDeD4997e23C0be802098A304ec5783cc0ECdb77', 'nonce': '0x0', 'yParity': '0x1', 'r': '0x9ae96640a5f3c16cc756e33a09f679dd01c2a717a09ec84ffdd86005c41aa8b2', 's': '0x50c665a770a1fe05e2c08d70b219c23c76d1abd475951e7813cee6ebfcecd34f', 'signer_private_key': None}}, 'property': 'userOp', 'children': [{'target': {'sender': '0x4a7ee0b8f036F54373a281bECC4c9740EAfadE67', 'nonce': '0x0', 'factory': '0x7702', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0xbDeD4997e23C0be802098A304ec5783cc0ECdb77', 'nonce': '0x0', 'yParity': '0x1', 'r': '0x9ae96640a5f3c16cc756e33a09f679dd01c2a717a09ec84ffdd86005c41aa8b2', 's': '0x50c665a770a1fe05e2c08d70b219c23c76d1abd475951e7813cee6ebfcecd34f', 'signer_private_key': None}}, 'value': '0x7702', 'property': 'factory', 'children': [], 'constraints': {'isEthereumAddress': 'factory must be an Ethereum address'}}]}]}}, id=675)
+_ test_account_create_with_factory[factory=unstaked,op=CREATE,expect=ok,rule=OP-032] _
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_create.py:136: in test_account_create_with_factory
+    assert_ok(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='account uses banned opcode: CREATE', data=None, id=705)
+_ test_account_create_with_factory[factory=staked,op=CREATE,expect=ok,rule=EREP-060] _
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_create.py:136: in test_account_create_with_factory
+    assert_ok(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='account uses banned opcode: CREATE', data=None, id=709)
+_ test_account_create_with_factory[factory=staked,op=nested-CREATE2,expect=err,rule=EREP-060] _
+tests/single/opbanning/test_create.py:138: in test_account_create_with_factory
+    assert_rpc_error(
+tests/utils.py:207: in assert_rpc_error
+    assert message.lower() in response.message.lower()
+E   AssertionError: assert 'account uses banned opcode: create2' in 'account uses banned opcode: create'
+E    +  where 'account uses banned opcode: create2' = <built-in method lower of str object at 0x7f60a870c3f0>()
+E    +    where <built-in method lower of str object at 0x7f60a870c3f0> = 'account uses banned opcode: CREATE2'.lower
+E    +  and   'account uses banned opcode: create' = <built-in method lower of str object at 0x7f60a857b8d0>()
+E    +    where <built-in method lower of str object at 0x7f60a857b8d0> = 'account uses banned opcode: CREATE'.lower
+E    +      where 'account uses banned opcode: CREATE' = Error(code=-32502, message='account uses banned opcode: CREATE', data=None, id=713).message
+_ test_account_create_with_factory[factory=staked,op=CREATE2,expect=ok,rule=EREP-060] _
+tests/utils.py:199: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_create.py:136: in test_account_create_with_factory
+    assert_ok(response)
+tests/utils.py:201: in assert_ok
+    raise AttributeError(f"expected result object, got:\n{response}") from exc
+E   AttributeError: expected result object, got:
+E   Error(code=-32502, message='account uses banned opcode: CREATE2', data=None, id=715)
+______________________ test_factory_banned_opcode[CREATE] ______________________
+tests/utils.py:206: in assert_rpc_error
+    assert response.code == code
+E   AttributeError: 'Ok' object has no attribute 'code'
+
+The above exception was the direct cause of the following exception:
+tests/single/opbanning/test_op_banning.py:127: in test_factory_banned_opcode
+    assert_rpc_error(
+tests/utils.py:211: in assert_rpc_error
+    raise AttributeError(f"expected error object, got:\n{response}") from exc
+E   AttributeError: expected error object, got:
+E   Ok(result='0xe1551f701b594874e9e0722520bbeae5cad2999c666283dfb8d5a5a6450e01e7', id=973)
+______________________ test_paymaster_on_account_failure _______________________
+tests/single/reputation/test_erep.py:71: in test_paymaster_on_account_failure
+    set_reputation(paymaster.address, ops_seen=5, ops_included=2)
+tests/utils.py:321: in set_reputation
+    assert res.result
+E   AttributeError: 'Error' object has no attribute 'result'
+____________________ test_staked_factory_on_account_failure ____________________
+tests/single/reputation/test_erep.py:120: in test_staked_factory_on_account_failure
+    assert get_reputation(factory.address).opsSeen >= 10000
+E   AssertionError: assert 2 >= 10000
+E    +  where 2 = Reputation(address='0xad940329e06fa8d254f5c2bd95d4fb2e3e38a5d5', opsSeen=2, opsIncluded=0, status=0).opsSeen
+E    +    where Reputation(address='0xad940329e06fa8d254f5c2bd95d4fb2e3e38a5d5', opsSeen=2, opsIncluded=0, status=0) = get_reputation('0xad940329E06FA8D254f5C2Bd95d4Fb2e3e38a5D5')
+E    +      where '0xad940329E06FA8D254f5C2Bd95d4Fb2e3e38a5D5' = <web3._utils.datatypes.Contract object at 0x7f60a8eefbb0>.address
+____________________ test_account_on_entity_failure[staked] ____________________
+tests/single/reputation/test_erep.py:174: in test_account_on_entity_failure
+    assert get_reputations([sender.address, paymaster.address]) == [
+E   AssertionError: staked account should be blamed instead of paymaster
+E   assert [Reputation(a...=0, status=0)] == [Reputation(a...=0, status=0)]
+E     
+E     At index 1 diff: Reputation(address='0x34f5dc93d6096310c838e1d2d38503b2ebdba3ee', opsSeen=1, opsIncluded=0, status=0) != Reputation(address='0x34f5dc93d6096310c838e1d2d38503b2ebdba3ee', opsSeen=0, opsIncluded=0, status=0)
+E     
+E     Full diff:
+E       [
+E           Reputation(
+E               address='0x9bb206cdab438fb6e0d2e1bc4d6b89a72af7599b',
+E               opsSeen=1,
+E               opsIncluded=0,
+E               status=0,
+E           ),
+E           Reputation(
+E               address='0x34f5dc93d6096310c838e1d2d38503b2ebdba3ee',
+E     -         opsSeen=0,
+E     ?                 ^
+E     +         opsSeen=1,
+E     ?                 ^
+E               opsIncluded=0,
+E               status=0,
+E           ),
+E       ]
+----------------------------- Captured stdout call -----------------------------
+staking account <web3._utils.datatypes.Contract object at 0x7f60a8824d30>
+____________________________ test_replace_paymaster ____________________________
+tests/single/reputation/test_replace.py:37: in test_replace_paymaster
+    assert pm_opsSeen(pm1.address) == 1, "replace with unmodified userop"
+E   AssertionError: replace with unmodified userop
+E   assert 2 == 1
+E    +  where 2 = pm_opsSeen('0x6f069Df00F9D41AC6f6D105c3C43BdE7601c8E52')
+E    +    where '0x6f069Df00F9D41AC6f6D105c3C43BdE7601c8E52' = <web3._utils.datatypes.Contract object at 0x7f60a87a8760>.address
+=============================== warnings summary ===============================
+tests/single/bundle/test_codehash.py::test_codehash_changed
+  /home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/.venv/lib/python3.10/site-packages/eth_utils/functional.py:47: UserWarning: The log with transaction hash: HexBytes('0xceefc3eb3b1202abe1b130498c6cba797c6b9edb68bf4021572b7a8809b19e18') and logIndex: 0 encountered the following error during processing: MismatchedABI(The event signature did not match the provided ABI). It has been discarded.
+    return callback(fn(*args, **kwargs))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+_________ test_rule[[STO-000]unstaked][account][no_storage][ok-CALL:>] _________
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x9c6201bd5231Ff660030043b8B048181227d0259
+______ test_rule[[STO-010]unstaked][account][account_storage][ok-CALL:>] _______
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x3BDE25D4Ca63eFA77448E6740Fc0C2059AfA3E8c
+_ test_rule[[STO-021]unstaked][account][account_reference_storage][ok-CALL:>] __
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x0bf87FeDD5960165412e4bA18f09F3ae23dA513e
+_ test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x105813254Af4a9047D2411F812E31d43C6e583A4
+_ test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xa38E8238509Cc05739F1417DC2BB750941649460
+_ test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x9Fce561123a6527F6EB8101485fdcB66607231B1
+__ test_rule[[STO-000]unstaked][account][external_storage_read][drop-CALL:>] ___
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x72e692F1e820888B4F0443fDf720752A7112571D
+________ test_rule[[OP-020]unstaked][account][out_of_gas][drop-CALL:>] _________
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x05D79AeB94933e07DB145Ea1866A5e169086708A
+_____ test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop-CALL:>] _____
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xCe4B973F8104BBCB7306f3b0eC6502CB1624643B
+__________ test_rule[[STO-000]staked][account][no_storage][ok-CALL:>] __________
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x5c3c3FC7c148c6050b30d91ED78883394a986DAb
+_______ test_rule[[STO-010]staked][account][account_storage][ok-CALL:>] ________
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x05c298416cb9e7fE0Ba022f58bb9DB9840bCd257
+__ test_rule[[STO-021]staked][account][account_reference_storage][ok-CALL:>] ___
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x8b3577B1241e3983Ab77AdD2Fa485884abB58FEC
+_ test_rule[[STO-021]staked][account][account_reference_storage_struct][ok-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x6d9fDa028d0EA6834b7CDdD969C50F3baE8bA70d
+_________ test_rule[[OP-020]staked][account][out_of_gas][drop-CALL:>] __________
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x7336CB6b222125F8bD4B41a3C28B1f7e91914c3a
+______ test_rule[[OP-020]staked][account][sstore_out_of_gas][drop-CALL:>] ______
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xba727D1ff412F950CDE260058256c371f9aC428f
+___ test_rule[[STO-033]staked][account][external_storage_write][drop-CALL:>] ___
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xBB797174e186b8E662FCB56F7D8b3F817f6BE47C
+____ test_rule[[STO-033]staked][account][external_storage_read][ok-CALL:>] _____
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xa01E8A74a8baDb6177702Ade16a89Df2994E6A33
+_ test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x6321d20b68D82D112B24fCEcb605445F5A1E6dE5
+_ test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x8Fa5c08a6f3eBAb4887572F4Ee900D22a5953Bde
+_ test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x3F68Ffb5a1e034809FBd7677105e1977Dbec102b
+_ test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xBB26E3Ce8a8Bbc9C95515DE8Ac2017c82C934a62
+_ test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x6293B834D996eD75E1752cF05CA1980a21D963f5
+_ test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x5667E147A2BFd4c7ED9820E3Fbe3E86e7649098F
+_ test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x3dEFA97eCFEbfE0DCd006Ed2f85886E73aF00eBF
+__ test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop-CALL:>] ___
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x204AB04c241748cA7f0aAd3e9218d3AFDD3b0ed8
+__ test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop-CALL:>] ___
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xf499743e0ff3013468e65C2D7B8EB4ddA6b4563D
+__ test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop-CALL:>] ___
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xA71bC3DfA12abfAFa12C1EBf36D12dCc5dDfe500
+_ test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop-CALL:>] __
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x598570A461d9E38B78453d2C778151a6fCacf68c
+_ test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xEa5c42727f6Def31E13cBA1B01480C5004B70215
+_ test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x9027FFd650B8EDE4cA965C0842503b6a73E26E64
+_ test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0xF58690f05181249A3F90Ff1b521344303587C048
+_ test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok-CALL:>] _
+----------------------------- Captured stdout call -----------------------------
+CALL:> funding test_rules_target 0x5CAAbac04c49356B35c3aCFDE0d49D887511e60F
+___________________ test_account_on_entity_failure[unstaked] ___________________
+----------------------------- Captured stdout call -----------------------------
+unstaked account <web3._utils.datatypes.Contract object at 0x7f60a8666c50>
+- generated xml file: /home/runner/work/bundler-test-executor/bundler-test-executor/build/out/skandha.xml -
+=========================== short test summary info ============================
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[only_priority_fee_bump]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[only_max_fee_bump]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[with_same_fee]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[with_less_fee]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_below_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_at_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_bundle_replace_op[fee_bump_above_threshold]
+PASSED tests/single/bundle/test_bundle.py::test_max_allowed_ops_unstaked_sender
+PASSED tests/single/bundle/test_bundle.py::test_max_allowed_ops_staked_sender
+PASSED tests/single/bundle/test_bundle.py::test_ban_user_op_access_other_ops_sender_in_bundle
+PASSED tests/single/bundle/test_bundle.py::test_ban_user_sender_double_role_in_bundle
+PASSED tests/single/bundle/test_bundle.py::test_stake_check_in_bundler
+PASSED tests/single/bundle/test_paymaster.py::test_paymaster_deposit
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][paymaster][no_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][paymaster][no_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][paymaster][no_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_read][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_read][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_read][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_write][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_write][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]unstaked][paymaster][storage_write][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tstore][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tstore][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tstore][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tload][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tload][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-031)]unstaked][paymaster][transient_storage_tload][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][paymaster_reference_storage][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][paymaster_reference_storage][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][paymaster_reference_storage][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][paymaster_reference_storage_struct][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][paymaster_reference_storage_struct][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][paymaster_reference_storage_struct][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][paymaster][account_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][paymaster][account_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][paymaster][account_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-010)]unstaked][paymaster][account_transient_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-010)]unstaked][paymaster][account_transient_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-070(STO-010)]unstaked][paymaster][account_transient_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]unstaked][paymaster][context][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]unstaked][paymaster][context][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]unstaked][paymaster][context][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][paymaster][no_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][paymaster][no_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][paymaster][no_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_read][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_read][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_read][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_write][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_write][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][paymaster][storage_write][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][paymaster_reference_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][paymaster_reference_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][paymaster_reference_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][paymaster_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][paymaster_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][paymaster][paymaster_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][paymaster_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][paymaster_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][paymaster_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][paymaster][account_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][paymaster][account_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][paymaster][account_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]staked][paymaster][context][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]staked][paymaster][context][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[EREP-050-regression]staked][paymaster][context][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_write][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_write][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_write][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_read][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_read][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][paymaster][external_storage_read][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][no_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][no_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][no_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_read][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_read][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_read][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_write][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_write][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][storage_write][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][factory_reference_storage][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][factory_reference_storage][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][factory_reference_storage][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][factory][factory_reference_storage_struct][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][factory][factory_reference_storage_struct][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]unstaked][factory][factory_reference_storage_struct][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][factory][account_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][factory][account_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][factory][account_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][external_storage_read][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][external_storage_read][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][factory][external_storage_read][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][no_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][no_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][factory][no_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_read][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_read][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_read][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_write][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_write][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-031]staked][factory][storage_write][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][factory_reference_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][factory_reference_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][factory_reference_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][factory_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][factory_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-032]staked][factory][factory_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][factory][account_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][factory][account_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][factory][account_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_write][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_write][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_write][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_read][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_read][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][factory][external_storage_read][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][no_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][no_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][no_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][account][account_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][account][account_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]unstaked][account][account_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][external_storage_read][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][external_storage_read][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]unstaked][account][external_storage_read][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][no_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][no_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-000]staked][account][no_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][account][account_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][account][account_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-010]staked][account][account_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage_struct][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage_struct][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-021]staked][account][account_reference_storage_struct][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][sstore_out_of_gas][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][sstore_out_of_gas][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-020]staked][account][sstore_out_of_gas][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_write][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_write][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_write][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_read][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_read][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[STO-033]staked][account][external_storage_read][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop-DELEGATECALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok-]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok-CALL:>]
+PASSED tests/single/bundle/test_storage_rules.py::test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok-DELEGATECALL:>]
+PASSED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_eip_7702_tx
+PASSED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_post_eip_7702_tx[0]
+PASSED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_post_eip_7702_tx[1337]
+PASSED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_bad_eip_7702_drop_userop
+PASSED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_nonsender_eip_7702_drop_userop
+PASSED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_wrongchain_eip_7702_drop_userop
+PASSED tests/single/opbanning/test_create.py::test_account_no_factory[CREATE]
+PASSED tests/single/opbanning/test_create.py::test_account_no_factory[CREATE2]
+PASSED tests/single/opbanning/test_create.py::test_paymaster_banned_create[CREATE]
+PASSED tests/single/opbanning/test_create.py::test_paymaster_banned_create[CREATE2]
+PASSED tests/single/opbanning/test_create.py::test_account_create2_once
+PASSED tests/single/opbanning/test_create.py::test_account_create_with_factory[factory=unstaked,op=CREATE2,expect=err,rule=OP-032]
+PASSED tests/single/opbanning/test_create.py::test_account_create_with_factory[factory=staked,op=nested-CREATE,expect=err,rule=EREP-060]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GAS-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GAS-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GAS-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[NUMBER-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[TIMESTAMP-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[COINBASE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[DIFFICULTY-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BASEFEE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASLIMIT-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[GASPRICE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFBALANCE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BALANCE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[ORIGIN-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOCKHASH-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[CREATE2-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[SELFDESTRUCT-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOBHASH-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOBHASH-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOBHASH-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOBBASEFEE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOBBASEFEE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_banned_opcode[BLOBBASEFEE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[BALANCE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[BALANCE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[BALANCE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[SELFBALANCE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[SELFBALANCE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_when_staked[SELFBALANCE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS CALL-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS CALL-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS CALL-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS DELEGATECALL-]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS DELEGATECALL-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_account_allowed_opcode_sequence[GAS DELEGATECALL-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GAS-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[NUMBER-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[TIMESTAMP-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[COINBASE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[DIFFICULTY-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BASEFEE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASLIMIT-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[GASPRICE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFBALANCE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BALANCE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[ORIGIN-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOCKHASH-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[CREATE2-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[SELFDESTRUCT-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOBHASH-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOBHASH-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOBHASH-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOBBASEFEE-]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOBBASEFEE-CALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_banned_opcode[BLOBBASEFEE-DELEGATECALL:>]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_allowed_opcode_when_staked[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_paymaster_allowed_opcode_when_staked[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GAS]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[NUMBER]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[TIMESTAMP]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[COINBASE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[DIFFICULTY]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GASLIMIT]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[GASPRICE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFBALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[ORIGIN]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOCKHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE2]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[SELFDESTRUCT]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOBHASH]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[BLOBBASEFEE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_allowed_opcode_when_staked[BALANCE]
+PASSED tests/single/opbanning/test_op_banning.py::test_factory_allowed_opcode_when_staked[SELFBALANCE]
+PASSED tests/single/reputation/test_erep.py::test_account_on_entity_failure[unstaked]
+PASSED tests/single/rpc/test_eth_chainId.py::test_eth_chainId[]
+PASSED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas[]
+PASSED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_execution_revert
+PASSED tests/single/rpc/test_eth_estimateUserOperationGas.py::test_eth_estimateUserOperationGas_simulation_revert
+PASSED tests/single/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash[]
+PASSED tests/single/rpc/test_eth_getUserOperationByHash.py::test_eth_getUserOperationByHash_error
+PASSED tests/single/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt[]
+PASSED tests/single/rpc/test_eth_getUserOperationReceipt.py::test_eth_getUserOperationReceipt_error
+PASSED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation[]
+PASSED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_revert
+PASSED tests/single/rpc/test_eth_sendUserOperation.py::test_eth_sendUserOperation_invalid_signature
+PASSED tests/single/rpc/test_eth_supportedEntryPoints.py::test_eth_supportedEntryPoints[]
+SKIPPED [1] tests/single/gas/test_pre_verification_gas_calculation.py:15: Slow and requires fixing
+SKIPPED [9] tests/single/bundle/test_bundle.py:123: skipped
+SKIPPED [1] tests/single/bundle/test_codehash.py:54: no self destruct. can't check code change..
+SKIPPED [2] tests/single/reputation/test_reputation.py:61: skipped
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][ok-] - AttributeError: expected result object, got:
+Error(code=-32502, message='unstaked paymaster accessed 0x993c8c089284e05ba267e527b404cb83e63a16b3 slot 0xb074bc299047fcad351de62f0cd2053a453fd7f04d93ccfa2c2644fa9bad428e', data={'paymaster': '0x3B8D126DCCA7c9093c30EF509F4Ec4bB6D77CaC2'}, id=502)
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][ok-CALL:>] - AttributeError: expected result object, got:
+Error(code=-32502, message='unstaked paymaster accessed 0x9e9680a57190d1f41fb09b7f67fa63fdca5e80cd slot 0xebe9c0fde87745ce45b318f8a398541e4a4fb766d55437a35bfc80235c5c88b2', data={'paymaster': '0x9A5640E901F5832E5E7CDcec080B8b21ad0616E9'}, id=504)
+FAILED tests/single/bundle/test_storage_rules.py::test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][ok-DELEGATECALL:>] - AttributeError: expected result object, got:
+Error(code=-32502, message='unstaked paymaster accessed 0x795d418af485b0465c9edf91304a07ec99c40211 slot 0x9a88ca9d976d893f3f3c952cb79be794cfa42457232d55d3066cd53ed8f7e301', data={'paymaster': '0xF96162c58025f2b66839D95d220Bc3E48a23Ee8E'}, id=506)
+FAILED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_eip_7702_tx_with_initcode - AttributeError: expected result object, got:
+Error(code=-32600, message='Invalid Request', data={'data': {'errors': [{'target': {'userOp': {'sender': '0x7F6B31347236179777ECFdEd006d94CB88ECF35A', 'nonce': '0x0', 'factory': '0x7702', 'factoryData': '0xa9e966b70000000000000000000000000000000000000000000000000000000000001e16', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0x175fF52a84D038c489701Be29766EF30cC664e81', 'nonce': '0x0', 'yParity': '0x0', 'r': '0xfc515443681a5a71dec2cad8cc75a9b4121ec5f62381a5d73bf49895d11ca9b7', 's': '0x5ff526a6a8832a77df268a0905cef14fa34598f6ed48301afbb4c39cceec55ab', 'signer_private_key': None}}, 'entryPoint': '0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108'}, 'value': {'sender': '0x7F6B31347236179777ECFdEd006d94CB88ECF35A', 'nonce': '0x0', 'factory': '0x7702', 'factoryData': '0xa9e966b70000000000000000000000000000000000000000000000000000000000001e16', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0x175fF52a84D038c489701Be29766EF30cC664e81', 'nonce': '0x0', 'yParity': '0x0', 'r': '0xfc515443681a5a71dec2cad8cc75a9b4121ec5f62381a5d73bf49895d11ca9b7', 's': '0x5ff526a6a8832a77df268a0905cef14fa34598f6ed48301afbb4c39cceec55ab', 'signer_private_key': None}}, 'property': 'userOp', 'children': [{'target': {'sender': '0x7F6B31347236179777ECFdEd006d94CB88ECF35A', 'nonce': '0x0', 'factory': '0x7702', 'factoryData': '0xa9e966b70000000000000000000000000000000000000000000000000000000000001e16', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0x175fF52a84D038c489701Be29766EF30cC664e81', 'nonce': '0x0', 'yParity': '0x0', 'r': '0xfc515443681a5a71dec2cad8cc75a9b4121ec5f62381a5d73bf49895d11ca9b7', 's': '0x5ff526a6a8832a77df268a0905cef14fa34598f6ed48301afbb4c39cceec55ab', 'signer_private_key': None}}, 'value': '0x7702', 'property': 'factory', 'children': [], 'constraints': {'isEthereumAddress': 'factory must be an Ethereum address'}}]}]}}, id=673)
+FAILED tests/single/eip7702/test_eip7702_tuple_userop.py::test_send_eip_7702_tx_with_flag_no_initcode - AttributeError: expected result object, got:
+Error(code=-32600, message='Invalid Request', data={'data': {'errors': [{'target': {'userOp': {'sender': '0x4a7ee0b8f036F54373a281bECC4c9740EAfadE67', 'nonce': '0x0', 'factory': '0x7702', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0xbDeD4997e23C0be802098A304ec5783cc0ECdb77', 'nonce': '0x0', 'yParity': '0x1', 'r': '0x9ae96640a5f3c16cc756e33a09f679dd01c2a717a09ec84ffdd86005c41aa8b2', 's': '0x50c665a770a1fe05e2c08d70b219c23c76d1abd475951e7813cee6ebfcecd34f', 'signer_private_key': None}}, 'entryPoint': '0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108'}, 'value': {'sender': '0x4a7ee0b8f036F54373a281bECC4c9740EAfadE67', 'nonce': '0x0', 'factory': '0x7702', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0xbDeD4997e23C0be802098A304ec5783cc0ECdb77', 'nonce': '0x0', 'yParity': '0x1', 'r': '0x9ae96640a5f3c16cc756e33a09f679dd01c2a717a09ec84ffdd86005c41aa8b2', 's': '0x50c665a770a1fe05e2c08d70b219c23c76d1abd475951e7813cee6ebfcecd34f', 'signer_private_key': None}}, 'property': 'userOp', 'children': [{'target': {'sender': '0x4a7ee0b8f036F54373a281bECC4c9740EAfadE67', 'nonce': '0x0', 'factory': '0x7702', 'callData': '0xa9cc4718', 'callGasLimit': '0x493e0', 'verificationGasLimit': '0xf4240', 'preVerificationGas': '0x493e0', 'maxFeePerGas': '0xee6b2800', 'maxPriorityFeePerGas': '0xb2d05e00', 'signature': '0xface', 'eip7702Auth': {'chainId': '0x539', 'address': '0xbDeD4997e23C0be802098A304ec5783cc0ECdb77', 'nonce': '0x0', 'yParity': '0x1', 'r': '0x9ae96640a5f3c16cc756e33a09f679dd01c2a717a09ec84ffdd86005c41aa8b2', 's': '0x50c665a770a1fe05e2c08d70b219c23c76d1abd475951e7813cee6ebfcecd34f', 'signer_private_key': None}}, 'value': '0x7702', 'property': 'factory', 'children': [], 'constraints': {'isEthereumAddress': 'factory must be an Ethereum address'}}]}]}}, id=675)
+FAILED tests/single/opbanning/test_create.py::test_account_create_with_factory[factory=unstaked,op=CREATE,expect=ok,rule=OP-032] - AttributeError: expected result object, got:
+Error(code=-32502, message='account uses banned opcode: CREATE', data=None, id=705)
+FAILED tests/single/opbanning/test_create.py::test_account_create_with_factory[factory=staked,op=CREATE,expect=ok,rule=EREP-060] - AttributeError: expected result object, got:
+Error(code=-32502, message='account uses banned opcode: CREATE', data=None, id=709)
+FAILED tests/single/opbanning/test_create.py::test_account_create_with_factory[factory=staked,op=nested-CREATE2,expect=err,rule=EREP-060] - AssertionError: assert 'account uses banned opcode: create2' in 'account uses banned opcode: create'
+ +  where 'account uses banned opcode: create2' = <built-in method lower of str object at 0x7f60a870c3f0>()
+ +    where <built-in method lower of str object at 0x7f60a870c3f0> = 'account uses banned opcode: CREATE2'.lower
+ +  and   'account uses banned opcode: create' = <built-in method lower of str object at 0x7f60a857b8d0>()
+ +    where <built-in method lower of str object at 0x7f60a857b8d0> = 'account uses banned opcode: CREATE'.lower
+ +      where 'account uses banned opcode: CREATE' = Error(code=-32502, message='account uses banned opcode: CREATE', data=None, id=713).message
+FAILED tests/single/opbanning/test_create.py::test_account_create_with_factory[factory=staked,op=CREATE2,expect=ok,rule=EREP-060] - AttributeError: expected result object, got:
+Error(code=-32502, message='account uses banned opcode: CREATE2', data=None, id=715)
+FAILED tests/single/opbanning/test_op_banning.py::test_factory_banned_opcode[CREATE] - AttributeError: expected error object, got:
+Ok(result='0xe1551f701b594874e9e0722520bbeae5cad2999c666283dfb8d5a5a6450e01e7', id=973)
+FAILED tests/single/reputation/test_erep.py::test_paymaster_on_account_failure - AttributeError: 'Error' object has no attribute 'result'
+FAILED tests/single/reputation/test_erep.py::test_staked_factory_on_account_failure - AssertionError: assert 2 >= 10000
+ +  where 2 = Reputation(address='0xad940329e06fa8d254f5c2bd95d4fb2e3e38a5d5', opsSeen=2, opsIncluded=0, status=0).opsSeen
+ +    where Reputation(address='0xad940329e06fa8d254f5c2bd95d4fb2e3e38a5d5', opsSeen=2, opsIncluded=0, status=0) = get_reputation('0xad940329E06FA8D254f5C2Bd95d4Fb2e3e38a5D5')
+ +      where '0xad940329E06FA8D254f5C2Bd95d4Fb2e3e38a5D5' = <web3._utils.datatypes.Contract object at 0x7f60a8eefbb0>.address
+FAILED tests/single/reputation/test_erep.py::test_account_on_entity_failure[staked] - AssertionError: staked account should be blamed instead of paymaster
+assert [Reputation(a...=0, status=0)] == [Reputation(a...=0, status=0)]
+  
+  At index 1 diff: Reputation(address='0x34f5dc93d6096310c838e1d2d38503b2ebdba3ee', opsSeen=1, opsIncluded=0, status=0) != Reputation(address='0x34f5dc93d6096310c838e1d2d38503b2ebdba3ee', opsSeen=0, opsIncluded=0, status=0)
+  
+  Full diff:
+    [
+        Reputation(
+            address='0x9bb206cdab438fb6e0d2e1bc4d6b89a72af7599b',
+            opsSeen=1,
+            opsIncluded=0,
+            status=0,
+        ),
+        Reputation(
+            address='0x34f5dc93d6096310c838e1d2d38503b2ebdba3ee',
+  -         opsSeen=0,
+  ?                 ^
+  +         opsSeen=1,
+  ?                 ^
+            opsIncluded=0,
+            status=0,
+        ),
+    ]
+FAILED tests/single/reputation/test_replace.py::test_replace_paymaster - AssertionError: replace with unmodified userop
+assert 2 == 1
+ +  where 2 = pm_opsSeen('0x6f069Df00F9D41AC6f6D105c3C43BdE7601c8E52')
+ +    where '0x6f069Df00F9D41AC6f6D105c3C43BdE7601c8E52' = <web3._utils.datatypes.Contract object at 0x7f60a87a8760>.address
+====== 14 failed, 455 passed, 13 skipped, 1 warning in 260.25s (0:04:20) =======
+Mon Mar 31 17:23:03 UTC 2025: done bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/skandha/skandha.yml, name=skandha
+CONTAINER                                REPOSITORY                                    TAG                 IMAGE ID            SIZE
+bundler-test-executor-bundler-1          etherspot/skandha                             v3-3.0.0-alpha      70aad56c1f27        416MB
+bundler-test-executor-bundler-waiter-1   ghcr.io/foundry-rs/foundry                    v0.2.0              6285e396820c        209MB
+bundler-test-executor-deployer-1         accountabstraction/deployer                   0.8                 547f77f2167c        231MB
+bundler-test-executor-funder-1           bundler-test-executor-funder                  latest              a8b54edd430d        213MB
+geth-1.15                                accountabstraction/geth-with-erc7562-tracer   latest              1adae6b728da        53.5MB
